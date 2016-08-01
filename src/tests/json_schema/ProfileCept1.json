@@ -1,0 +1,178 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "user_id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "group_id": {
+          "type": "integer"
+        },
+        "photo_url": {
+          "type": "string"
+        },
+        "group": {
+          "type": "string"
+        },
+        "university": {
+          "type": "string"
+        },
+        "uni_id": {
+          "type": "integer"
+        },
+        "gender": {
+          "type": "string"
+        },
+        "commencement": {
+          "type": ""
+        },
+        "year_of_completion": {
+          "type": ""
+        },
+        "avatar_image_url": {
+          "type": "string"
+        },
+        "karma": {
+          "type": "string"
+        },
+        "skills": {
+          "type": "array",
+          "items": []
+        },
+        "interests": {
+          "type": "array",
+          "items": []
+        },
+        "connection_count": {
+          "type": "string"
+        },
+        "connection_mutual_count": {
+          "type": "integer"
+        },
+        "connections": {
+          "type": "array",
+          "items": []
+        },
+        "education": {
+          "type": "array",
+          "items": []
+        },
+        "work_experience": {
+          "type": "array",
+          "items": []
+        },
+        "places": {
+          "type": "array",
+          "items": []
+        },
+        "club_memberships": {
+          "type": "array",
+          "items": []
+        },
+        "languages": {
+          "type": "array",
+          "items": []
+        },
+        "classes": {
+          "type": "array",
+          "items": []
+        },
+        "mentor_groups_joined": {
+          "type": "array",
+          "items": []
+        },
+        "custom_groups_joined": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "study_groups_joined": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "connected": {
+          "type": "boolean"
+        },
+        "sent_connection_request": {
+          "type": "boolean"
+        },
+        "received_connection_request": {
+          "type": "boolean"
+        },
+        "user_blocked_me": {
+          "type": "boolean"
+        },
+        "possessive_form": {
+          "type": "string"
+        },
+        "declined_request": {
+          "type": "boolean"
+        },
+        "acl_can_degree": {
+          "type": "boolean"
+        },
+        "acl_can_connections": {
+          "type": "boolean"
+        },
+        "acl_can_classes": {
+          "type": "boolean"
+        },
+        "acl_can_customgroups": {
+          "type": "boolean"
+        },
+        "acl_can_studygroups": {
+          "type": "boolean"
+        },
+        "acl_can_mentorgroups": {
+          "type": "boolean"
+        },
+        "acl_can_extracurr": {
+          "type": "boolean"
+        },
+        "acl_can_timetable": {
+          "type": "boolean"
+        },
+        "campus": {
+          "type": "string"
+        },
+        "timezone": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

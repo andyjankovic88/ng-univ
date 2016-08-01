@@ -1,0 +1,23 @@
+{
+  "strict": true,
+  "bitwise": true,
+  "curly": true,
+  "eqeqeq": false,
+  "latedef": false,
+  "multistr": true,
+  "noarg": true,
+  "undef": true,
+  "unused": true,
+  "validthis": true,
+  "jasmine": true,
+  "globals": {
+    "angular": false,
+    "inject": false,
+    "module": false,
+    "$": false,
+    "console": false,
+    "localStorage": false,
+    "moment": false,
+    "window": false
+  }
+}

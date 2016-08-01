@@ -1,0 +1,39 @@
+<div id="ur-connections">
+   <!-- content-heading -->
+   <div class="content-heading ng-scope">
+      <h1>Connections</h1>
+      <form id="form-search" class="r-side" ng-submit="doSearch()">
+         <div class="search-block l-side">
+            <input type="text" placeholder="Search..." ng-model="connectionsData.searchString">
+            <button class="search">
+               <svg class="ico-search"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#header-search"></use></svg>
+            </button>
+         </div>
+      </form>
+   </div>
+   <!-- sub-menu -->
+   <div class="sub-menu">
+      <ul>
+         <li ui-sref-active="active">
+            <a href="#" ui-sref="connectionsList">
+               <svg class="ico-list"><use xlink:href="#feeds-list" /></svg>
+               <span>MY CONNECTIONS</span>
+            </a>
+         </li>
+         <li ui-sref-active="active">
+            <a href="#" ui-sref="connectionsSuggestions">
+               <svg class="ico-suggestions"><use xlink:href="#icon-suggestions" /></svg>
+               <span>SUGGESTIONS</span>
+            </a>
+         </li>
+         <li ui-sref-active="active">
+            <a href="#" ui-sref="connectionsRequests">
+               <svg class="ico-user-plus"><use xlink:href="#icon-user-plus" /></svg>
+               <span>CONNECTION REQUESTS</span>
+            </a>
+         </li>
+      </ul>
+   </div>
+   <!-- clubs-content -->
+   <div class="clubs-content" ui-view></div>
+</div>

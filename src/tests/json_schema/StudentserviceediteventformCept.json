@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "event_image": {
+          "type": "string"
+        },
+        "start_date": {
+          "type": "string"
+        },
+        "start_date_hrs": {
+          "type": "string"
+        },
+        "end_date": {
+          "type": "string"
+        },
+        "end_date_hrs": {
+          "type": "string"
+        },
+        "campus_id": {
+          "type": "string"
+        },
+        "timezone": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "max_attendees": {
+          "type": "string"
+        },
+        "form_select_options": {
+          "type": "object",
+          "properties": {
+            "campus": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  }
+                }
+              ]
+            },
+            "timezone": {
+              "type": "object",
+              "properties": {
+                "Australia/Melbourne": {
+                  "type": "string"
+                },
+                "Australia/Sydney": {
+                  "type": "string"
+                },
+                "Australia/Victoria": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

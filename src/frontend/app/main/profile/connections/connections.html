@@ -1,0 +1,35 @@
+<!-- connections-section -->
+<div class="connections-section" infinite-scroll='loadNextPage()' infinite-scroll-disabled='listRequestInProgress || noMoreData' infinite-scroll-distance='1' infinite-scroll-container='".middle-section"'>
+   <div class="item-holder clearfix" ng-repeat="connection in connections">
+      <div class="item" ui-sref="profile({id: connection.user_id})">
+         <figure class="img-holder">
+            <a href="#"><img class="photo" ng-src="{{ connection.profile_pic }}"></a>
+         </figure>
+         <div class="item-info">
+            <h3>
+               <a> {{ connection.name }}</a>
+               <svg class="tick" ng-if="connection.connected">
+                  <use xlink:href="#profile-tick"/>
+               </svg>
+            </h3>
+            <span class="message-update">{{connection.subject}}</span>
+            <span>{{connection.campus}}</span>
+         </div>
+      </div>
+      <button type="button" class="btn-blue r-side"
+              ng-if="connection.connected && (connection.user_id != currentUserId)"
+              ui-sref="newMessage({recepient: connection.user_id})">Message
+      </button>
+      <button type="button" class="btn-green has-icon r-side"
+              ng-if="
+              !connection.connected &&
+              (connection.user_id != currentUserId) &&
+              (!connection.user_blocked_me) &&
+              !connection.declined_request &&
+              !connection.sent_connection_request
+              " ng-click="sendConnectRequest(connection)">
+         <span ng-hide="connection.isConnecting">Connect</span><span ng-show="connection.isConnecting" class="icon-for-button"><svg class="ico-sm"><use xlink:href="#icon-loading-spinner"></use></svg></span>
+      </button>
+   </div>
+   <loader is-active="listRequestInProgress" position="static"></loader>
+</div>

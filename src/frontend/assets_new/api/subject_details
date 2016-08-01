@@ -1,0 +1,162 @@
+{
+"message": "",
+"response": {
+    "id": "3",
+    "name": "Principles of accounting and finance",
+    "code": "AFC1000",
+    "teaching_times": {
+        "options": [
+            {
+                "id": "151630",
+                "display_text": "Assessment:  08:00",
+                "selected": false
+            },
+            {
+                "id": "151699",
+                "display_text": "Assessment:  08:00",
+                "selected": false
+            },
+            {
+                "id": "151711",
+                "display_text": "Assessment:  08:00",
+                "selected": false
+            },
+            {
+                "id": "151721",
+                "display_text": "Assessment:  08:00",
+                "selected": false
+            },
+            {
+                "id": "151763",
+                "display_text": "Assessment:  13:00",
+                "selected": false
+            },
+            {
+                "id": "151623",
+                "display_text": "Assessment: Mon 09:00",
+                "selected": true
+            },
+            {
+                "id": "151626",
+                "display_text": "Assessment: Mon 10:00",
+                "selected": false
+            },
+            {
+                "id": "151624",
+                "display_text": "Assessment: Mon 17:00",
+                "selected": false
+            },
+            {
+                "id": "151620",
+                "display_text": "Assessment: Sat 09:00",
+                "selected": false
+            },
+            {
+                "id": "151619",
+                "display_text": "Lab: Tue 09:00",
+                "selected": false
+            },
+            {
+                "id": "151766",
+                "display_text": "Seminar:  11:00",
+                "selected": false
+            },
+            {
+                "id": "151767",
+                "display_text": "Seminar:  15:00",
+                "selected": false
+            },
+            {
+                "id": "151767",
+                "display_text": "Seminar:  15:00",
+                "selected": false
+            }
+        ]
+    },
+    "consultation_times": {
+        "options": {
+            "day": {
+                "1": "Monday",
+                "2": "Tuesday",
+                "3": "Wednesday",
+                "4": "Thursday",
+                "5": "Friday",
+                "6": "Saturday",
+                "7": "Sunday"
+            },
+            "time": {
+                "08:00:00": "8:00am",
+                "08:30:00": "8:30am",
+                "09:00:00": "9:00am",
+                "09:30:00": "9:30am",
+                "10:00:00": "10:00am",
+                "10:30:00": "10:30am",
+                "11:00:00": "11:00am",
+                "11:30:00": "11:30am",
+                "12:00:00": "12:00pm",
+                "12:30:00": "12:30pm",
+                "13:00:00": "1:00pm",
+                "13:30:00": "1:30pm",
+                "14:00:00": "2:00pm",
+                "14:30:00": "2:30pm",
+                "15:00:00": "3:00pm",
+                "15:30:00": "3:30pm",
+                "16:00:00": "4:00pm",
+                "16:30:00": "4:30pm",
+                "17:00:00": "5:00pm",
+                "17:30:00": "5:30pm",
+                "18:00:00": "6:00pm",
+                "18:30:00": "6:30pm",
+                "19:00:00": "7:00pm",
+                "19:30:00": "7:30pm",
+                "20:00:00": "8:00pm",
+                "20:30:00": "8:30pm",
+                "21:00:00": "9:00pm",
+                "21:30:00": "9:30pm",
+                "22:00:00": "10:00pm",
+                "22:30:00": "10:30pm",
+                "23:00:00": "11:00pm",
+                "23:30:00": "11:30pm"
+            }
+        },
+        "current": [
+            {
+                "id": "570",
+                "time_day": "3",
+                "time_from": "10:00:00",
+                "time_to": "20:00:00"
+            },
+            {
+                "id": "571",
+                "time_day": "5",
+                "time_from": "15:00:00",
+                "time_to": "23:00:00"
+            }
+        ]
+    },
+    "monitor_keywords": [
+        {
+            "keyword": "Lorem Ipsum2",
+            "email": "newuser@local.com"
+        }
+    ],
+    "coursework_topics": [
+        {
+            "id": "142",
+            "title": "Tag tile 4"
+        },
+        {
+            "id": "1",
+            "title": "Tag title 1"
+        },
+        {
+            "id": "141",
+            "title": "Tag title 2"
+        },
+        {
+            "id": "7",
+            "title": "Tag title 3"
+        }
+    ]
+}
+}

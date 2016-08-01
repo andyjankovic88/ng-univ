@@ -1,0 +1,43 @@
+<!-- about-section -->
+<div class="about-section">
+   <div class="section" ng-if="profileInfo.education.length">
+      <h2>Education</h2>
+      <address>
+         <p ng-repeat="value in profileInfo.education">{{value.Name_of_School}}, {{value.Dates_attended}}</p>
+         <!--<p ng-repeat-end>{{value.Dates_attended}}</p>-->
+      </address>
+   </div>
+   <div class="section">
+      <h2>Places</h2>
+      <dl class="def-list">
+         <dt>Hometown:</dt>
+         <dd>{{profileInfo.places.town}}</dd>
+         <dt>Current Town/Suburb:</dt>
+         <dd>{{profileInfo.places.currtown}}</dd>
+         <dt>Country:</dt>
+         <dd>{{profileInfo.places.country}}</dd>
+      </dl>
+   </div>
+   <div class="section" ng-if="profileInfo.languages.length">
+      <h2>Languages</h2>
+      <tags-list list="profileInfo.languages"></tags-list>
+   </div>
+   <div class="section" ng-if="profileInfo.interests.length">
+      <h2>Interests</h2>
+      <tags-list list="profileInfo.interests"></tags-list>
+   </div>
+   <div class="section" ng-if="profileInfo.work_experience.length">
+      <h2>Work experience</h2>
+      <ul class="list-simple">
+         <li ng-repeat="value in profileInfo.work_experience">{{value.Company_Name}}, {{value.Position_Name}}</li>
+      </ul>
+   </div>
+   <div class="section" ng-if="profileInfo.skills.length">
+      <h2>Skills</h2>
+      <tags-list list="profileInfo.skills"></tags-list>
+   </div>
+   <div class="section" ng-if="profileInfo.club_memberships.length">
+      <h2>Clubs memberships</h2>
+      <tags-list list="profileInfo.club_memberships"></tags-list>
+   </div>
+</div>

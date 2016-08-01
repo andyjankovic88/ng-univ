@@ -1,0 +1,19 @@
+.item-brief-info {
+    .name {
+        margin-bottom: 9px;
+    }
+    .details {
+        margin-top: 4px;
+        .detail-item {
+            padding: 4px 0;
+            font-family: latobold;
+            font-size: 11px;
+            color: $color-inactive;
+            svg {
+                height: 13px;
+                width: 14px;
+                vertical-align: bottom;
+            }            
+        }
+    }
+}

@@ -1,0 +1,150 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "",
+  "properties": {
+    "activity": {
+      "type": "",
+      "items": [
+        {
+          "type": "",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "image_url": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            },
+            "user": {
+              "type": "",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "photo_url": {
+                  "type": "string"
+                },
+                "group_id": {
+                  "type": "integer"
+                },
+                "user_type": {
+                  "type": "string"
+                },
+                "karma": {
+                  "type": "integer"
+                }
+              }
+            },
+            "type": {
+              "type": "string"
+            },
+            "entity_type": {
+              "type": "string"
+            },
+            "created": {
+              "type": "string"
+            },
+            "link": {
+              "type": "",
+              "properties": {
+                "linked_object_type": {
+                  "type": "string"
+                },
+                "linked_object_id": {
+                  "type": "integer"
+                },
+                "linked_object_extra": {
+                  "type": "string"
+                },
+                "linked_object_extra_id": {
+                  "type": "integer"
+                }
+              }
+            },
+            "how_long_ago": {
+              "type": "string"
+            },
+            "extras_type": {
+              "type": "string"
+            },
+            "StudyGroupInfo": {
+              "type": "",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "image_url": {
+                  "type": "string"
+                },
+                "privacy": {
+                  "type": "string"
+                },
+                "creator": {
+                  "type": "",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "photo_url": {
+                      "type": "string"
+                    },
+                    "group_id": {
+                      "type": "integer"
+                    },
+                    "user_type": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "is_joined": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "required": [
+            "id",
+            "image_url",
+            "text",
+            "user",
+            "type",
+            "entity_type",
+            "created",
+            "link",
+            "how_long_ago",
+            "extras_type",
+            "StudyGroupInfo"
+          ]
+        }
+      ],
+      "required": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    "offset": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "activity",
+    "offset"
+  ]
+}

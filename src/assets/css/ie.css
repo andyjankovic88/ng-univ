@@ -1,0 +1,29 @@
+#class_post_pointer_arrow
+{
+	position: absolute;
+	top: -8px;
+	left: 15px;
+	z-index: 99;
+}
+
+
+
+
+#post_anonymously,
+#remember input{
+	padding: 0px;
+	border: none;
+}
+
+
+#profile #classes td.only-child,
+#profile #past-classes td.only-child {
+    padding-right: 35px;
+    border-bottom: none;
+}
+
+#profile #classes td:first-child + td,
+#profile #past-classes td:first-child + td {
+    padding-left: 0;
+    padding-right: 0;
+}

@@ -1,0 +1,64 @@
+<div class="content-heading">
+    <h1>Marketplace</h1>
+    <div class="float-right default-btn l-space">    
+        <a ui-sref="marketplaceCreateItem({type: 'sell'})" class="btn-blue">Sell Item</a>
+        <a ui-sref="marketplaceCreateItem({type: 'want'})" class="btn-green">Want Item</a> 
+    </div>
+    <form id="form-search" class="r-side" ng-submit="doFeedSearch()">
+        <fieldset>
+            <div class="search-block">
+                <input type="text" placeholder="Search post" ng-model="searchString">
+                <button class="search">
+                    <svg class="ico-search">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#header-search"></use>
+                    </svg>
+                </button>
+            </div>            
+        </fieldset>        
+    </form>
+</div>
+<div class="campus-tabs-wrapper">
+    <ul class="campus-tabs clearfix">
+        <li ng-class="{active: !userParam}">
+            <a href="#" ui-sref="marketplace({userId: ''})">
+                <svg class="list">
+                    <use xlink:href="#feeds-list" />
+                </svg>
+                MARKETPLACE
+            </a>
+        </li>
+        <li ng-class="{active: userParam}">
+            <a href="#" ui-sref="marketplaceList({userId: userId})">
+                <svg class="ico-star">
+                    <use xlink:href="#feeds-star" />
+                </svg>
+                MY ITEMS
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="row">
+    <div class="col">
+        <label>
+            Sort by price:
+        </label>
+        <div class="select-white" dropdown-select="sortOptions" dropdown-model="selectedSort" dropdown-item-label="text" dropdown-onchange="onSortChanged(selected)"></div>
+    </div>
+    <div class="col">
+        <label>
+            Filter by Category:
+        </label>
+        <combo-with-checkboxes options="categories" id-key="category_id" label-key="category_name" id-attr-prefix="cat" ng-model="selectedCategories"></combo-with-checkboxes>
+    </div>
+    <div class="col">
+        <label>
+            Filter by Campus:
+        </label>
+        <combo-with-checkboxes options="campuses" id-key="campus_id" label-key="campus_name" id-attr-prefix="camp" ng-model="selectedCampuses"></combo-with-checkboxes>
+    </div>
+</div>
+<ul class="goods-list">
+    <li ng-repeat="item in goods" class="goods-item">
+        <marketplace-list-item item="item" delete-item="deleteItem(item)" sold-item="soldItem(item)"></marketplace-list-item>
+    </li>
+</ul>

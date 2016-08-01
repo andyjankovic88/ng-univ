@@ -1,0 +1,49 @@
+<div class="uc-field-list time-section">
+   <div class="option-item options-link">
+      <div class="headers clearfix">
+         <div><label for="day">Day</label></div>
+         <div><label for="from">From</label></div>
+         <div><label for="to">To</label></div>
+      </div>
+      <div ng-repeat="option in options track by $index" class="clearfix time-holder">
+         <div class="select">
+            <div class="select-custom select-big">
+               <select id="day" ng-class="{selected : option.time_day}" ng-model="option.time_day">
+                  <option value="">select</option>
+                  <option ng-repeat="(key, value) in consultationData.day" value="{{key}}">{{value}}</option>
+               </select>
+            </div>
+         </div>
+         <div class="select">
+            <div class="select-custom select-big">
+               <select id="from" ng-class="{selected : option.time_from}" ng-model="option.time_from">
+                  <option value="">select</option>
+                  <option ng-repeat="(key, value) in consultationData.time" value="{{key}}">{{value}}</option>
+               </select>
+            </div>
+         </div>
+         <div class="select">
+            <div class="select-custom select-big">
+               <select id="to" ng-class="{selected : option.time_to}" ng-model="option.time_to">
+                  <option value="">select</option>
+                  <option ng-repeat="(key, value) in consultationData.time" value="{{key}}">{{value}}</option>
+               </select>
+            </div>
+         </div>
+         <svg class="ico-remove r-side" ng-click="removeOption($index)">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-remove"></use>
+         </svg>
+      </div>
+   </div>
+   <div class="holder">
+      <ul class="post-options r-side">
+         <li>
+            <a href="#" ng-click="addOption()">
+               <svg class="ico-add">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#popup-plus"></use>
+               </svg>
+            </a>
+         </li>
+      </ul>
+   </div>
+</div>

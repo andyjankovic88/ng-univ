@@ -1,0 +1,33 @@
+<!-- university -->
+<div class="university rhs-connections">
+   <!-- side-box -->
+    <div class="side-box invite-students at-univerity">
+        <div class="heading">
+        <h1><span>Upcoming Events</span><span class="amount"><a href="#">{{list.length}}</a></span></h1></div>
+        <section class="section">
+            <ul class="list-inner">
+                <li ng-repeat="(key, value) in list | limitTo:limit" ui-sref="profile({id: value.user_id})">
+                    <div>
+                        <figure class="img-holder">
+                            <img class="photo" ng-src="{{value.pic}}">
+                        </figure>
+                        <div class="popup-info">
+                            <h3>
+                                <a href="#" >{{value.title}}</a>
+                                <div class="options-icons">
+                                    <svg class="icon-hide"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#connections-eyehide"></use></svg>
+                                    <svg  class="icon-add"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#popup-plus"></use></svg>
+                                </div>
+                            </h3>
+                            <div class="message-update">{{value.start_datetime | date: "d MMM yyyy"}} to {{value.end_datetime | date:"d MMM yyyy"}}</div>
+                            <div class="message-update">{{value.start_datetime | date: "shortTime"}} to {{value.end_datetime | date:"shortTime"}}</div>
+                            <div class="message-update">{{timezone}}</div>
+                            <div class="message-update">{{location}}</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <span class="collapse"><a href="#" ng-click="seeAll()">See all</a></span>
+</div>

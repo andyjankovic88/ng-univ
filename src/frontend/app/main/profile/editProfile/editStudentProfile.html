@@ -1,0 +1,151 @@
+<!-- edit-profile -->
+<div id="edit-profile">
+    <div class="profile-header not-created">
+        <div class="banner">
+            <form id="upload-cover-pic">
+                <fieldset>
+                    <input for="txt" type="file" placeholder="" />
+                    <svg class="ico-test"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-test"></use></svg>
+                    <label id="txt">Click to upload your Cover Pic or just drag it here</label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="holder-info">
+            <div class="user-info">
+                <figure class="img-holder">
+                    <div class="avatar-holder" ngf-select="uploadUserPic($file)" ngf-max-size="10MB" accept="image/*">
+                        <img class="avatar" ng-if="details.profile_pic" ng-src="{{details.profile_pic}}" alt="avatar">
+                        <img class="avatar" ng-if="!details.profile_pic" src="/assets_new/images/userpic.png" alt="avatar">
+                        <span class="link-update" ng-if="!details.profile_pic">update</span>
+                    </div>
+                    <figcaption class="user-name">
+                        <h1>{{user_name}}</h1>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <form id="form-edit-profile" name="">
+        <fieldset>
+            <h2>Info</h2>
+            <div class="row">
+               <label for="degree">Degree</label>
+               <div class="search-section" dropdown>
+                  <input type="text" class="autoinput input-big input-typeahead" id="degree" ng-model="search.label"
+                         typeahead="course as course.label for course in details.courses.options | filter:{label:$viewValue}"
+                         autocomplete="off" />
+               </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="dropdown-faculty">Faculty</label>
+                    <combo-with-checkboxes options="details.faculties.options" id-key="id" label-key="name" id-attr-prefix="faculty-" ng-model="selectedFaculties"></combo-with-checkboxes>
+                </div>
+                <div class="col">
+                     <label for="campus">Campus</label>
+                    <div class="select-custom select-big">
+                        <select ng-class="{selected : details.campus.current}" ng-model="details.campus.current" id="campus">
+                            <option ng-repeat="(key, value) in details.campus.options" value="{{key}}">{{value}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-holder">
+                    <div class="col">
+                        <label for="dropdown-course-start">Course Start</label>
+                        <div class="select-custom select-big">
+                            <select ng-class="{selected : details.start_year.current}" id="dropdown-course-start" ng-model="details.start_year.current">
+                                <option ng-repeat="(key, value) in details.start_year.options" value="{{value}}">{{value}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="dropdown-course-end">Course End</label>
+                        <div class="select-custom select-big">
+                            <select ng-class="{selected : details.completion_year.current}" id="dropdown-course-start" ng-model="details.completion_year.current">
+                                <option ng-repeat="(key, value) in details.completion_year.options" value="{{key}}">{{value}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-holder">
+                    <ul class="checkbox-list">
+                        <li>
+                            <div class="checkbox">
+                                <input id="international-student" type="checkbox" ng-model="details.international" ng-true-value="1" ng-false-value="0" title="I am an international student" >
+                                <label for="international-student" style="padding-left: 20px;">I am an international student</label>
+                            </div>
+                        </li>
+                        <li ng-if="showVET()">
+                            <div class="checkbox">
+                                <input id="vet-student" ng-model="details.vet" ng-true-value="1" ng-false-value="0" type="checkbox" title="I am a VET student">
+                                <label for="vet-student">I am a VET student</label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <h2 class="strong">Extracurricular</h2>
+            <h2>Places</h2>
+            <div class="row">
+                <div class="col">
+                    <label for="home-city">Home City</label>
+                    <input class="input-big" id="home-city" type="text" ng-model="details.places.town" />
+                </div>
+                <div class="col">
+                    <label for="current-city">Current City/Town</label>
+                    <input class="input-big" id="current-city" type="text" ng-model="details.places.currtown" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="nationality">Nationality</label>
+                    <input class="input-big" id="nationality" type="text" ng-model="details.places.country" />
+                </div>
+                <div class="col"></div>
+            </div>
+            <h2>Education</h2>
+            <div class="row">
+               <div class="col"><label class="no-margin">Name of School</label></div>
+               <div class="col"><label class="no-margin">Year Graduated</label></div>
+            </div>
+            <div class="row">
+               <fields-list options="education" select-options="years" type="twoFieldSelect" placeholder="Name of School" placeholder2="Year Graduated" field="Name_of_School" field2="Dates_attended" ></fields-list>
+            </div>
+            <h2>Work Experience</h2>
+            <div class="row">
+               <div class="col"><label class="no-margin">Company Name</label></div>
+               <div class="col"><label class="no-margin">Position</label></div>
+            </div>
+            <div class="row">
+               <fields-list options="works" type="twoField" placeholder="Company Name" placeholder2="Position" field="Company_Name" field2="Position_Name" ></fields-list>
+            </div>
+            <h2>Languages</h2>
+            <div class="row">
+                <label>What languages are you speaking?</label>
+                <fields-list options="languages" type="oneField" placeholder="Add language" field="title" ></fields-list>
+            </div>
+            <h2>Skills</h2>
+            <div class="row">
+                <label>What are your skills?</label>
+                <fields-list options="skills" type="oneField" placeholder="Add skill" field="title" ></fields-list>
+            </div>
+            <h2>Interests</h2>
+            <div class="row">
+                <label>What are you interested in?</label>
+                <fields-list options="interests" type="oneField" placeholder="Add interest" field="title" ></fields-list>
+            </div>
+            <div class="row">
+                <ul class="options-btn">
+                    <li>
+                        <button type="button" ui-sref="profile({id: userId})" class="btn-link">Cancel</button>
+                    </li>
+                    <li>
+                        <button type="button" ng-click="updateStudentProfile()" class="btn-green">Save Profile</button>
+                    </li>
+                </ul>
+            </div>
+        </fieldset>
+    </form>
+</div>

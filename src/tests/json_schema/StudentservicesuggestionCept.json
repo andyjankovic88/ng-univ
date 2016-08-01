@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "suggested_services": {
+          "type": "array",
+          "items": []
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

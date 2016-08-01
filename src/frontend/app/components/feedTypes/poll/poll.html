@@ -1,0 +1,38 @@
+<div class="vote-section">
+   <h2 class="font24" ng-bind-html="text"></h2>
+   <form class="form-poll" action="#">
+      <div class="row">
+         <div class="col col-votes">
+            <fieldset>
+               <div class="row"
+                    ng-class="{active: $first && (pollOption.n_votes > 0), checked: pollOption.has_voted }"
+                    ng-repeat="pollOption in feed.poll_options" >
+                  <label>
+                     <input class="customradio" type="radio"
+                            name="poll"
+                            ng-value="pollOption.id"
+                            ng-model="$parent.voted"
+                            ng-disabled="$parent.voted"/>
+                     <span>{{pollOption.text}}</span>
+                  </label>
+                  <div class="poll-container" ng-if="$parent.voted > -1">
+                     <div class="poll-results">
+                        <div class="bar-title">
+                           <span>{{pollOption.vote_percent}}%</span>
+                           <span>{{pollOption.n_votes}} votes</span>
+                        </div>
+                        <div class="bar-container">
+                           <span class="bg-bar" ng-style="{width: pollOption.vote_percent + '%'}"></span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </fieldset>
+         </div>
+         <div class="col col-votes-count">
+            <div class="lbl-vote-count">{{totalVotes}}</div>
+            <div>Total Votes</div>
+         </div>
+      </div>
+   </form>
+</div>

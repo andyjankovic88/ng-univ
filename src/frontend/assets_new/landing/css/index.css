@@ -1,0 +1,1610 @@
+@import url("https://fonts.googleapis.com/css?family=Kreon:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700");
+img.uni-grounds-home {
+  min-height: 100%;
+  min-width: 1564px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+@media screen and (max-width: 1564px) {
+  img.uni-grounds-home {
+    left: 50%;
+    margin-left: -782px;
+  }
+}
+#conf {
+  background: #162e4d;
+  height: 30px;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+}
+#conf a {
+  color: white;
+  text-decoration: underline;
+}
+#public-header {
+  background: #ffffff;
+  background-color: rgba(255, 255, 255, 0.07);
+  margin-bottom: 32px;
+}
+.public-header-container {
+  width: 960px;
+  margin: 0 auto;
+  height: 86px;
+  padding-top: 34px;
+}
+#public-header #login #password {
+  background: url(/assets_new/images/index/button-facebook_signin-299px.png) no-repeat -9999px -9999px;
+}
+.public_bg {
+  background: url(/assets_new/images/index/button-ucroo_signin-299px.png) no-repeat -9999px -9999px;
+}
+#public-header .logo {
+  float: left;
+  margin-right: 20em;
+}
+#public-header .logo a {
+  color: #ffffff;
+}
+#public-header .logo img {
+  vertical-align: middle;
+  margin-right: 1em;
+}
+#public-header .logo .slogan {
+  font-family:'Kreon', Garamond, serif;
+  font-size: 1.666666667em;
+  text-shadow: 0 -1px 0px #252525;
+  color: #ffffff;
+}
+#public-header #login {
+  float: right;
+  margin-left: 3em;
+  font-size: 1.333333333em;
+}
+#public-header #menu {
+  float: right;
+  font-size: 1.166666667em;
+  font-family:'Kreon', Garamond, serif;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 50px;
+}
+#public-header #menu a {
+  color: #ffffff;
+  margin-left: 3em;
+  text-shadow: 0 -1px 0px #252525;
+}
+#public-header #menu a:hover {
+  text-decoration: underline;
+}
+#public-header #menu li ul#about_menu {
+  right: 0;
+  margin-top: 12px;
+  width: 150px;
+  border-top: none;
+}
+#public-header #menu li li {
+  float: none;
+  margin: 0;
+}
+#public-header #menu li .last {
+  border-bottom: none;
+}
+#about_menu {
+  display: none;
+  z-index: 10;
+}
+#public-header #menu #about_link:hover > a,
+#public-header #menu #about_link.active > a {
+  color: #004b84;
+}
+#public-header #menu li li a {
+  padding: 0 25px;
+  height: 45px;
+  line-height: 45px;
+  display: block;
+}
+#public-header #menu li li a:hover {
+  background: #004b84;
+  color: #fff;
+  text-decoration: none;
+}
+#content .content_nav {
+  position: fixed;
+  right: 40px;
+  top: 250px;
+  width: 20px;
+  z-index: 1000;
+}
+#content .content_nav ul li {
+  background: url('/assets_new/images/index/content_nav.png');
+  cursor: pointer;
+  height: 24px;
+  list-style-type: none;
+  text-align: center;
+  width: 24px;
+}
+#content .content_nav ul li.active {
+  background: url('/assets_new/images/index/content_nav_active.png');
+}
+#content .content {
+  float: none;
+  margin: 0 auto;
+  min-height: 525px;
+  position: relative;
+}
+#content .black, #public-header #menu ul li a {
+  color: #000000;
+}
+#content h1, h2, h3, h4, .feature-benefits dt {
+  font-family:'Kreon', Garamond, serif;
+}
+#content h1 {
+  color: #ffffff;
+  font-size: 2em;
+  line-height: 1.4;
+  font-weight: 400;
+  text-shadow: 0 -1px 0px #252525;
+}
+#content .noupper {
+  text-transform: none;
+  font-size: 36px;
+}
+#content h2 {
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 26px;
+}
+#content h3 {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+#content .content .text, #content h3, .feature-benefits {
+  font-family:"Source Sans Pro", Verdana, "Trebuchet MS", sans-serif;
+  font-weight: 600;
+  text-shadow: 0 -1px 0px #252525;
+  color: #ffffff;
+}
+#content .content .text {
+  float: left;
+  margin-right: 30px;
+  width: 409px;
+  padding-left: 1.5em;
+  text-shadow: 0 -1px 0 #252525;
+  color: #ffffff;
+}
+#content .content .text p {
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-bottom: 3.7em;
+  line-height: normal;
+}
+#content .content .video,
+.hero {
+  cursor: pointer;
+  float: right;
+  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: .75em;
+}
+.hero {
+  float: right;
+  cursor: auto;
+}
+.sub-hero {
+  float: right;
+}
+#content div.welcomemessage.fb h1.rating {
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+.fb-sign-in a {
+  background: transparent url('/assets_new/images/index/button-fb_lightblue.png') no-repeat 0 0;
+  height: 52px;
+  line-height: 50px;
+  margin-bottom: 15px;
+  margin-right: 0;
+  padding: 0 0 0 78px;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  width: 294px;
+  font-size: 1.5em;
+  font-family:"Source Sans Pro", Verdana, "Trebuchet MS", sans-serif;
+  font-weight: 600;
+  text-shadow: 0 -1px 0 #555555;
+}
+.fb-sign-in a:hover {
+  background-position: 0 -104px;
+}
+.fb-sign-in a:active {
+  background-position: 0 -52px;
+  text-shadow: none;
+  top: 1px;
+}
+.fb-sign-in.small a {
+  margin: 0 auto;
+  background: transparent url('/assets_new/images/index/button-facebook_signin-299px.png') no-repeat;
+  font-size: .8125em;
+  line-height: 31px;
+  height: 31px;
+  text-shadow: 0 1px 0 #000;
+  padding: 0 0 0 55px;
+  width: 165px;
+  text-align: left;
+  border-radius: 2px;
+  margin: 0;
+  display: block;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+.fb-sign-in.small a:hover {
+  background-position: 0 -62px;
+}
+.fb-sign-in.small a:active {
+  background-position: 0 -31px;
+  text-shadow: none;
+  top: 1px;
+}
+#content .content .note.signup {
+  margin: 0 auto 0 70px;
+  width: 630px;
+}
+#content .content .note.signup .con {
+  padding: 30px 80px;
+}
+#content .content .note.signup .con .top {
+  margin-right: 90px;
+}
+#content .content .note.signup .con .top h2 {
+  font-size: 2.7em;
+  text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 290px;
+}
+#content .content .note.signup .con hr {
+  border-bottom-width: 2px;
+}
+#content .content .note.signup .top {
+  float: left;
+  width: 210px;
+}
+#content .content .note.signup .top input {
+  width: 100%;
+}
+#content .content .note.signup .profile-pic {
+  background: url('/assets_new/images/index/sprite.png') no-repeat 0 -170px;
+  float: left;
+  height: 190px;
+  margin-bottom: 20px;
+  width: 190px;
+}
+#content .content .note.signup .profile-pic .pic-inner {
+  margin: 12px 12px 16px 14px;
+  overflow: hidden;
+  height: 164px;
+  width: 164px;
+}
+#content .content .con.steps form .cands input {
+  width: 10px;
+}
+#content .content #signup-email {
+  width: 205px;
+}
+#content .content #course_name {
+  width: 475px;
+}
+#content .content .note.signup .info, #content .content .pad {
+  padding: 10px 0;
+  position: relative;
+}
+#content .content .note.signup .bottom .course {
+  margin-bottom: 10px;
+}
+#content .content .note.signup .bottom .course input {
+  width: 93%;
+}
+#content .content .note.signup .bottom .left,
+#content .content .note.signup .bottom .right {
+  float: left;
+  width: 220px;
+}
+#content .content .note.signup .bottom .left {
+  margin-right: 70px;
+}
+#content .content .note.signup .top label,
+#content .content .note.signup .bottom label {
+  display: block;
+}
+#content .content .note.login input[type=text],
+#content .content .note.login input[type=password],
+#content .content .note.signup .con .bottom select,
+#content .content .note.signup .con input {
+  width: 100%;
+}
+#content .content .note.signup .top select,
+#content .content .note.signup .top input,
+#content .content .note.signup .bottom select,
+#content .content .note.signup .bottom input {
+  margin-bottom: 15px;
+}
+#public-header #login .button,
+#content .content .note.signup .profile-pic .button {
+  background: url('/assets_new/images/index/sprite.png') 0 -2px no-repeat;
+  border: none;
+  color: #fff;
+  font-size: 19px;
+  font-weight: bold;
+  height: 41px;
+  text-align: center;
+  text-shadow: 0 0 1px #333;
+  text-transform: uppercase;
+  width: 243px;
+}
+#content .content .note.signup .profile-pic .button:hover {
+  background: url('/assets_new/images/index/sprite.png') 0 -43px no-repeat;
+  text-shadow: 0 0 2px #111;
+}
+#public-header #login .button,
+#content .content .note.signup .profile-pic .button {
+  background: url('/assets_new/images/index/sprite.png') -2px -88px no-repeat;
+  cursor: pointer;
+  height: 31px;
+  margin: 25px auto 0 auto;
+  padding: 5px;
+  width: 142px;
+}
+#content .content .note.signup .profile-pic p {
+  text-align: center;
+}
+#public-header #login .button:hover,
+#content .content .note.signup .profile-pic .button:hover {
+  background: url('/assets_new/images/index/sprite.png') -2px -130px no-repeat;
+}
+#public-header #login .button a,
+#content .content .note.signup .profile-pic .button a {
+  color: #fff;
+  font-size: 10px;
+  line-height: 30px;
+}
+#profile-pic .fb_button_big {
+  background-image: url(/assets_new/images/index/button-fb-login-big.jpg);
+  width: 144px;
+  height: 144px;
+  color: #fff;
+  padding: 10px;
+}
+#profile-pic a:hover {
+  color: #fff;
+}
+#content .content .note.signup .top .password div {
+  float: left;
+}
+.primary_action .error {
+  background-color: #C95E5B;
+  color: hsl(2, 70%, 96%);
+  font-family:"Source Sans Pro", Verdana, "Trebuchet MS", sans-serif;
+  font-weight: 400;
+  font-size: 1.4em;
+  line-height: normal;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  padding: 1.5em;
+}
+#homeform p:first-child {
+  margin-top: 2em;
+}
+#content .content .note.login .error,
+#content .content .note.login h1 {
+  margin-bottom: 20px;
+}
+#content .content .note.login .con {
+  padding: 30px 100px;
+}
+#accd,
+#public-header #menu li ul {
+  position: absolute;
+  background-color: white;
+  font-family:"Source Sans Pro", Verdana, "Trebuchet MS", sans-serif;
+  font-weight: 400;
+}
+#accd {
+  width: 220px;
+  margin-left: -200px;
+  margin-top: -5px;
+  z-index:9999;
+  padding: 15px 25px;
+  -webkit-border-radius: 6px 0 6px 6px;
+  -moz-border-radius: 6px 0 6px 6px;
+  border-radius: 6px 0 6px 6px;
+  background-clip: padding-box;
+}
+#public-header #login #accd .button {
+  font-size: .8125em;
+  font-weight: 600;
+}
+#public-header #login #accd .button.ucroo {
+  background: transparent url('/assets_new/images/index/button-ucroo_signin-299px.png') no-repeat 0 0;
+  line-height: 31px;
+  height: 31px;
+  border-radius: 2px;
+  padding: 0 0 0 55px;
+  text-align: left;
+  width: 165px;
+  margin: 20px 0 0 0;
+  position: relative;
+  text-shadow: 0 1px 0 #000;
+  text-transform: none;
+}
+#public-header #login #accd .button.ucroo:hover {
+  background-position: 0 -62px;
+}
+#public-header #login #accd .button.ucroo:active {
+  background-position: 0 -31px;
+  top: 1px;
+  text-shadow: none;
+}
+#public-header #login #signin {
+  font-weight: 700;
+  padding: .4em 1em;
+  margin-top: .59375em;
+}
+#public-header #login #signin:hover {
+  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+#public-header #login #signin:active,
+#public-header #login #signin.active {
+  background-color: #ffffff;
+  color: #004b84;
+  text-shadow: none;
+}
+.button {
+  position: relative;
+}
+.button .ui-icon,
+#signin .ui-icon {
+  background: url('/assets_new/images/index/ui-icon-down_arrow.png') no-repeat 0 0;
+  height: 6px;
+  width: 13px;
+  position: absolute;
+  right: 5px;
+  top: 12px;
+}
+.button .ui-icon.active,
+#signin .ui-icon.active {
+  top: 11px;
+}
+.button.ucroo .ui-icon {
+  top: 13px;
+  right: 4px;
+}
+#login #accd #login-form input[type=submit],
+#login #accd #login-form input[type=password],
+#login #accd #login-form input[type=text] {
+  margin-bottom: 10px;
+  width: 208px;
+}
+#login #accd #login-form input[type=submit] {
+  margin-top: 12px;
+  margin-bottom: 0;
+  width: auto;
+  font-size: 1em;
+  line-height: normal;
+  padding: 0.4em 0.6em;
+}
+#login #accd #login-form input[type=submit]:active {
+  color: #ffffff;
+}
+.fb-like {
+  margin-top: 30px;
+}
+.green {
+  color: green;
+}
+.red {
+  color: red;
+}
+.orange {
+  color: orange;
+}
+#add-points {
+  background-color:#fff;
+  margin:30px;
+  padding: 10px 30px 40px 30px;
+}
+#add-points h1 {
+  margin: 20px 0;
+}
+#add-points .btn-light_blue {
+  padding: 0 35px;
+}
+ul.add-points-admin > li {
+  float: left;
+}
+ul.add-points-admin li {
+  list-style: inside;
+  list-style-type: none;
+}
+ul.add-points-admin ul {
+  margin-left: 80px;
+}
+.message p {
+  padding: 20px 20px 20px 0;
+}
+ul.add-points-admin .message {
+  padding: 20px 20px 20px 0;
+  color: orange;
+}
+#loading {
+  background: url(/assets_new/images/loading_square.gif);
+  height: 21px;
+  width: 140px;
+}
+.reply-button {
+  float: left;
+  margin: 25px 0;
+}
+#forgot_password_page .forgot_password_dialog,
+.login.primary_action,
+.reset_password_dialog.primary_action,
+.error_page.primary_action,
+.signup_connect.primary_action,
+.activation_required_page.primary_action,
+.terms_page .primary_action {
+  width: 60%;
+  margin: 0 auto;
+  text-align: left;
+  padding-bottom: 1.5em;
+}
+.activation_required_page.primary_action {
+  padding: 1.5em;
+}
+.signup_connect.primary_action {
+  padding: 1.5em;
+}
+#forgot_password_form {
+  margin-top: 1em;
+}
+.forgot_password_dialog label,
+.forgot_password_dialog p,
+.login label,
+.reset_password_dialog label,
+.error_page.primary_action p {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 #252525;
+  font-family:"Source Sans Pro", Verdana, "Trebuchet MS", sans-serif;
+  font-size: 1.5em;
+  line-height: normal;
+}
+.error_page.primary_action a {
+  color: #ffffff;
+  background: transparent url(/assets_new/images/menu/icon_house_sprite_nods-60x60.png) no-repeat 0 1px;
+  padding-left: 28px;
+  float: right;
+}
+#content .error_page h1 {
+  font-size: 3.6em;
+}
+.login.primary_action input[type='text'],
+.login.primary_action input[type='password'],
+.forgot_password_dialog.primary_action input[type='text'],
+.reset_password_dialog.primary_action input[type='password'] {
+  margin: 0 0 1em;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#forgot {
+  font-size: .75em;
+  margin-left: 0.6em;
+}
+.login.primary_action input[type='checkbox'] {
+  margin: 0;
+  line-height: 1;
+  padding: 0;
+}
+.login.primary_action #signup-submit {
+  float: right;
+}
+.forgotten_password {
+  color: #ffffff;
+  margin-left: 1em;
+  font-family:"Source Sans Pro", Verdana, "Trebuchet MS", sans-serif;
+  font-weight: 400;
+}
+.forgot_password_dialog p {
+  margin-bottom: 1em;
+}
+.primary_action,
+.secondary_call_to_action {
+  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.07);
+  color: #ffffff;
+  padding: 18px 18px 10px;
+}
+.primary_action {
+  margin-left: -1.5em;
+}
+.primary_action input[type='text'],
+.primary_action input[type='password'] {
+  font-family: Kreon, Garamond, serif;
+  font-size: 1.5em;
+  line-height: normal;
+  border: none;
+  padding: 0.46em .888888889em;
+  width: 14.344444444em;
+  margin-right: .555555556em;
+}
+.primary_action .secure-information,
+.secondary_call_to_action .secure-information {
+  font-family:"Source Sans Pro", Verdana, "Trebuchet MS", sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  background-color: transparent;
+  background-image: url(/assets_new/images/index/secure-icon.png);
+  background-repeat: no-repeat;
+  background-position: 0 4px;
+  padding-left: 1.272727273em;
+  display: block;
+  line-height: 1.375;
+  margin: 0 0 0 8em;
+}
+.for_clubs_page .primary_action .btn-call_to_action {
+  float: right;
+}
+.for_clubs_page .secondary_call_to_action .btn-call_to_action {
+  float: left;
+}
+.for_clubs_page .primary_action .secure-information,
+.for_clubs_page .secondary_call_to_action .secure-information {
+  margin-left: 14em;
+}
+.for_clubs_page .primary_action .secure-information {
+  margin-top: 1.52em;
+}
+.for_clubs_page .secondary_call_to_action .secure-information {
+  margin-top: 1.6em;
+}
+.primary_action p,
+.primary_action a {
+  text-shadow: 0 -1px 0 #252525;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+.primary_action p {
+  font-size: 1.5em;
+  font-family:"Source Sans Pro", Verdana, "Trebuchet MS", sans-serif;
+}
+#content .content .primary_action h3,
+#content .content .secondary_call_to_action h3 {
+  margin-bottom: 0.8em;
+  font-size: 1.833333333em;
+}
+.text .primary_action .btn-call_to_action,
+.for_instructors_page .primary_action .btn-call_to_action,
+.for_clubs_page .primary_action .btn-call_to_action,
+.for_students_page .primary_action .btn-call_to_action {
+  float: left;
+}
+.primary_action .ui-state-error p,
+.primary_action .ui-state-error a {
+  color: #cd0a0a;
+  text-shadow: none;
+}
+.primary_action .ui-state-error p:last-child {
+  margin-bottom: 0;
+}
+.testimonial-section {
+  margin-top: 5em;
+}
+.testimonial-section h4 {
+  font-family:"Source Sans Pro", Verdana, "Trebuchet MS", sans-serif;
+  font-size: 1.833333333em;
+  color: #ffffff;
+  text-shadow: 0 -1px 0px #252525;
+  font-weight: 600;
+  text-align: center;
+}
+.testimonials {
+  list-style: none;
+}
+.testimonial-section .testimonials li {
+  list-style: none;
+  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  text-shadow: 0 -1px 0px #252525;
+  font-family:"Source Sans Pro", Verdana, "Trebuchet MS", sans-serif;
+  font-weight: 600;
+  font-size: 1.333333333em;
+  font-style: normal;
+  position: relative;
+  height: 11em;
+}
+.testimonials blockquote,
+.testimonials p {
+  color: inherit;
+  font-size: inherit;
+  font-style: inherit;
+}
+.testimonials .testimonial-quote {
+  margin-bottom: 0.8em;
+}
+.testimonials .author-organisation-logo {
+  position: absolute;
+  bottom: 1.25em;
+  right: 1.25em;
+}
+.testimonials .testimonial-author {
+  font-family: Kreon, Garamond, serif;
+  font-weight: 300;
+  font-size: .75em;
+}
+.testimonials .testimonial-author span {
+  display: block;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+.testimonials .testimonial-author .author-name {
+  font-weight: 400;
+}
+.index-footer {
+  font-family:"Source Sans Pro", Verdana, "Trebuchet MS", sans-serif;
+  color: #ffffff;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+.index-footer a {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.166666667em;
+  margin-left: 1.5em;
+}
+.index-footer a:first-child {
+  margin-left: 0;
+}
+.index-footer a:hover {
+  text-decoration: underline;
+}
+.half-column {
+  float: left;
+  width: 48%;
+  margin-left: 4%;
+}
+.half-column:first-child {
+  margin-left: 0;
+}
+.third-column {
+  float: left;
+  width: 32%;
+  margin-left: 2%;
+}
+.third-column:first-child {
+  margin-left: 0;
+}
+.public_navigation * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.public_navigation {
+  font-family:'Kreon', Garamond, serif;
+  font-size: 1.166666667em;
+  font-weight: 700;
+  float: left;
+  height: 100%;
+}
+.public_navigation a {
+  color: #ffffff;
+  display: inline-block;
+  position: relative;
+  padding-top: 2em;
+  margin-left: 2.5em;
+  text-shadow: 0 -1px 0 #252525;
+  height: 100%;
+}
+.public_navigation a:hover,
+.public_navigation .active {
+  border-bottom: 3px solid #ffffff;
+  text-decoration: none;
+}
+.public_navigation a:hover:after,
+.public_navigation .active:after {
+  content:"";
+  background-color: #ffffff;
+  width: 6px;
+  height: 6px;
+  display: block;
+  border-radius: 3px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  bottom: -3px;
+}
+.public_navigation a:first-child {
+  margin-left: 0;
+}
+.public-nav-sprite {
+  display: inline-block;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-image: url(/assets_new/images/index/public-nav-sprite.png);
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+.students-public-nav-icon {
+  width: 21px;
+  height: 15px;
+  background-position: -2px -2px;
+  margin-left: -10.5px;
+  top: 5px;
+}
+.instructors-public-nav-icon {
+  width: 12px;
+  height: 22px;
+  background-position: -24px -26px;
+  margin-left: -6px;
+}
+.universities-public-nav-icon {
+  width: 22px;
+  height: 20px;
+  background-position: -27px -2px;
+  margin-left: -11px;
+}
+.clubs-public-nav-icon {
+  width: 18px;
+  height: 20px;
+  background-position: -2px -26px;
+  margin-left: -9px;
+}
+.secondary_nav {
+  width: 960px;
+  margin: 0 auto;
+}
+.secondary_nav a {
+  width: 25%;
+  font-family:'Kreon', Garamond, serif;
+  font-size: 1.833333333em;
+  height: 2.727272727em;
+  line-height: normal;
+  line-height: 2.727272727em;
+  font-weight: 400;
+  display: block;
+  float: left;
+  text-align: center;
+  border-left: 1px solid #333333;
+  border-left: 1px solid rgba(26, 26, 26, 0.3);
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-shadow: 0 -1px 0 #252525;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-decoration: none;
+}
+.secondary_nav a:first-child {
+  border-left: none;
+}
+.secondary_nav a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.secondary_nav a:active {
+  background-color: rgba(255, 255, 255, 0.4);
+  top: 1px;
+}
+.secondary_nav .active,
+.secondary_nav .active:hover {
+  background-color: #ffffff;
+  color: #004b84;
+  text-shadow: none;
+  border-bottom: 5px solid #004b84;
+  cursor: default;
+}
+.secondary_nav .active:after {
+  content:"";
+  background-color: #004b84;
+  width: 8px;
+  height: 8px;
+  display: block;
+  border-radius: 4px;
+  position: absolute;
+  left: 50%;
+  margin-left: -4px;
+  bottom: -4px;
+}
+#content .content.for_students_page .text {
+  background: transparent url(/assets_new/images/index/ucroo-iphone-hand-masked.png) no-repeat bottom right;
+  padding-bottom: 2em;
+  width: 100%;
+  min-height: 560px;
+}
+#content .content.for_clubs_page .text {
+  width: 36%;
+  margin-right: 2.083333333%;
+}
+#content .content.for_students_page .text h1 {
+  width: 50%;
+}
+#content .content.for_students_page .text p,
+#content .content.for_instructors_page .text p,
+#content .content.for_clubs_page .text p,
+#content .content.for_universities_page .text p,
+#content .content.university_it_page .text p {
+  margin-bottom: 1em;
+}
+#content .content.university_it_page .text p:last-child {
+  margin-bottom: 0;
+}
+#content .content.for_instructors_page .text {
+  width: 460px;
+}
+#content .content.for_students_page .text p {
+  width: 55%;
+}
+.for_students_page .primary_action {
+  width: 50%;
+}
+.for_students_page .feature-list-overview {
+  margin-top: 2em;
+  margin-bottom: 3em;
+}
+.for_students_page .feature-list-overview li {
+  list-style: none;
+  line-height: 2;
+  font-size: 1.416666667em;
+  font-weight: 600;
+  padding-left: 2.058823529em;
+}
+.for_clubs_page .audience-selling-point .primary_action {
+  width: 525px;
+  float: right;
+  margin-top: 2.5em;
+}
+.for_clubs_page .secondary_call_to_action {
+  width: 50%;
+  margin: 0;
+}
+#content .for_clubs_page .primary_action h3 {
+  font-size: 1.7em;
+}
+.for_instructors_page .text .primary_action {
+  width: 47.916666667%;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+}
+.for_instructors_page .primary_action {
+  width: 50%;
+  margin: 0;
+}
+.for-students-bulletpoints-sprite {
+  background-repeat: no-repeat;
+  background-image:url(/assets_new/images/index/for_students-bulletpoints-sprite-40x375.png);
+}
+.briefcase-icon {background-position: -0px -0px}
+.class-discussion-icon {background-position: -1px -28px}
+.clubs-icon {background-position: 3px -57px}
+.friends-on-uni-icon {background-position: 2px -89px}
+.marketplace-icon {background-position: -0px -121px}
+.mentor-groups-icon {background-position: -0px -156px}
+.question-icon {background-position: -0px -187px}
+.student-services-icon {background-position: -0px -221px}
+.studygroup-icon {background-position: 2px -252px}
+.timetable-icon {background-position: 1px -280px}
+.uni-events-icon {background-position: -1px -314px}
+.university-icon {background-position: 1px -345px}
+
+.instant_message_chat {
+  background-position: -2px -2px
+}
+.class_discussion {
+  background-position: -2px -199px
+}
+.clubs_and_societies {
+  background-position: -2px -396px
+}
+.earn_points {
+  background-position: -2px -593px
+}
+.get_connected {
+  background-position: -2px -790px
+}
+.study_groups {
+  background-position: -2px -987px
+}
+.subject_reviews {
+  background-position: -2px -1184px
+}
+.timetable_sharing {
+  background-position: -2px -1381px
+}
+.uni_in_pocket {
+  background-position: -2px -1578px
+}
+.class_community {
+  background-position: -20px -20px
+}
+.improved_learning_outcomes {
+  background-position: -18px -201px
+}
+.increase_teaching_efficiency {
+  background-position: 10px -363px
+}
+.for_instructors_page .seamless_integration {
+  background-position: -9px -545px
+}
+.connecting_university_community {
+  background-position: 8px -36px
+}
+.mobile_membership_cards {
+  background-position: 32px -243px
+}
+.online_event_ticketing {
+  background-position: -5px -449px
+}
+.online_membership {
+  background-position: -17px -640px
+}
+.save_administration_time {
+  background-position: 30px -817px
+}
+.university-community-in-your-pocket {
+  background-position: 25px -969px
+}
+.university_support {
+  background-position: -2px -1186px
+}
+.build-an-oncampus-community {background-position: -20px -44px}
+.control-your-network {background-position: -11px -208px}
+.control-and-privacy {background-position: 26px -385px}
+.improve-access-to-support {background-position: -5px -284px}
+.personalise-the-university-experience {background-position: -7px -527px}
+.seamless-integration {background-position: 6px -976px}
+.simple-set-up-and-maintenance {background-position: -8px -1181px}
+.student-engagement-analytics {background-position: -30px -750px}
+.university-grade-security {background-position: 14px -1529px}
+.voluntary-adoption {background-position: -2px -2559px}
+.for_universities_page .feature-benefits div.connect-uni-icon {
+  background-image: url(/assets_new/images/index/connect-uni-icon-185x198.png);
+  background-position: 42px 50%;
+  -webkit-background-size: auto 120px;
+  background-size: auto 120px;
+}
+.for_universities_page .feature-benefits div.social-learning-icon {
+  background-image: url(/assets_new/images/index/for_students-feature-benefits-sprite.png);
+  background-position: -2px -151px;
+  -webkit-background-size: 184px auto;
+   background-size: 184px auto;
+}
+.for_instructors_page .feature-benefits {
+  margin-top: 3em;
+}
+.feature-benefits {
+  border-right: 10px solid #ffffff;
+}
+.for_students_page .feature-benefits div {
+  background-image:url(/assets_new/images/index/for_students-feature-benefits-sprite.png);
+}
+.for_instructors_page .feature-benefits div {
+  background-image:url(/assets_new/images/index/for_instructors-feature-benefits-sprite.png);
+  -webkit-background-size: auto 720px;
+  background-size: auto 720px;
+}
+.for_clubs_page .feature-benefits div {
+  background-image:url(/assets_new/images/index/for_clubs-feature-benefits-sprite.png);
+  -webkit-background-size: 280px auto;
+  background-size: 280px auto;
+}
+.for_universities_page .feature-benefits div {
+  background-image:url(/assets_new/images/index/for_universities-feature-benefits-sprite.png);
+  -webkit-background-size: 280px 1173.6px;
+  background-size: 280px 1173.6px;
+}
+#content .for_universities_page .text {
+  width: 340px;
+  padding-left: 0;
+}
+.university_it_page .feature-benefits div {
+  background-image:url(/assets_new/images/index/university_it-feature-benefits-sprite-360x2856.png);
+  -webkit-background-size: 240px 1904px;
+  background-size: 240px 1904px;
+}
+.university_it_page .hero {
+  background-color: transparent;
+  padding: 0 90px 0 0;
+}
+.university_it_page .text {
+  padding-top: 42px;
+}
+.feature-benefits div {
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 30px;
+  padding: 0 0 0 220px;
+  position: relative;
+  height: auto;
+  /*min-height: 16.25em;*/
+}
+.feature-benefits div:after {
+  content:"";
+  background-color: #ffffff;
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  right: -15px;
+  top: 50%;
+  margin-top: -10px;
+  z-index: 10;
+}
+.feature-benefits dl {
+  margin: 0;
+  padding: 20px 0;
+}
+.feature-benefits dl.four-lines {
+  height: 12em;
+  margin-top: -6em;
+}
+.feature-benefits dl.five-lines {
+  height: 14em;
+  margin-top: -7em;
+}
+.feature-benefits dl.six-lines {
+  height: 19em;
+}
+.feature-benefits dl.seven-lines{
+  height: 21em;
+}
+.feature-benefits dl.eight-lines {
+  height: 24em;
+}
+.feature-benefits dl.nine-lines {
+  height: 26em;
+}
+.feature-benefits dt {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.feature-benefits dd:before {
+/*  content:"•";*/
+  padding-right: 0.5em;
+}
+.feature-benefits dd {
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-left: 0;
+  line-height: 1.444444444;
+  text-indent: -0.8em;
+  padding-left: 0.8em;
+  padding-right: 1em;
+}
+.faq.feature-benefits {
+  margin: 0;
+  height: auto;
+  background-color: transparent;
+  border-right: none;
+  top: auto;
+}
+.faq.feature-benefits dl {
+  height: auto;
+  margin-top: 0;
+  position: static;
+  margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px 30px;
+  border-left: 6px solid #fff;
+}
+.faq.feature-benefits dl > dt {
+  margin: 15px 0 0 0;
+  font-weight: normal;
+  position: relative;
+}
+.faq.feature-benefits dl > dt:first-child {
+  margin-top: 0;
+}
+.faq.feature-benefits dl > dt:after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  position: absolute;
+  left: -35px;
+  top: 50%;
+  margin-top: -5px;
+}
+.faq.feature-benefits dl dl dt {
+  font-size: 20px;
+  font-weight: 300;
+}
+.faq.feature-benefits dl dl dt:after {
+  /*content: normal;*/
+}
+.faq.feature-benefits .clear:after,
+.faq.feature-benefits .further-information:after {
+  content: normal;
+}
+.faq.feature-benefits .further-information {
+  width: 38%;
+  margin: 0 auto;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+}
+.faq.feature-benefits .further-information p  {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+.faq.feature-benefits .further-information ul {
+  margin: 10px 0 0;
+}
+.faq.feature-benefits .further-information li {
+  display: inline-block;
+}
+.faq.feature-benefits .further-information li:before {
+  content: "|";
+  padding: 0 12px;
+}
+.faq.feature-benefits .further-information li:first-child:before {
+  content: normal;
+}
+.faq.feature-benefits .further-information .btn-call_to_action {
+  font-size: 20px;
+  color: #fff;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.faq.feature-benefits dl > dd {
+  margin: 0 0 15px 0;
+  padding: 0;
+  border: none;
+  text-indent: 0;
+  line-height: 1.2;
+  font-size: 16px;
+}
+.faq.feature-benefits dl > dt+dd {
+  margin-top: 15px;
+}
+.faq.feature-benefits .separator{
+  margin-top: 25px;
+}
+.faq.feature-benefits dl > dd:before {
+  content: "";
+  padding: 0;
+}
+.faq.feature-benefits dl > dd:last-child {
+  margin-bottom: 0;
+}
+.faq.feature-benefits a,
+.opaque-link {
+  text-shadow: none;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0 4px 1px;
+  font-weight: 600;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #004b84;
+}
+.faq.feature-benefits a:hover {
+  text-decoration: underline !important;
+}
+.faq.feature-benefits .bullet-list li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+.faq.feature-benefits dd > dl {
+  height: auto;
+  position: static;
+  margin: 0;
+  background-color: transparent;
+  padding: 20px 30px;
+  padding: 0;
+  border-left: none;
+}
+.expand-faq {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 1;
+  width: 32px;
+  height: 32px;
+  display: block;
+  text-align: center;
+  border: 3px solid #fff;
+  font-size: 28px;
+  font-weight: 200;
+  font-style: normal;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+}
+
+.faq.feature-benefits dt .expand-faq {
+  position: absolute;
+  right: 0;
+  top: -6px;
+  cursor: pointer;
+  display: none;
+}
+.audience-selling-point {
+  margin-bottom: 6em;
+  position: relative;
+}
+.terms_page,
+.privacy_page {
+  font-family:"Source Sans Pro", Verdana, "Trebuchet MS", sans-serif;
+  font-size: 1.5em;
+  width: 60%;
+  margin: 0 auto;
+  text-align: left;
+  padding-bottom: 1.5em;
+}
+#content .terms_page p,
+#content .terms_page h2,
+#content .privacy_page p,
+#content .privacy_page h2,
+#content .privacy_page ol {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 #252525;
+  line-height: 1.375;
+}
+#content .terms_page p,
+#content .privacy_page p {
+  font-size: 1em;
+  margin-bottom: 1.5em;
+}
+#content .terms_page h2,
+#content .privacy_page h2 {
+  font-size: 1.4em;
+  margin-bottom: 0.2em;
+  padding: 0;
+}
+/*****************************************************
+ * Nirav Makwana
+ * Facebook signup page design
+ ******************************************************/
+.facebook-benefits {
+  color: #FFFFFF;
+  font-family:"Source Sans Pro", Verdana, "Trebuchet MS", sans-serif;
+  font-weight: 600;
+  text-shadow: 0 -1px 0 #252525;
+}
+.facebook-benefits dl {
+  margin-bottom: 0;
+  position: absolute;
+}
+.facebook-benefits dt {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 0.875em;
+}
+.facebook-benefits dt {
+  font-family:'Kreon', Garamond, serif;
+}
+dl dt {
+  font-weight: bold;
+}
+.facebook-benefits dd:before {
+/*  content:"•";*/
+  padding-right: 0.5em;
+}
+.facebook-benefits dd {
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.44444;
+  margin-left: 0;
+  padding-left: 0.8em;
+  padding-right: 1em;
+  text-indent: -0.8em;
+}
+.facebook-benefits div {
+  height: auto;
+  min-height: 10.25em;
+  position: relative;
+}
+.captivate {
+  position: relative;
+}
+.captivate .primary_action {
+  position: absolute;
+  bottom: 0;
+  width: inherit;
+  padding: 18px 10px 18px 18px;
+}
+.public-form,
+.public-form label {
+  color: #fff;
+  font-size: 18px;
+}
+.public-form ol {
+  list-style: none;
+  padding: 0;
+  margin-left: 0;
+}
+.public-form label {
+  display: block;
+  margin-bottom: 4px;
+}
+.public-form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-indent: 0;
+}
+.public-form legend {
+  font-size: 36px;
+  font-family:'Kreon', Garamond, serif;
+  border: none;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.public-form input,
+.public-form select,
+.public-form textarea {
+  width: 100%;
+  margin-bottom: 18px;
+  font-family: Kreon, Garamond, serif;
+  font-size: 16px;
+  line-height: normal;
+  border: none;
+  padding: 0.8em 1em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* .public-form textarea {
+  background: #fff;
+  border: 1px solid #e3e3e3;
+  color: #525252;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  height: 67px;
+  overflow: auto;
+  width: 298px;
+  padding: 6px 5px;
+} */
+.public-form .error {
+  background-color: #C95E5B;
+  color: #ffffff;
+  color: hsla(2, 70%, 96%, 1);
+  width: 403px;
+  font-family: "Source Sans Pro", Verdana, "Trebuchet MS", sans-serif;
+  font-weight: 400;
+  line-height: normal;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  padding: 1em 0.952205882em;
+}
+.public-form button[type="submit"] {
+  float: right;
+}
+.public-form .btn-call_to_action {
+  font-size: 1.2em;
+}
+.public-form .field-description {
+  margin-top: 6px;
+  display: block;
+  font-weight: 300;
+  font-size: 0.9em;
+  line-height: 1.375;
+}
+#content .request_a_demo_page .text {
+  margin: 0 auto;
+  float: none;
+}
+#content .content .text .public-form p {
+  margin-bottom: 0;
+  font-size: 1em;
+}
+
+#signup_wrapper #login .button,
+#content .content .note.signup .profile-pic .button {
+  background: url('/assets_new/images/index/sprite.png') 0 -2px no-repeat;
+  border: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  height: 41px;
+  text-align: center;
+  text-shadow: 0 0 1px #333;
+  text-transform: uppercase;
+  width: 243px;
+}
+
+#signup_wrapper #login .button,
+#content .content .note.signup .profile-pic .button {
+  background: url('/assets_new/images/index/sprite.png') -2px -88px no-repeat;
+  cursor: pointer;
+  height: 31px;
+  margin: 25px auto 0 auto;
+  padding: 5px;
+  width: 142px;
+}
+
+#signup_wrapper #login #signin {
+  font-size: 17px;
+  padding: .4em 0.93em;
+  margin-top: .59375em;
+}
+
+#signup_wrapper #login {
+	width:70px;
+	float: right;
+}
+
+#signup_wrapper #accountexists {
+	float:right; 
+	margin-right:14px; 
+	margin-top: 17px;
+	color: #fff;
+	font-weight: bold;
+	text-shadow: 0 1px 0 #000;
+  	text-transform: none;
+}
+
+
+#signup_wrapper #login #accd .button.ucroo {
+  background: transparent url('/assets_new/images/index/button-ucroo_signin-299px.png') no-repeat 0 0;
+  line-height: 31px;
+  height: 31px;
+  border-radius: 2px;
+  padding: 0 0 0 55px;
+  text-align: left;
+  width: 165px;
+  margin: 20px 0 0 0;
+  position: relative;
+  text-shadow: 0 1px 0 #000;
+  text-transform: none;
+}
+
+#signup_wrapper #login #accd .button.ucroo:hover {
+  background-position: 0 -62px;
+}
+#signup_wrapper #login #accd .button.ucroo:active {
+  background-position: 0 -31px;
+  top: 1px;
+  text-shadow: none;
+}
+
+#signup_wrapper #login #signin:hover {
+  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+#signup_wrapper #login #signin:active,
+#signup_wrapper #login #signin.active {
+  background-color: #ffffff;
+  color: #004b84;
+  text-shadow: none;
+}
+
+/*:focus {
+  border: 1px dotted black;
+}*/

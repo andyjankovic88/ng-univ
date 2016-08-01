@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "user": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "photo_url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "photo_url"
+        ]
+      },
+      "text": {
+        "type": "string"
+      },
+      "sent_date": {
+        "type": "string"
+      },
+      "sent_date_ios": {
+        "type": "string"
+      },
+      "attachments": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "user",
+      "text",
+      "sent_date",
+      "sent_date_ios",
+      "attachments"
+    ]
+  },
+  "required": [
+    "0"
+  ]
+}

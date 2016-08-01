@@ -1,0 +1,44 @@
+<!-- content-heading -->
+<div class="content-heading">
+   <h1>Prince Partick University</h1>
+   <span class="float-right default-btn l-space">
+      <input type="button" value="Unfollow">
+   </span>
+   <form id="form-search" class="r-side" ng-submit="doFeedSearch()">
+      <fieldset>
+         <div class="search-block">
+            <input type="text" placeholder="Search post" ng-model="searchString">
+            <button class="search">
+               <svg class="ico-search"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#header-search"></use></svg>
+            </button>
+         </div>
+      </fieldset>
+   </form>
+</div>
+<!-- campus-tabs -->
+<div class="campus-tabs-wrapper">
+   <ul class="campus-tabs clearfix">
+      <li class="active">
+         <a href="#">
+            <svg class="list"><use xlink:href="#feeds-list" /></svg>
+            DISCUSSION
+         </a>
+      </li>
+      <li>
+         <a href="#">
+            <svg class="ico-star"><use xlink:href="#feeds-star" /></svg>
+            EVENTS
+         </a>
+      </li>
+      <li>
+         <a href="#">
+            <svg class="ico-info"><use xlink:href="#icon-info" /></svg>
+            INFO
+         </a>
+      </li>
+   </ul>
+</div>
+
+<feed-list type="university_staff" type-id="{{feedId}}"></feed-list>
+
+

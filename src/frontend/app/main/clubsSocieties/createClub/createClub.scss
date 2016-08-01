@@ -1,0 +1,66 @@
+#createClub {
+  margin: -20px 0 0;
+   .row {
+      margin: 0 0 15px;
+   }
+  textarea:-moz-placeholder { color: $color-inactive;}
+  textarea::-webkit-input-placeholder { color: $color-inactive; }
+}
+#form-create-club {
+  label {
+    display: block;
+    margin: 0 0 10px;
+  }
+  .textarea {
+    border: 1px solid $color-light-grey;
+    background: none;
+    padding: 15px;
+    color: $color-inactive;
+  }
+
+   input {
+      width: 342px;
+      padding: 14px;
+   }
+   input:-moz-placeholder { color: $color-inactive;}
+   input::-webkit-input-placeholder { color: $color-inactive; }
+
+   .select-grey {
+      width: 342px;
+   }
+   .small-input {
+      width: 87px;
+      margin: 0 40px 0 0;
+   }
+   .float-elements {
+      label {
+         float: left;
+         margin: 0 10px 0 0;
+      }
+      span {
+         float: left;
+      }
+   }
+   .checkbox-list {
+      label {
+         color: $color-inactive;
+         width: 100%;
+         span {
+            float: left;
+         }
+         svg {
+            float: left;
+         }
+      }
+      .ico {
+         margin: -2px 0 0 5px;
+      }
+   }
+   .post-options.r-side li {
+      margin: 0 5px 0 0;
+   }
+   .error-msg {
+      float: right;
+      font-size: 0.9em;
+   }
+}

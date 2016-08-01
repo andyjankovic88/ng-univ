@@ -1,0 +1,25 @@
+<!-- study-timer -->
+<div id="study-timer">
+    <div class="content-heading">
+        <h1>Study Timer</h1>
+    </div>
+    <!-- sub-menu -->
+    <div class="sub-menu">
+        <ul>
+            <li ui-sref-active="active">
+                <a href="#" ui-sref="studyTimerGraph">
+                    <svg class="ico-list"><use xlink:href="#icon-study-graph" /></svg>
+                    <span>STUDY GRAPH</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a href="#" ui-sref="studyTimerHistory">
+                    <svg class="ico-suggestions"><use xlink:href="#icon-study-history" /></svg>
+                    <span>STUDY SESSION HISTORY</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--content -->
+    <div class="study-content" ui-view></div>
+</div>

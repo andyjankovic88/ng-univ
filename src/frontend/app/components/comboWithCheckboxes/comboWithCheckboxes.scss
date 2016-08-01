@@ -1,0 +1,32 @@
+.combo-with-checkbox {
+	[dropdown-body].drop-holder {
+		padding: 7px 10px;
+		left: 0;
+		width: 100%;
+		top: 100%;
+
+		.drop-content {
+			margin: 0;
+		}
+		.edit-drop {
+			li {
+				padding: 0;
+				.checkbox {
+					margin: 0;
+					label {
+                  padding: 7px 16px 7px 40px;
+						margin: 0;
+						&:before {
+                     top: 8px;
+                     left: 13px;
+						}
+						&:after {
+							top: 7px;
+    						left: 13px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

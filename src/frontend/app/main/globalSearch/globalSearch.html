@@ -1,0 +1,20 @@
+<div class="groups-section global-search"  infinite-scroll='loadNextPage()' infinite-scroll-disabled='listRequestInProgress' infinite-scroll-distance='1' infinite-scroll-container='".middle-section"'>
+   <div class="section">
+      <div class="item" ng-repeat="item in list">
+         <figure class="img-holder">
+            <a ng-href="{{$state.href(item.stateData.name, item.stateData.params)}}">
+               <img class="photo" ng-src="{{item.pic}}" ng-if="item.pic.length">
+            </a>
+         </figure>
+         <div class="item-info">
+            <h3>
+         <a ng-href="{{$state.href(item.stateData.name, item.stateData.params)}}">{{item.label}}</a>
+         <svg class="tick" ng-if="item.is_joined"><use xlink:href="#profile-tick" /></svg>
+      </h3>
+            <span>{{item.description[0]}}</span>
+            <span ng-if="item.description[1]">{{item.description[1]}}</span>
+         </div>
+      </div>
+   </div>
+  	<loader is-active="loaderActive" position="static"></loader>
+</div>

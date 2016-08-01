@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "subject_students_total": {
+          "type": "integer"
+        },
+        "subject_students": {
+          "type": "array",
+          "items": [
+              {
+              "type": "object",
+              "properties": {
+                "user_id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "photo_url": {
+                  "type": "string"
+                },
+                "group_id": {
+                  "type": "string"
+                },
+                "subject": {
+                  "type": "string"
+                },
+                "campus": {
+                  "type": "string"
+                },
+                "karma_points": {
+                  "type": "string"
+                },
+                "connected": {
+                  "type": "boolean"
+                },
+                "sent_connection_request": {
+                  "type": "boolean"
+                },
+                "received_connection_request": {
+                  "type": "boolean"
+                },
+                "declined_request": {
+                  "type": "boolean"
+                },
+                "user_blocked_me": {
+                  "type": "boolean"
+                },
+                "user_relationship_summary_text": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

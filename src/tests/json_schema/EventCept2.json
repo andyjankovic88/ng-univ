@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "uni_id": {
+          "type": "string"
+        },
+        "user_id": {
+          "type": "string"
+        },
+        "upcoming_events": {
+          "type": ""
+        },
+        "past_events": {
+          "type": ""
+        },
+        "content_heading": {
+          "type": "string"
+        },
+        "object_list_title": {
+          "type": "string"
+        },
+        "object_list_id": {
+          "type": "string"
+        },
+        "is_admin": {
+          "type": "boolean"
+        },
+        "user_group_name": {
+          "type": "string"
+        },
+        "can_create_delete": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

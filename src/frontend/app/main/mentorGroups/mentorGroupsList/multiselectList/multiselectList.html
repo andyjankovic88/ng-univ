@@ -1,0 +1,18 @@
+<ul class="edit-drop">
+    <li ng-repeat="item in list" ng-click="select($index)">
+        <a href="#">
+            <span>{{item.name}}</span>
+        </a>
+        <svg class="ico-tick r-side" ng-if="item.selected">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+        </svg>
+    </li>
+    <li ng-click="select(-2)">
+        <a href="#">
+            <span>Not Applicable</span>
+        </a>
+        <svg class="ico-tick r-side" ng-if="isNotApplicable">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+        </svg>
+    </li>
+</ul>

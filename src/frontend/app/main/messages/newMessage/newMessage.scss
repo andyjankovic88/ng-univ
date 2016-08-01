@@ -1,0 +1,81 @@
+.textarea-holder {
+   position: relative;
+   .post-options {
+      position: absolute;
+      right: 0;
+      top: 0;
+      /*min-width: 92px;*/
+   }
+}
+.search-section .search-box {
+   width: 100%;
+   top: 35px;
+   left: 0;
+   background: #fff;
+   z-index: 999;
+}
+[dropdown-body] {
+   .rubber-list {
+      .user-name {
+         max-width: 100%;
+      }
+      li {
+         padding: 0 10px 0 0;
+      }
+   }
+}
+#added-people {
+   li {
+      display: inline-block;
+      position: relative;
+      padding: 0 20px 0 0;
+      margin: 0 10px 0 10px;
+      .status {
+         border: 0;
+         bottom: 11px;
+         right: 0;
+         position: absolute;
+         width: 14px;
+         height: 14px;
+      }
+   }
+}
+#form-select {
+   .post-options {
+      li {
+         float: right;
+      }
+   }
+}
+#gallery {
+   width: 100%;
+   overflow: hidden;
+   .ng-thumb {
+      width: 108px;
+      height: 107px;
+      float: left;
+      margin: 0 5px 0 0;
+      img {
+         width: 108px;
+         height: 107px;
+         display: block;
+      }
+   }
+   .nav-left {
+      background: url(/../src/svg/icon/arrow-left.svg) no-repeat;
+      width: 16px;
+      height: 16px;
+      use {
+         fill: $color-white;
+      }
+   }
+   .nav-right {
+      background: url(/../src/svg/icon/arrow-right.svg) no-repeat;
+      width: 16px;
+      height: 16px;
+      use {
+         fill: $color-white;
+      }
+   }
+}
+

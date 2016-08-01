@@ -1,0 +1,58 @@
+<!-- university -->
+<div class="university">
+   <div class="side-box invite-students at-univerity">
+      <div class="heading"><h1>At University</h1></div>
+      <!-- section -->
+      <section class="section">
+         <h2><span class="heading">CONSULTATIONS</span><span class="amount"><a href="#">{{atUniversity.consultations.length}}</a></span></h2>
+         <ul class="list-inner">
+            <li ng-repeat="(key, value) in atUniversity.consultations | limitTo:limit">
+                <div>
+                    <figure class="img-holder" ui-sref="profile({id: value.user_id})">
+                        <img class="photo" ng-src="{{value.image_url}}">
+                    </figure>
+                    <div class="popup-info">
+                        <h3><a href ui-sref="profile({id: value.user_id})">{{value.name}}</a></h3>
+                        <span class="message-update">{{value.summary_text}}</span>
+                    </div>
+                </div>
+            </li>
+         </ul>
+      </section>
+      <!-- section -->
+      <section class="section">
+         <h2><span class="heading">EVENTS</span><span class="amount"><a href="#">{{atUniversity.events.length}}</a></span></h2>
+         <ul class="list-inner">
+            <li ng-repeat="(key, value) in atUniversity.events | limitTo:limit">
+                <div>
+                    <figure class="img-holder" ui-sref="event({id: value.event_id})">
+                        <img class="photo" ng-src="{{value.image_url}}">
+                    </figure>
+                    <div class="popup-info">
+                        <h3><a href ui-sref="event({id: value.event_id})">{{value.name}}</a></h3>
+                        <span class="message-update">{{value.summary_text}}</span>
+                    </div>
+                </div>
+            </li>
+         </ul>
+      </section>
+      <!-- section -->
+      <section class="section">
+         <h2><span class="heading">PEOPLE</span><span class="amount"><a href="#">{{atUniversity.peoples.length}}</a></span></h2>
+         <ul class="list-inner">
+            <li ng-repeat="(key, value) in atUniversity.peoples | limitTo:limit">
+                <div>
+                    <figure class="img-holder" ui-sref="profile({id: value.user_id})">
+                        <img class="photo" ng-src="{{value.image_url}}">
+                    </figure>
+                    <div class="popup-info">
+                        <h3><a href ui-sref="profile({id: value.user_id})">{{value.name}}</a></h3>
+                        <span class="message-update">{{value.summary_text}}</span>
+                    </div>
+                </div>
+            </li>
+         </ul>
+      </section>
+   </div>
+   <span class="collapse link" ng-click="switchState()">{{isCollapsed ? "Expand" : "Collapse"}}</span>
+</div>

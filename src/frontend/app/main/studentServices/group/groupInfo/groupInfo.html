@@ -1,0 +1,47 @@
+<div class="info-section">
+   <!-- info-section -->
+   <div class="holder">
+      <h2>Description</h2>
+      <p>{{service.description}}</p>
+      <h2>Faculty</h2>
+      <p>{{service.faculty}}</p>
+      <h2>Campus</h2>
+      <p>{{service.campus}}</p>
+      <h2>Website</h2>
+      <p>{{service.website}}</p>
+      <h2>Phone</h2>
+      <p>{{service.phone}}</p>
+      <h2>Email</h2>
+      <p>{{service.email}}</p>
+      <h2>Locations</h2>
+      <ul ng-repeat="location in service.office_location">
+         <li>
+            <p>{{location}}</p>
+         </li>
+      </ul>
+      <ul ng-repeat="consultation in service.drop_in_times">
+         <li>
+            <div><b>Campus :</b> {{consultation.dropin_campus}}</div>
+            <div><b>Location :</b> {{consultation.dropin_location}}</div>
+            <div><b>Day :</b> {{consultation.dropin_day}}</div>
+            <div><b>Start :</b> {{consultation.dropin_start}}</div>
+            <div><b>End :</b> {{consultation.dropin_end}}</div>
+            <div>&nbsp;</div>
+         </li>
+      </ul>
+      <h2>Staff members</h2>
+      <ul ng-repeat="member in stuffMembers">
+         <li>
+            <a title="{{member.name}}" ui-sref="profile({id:member.user_id})"><img class="photo"  ng-src="{{member.photo_url}}"></a>
+            <a ui-sref="profile({id:member.user_id})"><strong>{{member.name}}</strong></a>
+         </li>
+      </ul>
+      <h2>Followers</h2>
+      <ul ng-repeat="follower in followers">
+         <li>
+            <a title="{{follower.name}}" ui-sref="profile({id:follower.user_id})"><img class="photo"  ng-src="{{follower.photo_url}}"></a>
+            <a ui-sref="profile({id:follower.user_id})"><strong>{{follower.name}}</strong></a>
+         </li>
+      </ul>
+   </div>
+</div>

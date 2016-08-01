@@ -1,0 +1,40 @@
+<div class="feed-header holder">
+   <figure class="post-heading clearfix">
+      <a class="photo-holder" ui-sref="profile({id:feed.user.id})">
+         <img ng-src="{{feed.user.profile_pic}}">
+      </a>
+      <div class="wrapper-user">
+         <div class="user-details clearfix">
+            <div class="l-side">
+               <a ui-sref="profile({id:feed.user.id})" class="user-name">{{feed.user.username ? feed.user.username:'Anonymous'}}</a>
+               <span class="points">{{feed.user.karma  + ' pts.'}}</span>
+            </div>
+         </div>
+         <figcaption class="time-category">
+            <div class="user-info clearfix">
+               <span class="date">{{feed.how_long_ago}}</span>
+               <likes-comments is-liked="feed.has_liked" likes="{{feed.likes_count}}" comments="{{feed.comments_count}}" like="like(feed)"></likes-comments>
+            </div>
+            <!--<span>8:03pm</span>-->
+         </figcaption>
+      </div>
+   </figure>
+   <ul class="post-options r-side">
+      <li>
+         <a href="#" ng-click="report(feed)">
+            <svg class="ico-warning"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-warning"></use></svg>
+         </a>
+      </li>
+      <li>
+         <a href="#" ng-click="edit(feed)" ng-if="canEdit()">
+            <svg class="ico-pencil"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-pencil"></use></svg>
+         </a>
+      </li>
+      <li>
+         <a href="#" ng-click="delete(feed)" ng-if="hideDelete(feed)">
+            <svg class="ico-remove"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-remove"></use></svg>
+         </a>
+      </li>
+   </ul>
+</div>
+

@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "club_id": {
+          "type": "string"
+        },
+        "new": {
+          "type": "boolean"
+        },
+        "picture": {
+          "type": "string"
+        },
+        "event_type": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "lable": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "timezone": {
+          "type": "object",
+          "properties": {
+            "Africa/Johannesburg": {
+              "type": "string"
+            },
+            "Asia/Malaysia": {
+              "type": "string"
+            },
+            "Australia/Melbourne": {
+              "type": "string"
+            },
+            "Etc/GMT+1": {
+              "type": "string"
+            }
+          }
+        },
+        "back_url": {
+          "type": "string"
+        },
+        "content_heading": {
+          "type": "string"
+        },
+        "is_event_ticketing_enabled": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

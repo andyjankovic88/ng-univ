@@ -1,0 +1,47 @@
+<div class="row">
+   <h3>Ticket Information</h3>
+   <table id="tickets-table">
+      <thead>
+      <tr>
+         <th>Ticket type</th>
+         <th>Sales end</th>
+         <th>Price</th>
+         <th>QTY Available</th>
+         <th></th>
+      </tr>
+      </thead>
+      <tbody ng-repeat="ticket in tickets">
+         <tr>
+            <td>{{ticket.name}}</td>
+            <td>
+               <span ng-if="!ticket.end_date_text && ticket.end_date">{{ticket.end_date}} {{ticket.end_date_hrs}}:{{ticket.end_date_mins}} {{ticket.end_date_period}}</span>
+               <span ng-if="ticket.end_date_text">{{ticket.end_date_text}}</span>
+            </td>
+            <td>
+               <div ng-switch="ticket.price_choice">
+                  <span ng-switch-when="free">Free</span>
+                  <span ng-switch-default>{{ticket.price}}</span>
+               </div>
+            </td>
+            <td>
+               <div class="quantity-holder" ng-if="ticket.quantity > 0 && !isAdmin">
+                  <input class="quantity" ng-model="ticket.quantityBuy" type="number" max="{{ticket.quantity}}" min="1" value="1">
+                  <div class="separator">/</div>
+               </div>
+               <div class="quantity-val">{{ticket.quantity}}</div>
+            </td>
+            <td>
+               <span class="btn-edit r-side" ng-if="isAdmin" type="button" ng-click="ticket.edit = !ticket.edit">
+                  <svg class="ico edit"><use xlink:href="#icon-pencil"></use></svg>
+               </span>
+               <button class="btn-blue r-side" ng-disabled="!ticket.quantityBuy > 0 || ticket.buying" ng-if="!isAdmin" type="button" ng-click="buyTicket(ticket)">Buy</button>
+            </td>
+         </tr>
+         <tr ng-if="ticket.edit">
+            <td colspan="5">
+               <create-ticket ticket-edit="ticket" event-id="{{eventId}}"></create-ticket>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div>

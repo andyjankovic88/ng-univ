@@ -1,0 +1,25 @@
+<div class="info-section">
+   <!-- info-section -->
+   <div class="holder">
+      <h2>
+         Purpose
+      </h2>
+      <p>{{group.purpose}}</p>
+      <h2>
+         Privacy
+      </h2>
+      <p>{{group.privacy}}</p>
+      <h2>
+         Meeting time
+      </h2>
+      <p>{{dayNames[group.time_day].name}} {{group.time_from}} {{group.time_to}}</p>
+      <h2>Members</h2>
+
+      <ul ng-repeat="member in group.members">
+         <li>
+            <a title="{{member.details}}" ui-sref="profile({id:{{member.user_id}}})"><img class="photo"  ng-src="{{member.profile_picture}}"></a>
+            <a ui-sref="profile({id:{{member.user_id}}})"><strong>{{member.name}}</strong></a>
+         </li>
+      </ul>
+   </div>
+</div>

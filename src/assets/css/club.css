@@ -1,0 +1,795 @@
+/* @override http://simplesaml.sucroo.com/assets/css/club.css?3038 */
+
+/* @override
+        http://localhost.ucroo/assets/css/club.css?1603
+        http://localhost.ucroo/assets/css/club.css?1625
+        http://localhost.ucroo/assets/css/club.css?1647
+        http://anita.sucroo.com/assets/css/club.css?2085
+        http://localhost.martin/assets/css/club.css?2125
+        http://simplesaml.sucroo.com/assets/css/club.css?2179
+*/
+
+textarea
+{
+    resize: none;
+}
+
+#club .profile-header {
+    position: relative;
+    padding-bottom: 15px;
+}
+
+#club .edit-profile-pic {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+}
+
+#club .errors {
+    margin-left: 199px;
+    margin-bottom: 20px;
+    width: 365px;
+}
+
+#club .benefit-error, #club .errors {
+    color: red;
+}
+
+/*#club-form label {
+    display: inline-block;
+    text-align: right;
+    vertical-align: top;
+    width: 152px;
+    padding-bottom: 9px;
+    padding-left: 0;
+    padding-right: 30px;
+    min-height: 24px;
+}
+
+#club-form input[type="text"],
+#club-form textarea,
+#club-form select
+{
+    width: 431px;
+}*/
+
+.submit-form-action
+{
+    margin-top: 15px;
+}
+
+#club-form li.ui-state-default
+{
+    display: block;
+}
+
+#club-form input.blockinput
+{
+    width: 20px;
+}
+
+#club-form select.small_dd {
+    padding: 10px;
+}
+
+
+.club-parts.inactive {
+    opacity: 0.4;
+}
+
+.club-parts > div
+{
+    float: left;
+    margin-left: 9px;
+    padding: 0;
+}
+
+.club-parts > div:first-child
+{
+    margin-left: 0;
+}
+
+.club-parts a {
+    font-size: 11px;
+    background-color: #ffffff;
+    border: 1px solid #727272;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #727272;
+    line-height: 2.181818182;
+    padding: 0 6px;
+}
+
+.club-parts.active a:hover
+, .club-parts > div.active a
+{
+    border-bottom: 5px solid #464646;
+    text-decoration: none;
+}
+
+.club-home
+{
+    margin-top: 12px;
+}
+
+.club-parts > div .icon {
+    background: url(/assets/images/club/club_icon_sprite.png) 0 25px;
+    width: 25px;
+    height: 20px;
+}
+
+
+.club-parts > div .icon.feed {
+    background-position-x: -4px;
+}
+
+.club-parts > div .icon.info {
+    background-position-x: -28px;
+}
+
+.club-parts > div .icon.events {
+    background-position-x: -55px;
+}
+
+.club-parts > div .icon.board {
+    background-position-x: -78px;
+}
+
+#club-form div.submit
+{
+    margin-top: 22px;
+}
+
+#club-form #adder
+{
+    margin-top: 15px;
+}
+div#club {
+    margin-top: 12px;
+}
+
+.content_heading_main .club-desc
+, .content_heading_main .club-desc p
+{
+    margin: 0;
+    padding: 0;
+}
+
+.club-desc {
+    float: left;
+    color: #464646;
+}
+
+.club-desc p
+{
+    border-bottom: 1px solid #acacac;
+    padding: 0.6em 0.8em;
+}
+
+.club-desc p:last-child
+{
+    border-bottom: none;
+}
+
+.study_groups .event
+{
+    margin-top: 0;
+}
+
+.study_groups .event li:first-child
+{
+    border-top: none;
+}
+
+
+/*
+ * benefit styles on club edit page
+ */
+#club #sortable .icon {
+    background: url(/assets/images/club/club_icon_sprite.png) 0 25px;
+    width: 25px;
+    height: 25px;
+    margin: 8px 10px 0 -4px;
+}
+
+#club #sortable .icon:hover {
+    cursor: move;
+}
+
+#club #sortable li:hover button.remove {
+    display: inline-block;
+}
+
+#club #sortable li {
+    position: relative;
+    list-style-type: none;
+    padding: 5px 10px;margin-bottom: 10px;
+}
+
+#club #sortable li.ui-state-focus {
+    opacity: 0.4;
+    height: 20px;
+}
+
+#club #sortable li button.remove {
+    display: none;
+    position: absolute;
+    right: 15px;
+    bottom: 11px;
+}
+
+#club #sortable li button.remove:active {
+    top: auto;
+    bottom: 4px;
+}
+
+.benefits
+{
+    padding: 0;
+    margin-left: 15px;
+}
+
+.benefits li {
+    color: #464646;
+    padding: 0;
+    padding-left: 22px;
+    line-height: 20px;
+    background: url(/assets/images/icon-round.png) no-repeat left center;
+}
+
+/*ul.benefits li div.icon.check {
+        background: url(/assets/images/club/benefits_check.png) no-repeat;
+        width: 42px;
+        height: 36px;
+        margin-top: -6px;
+        margin-right: 11px;
+}
+*/
+
+#club-form #add-new-admin
+, #club-form #add-new-committee
+{
+    width: 214px;
+}
+
+#club-admins tfoot
+, #club-committees tfoot
+, #club-fields tfoot
+, #group-members tfoot
+{
+    display: table-footer-group;
+}
+
+#club-admins li,
+#group-members li {
+    list-style-type: none;
+}
+
+#club-form #club-admins input,
+#club-form #group-members input,
+#club-form #club-committees input {
+    width: 150px;
+    /*margin-right: 15px;*/
+}
+
+#club-form #club-committees input {
+    width: 125px;
+}
+
+#club-form #club-admins input.search-admin-members,
+#club-form #group-members input.search-admin-members{
+    width: 15px;
+    margin-right: 0px;
+}
+
+#club .submit-form-action :not(#club-form table .submit-form-action) {
+    float: right;
+    margin: 1em 45px 1.5em 0;
+}
+
+/*#club .error,
+#club .club_info
+{
+    margin-left: 187px;
+    margin-bottom: 12px;
+}*/
+
+
+.board_table
+{
+    width: 100%;
+    border-spacing: 0;
+    border-collapse:collapse;
+}
+
+.board_table thead {
+}
+
+.board_table img
+{
+    margin: 5px 20px;
+    border: 1px solid #C9CBCE;
+}
+
+.board_table tr:nth-child(even) {
+    background: #D1EBFF;
+    border-bottom: 1px solid #C9CBCE;
+    border-top: 1px solid #C9CBCE;
+}
+
+.club_s_image,
+.event-pic
+{
+   /* width: 100px;
+    height: 100px;*/
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.event-details {
+    display: inline-block;
+    width: 340px;
+    margin-left: 15px;
+}
+
+.club_s_image
+{
+    width: 100px;
+    height: 100px;
+    float: left;
+    overflow: hidden;
+}
+
+
+.club_s_text
+{
+    float: left;
+    width: 400px;
+}
+.club_s_text .heading_4
+{
+    line-height: 20px;
+}
+ul.event
+{
+    margin-top: 18px;
+    margin-bottom: 3em;
+}
+
+ul.event li
+{
+    list-style: none;
+    border-top: 1px solid #acacac;
+    margin: 0 -25px 0 -24px;
+    padding: 12px 24px;
+}
+
+ul.event li:last-child
+{
+    border-bottom: 1px solid #acacac;
+}
+
+.event_details
+{
+    float: right;
+    vertical-align: middle;
+    line-height: 50px;
+}
+
+.num_members
+, .num_unread_posts
+, .num_events
+{
+    background-image: url(/assets/images/menu/menu_icons_sprite-520x520-353535-png25.png);
+    background-repeat: no-repeat;
+    /*padding-left: 25px;*/
+    line-height: 26px;
+    display: inline-block;
+}
+
+.num_members
+{
+    background-position: -253px -249px;
+}
+
+.num_unread_posts
+{
+    background-position: -450px -448px;
+    margin-right: 12px;
+}
+
+.num_events
+{
+    background-position: -489px -488px;
+}
+
+.heading_4
+{
+    font-size: 14px;
+    font-weight: bold;
+    display: inline;
+    float: left;
+    margin-bottom: 0;
+    line-height: 50px;
+}
+
+.event_details a.btn {
+    margin-top: 8px;
+}
+
+span.event-type
+{
+    color: #6c6c6c;
+}
+
+.event_heading{
+    color: #ffffff;
+    background-color: #464646;
+    /*margin: 15px -26px 0 -24px;*/
+    margin: 28px -25px 0 -24px;
+    font-size: 14px;
+    padding: 10px 5px 10px 25px;
+}
+
+.event_type_heading
+{
+    color: #373737;
+    background-color: #d7d7d7;
+    padding: 4px 15px 0 14px;
+    /*margin: 15px -26px 10px -24px;*/
+    margin: 28px -25px 15px -24px;
+    line-height: 35px;
+}
+
+.event_type_heading a
+{
+    color: #373737;
+}
+
+.event_type_heading:first-child
+{
+    margin-top: 0;
+}
+
+.event_item
+{
+    margin-bottom: 1em;
+}
+
+.open_icon
+, .closed_icon
+{
+    background: url('/assets/images/icons/open_icon-15x21-png24.png') no-repeat center center;
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    line-height: 1.4;
+}
+
+.closed_icon
+{
+    background-image: url('/assets/images/icons/locked_icon-15x21-png24.png');
+}
+
+.event-icon {
+    background: url('/assets/images/icons/icons_sprite-373737-920x920-png24-v1.0.png') no-repeat;
+    height: 24px;
+    width: 150px;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.social_event
+{
+    background-position: -240px -250px;
+}
+
+.professional_event
+{
+    background-position: -200px -209px;
+}
+
+.important_date
+{
+    background-position: -840px -850px;
+}
+.academic_event
+{
+    background-position: -280px -290px;
+}
+
+.successful_emails,
+.club_email_list_less
+{
+    padding-left: 15px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.club_email_list
+{
+    padding-left: 15px;
+}
+
+.search-clubs {
+    margin-top: 15px;
+    width: 300px;
+}
+
+.image_with_description_list
+{
+    margin: 0 0.5em 1em 0;
+    padding: 0;
+    float: left;
+}
+
+.image_with_description_list:nth-child(3)
+{
+    margin-right: 0;
+}
+
+.image_with_description_list dt
+{
+    float: left;
+}
+
+.image_with_description_list dd
+{
+    margin-left: 63px;
+    margin-bottom: 0.833333333em;
+    line-height: 1em;
+}
+
+.image_with_description_list dd:last-child
+{
+    margin-bottom: 0;
+}
+
+.detail_list .desc
+{
+    margin-top: 2.833333333em;
+}
+
+.detail_list .desc + dd
+{
+    margin: 0;
+}
+
+.fee:first-letter
+{
+    font-weight: bold;
+}
+
+.detail_list .web_address
+, .detail_list .phone_contact
+, .detail_list .member
+{
+    background: url(/assets/images/icons/detail_icons_sprite-60x60_png8_white_matte.png) no-repeat 0 0;
+    padding-left: 20px;
+}
+
+.detail_list .web_address
+{
+    background-position: -3px -1px;
+}
+
+.detail_list .phone_contact
+{
+    background-position: -23px -21px;
+}
+
+.detail_list .member
+{
+    background-position: -43px -41px;
+}
+
+.profile-actions
+{
+    text-align: right;position: relative;
+}
+
+.profile-actions a.btn
+, .profile-actions button
+{
+    margin-bottom: 0.8em;
+}
+
+.profile-actions a.btn:not(.btn-auto_width)
+, .profile-actions button
+{
+    width: 100%;
+    display: block;
+}
+
+.profile-actions a:last-child
+, .profile-actions button:last-child
+{
+    margin-bottom: 0;
+}
+
+.current ul li
+{
+    list-style: none;
+    margin-right: 0;
+}
+
+.sidebar_suggestions
+{
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 0;
+    margin: 0 0 2.5em 0;
+    padding: 0;
+}
+
+.sidebar_suggestions:last-child
+{
+    margin-bottom: 0;
+}
+
+.sidebar_suggestions td
+{
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar_suggestions tr td:nth-child(2)
+{
+    text-align: right;
+}
+
+.sidebar_suggestions .num_events
+, .sidebar_suggestions .num_members
+{
+    font-size: 1.5em;
+    color: #373737;
+}
+
+#club .large_warning h1
+{
+    font-size: 1.1em;
+}
+
+.important_message-1
+, .important_message-2
+, .important_message-3
+, .important_message-4
+{
+    background: #a2a2a2 url(/assets/images/icons/message-icon-dollarsign-1) no-repeat 20px center;
+    padding-left: 120px;
+    font-weight: normal;
+}
+
+.important_message-1 p
+, .important_message-2 p
+, .important_message-3 p
+, .important_message-4 p
+{
+    width: auto;
+}
+
+.important_message-1
+, .important_message-1 h1
+{
+    background-color: #a2a2a2;
+    color: #fff;
+}
+
+.important_message-2
+, .important_message-2 h1
+{
+    background-color: #c7c7c7;
+    color: #464646;
+}
+
+.important_message-3
+, .important_message-3 h1
+{
+    background-color: #e3e3e3;
+    color: #353535;
+}
+
+.important_message-4
+, .important_message-4 h1
+{
+    background-color: #F1F1F1;
+    color: #353535;
+}
+
+.important_message-1.icon-large-dollar
+, .important_message-2.icon-large-dollar
+, .important_message-3.icon-large-dollar
+, .important_message-4.icon-large-dollar
+{
+    background-position: 43px center;
+}
+
+.important_message-1.icon-large-dollar
+{
+    background-image: url(/assets/images/icons/message-icon-dollarsign-1.png);
+}
+
+.important_message-2.icon-large-dollar
+{
+    background-image: url(/assets/images/icons/message-icon-dollarsign-2.png);
+}
+
+.important_message-3.icon-large-dollar,
+.important_message-4.icon-large-dollar
+{
+    background-image: url(/assets/images/icons/message-icon-dollarsign-3.png);
+}
+
+.important_message-1.icon-large-warning
+{
+    background-image: url(/assets/images/icons/message-icon-warning-1.png);
+}
+
+.important_message-2.icon-large-warning
+{
+    background-image: url(/assets/images/icons/message-icon-warning-2.png);
+}
+
+.important_message-3.icon-large-warning,
+.important_message-4.icon-large-warning
+{
+    background-image: url(/assets/images/icons/message-icon-warning-3.png);
+}
+
+.important_message-1.icon-large-user
+, .important_message-2.icon-large-user
+, .important_message-3.icon-large-user
+, .important_message-4.icon-large-user
+{
+    background-position: 26px center;
+}
+
+.important_message-1.icon-large-user
+{
+    background-image: url(/assets/images/icons/message-icon-user-1.png);
+}
+
+.important_message-2.icon-large-user
+{
+    background-image: url(/assets/images/icons/message-icon-user-2.png);
+}
+
+.important_message-3.icon-large-user,
+.important_message-4.icon-large-user
+{
+    background-image: url(/assets/images/icons/message-icon-user-3.png);
+}
+
+.input_with_help_page {
+    position: relative;
+}
+
+.right_help_link {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+}
+
+.eventbrite_important {
+    font-size: 12px;
+    font-weight: bold;
+    color: #CC0000;
+}
+
+#club .benefit-error-attendence{
+    color: red;
+    vertical-align: middle;
+}
+
+.event-icon-service {
+    /*background: url('/assets/images/icons/icons_sprite-373737-920x920-png24-v1.0.png') no-repeat;*/
+    height: 24px;
+    width: 150px;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+

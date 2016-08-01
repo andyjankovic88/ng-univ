@@ -1,0 +1,40 @@
+<!-- news-section -->
+<div id="news-section" infinite-scroll='loadNextPage()' infinite-scroll-disabled='listRequestInProgress' infinite-scroll-distance='1' infinite-scroll-container='".middle-section"'>
+   <div class="content-heading">
+      <h1><span>Ucroo</span> News</h1>
+      <loader is-active="loaderActive"></loader>
+   </div>
+   <div class="post" ng-repeat="post in posts">
+      <div class="holder">
+         <figure class="post-heading clearfix">
+            <div class="photo-holder">
+               <a href="#">
+                  <img class="ico" ng-src="{{post.news_source.logo}}" alt="avatar-image" ng-if="post.news_source.logo"/>
+               </a>
+            </div>
+            <div class="wrapper-user">
+               <div class="user-details clearfix">
+                  <div class="l-side">
+                     <a href="#" class="user-name">{{post.news_source.name}}</a>
+                  </div>
+               </div>
+               <figcaption class="time-category">
+                  <div class="user-info clearfix">
+                     <span class="date">{{post.how_long_ago}}</span>
+                  </div>
+                  <!--<span>[soon]8:42pm</span>-->
+               </figcaption>
+            </div>
+         </figure>
+      </div>
+      <div class="holder">
+         <figure class="simple-img news-image" ng-if="post.display_image_url">
+            <img ng-src="{{post.display_image_url}}" alt="news"/>
+            <figcaption class="news-heading" ui-sref="news.details({id:post.id})"><span>{{post.text}}</span></figcaption>
+         </figure>
+         <h2  ng-if="!post.display_image_url"><a  ui-sref="news.details({id:post.id})" href="#">{{post.text}}</a></h2>
+      </div>
+      <div class="post-text">{{post.link_details.description | trim : 500}}</div>
+      <likes-comments is-liked="post.has_liked" likes="{{post.likes_count}}" comments="{{post.comments_count}}" like="like(post)"></likes-comments>
+   </div>
+</div>

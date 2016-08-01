@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "uni_id": {
+          "type": "string"
+        },
+        "user_id": {
+          "type": "string"
+        },
+        "timezone": {
+          "type": "object",
+          "properties": {
+            "Australia/Melbourne": {
+              "type": "string"
+            },
+            "Australia/Sydney": {
+              "type": "string"
+            },
+            "Australia/Victoria": {
+              "type": "string"
+            }
+          }
+        },
+        "target_year": {
+          "type": "object",
+          "properties": {
+            "all": {
+              "type": "string"
+            },
+            "first": {
+              "type": "string"
+            },
+            "final": {
+              "type": "string"
+            }
+          }
+        },
+        "specificto_campus_check": {
+          "type": "string"
+        },
+        "campuses": {
+          "type": "object",
+          "properties": {
+            "options": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "content_heading": {
+          "type": "string"
+        },
+        "template_title": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

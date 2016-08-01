@@ -1,0 +1,73 @@
+<div class="signup-pad signup-pad-large">
+   <form ng-submit="nextStep(signupForm)" name="signupForm" novalidate>
+      <div class="signup-pad-in">
+         <div class="row">
+            <div class="home-logo"><svg><use xlink:href="#header-homepage-logo2"></use></svg></div>
+         </div>
+         <div class="row row-info">
+            <div class="info-l-label">Complete your information</div>
+            <div class="info-label">Please review and provide missing information to finish signing up.</div>
+         </div>
+         <div class="row">
+            <div class="avatar" ng-if="signupData.facebook.is_connected">
+               <img ng-src="//graph.facebook.com/{{signupData.facebook.facebook_id}}/picture?type=square">
+            </div>
+         </div>
+         <div class="row">
+            <div class="form-group col2" ng-class="{'has-error': (signupForm.$submitted || signupForm.firstname.$dirty) && signupForm.firstname.$invalid, 'no-error': (signupForm.$submitted || signupForm.firstname.$dirty) && signupForm.firstname.$valid}">
+               <label class="form-label">First name</label>
+               <input type="text" class="form-object" name="firstname" ng-model="signupData.firstname" tabindex="0" required>
+            </div>
+            <div class="form-group col2" ng-class="{'has-error': (signupForm.$submitted || signupForm.lastname.$dirty) && signupForm.lastname.$invalid, 'no-error': (signupForm.$submitted || signupForm.lastname.$dirty) && signupForm.lastname.$valid}">
+               <label class="form-label">Last name</label>
+               <input type="text" class="form-object" name="lastname" ng-model="signupData.lastname" tabindex="0" required>
+            </div>
+         </div>
+         <div class="row">
+            <div class="form-group col2" ng-class="{'has-error': (signupForm.$submitted || signupForm.gender.$dirty) && signupForm.gender.$invalid, 'no-error': (signupForm.$submitted || signupForm.gender.$dirty) && signupForm.gender.$valid}">
+               <label class="form-label">Gender</label>
+               <div class="select-custom form-object">
+                  <select name="gender"
+                          ng-class="{'selected': signupData.gender!=''}"
+                          ng-options="gender.id as gender.title for gender in genders"
+                          ng-model="signupData.gender" required tabindex="0">
+                     <option value="" disabled selected hidden>Please select your gender</option>
+                  </select>
+               </div>
+            </div>
+            <div class="form-group col2" ng-class="{'has-error': (signupForm.$submitted || signupForm.position.$dirty) && signupForm.position.$invalid, 'no-error': (signupForm.$submitted || signupForm.position.$dirty) && signupForm.position.$valid}">
+               <label class="form-label">Position</label>
+               <input type="text" class="form-object" name="position" ng-model="signupData.position" tabindex="0" required ng-readonly="signupData.uniIdAFF">
+            </div>
+         </div>
+         <div class="row">
+            <div class="form-group col2" ng-class="{'has-error': (signupForm.$submitted || signupForm.email.$dirty) && signupForm.email.$invalid, 'no-error': (signupForm.$submitted || signupForm.email.$dirty) && signupForm.email.$valid}">
+               <label class="form-label">University email</label>
+               <input type="email" class="form-object" name="email" ng-model="signupData.university_email" tabindex="0" required ng-readonly="signupData.uniIdAFF">
+            </div>
+         </div>
+         <div class="row">
+            <div class="form-group col2" ng-class="{'has-error': (signupForm.$submitted || signupForm.signup_password.$dirty) && signupForm.signup_password.$invalid, 'no-error': (signupForm.$submitted || signupForm.signup_password.$dirty) && signupForm.signup_password.$valid}">
+               <label class="form-label">Password</label>
+               <input type="password" class="form-object" id="signup_password" name="signup_password" ng-model="signupData.password" tabindex="0" required>
+            </div>
+            <div class="form-group col2" ng-class="{'has-error': (signupForm.$submitted || signupForm.confirm_password.$dirty) && signupForm.confirm_password.$invalid, 'no-error': (signupForm.$submitted || signupForm.confirm_password.$dirty) && signupForm.confirm_password.$valid}">
+               <label class="form-label">Confirm Password</label>
+               <input type="password" class="form-object" id="confirm_password" name="confirm_password" ng-model="signupData.repassword" tabindex="0" required pw-check="signup_password">
+            </div>
+         </div>
+         <div class="row"></div>
+         <div class="row">
+            <div class="r-side">
+               <button type="submit" class="btn-link btn-default">NEXT<svg class="ico-btn-right"><use xlink:href="#icon-arrow-right-nf"></use></svg></button>
+            </div>
+            <ul class="step-indicator">
+               <li class="active"></li><li></li>
+            </ul>
+         </div>
+      </div>
+   </form>
+</div>
+<div class="overlay-entire" ng-class="{'active': isProgressing}">
+   <div><svg><use xlink:href="#icon-loading-spinner"></use></svg></div>
+</div>

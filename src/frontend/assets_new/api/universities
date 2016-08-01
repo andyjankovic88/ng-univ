@@ -1,0 +1,102 @@
+
+{
+"message": "",
+"response": [
+    {
+        "id": 15,
+        "name": "AAF test SP",
+        "aaf": true,
+        "url": "https://vho.test.aaf.edu.au/idp/profile/SAML2/Redirect/SSO"
+    },
+    {
+        "id": 4,
+        "name": "CQUniversity",
+        "aaf": true,
+        "url": "https://idp.cqu.edu.au/idp/profile/SAML2/Redirect/SSO"
+    },
+    {
+        "id": 13,
+        "name": "La Trobe University",
+        "aaf": true,
+        "url": "https://aaf.latrobe.edu.au/idp/profile/SAML2/Redirect/SSO"
+    },
+    {
+        "id": 6,
+        "name": "Charles Sturt University (CSU)",
+        "aaf": true,
+        "url": "https://idp.csu.edu.au/idp/profile/SAML2/Redirect/SSO"
+    },
+    {
+        "id": 8,
+        "name": "Deakin University",
+        "aaf": true,
+        "url": "https://signon.deakin.edu.au/idp/profile/SAML2/Redirect/SSO"
+    },
+    {
+        "id": 14,
+        "name": "Macquarie University",
+        "aaf": true,
+        "url": "https://idp.mq.edu.au/idp/profile/SAML2/Redirect/SSO"
+    },
+    {
+        "id": 15,
+        "name": "Monash University",
+        "aaf": true,
+        "url": "https://idp.monash.edu.au/idp/profile/SAML2/Redirect/SSO"
+    },
+    {
+        "id": 17,
+        "name": "Queensland University of Technology",
+        "aaf": true,
+        "url": "https://idp.qut.edu.au/idp/profile/SAML2/Redirect/SSO"
+    },
+    {
+        "id": 18,
+        "name": "RMIT University",
+        "aaf": true,
+        "url": "https://sso-shibboleth.rmit.edu.au/idp/profile/SAML2/Redirect/SSO"
+    },
+    {
+        "id": 20,
+        "name": "Swinburne University of Technology",
+        "aaf": true,
+        "url": "https://idp.cc.swin.edu.au/idp/profile/SAML2/Redirect/SSO"
+    },
+    {
+        "id": 22,
+        "name": "Federation University Australia",
+        "aaf": true,
+        "url": "https://idp.ballarat.edu.au/idp/profile/SAML2/Redirect/SSO"
+    },
+    {
+        "id": 24,
+        "name": "University of Melbourne",
+        "aaf": true,
+        "url": "https://idp.unimelb.edu.au/idp/profile/SAML2/Redirect/SSO"
+    },
+    {
+        "id": 7,
+        "name": "University of Technology, Sydney",
+        "aaf": true,
+        "url": "https://aaf-login.uts.edu.au/idp/profile/SAML2/Redirect/SSO"
+    },
+    {
+        "id": 39,
+        "name": "Prince Patrick University",
+        "aaf": false,
+        "url": ""
+    },
+    {
+        "id": 5,
+        "name": "Charles Darwin University - Staff",
+        "aaf": true,
+        "url": "https://idp.cdu.edu.au/idp/profile/SAML2/Redirect/SSO"
+    },
+    {
+        "id": 5,
+        "name": "Charles Darwin University",
+        "aaf": false,
+        "url": ""
+    }
+]
+}

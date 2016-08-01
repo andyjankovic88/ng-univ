@@ -1,0 +1,33 @@
+<div class="target-category">
+   <div class="category-header">
+      <h2>{{title}}</h2>
+      <svg class="chevron-right">
+         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-chevron-right"></use>
+      </svg>
+   </div>
+   <div class="category-content">
+      <ul class="col">
+         <li>
+            <div class="checkbox" ng-repeat="item in list | limitTo : middle()">
+               <input type="checkbox"
+                      ng-attr-id="{{title + item.id}}"
+                      ng-model="item.isSelected"
+                      title="{{item.name}}">
+               <label ng-attr-for="{{title + item.id}}">{{item.name}}</label>
+            </div>
+         </li>
+      </ul>
+      <ul class="col">
+         <li>
+            <div class="checkbox" ng-repeat="item in list | limitTo : -(middle() - 1)">
+               <input type="checkbox"
+                  ng-attr-id="{{title + item.id}}"
+                  ng-model="item.isSelected"
+                  title="{{item.name}}">
+               <label ng-attr-for="{{title + item.id}}">{{item.name}}</label>
+            </div>
+         </li>
+      </ul>
+
+   </div>
+</div>

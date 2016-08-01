@@ -1,0 +1,61 @@
+<!-- clubInside -->
+<div class="ur-sg-profile">
+   <div ng-if="pageStatus('success')">
+      <div class="banner">
+         <img class="photo" ng-src="/assets_new/images/profile.jpg" alt="cover-pic">
+      </div>
+      <div class="holder-info">
+         <div class="user-info">
+            <figure class="img-holder">
+               <div class="avatar-holder">
+                  <a href="#"><img ng-if="group.picture" class="avatar" ng-src="{{group.picture}}" alt="Virginia Henderson"></a>
+               </div>
+               <figcaption class="user-name">
+                  <h1>{{group.name}}</h1>
+                  <span>Study Groups</span>
+               </figcaption>
+            </figure>
+            <div class="profile-actions">
+               <span class="float-right default-btn white-btn" ng-show="group.is_joined">
+                  <input type="button" ng-click="unfollow()" value="Unfollow">
+               </span>
+               <span class="float-right" ng-show="!group.is_joined">
+                  <button type="button" class="btn-green" ng-click="follow()" >Follow</button>
+               </span>
+               <span class="float-right" ng-show="group.can_edit">
+                  <button type="button" class="btn-blue" ui-sref="studyGroupsEdit({group_id: group.id})" >Edit</button>
+               </span>
+            </div>
+         </div>
+      </div>
+      <!-- sub-menu -->
+      <div class="sub-menu">
+         <ul>
+            <li ui-sref-active="active">
+               <a href="#" ui-sref="studyGroupsFeed">
+                  <svg class="ico-list"><use xlink:href="#feeds-list" /></svg>
+                  <span>DISCUSSION</span>
+               </a>
+            </li>
+            <!--<li ui-sref-active="active">-->
+               <!--<a href="#" ui-sref="studyGroupEvents">-->
+                  <!--<svg class="ico-star"><use xlink:href="#feeds-star" /></svg>-->
+                  <!--<span>EVENTS</span>-->
+               <!--</a>-->
+            <!--</li>-->
+            <li ui-sref-active="active">
+               <a href="#" ui-sref="studyGroupsInfo">
+                  <svg class="ico-info"><use xlink:href="#icon-info" /></svg>
+                  <span>INFO</span>
+               </a>
+            </li>
+         </ul>
+      </div>
+      <!-- groups-section -->
+      <div class="profile-content" ui-view></div>
+   </div>
+   <div class="failure-container" ng-if="pageStatus('failed')">
+      <div class="ur-message ur-message-warning">Could not find this study group, please go to the <a ui-sref="studyGroupsList">study group list</a> page.</div>
+   </div>
+   <loader is-active="pageStatus('loading')" position="static"></loader>
+</div>

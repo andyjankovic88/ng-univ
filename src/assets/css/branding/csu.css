@@ -1,0 +1,8 @@
+.csu{background: #bf1819;}
+.csu .left{padding: 7px 0 0 0;}
+.csu .right{float: right;}
+.csu .right .top-links{text-align: right;font-size: 13px;line-height: 17px;}
+.csu .right .top-links a{display: inline-block;color: #003868;padding: 0 10px;border-right: 1px solid #003868;margin: 20px 0 0 0;}
+.csu .right .top-links a:hover{color: #000;}
+#topcasing_csu { max-height: 63px; background-color: #000; color: #fff; width:100%;}
+.csu .right .csu-social-logo{margin: 10px 4px 0 0;}

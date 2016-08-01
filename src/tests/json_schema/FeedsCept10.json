@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "poll_options": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "text": {
+                "type": "string"
+              },
+              "has_voted": {
+                "type": "boolean"
+              },
+              "n_votes": {
+                "type": "integer"
+              },
+              "vote_percent": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

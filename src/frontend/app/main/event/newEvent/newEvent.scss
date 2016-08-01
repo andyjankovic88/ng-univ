@@ -1,0 +1,171 @@
+.ico-clear {
+   cursor: pointer;
+}
+
+.loader-holder {
+   position: relative;
+}
+
+feeds-file .ng-gallery {
+   > div {
+      float: left;
+
+   }
+   > div:first-child {
+      float: none;
+      width: 100%;
+      overflow: hidden;
+      .ng-thumb {
+         height: auto;
+      }
+   }
+}
+
+.target-post-popup.popup-holder {
+   width: 501px;
+   .category-content {
+      .col {
+         overflow: hidden;
+         float: left;
+      }
+      overflow: hidden;
+   }
+}
+.start-end {
+   .date-holder {
+      width: 22%;
+      float: left;
+   }
+   .col-time {
+      width: 48%;
+      float: left;
+      margin: 0 0 0 1%;
+      min-width: 150px;
+   }
+   [dropdown] [dropdown-body].big-popup,
+   [dropdown] [dropdown-body].big-drop {
+      left: 1px;
+      top: 48px;
+      .arrow-top-w {
+         left: -3px;
+      }
+   }
+   .date-holder {
+      width: 42%;
+   }
+   .col-time-hour {
+      width: 25%;
+      min-width: 37px;
+      float: left;
+   }
+   .col-time-separator {
+      width: 5px;
+      float: left;
+      margin: 14px 1% 0;
+      text-align: center;
+   }
+   .col-time-minute {
+      width: 25%;
+      min-width: 37px;
+      float: left;
+      margin: 0 1% 0 0;
+   }
+   .col-time-period {
+      width: 42%;
+      float: left;
+      min-width: 64px;
+      margin: 0 0 0 1%;
+
+   }
+   [dropdown] .drop-content {
+      margin: 0;
+   }
+   .options-btn {
+      float: right;
+      min-width: 140px;
+      li {
+         float: left;
+      }
+   }
+   .timezone > .col {
+      width: 48%;
+      padding: 0px 57px 0 0;
+      &:last-child {
+         padding: 0;
+      }
+   }
+}
+
+
+.time-input{
+   padding-left: 0;
+   padding-right: 0;
+   text-align: center;
+   &::-webkit-outer-spin-button,
+   &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+   }
+   &[type='number'] {
+      -moz-appearance:textfield;
+   }
+}
+.event-type {
+   .dropdown-timezone {
+      width: 210px;
+   }
+}
+.sell-tickets {
+   .holder {
+      text-align: center;
+   }
+   .heading {
+      font-size: $font20;
+      font-weight: normal;
+      text-align: center;
+   }
+   .options-selling {
+      text-align: left;
+      margin: 0 0 10px;
+      li {
+         display: inline-block;
+         vertical-align: top;
+         width: 42%;
+         padding: 0 20px 10px 0;
+         &:last-child {
+            padding: 0;
+         }
+      }
+   }
+   .content-holder {
+      border: 0;
+      padding: 15px 0;
+   }
+   .photo-holder {
+      svg {
+         width: 48px;
+         height: 48px;
+      }
+      svg use {
+         fill: #fff;
+      }
+   }
+   svg {
+      border: 1px solid $color-blue;
+      use {
+         fill: $color-white;
+      }
+   }
+}
+.img-description {
+   .date {
+      font-style: normal;
+      font-family: latobold;
+      strong {
+         font-weight: normal;
+         font-family: latoregular;
+      }
+   }
+}
+
+

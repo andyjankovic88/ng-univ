@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>notifications-st-services</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ASSETS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-4" sketch:type="MSArtboardGroup" transform="translate(-30.000000, -142.000000)">
+            <g id="Shape-Copy-3-+-Rectangle-346-Copy-Copy-Copy-Copy-Copy" sketch:type="MSLayerGroup" transform="translate(30.000000, 142.000000)">
+                <rect id="Rectangle-346" sketch:type="MSShapeGroup" x="0" y="0" width="24" height="24"></rect>
+                <g id="Shape-Copy-6-+-Path-+-Path" sketch:type="MSShapeGroup">
+                    <path d="M11.601,0 L11.601,0 C18.0068827,0 23.201,5.19374363 23.201,11.6 C23.201,18.0070695 18.0070695,23.201 11.601,23.201 C5.1934305,23.201 0,18.0075695 0,11.6 C0,5.19324367 5.19361734,0 11.601,0 L11.601,0 Z" id="Shape" fill="#FFFFFF"></path>
+                    <path d="M11.601,2 C6.298,2 2,6.298 2,11.6 C2,16.903 6.298,21.201 11.601,21.201 C16.902,21.201 21.201,16.903 21.201,11.6 C21.201,6.298 16.902,2 11.601,2 L11.601,2 L11.601,2 Z" id="Path" fill="#F29A78"></path>
+                    <path d="M12.497,5.466 C13.433,5.466 13.708,6.009 13.708,6.63 C13.708,7.405 13.088,8.122 12.029,8.122 C11.143,8.122 10.721,7.677 10.747,6.94 C10.747,6.319 11.266,5.466 12.497,5.466 L12.497,5.466 Z" id="Path" fill="#FFFFFF"></path>
+                    <path d="M10.099,17.35 C9.459,17.35 8.992,16.961 9.439,15.256 L10.172,12.231 C10.299,11.747 10.32,11.553 10.172,11.553 C9.981,11.553 9.15,11.887 8.66,12.217 L8.341,11.694 C9.896,10.395 11.684,9.633 12.449,9.633 C13.089,9.633 13.195,10.389 12.876,11.553 L12.036,14.733 C11.887,15.295 11.951,15.489 12.1,15.489 C12.292,15.489 12.92,15.257 13.538,14.77 L13.9,15.256 C12.387,16.768 10.738,17.35 10.099,17.35 L10.099,17.35 Z" id="Path" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

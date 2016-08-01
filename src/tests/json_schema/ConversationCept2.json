@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "", 
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "msg_id": {
+              "type": "integer"
+            },
+            "is_blocked": {
+              "type": "boolean"
+            },
+            "is_read": {
+              "type": "integer"
+            },
+            "message_text": {
+              "type": "string"
+            },
+            "user_id": {
+              "type": "integer"
+            },
+            "username": {
+              "type": "string"
+            },
+            "profile_pic": {
+              "type": "string"
+            },
+            "attachment_details": {
+              "type": "array",
+              "items": []
+            },
+            "how_long_ago": {
+              "type": "string"
+            },
+            "sent_date": {
+              "type": "string"
+            },
+            "sent_date_ios": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

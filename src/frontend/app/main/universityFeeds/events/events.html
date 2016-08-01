@@ -1,0 +1,6 @@
+<span class="float-right default-btn l-space" ng-if="can_create_delete">
+      <input type="button" value="Create Event" ui-sref="newEvent({group_type: group_type, group_id: feedId})">
+</span>
+<event-list club-id="{{feedId}}" type="university" can-edit="can_create_delete"></event-list>
+
+

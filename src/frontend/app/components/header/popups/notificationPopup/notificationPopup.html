@@ -1,0 +1,54 @@
+<div id="popup-notification" class="popup-notification">
+    <div class="popup-holder clearfix">
+        <!--<a href="#" class="mark-read">
+            <svg><use xlink:href="#popup-mark-as-read"></use></svg>
+           <span>Mark all as read</span>
+        </a>-->
+        <div class="popup-wrapper clearfix">
+            <div class="popup-fixed" scrollbar>
+               <div class="header-notification">
+                  <a href="#" class="blue-link" ui-sref="notifications">See all notifications</a>
+                  <svg class="ico-clear r-side" ng-click="activeWidget = ''">
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-clear"></use>
+                  </svg>
+               </div>
+               <div class="holder-notification">
+                  <div class="post-section post-description clearfix" ng-repeat="activity in notifications">
+                     <ul class="popup-list clearfix">
+                        <li ng-class="{'user-post' :  activity.type === 'vote_feed_posts'}">
+                           <figure class="img-holder" ui-sref="profile({id: activity.title.user.id})" class="photo-holder" ng-if="activity.type != 'scheduled_post_posted'">
+                              <img ng-src="{{activity.title.user.profile_pic}}">
+                              <svg class="icon-type-group">
+                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-ico-1"></use>
+                              </svg>
+                           </figure>
+                           <div class="popup-info">
+                              <div class="wrapper">
+                                 <notification-title></notification-title>
+                              </div>
+                              <div class="time-category">
+                                 <span class="date" ng-if="activity.type != 'scheduled_post_posted'">
+                                    {{activity.how_long_ago}}
+                                 </span>
+                              </div>
+                              <!--<svg class="ico-remove" ng-click="removeItem($index, activity.id)">
+                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-ico-1"></use>
+                              </svg>-->
+                           </div>
+                        </li>
+                     </ul>
+                     <ul id="options-btn" ng-if="activity.type === 'added_connection'">
+                        <li>
+                           <button type="button" class="default-btn" ng-click="blockRequest($index, activity.title.user.id, activity.id)">Ignore</button>
+                        </li>
+                        <li>
+                           <button type="button" class="btn-green" ng-click="acceptRequest($index, activity.title.user.id, activity.id)">Accept</button>
+                        </li>
+                     </ul>
+                     <div ng-if="activity.type === 'feed_post'">{{activity.body.object.name}}</div>
+                  </div>
+               </div>
+            </div>
+        </div>
+    </div><!-- /.popup-holder -->
+</div><!-- /.popup-notification -->

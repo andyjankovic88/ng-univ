@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Product set",
+    "type": "array",
+    "items": {
+        "title": "Product",
+        "type": "object",
+        "properties": {
+            "email": {
+                "type": "string"
+            },
+            "unit": {
+                "type": "array",
+                "properties": {
+                    "code": {"type": "string"},
+                    "name": {"type": "string"}
+                },
+                "required": ["code"]
+            },
+            "degree": {
+                "type": "string"
+            },
+            "unenrol": {
+                "type": "boolean"
+            }
+        },
+        "required": ["email"]
+    }
+}

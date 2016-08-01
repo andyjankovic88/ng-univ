@@ -1,0 +1,33 @@
+#conversation-list,
+#conversation-person {
+   font-size: 13px;
+  .info-holder {
+    p {
+      a {
+        color: $color-inactive;
+        &:hover {
+          color: $color-blue;
+        }
+      }
+    }
+  }
+  .item-list li {
+    border-bottom: 1px solid $color-light-grey;
+    overflow: hidden;
+  }
+  .item-list li:last-child {
+    border: 0;
+  }
+  [type="checkbox"]:not(:checked) + label,
+  [type="checkbox"]:checked + label {
+    color: $color-blue;
+  }
+}
+
+/*
+   ToDo see classOnMiddleSectionDirective
+*/
+.middle-section.messages-section .conversation-holder {
+   height: 100%;
+   overflow: auto;
+}

@@ -1,0 +1,21 @@
+<div class="small-gallery">
+   <a href="#" class="arrow-blue" ng-if="arrow">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
+         <polyline fill="none" stroke="#42a5f5" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" points="
+                 0.375,0.375 45.63,38.087 0.375,75.8 "></polyline>
+      </svg>
+   </a>
+   <ul ng-repeat="user in list | limitTo:limitTo">
+      <li>
+         <a title="{{user[nameKey]}}" ui-sref="profile({id: user[idKey]})"><img class="photo" ng-src="{{user[photoKey]}}"></a>
+         <!-- <a class="tooltip-holder tooltip-top" href="#">
+            <div class="arrow-top"></div>
+            <div class="tooltip">
+               <strong>[soon]Gregory Hanson</strong>
+               <p>Head</p>
+            </div>
+         </a> -->
+      </li>
+   </ul>
+   <span class="label" ng-if="title">{{title}}</span>
+</div>

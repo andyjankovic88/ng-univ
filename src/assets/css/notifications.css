@@ -1,0 +1,11 @@
+/* @override http://localhost.imac/assets/css/notifications.css */
+
+@CHARSET "UTF-8";
+
+.post-description	{
+	color: #9c9c9c;
+}
+
+.connection_area .post-description	{
+	cursor: default;
+}

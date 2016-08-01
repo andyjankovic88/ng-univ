@@ -1,0 +1,60 @@
+<div id="first-steps-three">
+   <div class="title-wrapper">
+      <h1 class="title">Join some trending groups</h1>
+      <p class="title-tip">You can always customise it later</p>
+   </div>
+   <div class='add-subject'>
+      <form>
+         <fieldset>
+            <div class="row">
+               <label for="search" ng-if="label">Subject Name</label>
+               <div class="search-section" dropdown>
+                  <input class="autoinput" type="text" id="search" dropdown-trigger ng-model="search.keywords" ng-change="searchGroups()" placeholder="">
+                  <div class="search-box" dropdown-body ng-show="searchResults.length">
+                     <div class="holder"><span class="r-side txt">search suggestions</span></div>
+                     <div class="holder table">
+                        <ul class="rubber-list">
+                           <li ng-repeat="item in searchResults | limitTo: 6" dropdown-inner-trigger ng-click="select(item)">
+                              <figure class="img-holder">
+                                 <div class="icon-circle">
+                                    <a href="#">
+                                       <svg class="ico-subject-small">
+                                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-study"></use>
+                                       </svg>
+                                    </a>
+                                 </div>
+                                 <strong class="user-name">{{item.name}}</strong>
+                              </figure>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="subjects-section" ng-show="selectedGroups.length">
+                  <div class="item-holder clearfix" ng-repeat="item in selectedGroups">
+                     <div class="item">
+                        <figure class="img-holder">
+                           <div class="icon-circle">
+                              <a href="#">
+                                 <svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-study"></use>
+                                 </svg>
+                              </a>
+                           </div>
+                        </figure>
+                        <div class="item-info">
+                           <h3>
+                        		<a href="#">{{item.name}}</a>
+                     		</h3>
+                           <span class="message-update">{{item.members}} members</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </fieldset>
+      </form>
+   </div>
+</div>

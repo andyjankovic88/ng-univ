@@ -1,0 +1,16 @@
+h3 {
+   a {
+      color: $color-blue;
+   }
+}
+.post-section {
+   .subtitle {
+      padding: 0 0 10px;
+      border-bottom: 1px solid $color-light-grey;
+      margin: 0 0 20px;
+      .user-name {
+         margin: 0 5px 0 0;
+         font-size: $font12;
+      }
+   }
+}

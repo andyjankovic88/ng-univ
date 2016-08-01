@@ -1,0 +1,98 @@
+/* @override 
+	http://ucroo/assets/css/search.css
+	http://simplesaml.sucroo.com/assets/css/search.css?2907
+*/
+
+@CHARSET "UTF-8";
+
+/*.search-label	{
+	font-weight:bold;
+	font-size: 1em;
+}
+
+.search-label-more	{
+	font-weight:bold;
+	font-size: 1em;
+	color: #279ED9;
+}
+
+.search-label-icon	{
+	font-weight:bold;
+	font-size: 1em;
+	margin-left: 30px;
+}*/
+
+.question_icon {
+  background-position: -120px -124px;
+  float: left;
+  vertical-align: middle;
+  background-image: url(/assets/images/icons/icons_sprite-373737-920x920-png24-v1.0.png);
+}
+
+.question_icon:hover {
+  background-image: url(/assets/images/icons/icons_sprite-ffffff-880x880-png24.png);
+}
+
+li.search.ui-menu-item {
+	padding-bottom: 10px;
+}
+
+a.search.ui-corner-all {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	
+}
+
+
+.search-desc	{
+    color: #91989d;
+    font-family: 'SoleilLt';
+}
+
+.search-result	{
+	clear: both;
+	cursor: pointer; cursor: hand;
+	margin-bottom: 7px;
+	padding: 5px;
+}
+
+.search-result:hover	{
+	background-color: #eff3ff;
+}
+
+
+h3.search a {
+	color: #5cb294;
+}
+
+div.search_results_display {
+	margin-bottom: 20px;
+}
+
+.result-description	{
+	font-size: 1em;
+	color: #666;
+}
+
+.search-icon	{
+	float: left;
+	border-radius: 30px;
+    height: 40px;
+    margin: 0 20px 0 0;
+    overflow: hidden;
+    width: 40px;
+}
+
+.search-label	{
+	color: #004a84;
+    display: block;
+    font-family: 'SoleilBk';
+    font-size: 14px;
+    margin: 0 0 0 0;
+}
+
+.search-label span:hover	{
+	color: #fff;
+}
+
+/*a.ui-corner-all:hover .search-label,a.ui-corner-all:hover .search-desc{color: #fff;}*/

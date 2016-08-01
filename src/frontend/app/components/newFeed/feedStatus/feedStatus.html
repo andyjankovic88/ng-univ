@@ -1,0 +1,26 @@
+<ul class="def-list">
+   <li ng-if="post.target">
+      <div class="title">Target to:</div>
+      <div class="def">
+         <span ng-repeat="faculty in post.target.faculties"><span ng-if="!$first">; </span>{{faculty.name}}</span>
+         <span ng-repeat="campus in post.target.campuses"><span ng-if="!$first">; </span>{{campus.name}}</span>
+         <span ng-if="post.target.international">; to International Students</span>
+         <a href="#" ng-click="post.target = false"><svg class="ico-delete"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-delete"></use></svg></a>
+      </div>
+   </li>
+   <li ng-if="post.scheduleDate">
+      <div class="title">Schedule Post on:</div>
+      <div class="def">
+         <span ng-show="post.scheduleDate.hasTime">{{post.scheduleDate.date.format('D MMMM YYYY, h:mm a')}}</span>
+         <span ng-hide="post.scheduleDate.hasTime">{{post.scheduleDate.date.format('D MMMM YYYY')}}</span>
+         <a href="#" ng-click="post.scheduleDate = null;"><svg class="ico-delete"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use></svg></a>
+      </div>
+   </li>
+   <li ng-if="post.pinnDate">
+      <div class="title">Pin until:</div>
+      <div class="def">
+         <span>{{post.pinnDate.format('D MMMM YYYY, h:mm a')}}</span>
+         <a href="#" ng-click="post.pinnDate = false"><svg class="ico-delete"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-delete"></use></svg></a>
+      </div>
+   </li>
+</ul>

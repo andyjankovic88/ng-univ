@@ -1,0 +1,81 @@
+#first-steps-staff {
+    .wrapper-center {
+        text-align: center;
+    }
+    .title {
+        display: inline-block;
+        margin-bottom: 50px;
+        .title-logo {
+            width: 167px;
+            height: 167px;
+        }
+        h1 {
+            font-weight: bold;
+            font-size: 28px;
+        }
+        .description {
+            display: block;
+            font-size: 14px;
+        }
+    }
+    .rubber-list {
+        display: inline-block;
+        max-width: 800px;
+        margin: 0 auto;
+        li {
+            display: inline-block;
+            width: 210px;
+            text-align: center;
+            padding: 15px 10px;
+            vertical-align: top;
+            margin: 10px;
+            cursor: pointer;
+            .img-holder {
+                cursor: pointer;
+                margin: 0 auto;
+                .icon-circle {
+                    height: 80px;
+                    width: 80px;
+                    display: block;
+                    border-radius: 50%;
+                    border: 3px solid $color-green;
+                    line-height: 66px;
+                    text-align: center;
+                    float: none;
+                    margin: 0;
+                    font-size: 36px;
+                    color: $color-green;
+                    margin-bottom: 7px;
+                    svg {
+                        width: 36px;
+                        height: 36px;
+                        margin: 0 0 7px 0;
+                        vertical-align: middle;
+                        use {
+                            fill: $color-green;
+                        }
+                    }
+                }
+            }
+            &:hover {
+               .icon-circle {
+                   border-color: $color-blue;
+                   svg {
+                       use {
+                          fill: $color-blue;
+                       }
+                   }
+                   color: $color-blue;
+                }
+            }
+        }
+        h2 {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .description {
+            font-size: 13px;
+        }
+    }
+}

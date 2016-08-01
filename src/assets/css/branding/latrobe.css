@@ -1,0 +1,19 @@
+.la-trobe {
+/** Update La Trobe Logo 
+    Update Back-ground color (set white in place of #D52B1E - red)
+    #4871 @Anuj - 15-06-2015
+    //background-color: #D52B1E; 
+**/
+
+  background-color: #fff; 
+}
+.la-trobe .left{height: 56px;}
+.la-trobe .right{float: right;}
+.la-trobe .right .top-links{text-align: right;font-size: 13px;line-height: 17px; color: #D52B1E;}
+.la-trobe .right .top-links a{display: inline-block;color: #D52B1E;padding: 0 10px;border-right: 1px solid #003868;margin: 20px 0 0 0;}
+.la-trobe .right .top-links a:hover{color: #D52B1E; text-decoration: underline;}
+
+.la-trobe .custom-wrapper .left img {
+    height:44px;
+    margin-top: 6px;
+}

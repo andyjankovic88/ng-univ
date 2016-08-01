@@ -1,0 +1,23 @@
+h3 {
+   a {
+      color: $color-blue;
+   }
+}
+.post-section {
+   .subtitle {
+      padding: 0 0 6px;
+      border-bottom: 1px solid $color-light-grey;
+      margin: 0 0 20px;
+      position: relative;
+      .user-name {
+         margin: 0 5px 0 0;
+         font-size: $font12;
+         line-height: 20px;
+      }
+      .ico-remove {
+         position: absolute;
+         top: 0;
+         right: 0;
+      }
+   }
+}

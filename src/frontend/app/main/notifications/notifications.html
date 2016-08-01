@@ -1,0 +1,75 @@
+<div id="notifications" class="holder-item">
+   <div class="content-heading">
+      <h1>Notifications</h1>
+   </div>
+   <div class="post">
+      <div class="post-section post-description clearfix" ng-repeat="activity in notifications">
+         <div ng-class="{'user-post' :  activity.type === 'vote_feed_posts'}">
+            <a ui-sref="profile({id: activity.title.user.id})" class="photo-holder" ng-if="activity.type != 'vote_feed_posts' && activity.type != 'scheduled_post_posted'">
+               <img ng-src="{{activity.title.user.profile_pic}}">
+               <svg class="ico-remove r-side">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-ico-1"></use>
+               </svg>
+            </a>
+            <div class="content-holder">
+               <notification-title></notification-title>
+               <div class="time-category">
+                  <div class="date" ng-if="activity.type != 'vote_feed_posts' && activity.type != 'scheduled_post_posted'">{{activity.how_long_ago}}</div>
+               </div>
+               <svg class="ico-remove" ng-click="removeItem($index, activity.id)">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-ico-1"></use>
+               </svg>
+               <ul id="options-btn" ng-if="activity.type === 'added_connection'">
+                  <li>
+                     <button type="button" class="default-btn" ng-click="blockRequest($index, activity.title.user.id, activity.id)">Ignore</button>
+                  </li>
+                  <li>
+                     <button type="button" class="btn-green" ng-click="acceptRequest($index, activity.title.user.id, activity.id)">Accept</button>
+                  </li>
+               </ul>
+               <div ng-if="activity.type === 'feed_post'">{{activity.body.object.name}}</div>
+            </div>
+         </div>
+         <div class="holder" ng-if="activity.type === 'vote_feed_posts' || activity.type === 'scheduled_post_posted'">
+            <figure class="post-heading clearfix">
+               <a class="photo-holder" ui-sref="profile({id: activity.body.user.id})">
+                  <img ng-src="{{activity.body.user.profile_pic}}">
+               </a>
+               <div class="wrapper-user">
+                  <div class="user-details clearfix">
+                     <div class="l-side">
+                        <a ui-sref="profile({id: activity.body.user.linked_object_id})" class="user-name">{{activity.body.user.username}}</a>
+                        <span class="points">{{activity.body.user.karma}}</span>
+                     </div>
+                  </div>
+                  <figcaption class="time-category">
+                     <div class="user-info clearfix">
+                        <span class="date">{{activity.how_long_ago}}</span>
+                        <ul class="post-options">
+                           <li class="likes" ng-if="activity.body.object.likes_count">
+                              <a href="#">
+                                 <svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#feeds-filledHart"></use>
+                                 </svg>
+                                 <span class="number">{{activity.body.object.likes_count}}</span>
+                              </a>
+                           </li>
+                           <li class="comments" ng-if="activity.body.object.comments_count">
+                              <a href="#">
+                                 <svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#feeds-chat"></use>
+                                 </svg>
+                                 <span class="number">{{activity.body.object.comments_count}}</span>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </figcaption>
+               </div>
+            </figure>
+            <post></post>
+         </div>
+
+      </div>
+   </div>
+</div>

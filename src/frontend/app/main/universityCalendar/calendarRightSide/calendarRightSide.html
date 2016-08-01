@@ -1,0 +1,238 @@
+<div class="calendar-right-side">
+   <h2>Add to Calendar</h2>
+   <ul class="tabset" ng-init="tab = 'class'">
+      <li ng-class="{active: tab == 'class'}" ng-click="tab = 'class'">Class time</li>
+      <li ng-class="{active: tab == 'activity'}" ng-click="tab = 'activity'">Activity</li>
+      <li ng-class="{active: tab == 'assessment'}" ng-click="tab = 'assessment'">Assessment</li>
+   </ul>
+
+   <div class="tab" ng-show="tab == 'class'">
+      <form novalidate ng-submit="submit(class)">
+         <div class="row">
+            <div class="select-custom select-big">
+               <select ng-class="{selected: class.assessment_unit_id}" ng-model="class.assessment_unit_id" ng-options="subject.id as (subject.code + ' ' + subject.name) for subject in subjects" ng-change="loadClassTimes()">
+                  <option hidden disabled value="">Select subject</option>
+               </select>
+            </div>
+         </div>
+         <div class="row" ng-if="classTimes.length">
+            <combo-with-checkboxes options="classTimes" id-key="id" label-key="display_text" id-attr-prefix="times" ng-model="class.unit_info_ids" default-text="Class times"></combo-with-checkboxes>
+         </div>
+         <div class="checkbox">
+            <input type="checkbox" id="manual" ng-model="class.class_details" ng-true-value="1" ng-false-value="0" ng-change="setOnChecked(class, 'class_type', '', activity.repeats)">
+            <label for="manual">Add manually class time</label>
+         </div>
+         <div ng-if="class.class_details">
+            <div class="select-custom select-big row">
+               <select ng-class="{selected: class.class_type}" ng-model="class.class_type" ng-options="key as value for (key, value) in types">
+                  <option hidden disabled value="">Class type</option>
+               </select>
+            </div>
+            <div class="select-custom select-big row">
+               <select ng-class="{selected: class.day}" ng-model="class.day" ng-options="key as value for (key, value) in days">
+                  <option hidden disabled value="">Day</option>
+               </select>
+            </div>
+            <div class="select-custom select-big row">
+               <select ng-class="{selected: class.time_from}" ng-model="class.time_from" ng-options="key as value for (key, value) in time">
+                  <option hidden disabled value="">Start</option>
+               </select>
+            </div>
+            <div class="select-custom select-big row">
+               <select ng-class="{selected: class.time_to}" ng-model="class.time_to" ng-options="key as value for (key, value) in time">
+                  <option hidden disabled value="">End</option>
+               </select>
+            </div>
+         </div>
+         <div class="row import-file">
+            <label for="import-file">Add your class times by uploading an .ics file</label>
+            <div id="import-file">
+               <button type="button" class="btn-green" ngf-select="importICS($file)">Upload</button>
+            </div>
+         </div>
+         <button type="submit" class="blue-btn" ng-show="class.assessment_unit_id && (class.unit_info_ids.length || (class.class_type && class.day && class.time_from && class.time_to))">Add to Calendar</button>
+      </form>
+   </div>
+   <div class="tab" ng-show="tab == 'activity'">
+      <form novalidate ng-submit="submit(activity)">
+         <div class="row">
+            <input type="text" placeholder="Name" ng-model="activity.title">
+         </div>
+         <div class="row" dropdown>
+            <input type="text" dropdown-trigger value="On&#058; {{activity.date | date:'d MMM yyyy'}}">
+
+            <div dropdown-body class="popup-holder big-popup clearfix">
+               <span class="arrow-top-w"></span>
+               <span class="arrow-top"></span>
+
+               <div class="calendar-popup drop-content">
+                  <div class="header clearfix">
+                     <svg class="ico-clear r-side" dropdown-inner-trigger>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-clear"></use>
+                     </svg>
+                  </div>
+                  <date-picker-ex
+                     on-save="activity.date = $date.toDate()"
+                     on-cancel=""
+                  ></date-picker-ex>
+               </div>
+            </div>
+         </div>
+         <div class="row select-custom select-big">
+            <select ng-class="{selected: activity.time_from}" ng-model="activity.time_from" ng-options="key as value for (key, value) in time">
+               <option hidden disabled value="">Start</option>
+            </select>
+         </div>
+         <div class="row select-custom select-big">
+            <select ng-class="{selected: activity.time_to}" ng-model="activity.time_to" ng-options="key as value for (key, value) in time">
+               <option hidden disabled value="">End</option>
+            </select>
+         </div>
+         <div class="checkbox">
+            <input type="checkbox" id="repeats" ng-model="activity.repeats" ng-change="setOnChecked(activity, 'repeat-event-value', 'daily', activity.repeats)">
+            <label for="repeats">Repeats</label>
+         </div>
+         <div class="repeats-block" ng-if="activity.repeats">
+            <div class="row">
+               <div class="select-custom select-big">
+                  <select ng-class="{selected: activity['repeat-event-value']}" ng-model="activity['repeat-event-value']" ng-options="key as value for (key, value) in repeatOptions"></select>
+               </div>
+            </div>
+            <div class="row" dropdown>
+               <input type="text" dropdown-trigger value="From&#058; {{activity['repeat-start-date'] | date:'d MMM yyyy'}}">
+
+               <div dropdown-body class="popup-holder big-popup clearfix">
+                  <span class="arrow-top-w"></span>
+                  <span class="arrow-top"></span>
+
+                  <div class="calendar-popup drop-content">
+                     <div class="header clearfix">
+                        <svg class="ico-clear r-side" dropdown-inner-trigger>
+                           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-clear"></use>
+                        </svg>
+                     </div>
+                     <date-picker-ex
+                        on-save="activity['repeat-start-date'] = $date.toDate()"
+                        on-cancel=""
+                     ></date-picker-ex>
+                  </div>
+               </div>
+            </div>
+            <div class="row" dropdown>
+               <input type="text" dropdown-trigger value="To&#058; {{activity['repeat-end-date'] | date:'d MMM yyyy'}}">
+
+               <div dropdown-body class="popup-holder big-popup clearfix">
+                  <span class="arrow-top-w"></span>
+                  <span class="arrow-top"></span>
+
+                  <div class="calendar-popup drop-content">
+                     <div class="header clearfix">
+                        <svg class="ico-clear r-side" dropdown-inner-trigger>
+                           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-clear"></use>
+                        </svg>
+                     </div>
+                     <date-picker-ex
+                        on-save="activity['repeat-end-date'] = $date.toDate()"
+                        on-cancel=""
+                     ></date-picker-ex>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <button type="submit" class="blue-btn" ng-show="activity.date && activity.time_from && activity.time_to">Add to Calendar</button>
+      </form>
+   </div>
+   <div class="tab" ng-show="tab == 'assessment'">
+      <form novalidate ng-submit="submit(assessment)">
+         <div class="row">
+            <input type="text" placeholder="Title" ng-model="assessment.title">
+         </div>
+         <div class="row">
+            <div class="select-custom select-big">
+               <select ng-class="{selected: assessment.assessment_unit_id}" ng-model="assessment.assessment_unit_id" ng-options="subject.id as (subject.code + ' ' + subject.name) for subject in subjects" ng-change="loadClassTimes()">
+                  <option hidden disabled value="">Select subject</option>
+               </select>
+            </div>
+         </div>
+         <div class="row" dropdown>
+            <input type="text" dropdown-trigger value="To&#058; {{assessment.date | date:'d MMM yyyy'}}">
+
+            <div dropdown-body class="popup-holder big-popup clearfix">
+               <span class="arrow-top-w"></span>
+               <span class="arrow-top"></span>
+
+               <div class="calendar-popup drop-content">
+                  <div class="header clearfix">
+                     <svg class="ico-clear r-side" dropdown-inner-trigger>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-clear"></use>
+                     </svg>
+                  </div>
+                  <date-picker-ex
+                     on-save="assessment.date = $date.toDate()"
+                     on-cancel=""
+                  ></date-picker-ex>
+               </div>
+            </div>
+         </div>
+         <div class="row select-custom select-big">
+            <select ng-class="{selected: assessment.time_from}" ng-model="assessment.time_from" ng-options="key as value for (key, value) in time">
+               <option hidden disabled value="">Start</option>
+            </select>
+         </div>
+         <div class="row select-custom select-big" ng-if="!assessment.noEnd">
+            <select ng-class="{selected: assessment.time_to}" ng-model="assessment.time_to" ng-options="key as value for (key, value) in time">
+               <option hidden disabled value="">End</option>
+            </select>
+         </div>
+         <div class="checkbox">
+            <input type="checkbox" id="no-end" ng-model="assessment.noEnd" ng-change="setOnChecked(assessment, 'time_to', '', !assessment.noEnd)">
+            <label for="no-end">No End Time</label>
+         </div>
+         <div class="checkbox">
+            <input type="checkbox" id="reminder" ng-model="assessment.reminder" ng-change="setOnChecked(assessment, 'alert', '1', assessment.reminder)">
+            <label for="reminder">Assessment Reminder</label>
+         </div>
+         <div class="row" ng-if="assessment.reminder">
+            <div class="select-custom select-big">
+               <select ng-class="{selected: assessment.alert}" ng-model="assessment.alert" ng-options="key as value for (key, value) in alertOptions"></select>
+            </div>
+         </div>
+         <div class="checkbox">
+            <input type="checkbox" id="assessment-repeats" ng-model="assessment.repeats" ng-change="setOnChecked(assessment, 'repeat-event-value', 'daily', assessment.repeats)">
+            <label for="assessment-repeats">Repeats</label>
+         </div>
+         <div class="repeats-block" ng-if="assessment.repeats">
+            <div class="row">
+               <div class="select-custom select-big">
+                  <select ng-class="{selected: assessment['repeat-event-value']}" ng-model="assessment['repeat-event-value']" ng-options="key as value for (key, value) in repeatOptions"></select>
+               </div>
+            </div>
+            <div class="row" dropdown>
+               <input type="text" dropdown-trigger value="Until&#058; {{assessment['repeat-end-date'] | date:'d MMM yyyy'}}">
+
+               <div dropdown-body class="popup-holder big-popup clearfix">
+                  <span class="arrow-top-w"></span>
+                  <span class="arrow-top"></span>
+
+                  <div class="calendar-popup drop-content">
+                     <div class="header clearfix">
+                        <svg class="ico-clear r-side" dropdown-inner-trigger>
+                           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-clear"></use>
+                        </svg>
+                     </div>
+                     <date-picker-ex
+                        on-save="assessment['repeat-end-date'] = $date.toDate()"
+                        on-cancel=""
+                     ></date-picker-ex>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="checkbox">
+            <input type="checkbox" id="showInAll" ng-model="assessment.by_academic" ng-true-value="0" ng-false-value="1">
+            <label for="showInAll">Show in all students Calendars</label>
+         </div>
+         <button type="submit" ng-show="assessment.assessment_unit_id && assessment.date && assessment.time_from && (assessment.time_to || assessment.noEnd)" class="blue-btn">Add to Calendar</button>
+      </form>
+   </div>
+</div>

@@ -1,0 +1,79 @@
+#createCustomGroup {
+   margin: -20px 0 0;
+   position: relative;
+   .holder-info {
+      border: 0;
+   }
+   label {
+      color: $color-inactive;
+      position: relative;
+      svg {
+         top: 0px;
+         left: 100%;
+         position: absolute;
+      }
+      &.red {
+         color: #f00;
+      }
+      &.green {
+         color: green;
+      }
+   }
+   .col {
+      padding: 0 10px 0 0;
+      width: 50%;
+      &:last-child {
+         padding: 0;
+      }
+   }
+}
+.banner {
+   background: #ebebeb;
+}
+#upload-cover-pic {
+   position: relative;
+   background: #ebebeb;
+   input {
+      filter: alpha(opacity=0);
+      opacity: 0;
+      height: 200px;
+      width: 100%;
+   }
+   label {
+      position: absolute;
+      top: 78px;
+      width: 310px;
+      margin: 0 0 0 -155px;
+      left: 50%;
+      font-size: 14px;
+      text-align: center;
+      background: #ebebeb;
+   }
+   .ico-test {
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      margin: -36px 0 0 -36px;
+   }
+}
+.not-created {
+   .input-name {
+      color: $color-inactive;
+      background: url(/../svg/icon/line.svg) repeat-x 0 100%;
+      border: 0;
+      padding: 10px 0;
+      width: 300px;
+   }
+   .holder-info .user-info .avatar {
+      border: 0;
+   }
+}
+
+/* list-33 */
+.list-33 {
+   li {
+      width: 33%;
+      display: inline-block;
+   }
+}
+

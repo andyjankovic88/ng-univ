@@ -1,0 +1,389 @@
+/* @override 
+	http://localhost.ucroo/assets/css/home.css
+	http://localhost.imac/assets/css/home.css
+	http://anita.sucroo.com/assets/css/home.css?2085
+	http://localhost.ucroo/assets/css/home.css?2117
+*/
+
+.home_area
+{
+	clear: both;
+	border-top: 1px solid #acacac;
+	margin: 10px -26px 1.4em -24px;
+	color: #464646;
+}
+
+.home_area h2
+{
+	font-size: 9px;
+	color: #acacac;
+	text-transform: uppercase;
+	display: inline-block;
+	margin-bottom: 1em;
+}
+
+.strikethrough
+{
+	background-color: #ffffff;
+	margin: -10px 0 0 20px;
+	padding: 0 6px;
+}
+
+.home-main
+{
+	margin: 0 26px 2.5em;
+	padding-top: 0.2em;
+}
+
+.home-main a
+{
+	color: #004b84;
+	font-weight: bold;
+}
+
+.home_content
+{
+	margin-left: 75px;
+}
+
+.home-time-right
+{
+	padding-left: 54px;
+	
+}
+.icon_content {
+	width: 527px;
+	float: left;
+}
+
+
+.home_actions
+{
+	float: right;
+	margin-top: 6px;
+}
+
+
+span.home_title {
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.home_therating
+{
+	margin-top: 5px;
+}
+
+.home_icon
+{
+	width: 50px;
+	overflow: hidden;
+}
+
+.activity_answer_box
+{
+	margin: 0;
+}
+
+.home_votes {
+	text-align: center;
+	width: 32px;
+	font-size: 12px;
+	line-height: 15px;
+	height: 38px;
+	padding-top: 9px;
+}
+
+
+.home-time-date
+{
+	color: #acacac;
+	display: block;
+}
+
+.home_questionlink{
+	color: #004b84;
+}
+
+.home_questionlink a {
+	color: #464646;
+}
+
+.home_percentage_unit {
+	font-weight: bold;
+	color: #8cb4d9;
+	font-size: 18px;
+	text-align: center;
+	padding-top: 20px;
+}
+
+span.percentage_big {
+	font-size: 30px;
+	margin-bottom: 10px;
+	line-height: 30px;
+}
+
+span.home_percent {
+	/*font-weight: bold;*/
+	color: #8cb4d9;
+	font-size: 12px;
+}
+
+.home_lect
+{
+	width: 532px;
+	padding-bottom: 6px;
+}
+
+.home_comment {
+	font-style: italic;
+	color: #2bb295;
+}
+
+.home_post{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.home_answers{
+	border: 1px solid #d5d5d5;
+	background-color: #f5f5f5;
+	cursor: pointer;
+	padding: 3px 10px;
+	width: 540px;
+}
+
+.home_answers ul
+{
+	margin-left: 25px;
+}
+
+.home_subtitle {
+	color: #000;
+}
+
+.home_answer_pic
+{
+	/*width: 40px;*/
+	float: left;
+	overflow: hidden;
+	margin-right: 10px;
+	margin-top: 3px;
+}
+
+.topdetails_more {
+	width: 475px;	
+	float: left;
+}
+
+.wider
+{
+	width: 540px;
+}
+/* pp arrow on asnwers */
+
+#ht1 {
+    position: relative;
+    width:0;
+    height:0;
+    border-color: transparent transparent #bdbcbc transparent;
+    border-width:8px;
+    border-style:solid;
+    z-index: 0;
+}
+
+#ht2 {
+    position: relative;
+    width:0;
+    height:0;
+    border-color: transparent transparent #f5f5f5 transparent;
+    border-width:8px;
+    border-style:solid;
+    z-index: 1;
+	top: -15px;
+}
+
+.ht11
+{
+    left: 20px;	
+}
+
+.home_answers_box
+{
+	height: 15px;
+	margin-top: -5px;
+}
+
+.home_first_steps
+{
+	margin-top: -15px;
+}
+
+.home_first_steps li {
+  list-style-type: none;
+  font-weight: bold;
+  border-bottom: 1px solid #acacac;
+  margin: 0 -25px 0 -24px;
+}
+
+.home_first_steps li a {
+  display: block;
+  position: relative;
+  vertical-align: middle;
+  color: #353535;
+  padding: 15px 0;
+  text-align: center;
+  display: table;
+  width: 100%;
+}
+
+.home_first_steps li a:hover {
+  text-decoration: none;
+}
+.home_first_steps li a:hover .first-step-tip-box {
+  display: block;
+}
+
+.home_first_steps li a img
+{
+	vertical-align: middle;
+}
+
+.home_first_steps li a:hover img
+{
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=20)"; /*IE8*/
+}
+
+.twenty-col {
+  width: 20%;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.eighty-col {
+  width: 80%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.first-step-title {
+  text-align: center;
+  margin: 0 0 16px 0;
+  line-height: 1;
+  font-size: 1.2em;
+  width: 95%;
+}
+
+.first-step-description {
+  text-align: center;
+  line-height: 1;
+  margin: 0;
+  font-size: 10px;
+  font-weight: bold;
+  width: 95%;
+  color: #004b84;
+}
+
+.first-step-tip-box
+{
+  font-size: 18px;
+  font-weight: normal;
+  color: #fff !important;
+  background-color: #004b84;
+  background-color: rgba(0, 75, 132, 0.95);
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  padding: 2% 0;
+}
+
+.first-step-tip-action {
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  margin: 0 0 6px 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.first-step-tip-text {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0;
+  font-size: 10px;
+}
+
+.first-step-tip-text .ucroo-icon-white {
+  margin-right: 3px;
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+#fileprogress .bar {
+	height: 20px;
+	background-color: #008710;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: .6em;
+	line-height: 20px;
+}
+
+#fileprogress .bar span {
+	padding-left: 1em;
+}
+
+.ucroo-intro {
+}
+
+  .ucroo-intro .introjs-tooltipbuttons {
+    border-top: 2px solid #004b84;
+    margin: 8px -10px 0;
+    padding: 0 10px;
+  }
+
+  .ucroo-intro .introjs-button {
+    text-decoration: none;
+    border-radius: 0;
+  }
+
+  .ucroo-intro .introjs-button:not(.introjs-disabled) {
+    background: #004b84;
+    border-color: #004071;
+    border-radius: none;
+    color: #fff;
+    text-shadow: none;
+  }
+
+  .ucroo-intro .introjs-button:not(.introjs-disabled):hover {
+    background: #005393;
+    border-color: #00487F;
+  }
+
+  .ucroo-intro .introjs-skipbutton {
+    float: right;
+    margin-left: 5px;
+    margin-right: 0;
+  }
+
+  .ucroo-intro .introjs-arrow.left{
+    border-right-color: #004b84;
+  }
+
+.tour-heading {
+  background-color: #004b84;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  margin: -10px -10px 4px;
+  padding: 8px 10px;
+  -webkit-border-radius: 3px 3px 0 0;
+     -moz-border-radius: 3px 3px 0 0;
+          border-radius: 3px 3px 0 0;
+}

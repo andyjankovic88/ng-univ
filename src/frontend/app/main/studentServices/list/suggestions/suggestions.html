@@ -1,0 +1,25 @@
+<div class="suggestions-section">
+   <!-- content-heading -->
+   <h2>
+      <svg class="ico-add-user pink">
+         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-connections"></use>
+      </svg>
+      <span>Based on your connections</span>
+   </h2>
+
+   <div class="section">
+      <div class="item" ng-repeat="group in suggestions">
+         <figure class="img-holder">
+            <a ui-sref="studentServicesFeed({service_id:group.id})"><img class="photo" ng-src="{{group.picture}}"></a>
+         </figure>
+         <div class="item-info">
+            <h3>
+               <a ui-sref="studentServicesFeed({service_id:group.id})">{{group.group_name}}</a>
+               <svg class="tick" ng-if="group.is_member"><use xlink:href="#profile-tick" /></svg>
+            </h3>
+            <span>{{group.description}}</span>
+         </div>
+      </div>
+   </div>
+   <loader is-active="listRequestInProgress" position="static"></loader>
+</div>

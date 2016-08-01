@@ -1,0 +1,50 @@
+#first-steps-one {
+   .profile-header {
+      background: $color-white;
+      color: $color-inactive;
+      margin: 0;
+      .holder-info {
+         margin: -75px 0px 15px;
+         padding: 0 10px 0px 23px;
+         .avatar-holder {
+            cursor: pointer;
+            .avatar {
+               height: 100px;
+               width: 100px;
+            }
+         }
+         .user-name {
+            font-weight: normal;
+            h1 {
+               color: $color-white;
+               margin: 0;
+            }
+         }
+         .personal-detail {
+            li {
+               margin-top: 0;
+               font-size: 12px;
+               use {
+                  fill: $color-pink;
+               }
+            }
+         }
+      }
+      .banner {
+         margin: 0;
+         background: $color-white;
+         #upload-cover-pic {
+            background: $color-white;
+            fieldset {
+               border: none;
+               margin: 0;
+               @include gradient(0.4);
+            }
+         }
+      }
+   }
+   .ico-test {
+      width: 72px;
+      height: 72px;
+   }
+}

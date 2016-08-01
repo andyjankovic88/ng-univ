@@ -1,0 +1,87 @@
+/* buttons */
+button {
+   color: $color-white;
+   font: inherit;
+}
+button,
+.btn-green,
+.btn-blue,
+.btn-red,
+.btn-transparent,
+button.default-btn {
+   padding: 0 20px;
+   border: none;
+   color: #fff;
+   background: $color-blue;
+   font-size: 13px;
+   height: 35px;
+   text-align: center;
+   line-height: 35px;
+   display: inline-block;
+   cursor: pointer;
+   min-width: 100px;
+}
+.btn-blue:hover {
+   background: $color-blue-hover;
+   //color: #fff;
+}
+.btn-green {
+   background: $color-green;
+}
+.btn-green:hover {
+   background: $color-green-hover;
+}
+.btn-red {
+   background: $color-red;
+}
+.btn-red:hover {
+   background: $color-red-hover;
+}
+.btn-link {
+   background: none;
+   color: $color-grey-middle;
+   font-size: 14px;
+   padding: 0;
+   &:hover {
+      text-decoration: none;
+      color: $color-blue-hover;
+   }
+}
+.btn-transparent,
+.btn-transparent:hover {
+   background: none;
+   height: 34px;
+   line-height: 34px;
+   border: 1px solid $color-white;
+}
+button.ignore{
+   float: none;
+}
+button.default-btn {
+   padding: 6px 20px;
+   background: none;
+   border: 1px solid $color-inactive-icon;
+   color: $color-grey-dark;
+   line-height: 12px;
+   height: 34px;
+   &:hover{
+      border:1px solid #c4c3c3;
+      -webkit-border-radius:2px;
+      -moz-border-radius:2px;
+      border-radius:2px;
+   }
+}
+.btn-upload {
+   min-width: 150px;
+}
+.btn-edit {
+   background: none;
+   svg {
+      width: 12px;
+      height: 12px;
+      use {
+         fill: $color-grey;
+      }
+   }
+}
+

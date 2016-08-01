@@ -1,0 +1,71 @@
+<div>
+   <div ng-hide="listRequestInProgress">
+      <div ng-if="universityServices && universityServices.length > 0" class="ur-ss-list-section">
+         <h2>
+            <svg class="ico-add-user pink">
+               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-academic-staff"></use>
+            </svg>
+            <span>University Wide Services</span>
+         </h2>
+         <div class="section">
+            <div class="item" ng-repeat="group in universityServices">
+               <figure class="img-holder">
+                  <a ui-sref="studentServicesFeed({service_id:group.id})"><img class="photo" ng-src="{{group.picture}}"></a>
+               </figure>
+               <div class="item-info">
+                  <h3>
+                     <a ui-sref="studentServicesEvents({service_id:group.id})">{{group.group_name}}</a>
+                     <svg class="tick" ng-if="group.is_member"><use xlink:href="#profile-tick" /></svg>
+                  </h3>
+                  <span>{{group.description}}</span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div ng-if="campusServices && campusServices.length > 0" class="ur-ss-list-section">
+         <h2>
+            <svg class="ico-add-user pink">
+               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#profile-campus"></use>
+            </svg>
+            <span>[Campus] Services</span>
+         </h2>
+         <div class="section">
+            <div class="item" ng-repeat="group in campusServices">
+               <figure class="img-holder">
+                  <a ui-sref="studentServicesFeed({service_id:group.id})"><img class="photo" ng-src="{{group.picture}}"></a>
+               </figure>
+               <div class="item-info">
+                  <h3>
+                     <a ui-sref="studentServicesFeed({service_id:group.id})">{{group.group_name}}</a>
+                     <svg class="tick" ng-if="group.is_member"><use xlink:href="#profile-tick" /></svg>
+                  </h3>
+                  <span>{{group.description}}</span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div ng-if="facultyServices && facultyServices.length > 0" class="ur-ss-list-section">
+         <h2>
+            <svg class="ico-add-user pink">
+               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-add-user"></use>
+            </svg>
+            <span>[faculty] Services</span>
+         </h2>
+         <div class="section">
+            <div class="item" ng-repeat="group in facultyServices">
+               <figure class="img-holder">
+                  <a ui-sref="studentServicesFeed({service_id:group.id})"><img class="photo" ng-src="{{group.picture}}"></a>
+               </figure>
+               <div class="item-info">
+                  <h3>
+                     <a ui-sref="studentServicesFeed({service_id:group.id})">{{group.group_name}}</a>
+                     <svg class="tick" ng-if="group.is_member"><use xlink:href="#profile-tick" /></svg>
+                  </h3>
+                  <span>{{group.description}}</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <loader is-active="listRequestInProgress" position="static"></loader>
+</div>

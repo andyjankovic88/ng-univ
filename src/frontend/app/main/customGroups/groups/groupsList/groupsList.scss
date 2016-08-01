@@ -1,0 +1,103 @@
+/* types of dropdowns */
+#filter-dropdown.drop-holder {
+
+   left: -95px;
+   .edit-drop {
+      min-width: 165px;
+      .ico {
+         float: left;
+      }
+   }
+   [type="checkbox"]:not(:checked) + label
+   [type="checkbox"]:checked + label {
+      padding-left: 0;
+   }
+   label {
+      margin: 0;
+      svg {
+         margin: 0;
+      }
+   }
+   [type="checkbox"]:not(:checked) + label:before,
+   [type="checkbox"]:checked + label:before {
+      width: 195px;
+      height: 37px;
+      top: -1px;
+      background: 0;
+   }
+   [type="checkbox"]:not(:checked) + label:after,
+   [type="checkbox"]:checked + label:after {
+      background: 0;
+   }
+   [type="checkbox"]:checked + label {
+      background: #f8f8f8 url(/../svg/icon/tick.svg) no-repeat 95% 12px;
+      width: 195px;
+      height: 36px;
+      color: $color-blue;
+      use {
+         fill: $color-blue;
+      }
+   }
+   [type="checkbox"]:checked + label:after {
+      opacity: 0;
+   }
+   label {
+      width: 195px;
+      padding: 10px 15px;
+   }
+   .edit-drop li {
+      padding: 0;
+   }
+}
+.clubs-list-section,
+#news-section
+.connections-section {
+   .img-holder,
+   .photo-holder {
+      background: url(/assets_new/images/mentor_group_icon.png) no-repeat;
+      width: 80px;
+      height: 80px;
+      float: left;
+      img {
+         width: 80px;
+         height: 80px;
+      }
+   }
+}
+.clubs-list-section {
+   .filter-section {
+      float: right;
+      font-size: 13px;
+      font-family: latobold;
+      li {
+         margin: 0 ;
+         li {
+            font-family: latoregular;
+         }
+      }
+      li:last-child [dropdown-body] {
+         padding: 15px 0 0;
+         //left: -172px;
+         .arrow-holder {
+            right: 35px;
+            left: auto;
+         }
+      }
+      li [dropdown-body]{
+         left: -54px;
+         .arrow-holder {
+            right: auto;
+            left: 55px;
+            .arrow-top {
+               left: 5px;
+            }
+         }
+      }
+      a {
+         color: $color-blue;
+      }
+   }
+}
+.trending-list h3 a {
+   color: $color-red;
+}

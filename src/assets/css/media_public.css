@@ -1,0 +1,649 @@
+@media only screen and (min-width: 1170px) and (max-width:1875px) {
+nav{width:87%;}
+nav li a{padding:0 29px;}
+/*.custom-select:after{padding:0 27px;}*/
+
+	
+/*Staff page*/
+.staff-img{width:35%;}	
+.staff-detail{width:54%;}
+.staff-page li{width:47%;}
+.staff-page li .details{width:75%;}
+
+/*Signup page
+.signup-detail .custom-select:after{padding:0;}*/
+
+/*University page*/
+.university-it-lt{width: 50%;left: -3%;}
+.university-it-rt{width: 50%;margin-bottom: 0;}
+/*Meet the team*/
+.team-list ul { text-align: center; }
+.team-list ul li:first-child{margin-left:18px;}
+.team-list ul li .team-person-img { max-width: 268px; min-height: 268px; }
+.team-person-description { padding-bottom: 20px;  }
+.team-person-description p { font-size: 19px; }
+.team-person-description span { font-size: 16px; }
+.team-list li .team-person-img a img { max-width: 281px; height: auto; }
+}
+
+
+/*for 1024*/
+@media only screen and (min-width: 1024px) and (max-width: 1169px) {
+.homepage-bg{width:100%;}
+.layout-width{width:98%;}	
+.homepage-left{width:56%;margin:120px 0 140px;min-height:inherit;}
+.homepage-left .title{font-size:36px;}
+.homepage-left p{font-size:19px;margin-bottom:20px;}
+.homepage-right{width:40%;}
+.homepage-right img{max-width:100%;}
+.custom-select select{width:395px;padding:12px;font-size:18px;}
+.signup-main .btn-blue{height:53px;line-height:53px;padding:0 18px !important;margin:0 0 0 10px;font-size:15px;}
+.custom-select:after{background: url(/assets/images/simages/elect-arrow.png) no-repeat 58% 50% rgba(0, 0, 0, 0.25);}
+.footer-home li{padding:0 17px 0 0;}
+.signup-main .entypo{margin-top:1px;}
+.footer-home .entypo{float:left;margin-top:10px;}
+.footer-home .layout-width{max-width:80%;}
+.login .entypo{float:left;margin-top:10px;}
+
+/*Students page*/
+header .layout-width{width:98%;}
+nav{width:85%;}
+nav li{font-size:17px;}
+.login{width:15%;}
+nav li a{padding:0 15px;}
+.student-wrapper{width:98%;}
+.student-left{width:32%;margin-right:20px;}
+.student-middle{width:31%;}
+.student-right{width:32%;margin-left:20px;}
+.student-iphone img{width:100%;}
+.student-wrapper li .detail{width:70%;}
+
+/*instructor page*/
+.instructor-banner{min-height:inherit;}
+.instructor-banner .title{padding:170px 0;font-size:36px;}
+.instructor-top-detail .left-section{width:35%;margin:-73px 20px 0 0;}
+.instructor-top-detail .left-section img{max-width:100%;}
+.instructor-top-detail .right-section{width:62%;}
+.middle-wrapper{width:98%;}
+.class-community li{width:47%;margin: 0 5% 7% 0;}
+
+/*Staff Page*/
+.staff-banner{min-height:inherit;}
+.staff-banner .title{padding:170px 0;font-size:36px;}
+.staff-heading{margin: 20px 0;}
+.staff-img{width:40%;display: none;}
+.staff-detail{width:98%;margin: 0 auto !important;float: none;}
+.staff-page li{width:48%;margin: 0 10px 20px 0;}
+.staff-page li .details{margin-left: 10px;width: 75%;}
+.staff-detail.mrgnRt10{margin-right:0;}
+.staff-page li .icon-main-staff{vertical-align: inherit;}
+
+/*Club page*/
+.club-banner .title{font-size:36px;}
+.club-middle-lt{width:51%;margin-bottom:0;}
+.club-middle-rt{width:46%;}
+.club-middle-rt img{max-width:100%;}
+.club-middle{padding:50px 0 30px 0;}
+
+/*University page*/
+.university-banner{min-height:inherit;}
+.university-banner .title{padding:100px 0;font-size:36px;}
+.resp-tabs-list li{width:21.9%;}
+.why-ucroo-lt{width:46%;}
+.why-ucroo-lt img{max-width:100%;}
+.why-ucroo-rt{width:51%;}
+.university-tabs ul{margin:0 8px;}
+.university-tabs li .panel-heading{padding:15px 0px 15px 10px;}
+.university-tabs li .icon{margin: 0 15px 0 0;}
+.university-it-lt{width:46%;left: inherit;}
+.university-it-lt img{max-width:100%;}
+.university-it-rt{width:51%;margin-bottom: 0;}
+.university-it-rt .title{font-size:27px;}
+.university-it{margin-bottom:0;}
+.panel-content{padding:10px;}
+.request-lt{width:48%;}
+.request-rt{width:45%;padding:15px;}
+.request-rt .form-group{margin-bottom:20px;}
+.request-rt input,.col-two .form-group input{width:93%;}
+.col-two .form-group{width:100%;}
+.request-rt textarea{width:93%;}
+.footer-main{padding:35px 0;}
+.footer-section{width:20%;}
+.connect-us{width:18%;}
+.university-it-list ul{margin: 0 20px 0 0;}
+.request-rt .padder35{padding: 0;}
+
+/*Sign up-----------------------------------------------*/
+.degree-input .ui-fullsearch{width: 92% !important;}
+.pad{width: 100%;}
+.steps-description.middle{left: -15%;}
+.signup-Lt{width:58%;margin-right:20px;padding:20px;}
+.signup-Lt .title{padding-bottom:20px;}
+.signup-detail .form-group{width:48%;}
+.signup-detail .control-label{font-size:14px;}
+.degree-info .signup-detail input{width:92%;padding:12px;}
+.signup-detail .row{padding-bottom:25px;}
+.signup-Rt{width:36%;}
+.account-profile-detail{width:62%;font-size:13px;}
+.degree-info{padding:20px;}
+.degree-info .title{font-size:22px;padding:0 0 10px 0;}
+.degree-info .btn-blue{padding:0 10px;font-size:17px;}
+.degree-info .checkbox{font-size:15px;}
+.degree-info .signup-detail .row{padding-bottom:11px;}
+.degree-info .signup-detail .form-group{width:46%;}
+.degree-info .input-small {width: 84% !important;}
+.signup-detail .custom-select select{width: 275px;}
+.degree-info .signup-detail .finish-btn input{padding: 12px 0;}
+
+.club-middle-rt iframe,.why-ucroo-lt iframe{width: 100% !important;}
+
+/*Meet the team*/
+.team-list ul { text-align: center; }
+.team-list ul li:first-child{margin-left:20px;}
+.team-list ul li .team-person-img { max-width: 240px; min-height: 220px; }
+.team-person-description { padding-bottom: 20px;  }
+.team-person-description p { font-size: 17px; }
+.team-person-description span { font-size: 14px; }
+.team-list li .team-person-img a img { max-width: 225px; height: auto; }
+
+}
+
+/*for 980*/
+@media only screen and (min-width: 980px) and (max-width: 1023px) {
+.homepage-bg{width:100%;}
+.layout-width{width:98%;}	
+.homepage-left{width:56%;margin:120px 0 140px;min-height:inherit;}
+.homepage-left .title{font-size:36px;}
+.homepage-left p{font-size:19px;margin-bottom:20px;}
+.homepage-right img{max-width:100%;}
+.custom-select select{width:347px;padding:13px;font-size:18px;}
+.custom-select:after{background: url(/assets/images/select-arrow.png) no-repeat 58% 50% rgba(0, 0, 0, 0.25);}
+.footer-home li{padding:0 75px 0 0;}
+.signup-main .entypo{margin-top:1px;}
+.footer-home .entypo{float:left;margin-top:10px;}
+.login .entypo{float:left;margin-top:10px;}
+.signup-main .btn-blue{height:53px;line-height:53px;padding:0 9px;margin:0 0 0 5px;font-size:15px;}
+
+	
+/*Students page*/
+header .layout-width{width:98%;}
+nav{width:82%;}
+nav li{font-size:17px;}
+.login{width:15%;}
+nav li a{padding:0 13px;}
+.student-wrapper{width:98%;}
+.student-left{width:32%;margin-right:20px;}
+.student-middle{width:31%;}
+.student-right{width:32%;margin-left:20px;}
+.student-iphone img{width:100%;}
+.student-wrapper li{padding:10px;}
+.student-wrapper li .icon-main-student{margin-right:10px;}
+.student-wrapper li .detail{width:74%;}
+nav li a{padding:0 10px;}
+
+/*Instructors page*/
+.instructor-banner{min-height:inherit;}
+.instructor-banner .title{padding:170px 0;font-size:36px;}
+.instructor-top-detail .left-section{width:40%;margin:0 20px 0 0;padding:20px 0;}
+.instructor-top-detail .left-section img{max-width:100%;}
+.instructor-top-detail .right-section{width:56%;padding:20px 0;}
+.middle-wrapper{width:98%;}
+.class-community li{width:47%;margin:0 5% 5% 0;}
+
+/*Staff page*/
+.staff-banner{min-height:inherit;}
+.staff-banner .title{padding:170px 0;font-size:36px;}
+.staff-img{width:38%;display: none;}
+.staff-detail{width:98%;float: none;margin: 0 auto !important;}
+.staff-page li{width:47%;}
+.staff-page li .details{width:72%;}
+.staff-detail.mrgnRt10{margin-right:0;}
+.staff-heading{margin: 20px 0;}
+
+/*Club page*/
+.why-club {padding: 30px 0;}
+.why-club .title{padding:0 0 30px 0;}
+.why-club li{width:19.5%;}
+.why-club li .icon-main-club{height:100px;width:100px;}
+.why-club li .icon-club{line-height:100px;}
+.why-club li .text{font-size:16px;}
+.club-middle-lt{width:55%;margin-bottom:0;}
+.club-middle-rt{width:41%;}
+.club-middle-rt img{max-width:100%;}
+.club-middle{padding:50px 0 30px 0;}
+.club-middle-lt .title{font-size:19px;}
+.club-banner .title{font-size:36px;}
+
+/*University page*/
+.university-banner{min-height:inherit;}
+.university-banner .title{padding:100px 0;font-size:36px;}
+.resp-tabs-list li{width:21.7%;}
+.why-ucroo-lt{width:41%;}
+.why-ucroo-lt img{max-width:100%;}
+.why-ucroo-rt{width:55%;}
+.why-ucroo-rt .title{font-size:26px;}
+.university-tabs ul{margin:0 8px;}
+.university-tabs li .panel-heading{padding:15px 0px 15px 10px;}
+.university-tabs li .icon{margin: 0 15px 0 0;font-size: 26px;}
+.university-it-lt{width:41%;left: inherit;}
+.university-it-lt img{max-width:100%;}
+.university-it-rt{width:55%;}
+.university-it-rt .title{font-size:23px;}
+.university-it{margin-bottom:0;}
+.panel-content{padding:10px;}
+.request-lt{width:48%;}
+.request-rt{width:45%;padding:15px;}
+.request-rt .padder35{padding: 0;}
+.request-rt .form-group{margin-bottom:20px;}
+.request-rt input,.col-two .form-group input{width:92%;}
+.col-two .form-group{width:100%;}
+.request-rt textarea{width:92%;}
+.footer-main{padding:35px 0;}
+.footer-section{width:20%;}
+.connect-us{width:18%;}
+
+/*Sign up-----------------------------------------------*/
+.pad{width: 100%;}
+.steps-description.middle{left: -15%;}
+.signup-Lt{width:58%;margin-right:17px;padding:20px;}
+.signup-Lt .title{padding-bottom:20px;}
+.signup-detail .form-group{width:48%;}
+.signup-detail .control-label{font-size:14px;}
+.degree-info .signup-detail input{width:92%;padding:12px;}
+.signup-detail .row{padding-bottom:25px;}
+.signup-Rt{width:36%;}
+.account-profile-detail{width:62%;font-size:13px;}
+.degree-info{padding:20px;}
+.degree-info .title{font-size:22px;padding:0 0 10px 0;}
+.degree-info .btn-blue{padding:0 10px;font-size:17px;}
+.degree-info .checkbox{font-size:15px;}
+.degree-info .signup-detail .row{padding-bottom:18px;}
+.degree-info .signup-detail .form-group{width:46%;}
+.degree-info .input-small {width: 84% !important;}
+.signup-detail .custom-select select{font-size:16px;}
+.account-profile-pic{width:70px;height:70px;}
+.degree-info .signup-detail .finish-btn input{padding: 12px 0;}
+
+.club-middle-rt iframe,.why-ucroo-lt iframe{width: 100% !important;}
+.degree-input .ui-fullsearch{width: 90% !important;}
+
+/*12-02-2015------------------------------------------------------*/
+.select-univ select{width: 370px;}
+
+
+/*Meet the team*/
+.team-list ul { text-align: center; }
+.team-list ul li .team-person-img { max-width: 220px; min-height: 200px; }
+.team-person-description { padding-bottom: 30px;  }
+.team-person-description p { padding-top: 5px; font-size: 16px; }
+.team-person-description span { font-size: 13px; }
+.team-list li .team-person-img a img { max-width: 200px; height: auto; }
+}	
+
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+.degree-input .ui-fullsearch{width: 90% !important;}
+.signup-main .custom-select select {padding: 10px;}
+.homepage-bg{width:100%;}
+.layout-width{width:98%;}	
+.homepage-left{width:60%;margin:50px 0 0 0;}
+.homepage-left .title{font-size:36px;}
+.homepage-left p{font-size:19px;margin-bottom:20px;}
+.homepage-right{width:40%;}
+.homepage-right img{max-width:100%;}
+.custom-select select{width:290px;padding:13px;font-size:15px;}
+.signup-main .btn-blue{padding:0 10px !important;margin:0 0 0 3px;font-size:15px;}
+.custom-select:after{background-position: 58% 50%;}
+.signup-main small{font-size:11px;}
+.footer-home li{padding:0 12px 0 0;font-size:14px;}
+.footer-home .layout-width{width:80%;}
+.signup-main .entypo{margin-top:1px;}
+.footer-icon{padding:0 10px 0 0;}
+.footer-home .entypo{float:left;margin-top:10px;}
+.login .entypo{float:left;margin-top:10px;}
+
+/*Students page*/
+header .layout-width{width:98%;}
+nav{width:83%;}
+nav li{font-size:14px;}
+.login{width:15%;}
+a.login-btn{padding: 0px 13px;}
+.nav-icon{padding-right:5px;}
+nav li a{padding:0 10px;}
+.student-wrapper{width:98%;}
+.student-left{width:32%;margin-right:10px;}
+.student-middle{width:32%;}
+.student-right{width:32%;margin-left:10px;}
+.student-iphone img{width:100%;}
+.student-wrapper li .detail{width:70%;}
+.student-wrapper li{padding:10px;}
+.student-wrapper li .icon-main-student{margin: 0 10px 0 0;width:50px;height:50px;}
+.student-wrapper .icon-student{line-height:50px;font-size:25px;}
+.student-wrapper li .detail{width:71%;}
+.student-wrapper li .title{font-size:15px;}
+.university-icon{padding: 0 25px 0 0;}
+#nav{width:85%;}
+
+/*Instructors page*/
+.instructor-banner{min-height:inherit;}
+.instructor-banner .title{padding:170px 0;font-size:36px;}
+.instructor-top-detail .left-section{width:40%;margin:0 20px 0 0;padding:20px 0;}
+.instructor-top-detail .left-section img{max-width:100%;}
+.instructor-top-detail .right-section{width:56%;padding:20px 0;}
+.middle-wrapper{width:98%;}
+.class-community li{width:47%;margin:0 5% 5% 0;}
+
+/*Staff page*/
+.staff-banner{min-height:inherit;}
+.staff-banner .title{padding:170px 0;font-size:36px;}
+.staff-heading{margin: 20px 0;}
+.staff-img{width:40%;display: none;}
+.staff-detail{width:98%;margin: 0 auto !important;float: none;}
+.staff-heading p{font-size:16px;}
+.staff-page li{margin:0 10px 20px 0;width:100%;}
+.staff-page li .details{width:82%;}
+.staff-detail.mrgnRt10{margin-right:0;}
+.staff-sign-up{padding:20px 0;}
+.staff-page li .icon-main-staff{vertical-align: inherit;}
+
+
+/*Club page*/
+.why-club {padding: 30px 0;}
+.why-club .title{padding:0 0 30px 0;}
+.why-club li{width:19.5%;}
+.why-club li .icon-main-club{height:100px;width:100px;}
+.why-club li .icon-club{line-height:100px;}
+.why-club li .text{font-size:16px;}
+.club-middle-lt{width:55%;margin-bottom:0;}
+.club-middle-rt{width:41%;}
+.club-middle-rt img{max-width:100%;}
+.club-middle{padding:50px 0 30px 0;}
+.club-middle-lt .title{font-size:19px;}
+.club-banner .title{font-size:36px;}
+
+/*University page*/
+.university-banner{min-height:inherit;}
+.university-banner .title{padding:100px 0;font-size:36px;}
+.resp-tabs-list li{width:20.9%;}
+.why-ucroo-lt{width:41%;}
+.why-ucroo-lt img{max-width:100%;}
+.why-ucroo-rt{width:55%;}
+.why-ucroo-rt .title{font-size:26px;}
+.why-ucroo-rt p {font-size:16px;}
+.university-tabs ul{margin:0 6px;}
+.university-tabs li .panel-heading{padding:15px 0px 15px 10px;}
+.university-tabs li .icon{margin: 0 15px 0 0;font-size: 26px;}
+.university-tabs li .icon .icon-lock{font-size:26px;}
+.university-tabs li .detail{width:78%;font-size: 16px;}
+.university-it-lt{width:41%;left: inherit;}
+.university-it-lt img{max-width:100%;}
+.university-it-rt{width:55%;margin-bottom: 0;}
+.university-it-rt .title{font-size:23px;}
+.university-it-rt p{font-size:16px;}
+.university-it{margin-bottom:0;}
+.panel-content{padding:10px;}
+.faq-top .title{font-size:28px;}
+.faq-top p{font-size:16px;}
+.request-lt{width:48%;}
+.request-lt .title{font-size:25px;}
+.request-lt p{font-size:16px;}
+.request-rt{width:45%;padding:15px;}
+.request-rt .form-group{margin-bottom:20px;}
+.request-rt input,.col-two .form-group input{width:90%;}
+.col-two .form-group{width:100%;}
+.request-rt textarea{width:90%;}
+.footer-main{padding:35px 0;}
+.footer-section{width:20%;}
+.connect-us{width:18%;}
+.request-rt .padder35{padding: 0;}
+
+/*Sign up-----------------------------------------------*/
+.pad{width: 100%;}
+.steps-description.middle{left: -20%;}
+.signup-Lt{width:57%;margin-right:10px;padding:20px;}
+.signup-Lt .title{padding-bottom:20px;}
+.signup-detail .form-group{width:100%;margin-right:0px;margin-bottom: 25px;}
+.signup-detail .control-label{font-size:14px;}
+.signup-detail input{width:95%;padding:12px 10px;font-size: 15px;}
+.signup-detail .row{padding-bottom:0;}
+.signup-Rt{width:36%;}
+.account-profile-pic{width:50px;height:50px;margin-right:10px;}
+.account-profile-detail{width:65%;font-size:13px;}
+.account-profile-detail .title{font-size:22px;}
+.degree-info{padding:20px;}
+.degree-info .title{font-size:22px;padding:0 0 10px 0;}
+.degree-info .btn-blue{padding:0 10px;font-size:17px;margin-top: 15px;}
+.degree-info .checkbox{font-size:15px;}
+.degree-info .signup-detail .row{padding-bottom:0;}
+.account-profile{margin-bottom:10px;}
+.degree-info .signup-detail .form-group{width: 100%;}
+.degree-info .signup-detail .row.checkbox{padding-bottom: 25px;}
+.signup-detail .custom-select select{width: 92%;}
+.signup-detail .checkbox label{padding:0 0 0 10px;}
+.degree-info .signup-detail .finish-btn input{padding: 12px 0;}
+.degree-info .signup-detail input{padding: 12px 10px;width: 91%;}
+
+
+.club-middle-rt iframe,.why-ucroo-lt iframe{width: 100% !important;}
+
+.student-left ul li,.banner-title, .class-community li .community-details .title,.student-right ul li, .tagline, .class-community li .community-details p,
+.student-middle, .instructor-top-detail,.staff-page li .icon-main-staff,.staff-heading,.club-middle-lt,.club-middle-rt,.why-club li,.class-community li,
+.class-community li .icon-main-instrcutor,.why-club li .text,.university-tabs-nav,.university-it-lt,.request-lt,.request-rt{visibility: visible;}
+
+/*12-02-2015------------------------------------------------------*/
+.select-univ select{width: 370px;}
+
+/*Meet the team*/
+.team-banner{min-height:inherit;}
+.team-banner .title-team{font-size:36px;padding:50px 0;}
+.team-list ul{display:block;text-align:center;}
+.team-list ul li:first-child, .team-list ul li:nth-child(5n){margin-left:10px;}
+.team-list ul li .team-person-img { max-width: 160px; min-height: 160px; }
+.team-person-description { padding-bottom: 30px;  }
+.team-person-description p { padding-top: 4px; font-size: 12px; line-height: 15px; }
+.team-person-description span { font-size: 12px; line-height: 12px; }
+.team-list li .team-person-img a img { max-width: 160px; height: auto; }
+.team-social .social-icon { font-size: 20px; }
+.team-social .social-icon:hover:after {left: 5px; top: 1px; width: 13px; height: 15px }
+}
+
+
+
+
+@media only screen and (max-width: 767px) {
+.layout-width{width:98%;}	
+.homepage-left{margin-top:0;width:100%;min-height:inherit;}
+.homepage-right{position:inherit;text-align:right;width:100%;margin:30px 0;}
+.homepage-right img{margin:0;}
+.footer-home li{font-size:15px;padding: 0 20px 0 0;}
+.footer-icon{padding: 0 10px 0 0;}
+.homepage-left .title{font-size:38px;}
+.homepage-left p{font-size:21px;}
+.signup-main{margin-bottom:40px;}
+.signup-main small{color:#959998;}
+.university-icon{background-position:left 0;padding:0 30px 0 0;}
+.footer-home li a:hover span.university-icon{background-position:left 0;}
+.custom-select:after{ background: url(/assets/images/select-arrow-bg.png) no-repeat 53% 50% rgba(255, 255, 255, 0.2);}
+.footer-home .entypo{float:left;margin-top:10px;}
+.login .entypo{float:left;margin-top:10px;}
+.homepage-bg .login{margin-top:20px;}
+
+/*Students*/
+header .layout-width{width:98%;}
+nav{display:none;}
+.student-banner .title{font-size:30px;}
+.student-banner .title span{font-size:15px;}
+.student-wrapper{width:98%;}
+.student-left,.student-right{width:100%;margin:0;}
+.student-wrapper li{margin-bottom:20px;}
+.student-middle{width:100%;}
+.student-iphone{margin:0 auto 20px;text-align:center;}
+.student-iphone img{width:50%;}
+.student-wrapper li .detail{width:84%;}
+.join-now{margin:20px 0;}
+nav li{float:none;}
+#nav li a{padding:0 10px;line-height:60px;}
+nav li a:hover:before,nav li a.active:before{border:none;}
+.header-bg{background:#213e6a;/*overflow:hidden;*/}
+.login {padding:10px 0;margin:0;float:right;}
+#nav{overflow:hidden;}
+
+/*Instructors page*/
+.instructor-banner{min-height:inherit;}
+.instructor-banner .title{font-size:30px;padding:120px 0;}
+.instructor-banner .title span{font-size:14px;}
+.instructor-top-detail .left-section{width:100%;text-align:center; margin: -73px auto 0}
+.instructor-top-detail .right-section{width:100%;padding:30px 0;}
+.middle-wrapper{width:98%;}
+.class-community li .icon-box{height: 80px;width: 80px;margin: 0 auto 15px;}
+.class-community li .community-details .title{font-size:20px;}
+.class-community li{ width: 48%; margin: 0 3% 7% 0;}
+.sign-up-btn .chevron-right{line-height:45px;}
+
+/*Staff page*/
+.staff-detail{width:64%;margin:10px 0;}
+.staff-heading{padding:10px;}
+.staff-heading .title{font-size:20px;}
+.staff-heading p{font-size:15px;}
+.staff-page li{width:100%;}
+.staff-detail.mrgnRt10{margin-right:0;}
+
+.staff-sign-up{padding:40px 0;}
+.staff-page li{ margin: 0 0 30px 0;}
+.staff-banner{min-height:inherit;}
+.staff-banner .title{padding:120px 0;font-size:30px;}
+.staff-banner .title span{font-size:15px;}
+
+/*Club Page*/
+.club-banner{min-height:inherit;}
+.club-banner .title{font-size:30px;padding:120px 0;}
+.why-club li{width:19.4%;}
+.why-club li .icon-main-club{width:100px;height:100px;}
+.why-club li .icon-club{font-size:40px;line-height:100px;}
+.why-club li .text{font-size:16px;}
+.club-middle-rt{float:none;text-align:center;}
+.club-middle-lt{float:none;width:100%;margin:20px 0;}
+.club-middle{padding:50px 0 0 0;}
+
+/*University page*/
+.university-banner .title{font-size:36px;padding:95px 0;}
+.university-tabs{padding:50px 0 30px 0;}
+.why-ucroo-lt{float:none;text-align:center;}
+.why-ucroo-rt{float:none;width:100%;margin:20px 0;}
+.university-tabs ul{float:none;width:100%;margin-right:0;}
+.university-it-lt{float:none;width:70%;}
+.university-it-rt{float:none;width:100%;}
+.university-tabs li .detail{width:80%;}
+.university-it .join-now{margin:0;}
+.university-it{margin-bottom:0;}
+.university-tabs li .panel-heading{padding:15px 10px 15px 20px;}
+.university-tabs li .panel-content{padding:15px 10px 15px 20px;}
+.faq .join-now{margin:0;}
+.request-lt{float:none;width:100%;}
+.request-rt{float:none;width:92%;padding:20px;margin-bottom:0;}
+.footer-section{width:33%;}
+.connect-us{margin:30px 0 0 0;width:50%;}
+.footer-logo{margin:30px 0 0 0;}
+
+.student-left ul li,.banner-title, .class-community li .community-details .title,.student-right ul li, .tagline, .class-community li .community-details p,
+.student-middle, .instructor-top-detail,.staff-page li .icon-main-staff,.staff-heading,.club-middle-lt,.club-middle-rt,.why-club li,.class-community li,
+.class-community li .icon-main-instrcutor,.why-club li .text,.university-tabs-nav,.university-it-lt,.request-lt,.request-rt{visibility: visible;}
+}
+
+
+@media only screen and (max-width: 600px) {
+span.custom-select{width:100%;}
+.custom-select select{width:100%;}
+.signup-main{margin:0 auto 40px;text-align:center;}
+.signup-main .btn-blue{margin:10px 0 0 0;}
+.footer-home li{padding: 0 14px 10px 0;}
+.homepage-logo{margin-top:20px;}
+
+/*Students page*/
+.student-wrapper li .detail{width:80%;}
+.class-community li{width:100%;margin:0 0 50px 0;}
+
+/*Staff page*/
+.staff-img{width:100%;}
+.staff-detail{width:98%;float:none;margin:20px auto 0px;clear:both;}
+.staff-page li .details{width: 86%;margin-left:10px;}
+
+/*Club page*/
+.staff-sign-up{padding:20px 0;}
+.why-club{padding:30px 0;}
+.why-club li{width:49%;margin-bottom:30px;}
+.join-now{margin:0;padding:20px;}
+
+.student-left ul li,.banner-title, .class-community li .community-details .title,.student-right ul li, .tagline, .class-community li .community-details p,
+.student-middle, .instructor-top-detail,.staff-page li .icon-main-staff,.staff-heading,.club-middle-lt,.club-middle-rt,.why-club li,.class-community li,
+.class-community li .icon-main-instrcutor,.why-club li .text,.university-tabs-nav,.university-it-lt,.request-lt,.request-rt{visibility: visible;}
+}
+
+@media only screen and (max-width: 360px) {
+.footer-home li{font-size:15px;padding: 0 20px 0 0;}
+.homepage-left .title{font-size:26px;}
+.homepage-left p{font-size:17px;margin-bottom:30px;}
+span.custom-select{width:100%;}	
+.custom-select select{width:100%;height:40px;font-size:16px;padding:0 5px;}
+.signup-main{margin:0 auto 40px;text-align:center;}
+.signup-main .btn-blue{height:40px;line-height:40px;margin:10px 0 0 0;}
+.homepage-logo{margin:20px 0 0 0;}
+.footer-home li{padding:0 20px 15px 0;}
+
+/*Students page*/
+.student-wrapper li{padding:10px;}
+.student-wrapper li .icon-main-student{margin-right:10px;width:50px;height:50px;}
+.student-wrapper .icon-student{line-height:50px;}
+.student-wrapper li .detail{width:75%;}
+
+/*Instructors page*/
+.instructor-top-detail .left-section img{width:100%;}
+.class-community li{width:100%;margin:0 0 50px 0;}
+
+/*Staff page*/
+.staff-page li .details{width:79%;}
+.staff-detail.mrgnRt10{margin:0 auto;}
+.join-now em{font-size:20px;}
+
+/*Club page*/
+.why-club{padding:20px 0;}
+.why-club li{width:100%;}
+.why-club .title{padding:0 0 20px 0;}
+.why-club li .icon-main-club{margin:0 auto 15px;}
+.why-club li{margin:0 0 25px 0;}
+.club-middle{padding:30px 0 0 0;}
+.club-middle-rt img{max-width:100%;}
+.join-now{margin:0;}
+.why-ucroo-lt img{max-width:100%;}
+.why-ucroo-rt .title,.university-it-rt .title,.faq-top .title,.request-lt .title{font-size:26px;}
+.university-tabs li .panel-heading{padding:15px 0 15px 10px;}
+.why-ucroo{margin:0;}
+.join-now{padding:20px 0;}
+.university-tabs li .panel-content{padding:10px;}
+.university-tabs li .detail{width:74%;font-size:15px;}
+.university-tabs li .icon{margin:0 10px 0 0;font-size:26px;width:30px;}
+.why-ucroo-rt p,.university-it-rt p,.faq-top p,.request-lt p{font-size:16px;}
+.university-tabs li .icon .icon-lock{font-size:26px;}
+.university-banner .title{font-size:30px;}
+.request-rt{width:86%;}
+.request-rt input{width:87%;}
+.request-rt .form-group{margin-bottom:20px;}
+.col-two .form-group{width:100%;margin-right:0;float:none;}
+.university-tabs{padding:30px 0;}
+.footer-main{padding:20px 0;}
+.footer-section{width:50%;min-height:140px;margin-bottom:20px;}
+.connect-us{margin:0;}
+.footer-logo{margin:20px 0;float:left;}
+
+.student-left ul li,.banner-title, .class-community li .community-details .title,.student-right ul li, .tagline, .class-community li .community-details p,
+.student-middle, .instructor-top-detail,.staff-page li .icon-main-staff,.staff-heading,.club-middle-lt,.club-middle-rt,.why-club li,.class-community li,
+.class-community li .icon-main-instrcutor,.why-club li .text,.university-tabs-nav,.university-it-lt,.request-lt,.request-rt{visibility: visible;}
+}
+
+@media only screen and (max-width: 320px) {
+.student-wrapper li .detail{width:78%;}
+
+.student-left ul li,.banner-title, .class-community li .community-details .title,.student-right ul li, .tagline, .class-community li .community-details p,
+.student-middle, .instructor-top-detail,.staff-page li .icon-main-staff,.staff-heading,.club-middle-lt,.club-middle-rt,.why-club li,.class-community li,
+.class-community li .icon-main-instrcutor,.why-club li .text,.university-tabs-nav,.university-it-lt,.request-lt,.request-rt{visibility: visible;}
+}

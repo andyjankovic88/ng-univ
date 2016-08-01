@@ -1,0 +1,67 @@
+<!-- recent-activity -->
+<div id="recent-activity" infinite-scroll='loadNextPage()' infinite-scroll-disabled='listRequestInProgress' infinite-scroll-distance='1' infinite-scroll-container='".middle-section"'>
+    <div class="content-heading">
+        <h1>Activity</h1>
+    </div>
+    <div class="post">
+        <!-- post-section -->
+        <div class="post-section post-description" ng-repeat="activity in activities">
+            <div class="subtitle">
+               <activity-title></activity-title>
+            </div>
+            <div ng-if="activity.body.user">
+               <figure class="post-heading clearfix">
+                    <!--<a class="photo-holder" ui-sref="profile({id: activity.body.user.id})">
+                        <img ng-src="{{activity.body.user.profile_pic}}">
+                    </a>-->
+                    <div class="wrapper-user">
+                        <div class="user-details clearfix">
+                            <div class="l-side">
+                                <a ui-sref="profile({id: activity.body.user.linked_object_id})" class="user-name">{{activity.body.user.username}}</a>
+                                <span class="points">{{activity.body.user.karma}}</span>
+                            </div>
+                        </div>
+                        <figcaption class="time-category">
+                            <div class="user-info clearfix">
+                                <span class="date">{{activity.how_long_ago}}</span>
+                                <ul class="post-options">
+                                    <li class="likes" ng-if="activity.body.object.likes_count">
+                                        <a href="#">
+                                            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#feeds-filledHart"></use></svg>
+                                            <span class="number">{{activity.body.object.likes_count}}</span>
+                                        </a>
+                                    </li>
+                                    <li class="comments" ng-if="activity.body.object.comments_count">
+                                        <a href="#">
+                                            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#feeds-chat"></use></svg>
+                                            <span class="number">{{activity.body.object.comments_count}}</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </figcaption>
+                    </div>
+               </figure>
+            </div>
+            <div ng-switch="activity.body.object.type">
+               <post ng-switch-when="Feed_posts"></post>
+               <ucroo-event ng-switch-when="ucroo_event"></ucroo-event>
+               <ucroo-event ng-switch-when="club_event"></ucroo-event>
+               <marketplace ng-switch-when="marketplace"></marketplace>
+               <club ng-switch-when="club"></club>
+               <servicepage ng-switch-when="servicepage"></servicepage>
+               <group ng-switch-when="groups"></group>
+               <customgroup ng-switch-when="customgroups"></customgroup>
+               <unit ng-switch-when="unit"></unit>
+            </div>
+
+        </div>
+    </div>
+
+    <section ui-view="overlay">
+
+
+    </section>
+
+
+</div>

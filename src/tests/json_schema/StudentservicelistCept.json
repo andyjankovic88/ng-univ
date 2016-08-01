@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "university_wide_services": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": ""
+                },
+                "name": {
+                  "type": "string"
+                },
+                "faculty": {
+                  "type": "string"
+                },
+                "campus": {
+                  "type": "string"
+                },
+                "picture": {
+                  "type": "string"
+                },
+                "is_member": {
+                  "type": "boolean"
+                }
+              }
+            }
+          ]
+        },
+        "campus_services": {
+          "type": "array",
+          "properties": {
+            "Caulfield": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "faculty": {
+                    "type": "string"
+                  },
+                  "campus": {
+                    "type": "string"
+                  },
+                  "picture": {
+                    "type": "string"
+                  },
+                  "is_member": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "faculty_services": {
+          "type": "array",
+          "properties": {
+            "Art, Design and Architecture": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "faculty": {
+                    "type": "string"
+                  },
+                  "campus": {
+                    "type": "string"
+                  },
+                  "picture": {
+                    "type": "string"
+                  },
+                  "is_member": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

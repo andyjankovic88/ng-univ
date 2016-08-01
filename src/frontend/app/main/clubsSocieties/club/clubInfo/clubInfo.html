@@ -1,0 +1,33 @@
+<div class="info-section">
+   <!-- info-section -->
+   <div class="holder">
+      <h2>
+         Description
+      </h2>
+      <p>{{club.info.description.data}}</p>
+      <h2>Benefits of Membership</h2>
+      <p ng-repeat="benefit in club.benefits.data track by $index">
+          {{benefit}}
+      </p>
+   </div>
+   <div class="border-t">
+      <h2>Club Committee</h2>
+      <div class="item-holder clearfix">
+         <div class="item" ng-repeat="member in club.club_committee.data">
+            <figure class="img-holder">
+               <a ui-sref="profile({id:{{member.id}}})"><img class="photo" ng-src="{{member.profile_pic.src}}"></a>
+            </figure>
+            <div class="item-info">
+               <h3>
+                  <a ui-sref="profile({id:{{member.id}}})" class="ng-binding">{{member.username}}</a>
+                  <svg class="tick" ng-if="member.connected">
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#profile-tick"></use>
+                  </svg>
+               </h3>
+               <span class="message-update ng-binding"></span>
+               <span class="ng-binding">{{member.position}}</span>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,22 @@
+.unread {
+   font-family: $font-bold;
+   margin: 0 0 0 20px;
+   a {
+      /* padding: 0 0 0 16px; */
+      position: relative;
+   }
+   /* :before {
+      position: absolute;
+      top: 6px;
+      left: 28px;
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      -moz-border-radius: 15px;
+      -webkit-border-radius: 15px;
+      border-radius: 15px;
+      background-color: $color-blue;
+      margin: 0 10px 0 -28px;
+   }*/
+}

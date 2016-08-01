@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "at_university": {
+          "type": "object",
+          "properties": {
+            "consultations": {
+              "type": "array",
+              "items": []
+            },
+            "events": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "event_id": {
+                      "type": ""
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "module_name": {
+                      "type": "string"
+                    },
+                    "module_id": {
+                      "type": "integer"
+                    },
+                    "image_url": {
+                      "type": "string"
+                    },
+                    "summary_text": {
+                      "type": "string"
+                    }
+                  }
+                }
+              ]
+            },
+            "peoples": {
+              "type": "array",
+              "items": []
+            },
+            "service_dropin": {
+              "type": "array",
+              "items": []
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

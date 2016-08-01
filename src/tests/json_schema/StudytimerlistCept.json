@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "study_session_data": {
+          "type": "",
+          "properties": {
+            "": {
+              "type": "array",
+              "items": [
+                {
+                  "id": "http://jsonschema.net/response/study_session_data/2016-10-03T11:00:00+1100/0",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "unit_code": {
+                      "type": "string"
+                    },
+                    "unit_name": {
+                      "type": "string"
+                    },
+                    "date": {
+                      "type": "string"
+                    },
+                    "study_time": {
+                      "type": "string"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

@@ -1,0 +1,71 @@
+<!-- pad -->
+<div class="login-pad">
+   <!-- login -->
+   <form id="loginForm" name="loginForm" ng-submit="login(loginForm)" accept-charset="utf-8" novalidate="">
+      <div class="login-box-new">
+         <!-- login-detail -->
+         <div class="home-logo">
+            <svg><use xlink:href="#header-homepage-logo"></use></svg>
+         </div>
+         <div class="row" ng-show="isLoginLocked">
+            <div class="lbl-warning">
+               You have made 5 unsuccessful attempts to login into your account. Your account has been temporarily blocked.
+            </div>
+         </div>
+         <div class="row btn-facebook btn-facebook-user-login">
+            <a href="#" ng-click="loginWithFacebook()">
+               <!--  href="https://www.facebook.com/v2.2/dialog/oauth?client_id=174268539315296&amp;redirect_uri=https%3A%2F%2Fwww.sucroo.com%2Fuser%2Ffblogin_auth%2F&amp;state=2358b6b9fe599c5d0d968460c204e949&amp;sdk=php-sdk-4.0.20&amp;scope=email%2Cuser_hometown%2Cuser_work_history%2Cuser_friends%2Cuser_education_history" -->
+               <svg class="login-social-network"><use xlink:href="#login-social-network"></use></svg>
+               <span class="text">Login with Facebook</span>
+            </a>
+         </div>
+         <div class="row">
+            <div class="splitter splitter-label">or</div>
+         </div>
+         <div class="row">
+            <div class="form-group" ng-class="{'has-error': (loginForm.$submitted || loginForm.university.$dirty) && loginForm.university.$invalid, 'no-error': (loginForm.$submitted || loginForm.university.$dirty) && loginForm.university.$valid}">
+               <div class="form-label-error">The university field is required.</div>
+               <label class="form-label">Select your university</label>
+               <div class="select-custom form-object">
+                  <select name="university" ng-class="{'selected': selectedUniversity}" ng-options="university as university.name for university in universities track by university.id" ng-model="selectedUniversity" required tabindex="0">
+                     <option value="" disabled selected hidden>Select University</option>
+                  </select>
+               </div>
+            </div>
+            <div class="checkbox">
+               <input id="remember_university" type="checkbox" name="remember_university" ng-model="isRememberUniv" title="Remember my University">
+               <label for="remember_university" tabindex="0">Remember my University</label>
+            </div>
+         </div>
+         <div class="row" id="email_row_id" ng-class="{'has-error': (loginForm.$submitted || loginForm.email.$dirty) && loginForm.email.$invalid, 'no-error': (loginForm.$submitted || loginForm.email.$dirty) && loginForm.email.$valid}">
+            <div class="form-group">
+               <div class="form-label-error">Field must contain a valid email address</div>
+               <label class="form-label">Login</label>
+               <input type="text" name="email" class="form-object" placeholder="University Email Address" ng-model="userName" tabindex="0"  required>
+            </div>
+         </div>
+         <div class="row" id="password_row_id">
+            <div class="form-group" ng-class="{'has-error': (loginForm.$submitted || loginForm.password.$dirty) && loginForm.password.$invalid, 'no-error': (loginForm.$submitted || loginForm.password.$dirty) && loginForm.password.$valid}">
+               <div class="form-label-error">Your username or password is incorrect</div>
+               <label class="form-label success-blue">Password</label>
+               <input type="password" name="password" class="form-object" placeholder="UCROO Password" ng-model="password" tabindex="0"  required>
+            </div>
+            <div class="row" id="remember_me_login_id">
+               <div class="checkbox"><input id="remember" type="checkbox" name="remember" ng-model="isRememberUser" value="1" checked="checked" tabindex="7" title="Remember Me"><label for="remember">Remember Me</label></div>
+            </div>
+         </div><!-- /.login-detail -->
+         <div class="row">
+            <button type="submit" class="btn-blue btn-login" tabindex="0" ng-disabled="isLoginLocked">Login with University Email</button>
+         </div>
+      </div>
+   </form>
+   <div class="bottom-row">
+      <span class="linkto-signup">Don't have an account? <a href="#">Get started</a></span>
+      <span class="linkto-forgot-password"><a ui-sref="passwordRecovery" class="forgotten_password">Forgot your password?</a></span>
+   </div>
+</div>
+<div class="overlay-entire--" ng-class="{'active': isProgressing}">
+   <div></div>
+</div>
+
+

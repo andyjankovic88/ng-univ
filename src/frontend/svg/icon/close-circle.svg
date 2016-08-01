@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="64"
+   height="64"
+   id="svg3336"
+   version="1.1"
+   viewBox="0 0 64 64"
+   style="enable-background:new 0 0 64 64;" xml:space="preserve">
+  <g
+     id="layer1">
+    <path
+       d="M 32.011719 0.10351562 A 31.884087 31.94837 0 0 0 0.12890625 32.050781 A 31.884087 31.94837 0 0 0 32.011719 64 A 31.884087 31.94837 0 0 0 63.896484 32.050781 A 31.884087 31.94837 0 0 0 32.011719 0.10351562 z M 32.056641 7.4707031 A 24.343147 24.343147 0 0 1 56.400391 31.814453 A 24.343147 24.343147 0 0 1 32.056641 56.158203 A 24.343147 24.343147 0 0 1 7.7148438 31.814453 A 24.343147 24.343147 0 0 1 32.056641 7.4707031 z "
+       id="path3344" />
+    <path
+       d="m 17.482251,22.357222 9.454018,9.454018 -9.40452,9.40452 5.080893,5.080894 9.404521,-9.40452 9.446615,9.446615 5.091168,-5.091169 -9.446615,-9.446615 9.494323,-9.494323 -5.080949,-5.080949 -9.494323,9.494323 -9.453962,-9.453962 z"
+       id="rect4150" />
+  </g>
+</svg>

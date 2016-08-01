@@ -1,0 +1,55 @@
+{
+    "message": "",
+    "response": {
+        "groups": {
+            "14": {
+                "id": 14,
+                "name": "Monash Entrepreneurs",
+                "type": "Other",
+                "picture": "http://backend.localhost.ucroo/ugc/clubs/14/club_14_r.jpg",
+                "is_followed": true,
+                "members": "42 Members",
+                "connections": 2
+            },
+            "22": {
+                "id": 22,
+                "name": "FMAA Monash",
+                "type": "Academic",
+                "picture": "http://backend.localhost.ucroo/ugc/clubs/22/club_22_r.JPG",
+                "is_followed": true,
+                "members": "1 Member"
+
+            }
+        },
+        "group_suggestions": {
+            "1": {
+                "id": 1,
+                "name": "Actuarial Students Society",
+                "type": "Interast/Hobby",
+                "picture": "http://backend.localhost.ucroo/ugc/cache/9b5764ed12c5185662cd4dd0f98c9d14_90f3f753.jpg",
+                "connections": 2
+            },
+            "2": {
+                "id": 2,
+                "name": "A.I.E.S.E.C",
+                "type": "Other",
+                "picture": "http://backend.localhost.ucroo/ugc/cache/ee20af1992abff9c019793ac2864d6a4_90f3f753.png",
+                "connections": 0
+            },
+            "3": {
+                "id": 3,
+                "name": "A.L.P (Labor)",
+                "type": "Academic",
+                "picture": "http://backend.localhost.ucroo/assets_new/images/club/profile_standard.jpg",
+                "connections": 4
+            },
+            "105": {
+                "id": 105,
+                "name": "Wildfire",
+                "type": "Location",
+                "picture": "http://backend.localhost.ucroo/ugc/cache/8ba1aa3f2e64d8628484cf8c23d0c83b_90f3f753.jpg",
+                "connections": 43
+            }
+        }
+    }
+}

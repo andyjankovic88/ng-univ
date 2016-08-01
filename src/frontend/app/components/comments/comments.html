@@ -1,0 +1,42 @@
+<div class="post-comment-wrapper">
+   <div>
+      <a href="#" class="blue-link"ng-click="toggleShowAll()" ng-if="list.length > commentsPreviewLimits">{{isShowAll ? 'hide' : 'show all ' + list.length}} comments</a>
+   </div>
+   <!-- post-comment -->
+   <div class="post-comment"  ng-repeat="comment in list | limitTo: -limit">
+      <div class="holder">
+         <figure class="post-heading clearfix">
+            <a class="photo-holder" href="#" ui-sref="profile({id: comment.user.id})">
+               <img ng-src="{{ comment.user.profilePic }}">
+            </a>
+            <div class="wrapper-user">
+               <div class="user-details clearfix">
+                  <a href="#" class="user-name" ui-sref="profile({id: comment.user.id})">{{ comment.user.userName }}</a>
+               </div>
+               <figcaption class="time-category">
+                  <div class="user-info clearfix">
+                     <span class="date">{{ comment.post_time | date:"MMMM dd' at 'h:mma" }}</span>
+                  </div>
+               </figcaption>
+            </div>
+         </figure>
+         <ul class="post-options r-side" >
+            <li>
+               <a href="#" ng-click="toggleEdit(comment.comment_id)" ng-if="canEdit(comment.user.id)">
+                  <svg class="ico-pencil"><use xlink:href="#icon-pencil" /></svg>
+               </a>
+            </li>
+            <li>
+               <a href="#" ng-click="delete(comment.comment_id)" ng-if="canDelete(comment.user.id)">
+                  <svg class="ico-remove"><use xlink:href="#icon-remove" /></svg>
+               </a>
+            </li>
+         </ul>
+      </div>
+      <div class="post-txt">
+         <p ng-bind-html="comment.text | linky:'_blank'"></p>
+         <new-comment-form comment="comment" ng-if="comment.user.id == newComment.user.id" ></new-comment-form>
+      </div>
+   </div>
+   <new-comment-form comment="newComment" on-activate="toggleEdit(newComment.comment_id)" on-add="addNew()"></new-comment-form>
+</div>

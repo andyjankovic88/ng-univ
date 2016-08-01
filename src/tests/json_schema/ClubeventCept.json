@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "show_recommended": {
+          "type": "integer"
+        },
+        "is_event_ticketing_enabled": {
+          "type": "boolean"
+        },
+        "is_club_membership_enabled": {
+          "type": "boolean"
+        },
+        "is_csu_uni": {
+          "type": "boolean"
+        },
+        "is_user_NikGranger": {
+          "type": "boolean"
+        },
+        "picture": {
+          "type": "string"
+        },
+        "content_heading": {
+          "type": "string"
+        },
+        "object_list_title": {
+          "type": "string"
+        },
+        "object_list_id": {
+          "type": "string"
+        },
+        "is_admin": {
+          "type": "boolean"
+        },
+        "is_committee": {
+          "type": "boolean"
+        },
+        "upcoming_events": {
+          "type": "string"
+        },
+        "past_events": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

@@ -1,0 +1,19 @@
+<div class="notifications-section">
+   <h2>
+      <span>Receive email notifications for</span>
+   </h2>
+   <div class="section">
+      <ul>
+         <li ng-repeat="(key, notification) in settings.email_notif_details" class="ucr-as-row ucr-clearfix">
+            <div class="row-actions r-side">
+               <input type="checkbox" class="cmn-toggle cmn-toggle-round-flat" ng-attr-id="email_notif_{{key}}" ng-model="notification.value" ng-true-value="1" ng-false-value="0">
+               <label ng-attr-for="email_notif_{{key}}">{{option}}</label>
+            </div>
+            <div class="ucr-as-label" ng-class="{'active': notification.value==1}">
+               <div class="ucr-as-title">{{notification.title}}</div>
+               <div>{{notification.text}}</div>
+            </div>
+         </li>
+      </ul>
+   </div>
+</div>

@@ -1,0 +1,70 @@
+<!-- edit-profile -->
+<div id="edit-profile">
+    <div class="profile-header not-created">
+        <div class="banner">
+            <form id="upload-cover-pic">
+                <fieldset>
+                    <input for="txt" type="file" placeholder="" />
+                    <svg class="ico-test"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-test"></use></svg>
+                    <label id="txt">Click to upload your Cover Pic or just drag it here</label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="holder-info">
+            <div class="user-info">
+                <figure class="img-holder">
+                    <div class="avatar-holder" ngf-select="uploadUserPic($file)" ngf-max-size="10MB" accept="image/*">
+                        <img class="avatar" ng-if="details.profile_pic" ng-src="{{details.profile_pic}}" alt="avatar">
+                        <img class="avatar" ng-if="!details.profile_pic" src="/assets_new/images/userpic.png" alt="avatar">
+                        <span class="link-update" ng-if="!details.profile_pic">update</span>
+                    </div>
+                    <figcaption class="user-name">
+                        <h1>{{user_name}}</h1>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <form id="form-edit-profile" name="">
+        <fieldset>
+            <h2>Info</h2>
+            <div class="row">
+                <label for="position">Position</label>
+                <div class="select-custom select-big">
+                   <select ng-class="{selected : position}" ng-model="position" style="text-transform: capitalize">
+                        <option ng-repeat="(key, value) in userGroups" value="{{key}}">{{key}}</option>
+                   </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="dropdown-faculty">Faculty</label>
+                    <combo-with-checkboxes options="details.faculties.options" id-key="id" label-key="name" id-attr-prefix="faculty-" ng-model="selectedFaculties"></combo-with-checkboxes>
+                </div>
+                <div class="col">
+                    <label for="campus">Campus</label>
+                    <div class="select-custom select-big">
+                        <select ng-class="{selected : details.campus.current}" ng-model="details.campus.current" id="campus">
+                            <option ng-repeat="(key, value) in details.campus.options" value="{{key}}">{{value}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkbox">
+              <input id="international" type="checkbox" checked="checked" ng-model="details.international" ng-true-value="1" ng-false-value="0" title="I am an international" >
+              <label for="international" style="padding-left: 20px;">I am an international</label>
+            </div>
+            <div class="row">
+                <ul class="options-btn">
+                    <li>
+                        <button type="button" ui-sref="profile({id: userId})" class="btn-link">Cancel</button>
+                    </li>
+                    <li>
+                        <button type="button" ng-click="updateStudentProfile()" class="btn-green">Save Profile</button>
+                    </li>
+                </ul>
+            </div>
+         </fieldset>
+    </form>
+</div>

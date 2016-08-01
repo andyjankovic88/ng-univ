@@ -1,0 +1,42 @@
+.ur-ss-list {
+   .sub-menu {
+      li {
+         margin-left: 24px;
+         &:first-child {
+            margin-left: 0;
+         }
+      }
+   }
+   .item {
+      padding-top: 10px;
+      .img-holder {
+         display: table-cell;
+         vertical-align: top;
+         padding: 0 20px 10px 0;
+         img {
+            width: 80px;
+            height: 80px;
+         }
+      }
+      .item-info {
+         display: table-cell;
+         vertical-align: top;
+         padding-bottom: 10px;
+         border-bottom: 1px solid #e9e9e8;
+         h3 {
+            margin: 10px 0 5px;
+         }
+         svg.tick {
+            vertical-align: middle;
+            float: none;
+            margin: -2px 0 0 6px;
+         }
+      }
+   }
+   .ur-ss-list-section {
+      margin-top: 60px;
+      &:first-child {
+         margin-top: 0;
+      }
+   }
+}

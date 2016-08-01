@@ -1,0 +1,52 @@
+<form action="#">
+   <fieldset>
+      <div class="row">
+         <label for="search" ng-if="label">Subject Name</label>
+         <div class="search-section" dropdown>
+            <input class="autoinput" type="text" id="search" dropdown-trigger ng-model="search.keywords" ng-change="searchSubject()" placeholder="Start typing the name or code here...">
+            <div class="search-box" dropdown-body ng-show="searchResults.length">
+               <div class="holder"><span class="r-side txt">search suggestions</span></div>
+               <div class="holder table">
+                  <ul class="rubber-list">
+                     <li ng-repeat="item in searchResults | limitTo: 6" dropdown-inner-trigger ng-click="addID(item)">
+                        <figure class="img-holder">
+                           <div class="icon-circle">
+                              <a href="#">
+                                 <svg class="ico-subject-small">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-subject-small"></use>
+                                 </svg>
+                              </a>
+                           </div>
+                           <strong class="user-name">{{item.name}}</strong>
+                        </figure>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="subjects-section" ng-show="selectedSubject.length">
+            <div class="item-holder clearfix" ng-repeat="subject in selectedSubject">
+               <div class="item">
+                  <figure class="img-holder">
+                     <div class="icon-circle">
+                        <a ui-sref="subjectFeed({id:subject.id})">
+                           <svg>
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-subject"></use>
+                           </svg>
+                        </a>
+                     </div>
+                  </figure>
+                  <div class="item-info">
+                     <h3>
+                        <a ui-sref="subjectFeed({id:subject.id, name:subject.name})">{{subject.code}}</a>
+                     </h3>
+                     <span class="message-update">{{subject.name}}</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </fieldset>
+</form>

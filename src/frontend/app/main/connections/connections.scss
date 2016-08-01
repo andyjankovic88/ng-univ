@@ -1,0 +1,12 @@
+@import "mixins";
+
+#ur-connections{
+   .item-info {
+      span {
+         em {
+            color: $color-blue;
+            font-style: normal;
+         }
+      }
+   }
+}

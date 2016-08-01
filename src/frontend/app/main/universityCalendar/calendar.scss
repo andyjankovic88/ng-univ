@@ -1,0 +1,110 @@
+.calendar-section {
+   padding: 15px 0 40px;
+   .fc-time-grid-event {
+      overflow: visible;
+   }
+   .fc-event {
+      border-radius: 0;
+      border: none;
+      margin-right: -1px;
+   }
+   .fc-button {
+      background: none !important;
+      border: none !important;
+      box-shadow: none !important;
+      font-size: 1.2em;
+      color: #424242;
+   }
+   .fc-toolbar .fc-center {
+      padding-top: 5px;
+   }
+   .ico-cross {
+      position: absolute;
+      z-index: 100;
+      top: -7px;
+      right: -7px;
+      border-radius: 100%;
+      background: #fff;
+      border: 2px solid #fff;
+      width: 14px !important;
+      height: 14px !important;
+      cursor: pointer;
+   }
+   .fc {
+       thead {
+           td {
+               border: none;
+           }
+       }
+       th {
+           border: none;
+       }
+       tr {
+           height: 45px;
+       }
+       .fc-body>tr>.fc-widget-content {
+           //border-style: none;
+           border: none;
+       }
+       .fc-axis {
+           border: none;
+       }
+       .fc-content-skeleton {
+           table {
+               td {
+                   border: none;
+               }
+           }
+       }
+       .fc-slats {
+           table {
+               border-collapse: separate;
+               .fc-axis {
+                 vertical-align: baseline;
+               }
+           }
+           .noon {
+               position: relative;
+               top: 0;
+               left: 0;
+               &:before {
+                   display: block;
+                   content: "Noon";
+                   color: #3a91e0;
+                   position: absolute;
+                   top: -12px;
+                   left: 2px;
+                   font: 12px $font-bold, sans-serif;
+               }
+           }
+       }
+       .fc-day-header {
+           div {
+               height: 44px;
+               margin-top: 5px;
+               span {
+                   vertical-align: middle;
+               }
+               &.current {
+                   width: 44px;
+                   margin: 8px auto 9px;
+                   background-color: #8bc34a;
+                   border-radius: 50%;
+                   color: white;
+               }
+           }
+       }
+       .fc-time-grid .fc-today {
+           background-color: white;
+       }
+       .fc-content {
+          .fc-time {
+             display: none;
+          }
+          .fc-title {
+             text-align: center;
+             margin-top: 15px;
+          }
+       }
+   }
+}

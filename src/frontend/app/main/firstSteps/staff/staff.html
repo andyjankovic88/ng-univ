@@ -1,0 +1,28 @@
+<div id="first-steps-staff">
+    <div class="wrapper-center">
+        <div class="title">
+            <img class="title-logo" src="/assets_new/images/shadow-logo.png" alt="logo">
+            <h1>Welcome to UCROO!</h1>
+            <p class="description">UCROO is the best way to connect with students and staff across your university.</p>
+        </div>
+    </div>
+    <div class="wrapper-center">
+        <ul class="rubber-list">
+            <li ng-repeat="step in steps" ui-sref="subjectsList" ng-click="completeStaffStep(step.api)">
+                <figure class="img-holder">
+                    <a class="icon-circle">
+                        <svg class="ico-subject-small">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink"  xlink:href="" ng-href="#{{step.class}}"></use>
+                        </svg>
+                    </a>
+                </figure>
+                <h2>{{step.title}}</h2>
+                <p class="description">{{step.desc}}</p>
+            </li>
+        </ul>
+    </div>
+    <loader is-active="loaderActive" position="static"></loader>
+    <section ui-view="overlay">
+
+    </section>
+</div>

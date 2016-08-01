@@ -1,0 +1,39 @@
+<div class="holder-item">
+   <div class="content-heading">
+      <h1>New Message</h1>
+    </div>
+    <div class="">
+       <form id="form-select">
+           <select-user selected-users="selectedUsers" placeholder="Add a recipient…" initial-user="initialUser"></select-user>
+           <div class="textarea-holder">
+             <div class="holder-txt">
+                <textarea class="colored comment-area" cols="20" rows="6" placeholder="New message text" ng-model="message.text"></textarea>
+             </div>
+             <ul class="post-options r-side">
+                <li ng-hide="attachment.images.length || attachment.files.length">
+                   <a href="#" ngf-select="uploadFiles($files)" ngf-max-size="10MB">
+                      <svg class="ico-attach">
+                         <use xlink:href="#news-attach"/>
+                      </svg>
+                   </a>
+                </li>
+             </ul>
+           </div>
+           <div id="gallery">
+              <ng-gallery
+                   ng-if="attachment.images.length"
+                   images="attachment.images"
+                   img-key="url"
+                   thumb-key="url"
+                ></ng-gallery>
+                <file-list list="attachment.files" can-edit>
+                   <span></span>
+                </file-list>
+           </div>
+          <ul class="options-btn">
+             <li><button type="button" class="btn-blue r-side" ng-click="postMessage()">Send</button><button type="button" class="btn-link r-side" ng-click="cancel()">Cancel</button></li>
+             
+          </ul>
+        </form>
+    </div>
+</div>

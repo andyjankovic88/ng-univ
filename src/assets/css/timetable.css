@@ -1,0 +1,1440 @@
+/* @override
+	http://localhost.ucroo/assets/css/timetable.css
+	http://localhost.imac/assets/css/timetable.css?1514
+	http://anita.sucroo.com/assets/css/timetable.css?2085
+	http://simplesaml.sucroo.com/assets/css/timetable.css?2217
+*/
+
+#firstclasses {
+		border: 1px solid #e4e5e5;
+		background-color: #eef0f0;
+		padding: 12px;
+}
+
+#class_form,
+#assesssment_form {
+		padding-top: 6px;
+}
+
+#class_form input,
+#class_form textarea,
+#class_form select,
+#assesssment_form input,
+#assesssment_form textarea,
+#assesssment_form select
+
+{
+		width: 229px;
+		margin-bottom: 10px;
+}
+
+div.class_details {
+		float: left;
+		width: 70px;
+		color: #5cb294;
+		padding-top: 8px;
+}
+
+h4.semester {
+		float: left;
+}
+
+h4.timetable {
+		margin-bottom: 1em;
+		/*font-weight: bold;*/
+		text-transform: uppercase;
+		color: #464646;
+		font-size: 1.1em;
+}
+
+.timetable_set {
+		clear: both;
+		margin-bottom: 0;
+		position: relative;
+		line-height: 24px;
+}
+
+.timetable_time {
+		/*float: left;*/
+		color: #434242;
+		/*width: 230px;*/
+}
+
+.shorter {
+		width: 115px;
+}
+
+.shorterlittle {
+		width: 155px;
+}
+
+.timetable_class {
+		/*float: left;*/
+		color: #6ab14c;
+		width: 100%;
+}
+
+.longer {
+		width: 455px;
+}
+
+.longerlittle {
+		width: 415px;
+}
+
+.manuelly_added
+{
+	margin-bottom: 3em;
+}
+
+.class_times {
+		width: 100%;
+		display: inline-block;font-size: 14px;
+}
+
+.unit-manu
+{
+	margin: 20px -26px 0 -24px;
+	padding: 1em 24px 1.8em;
+	border-bottom: 1px solid #acacac;
+}
+
+.unit-manu:first-child
+{
+	padding-top: 0;
+}
+
+.day {
+		width: 120px;
+		color: #464646;
+		font-size: 1.1em;
+		color: #5cb294;
+}
+
+.times
+{
+		padding-bottom: 16px;
+}
+
+.morespace
+{
+		padding-top: 2px;
+}
+
+.old_assessment {
+		color: #bebebe;
+}
+
+/*
+ * FullCalendar v1.5.3 Stylesheet
+ *
+ * Copyright (c) 2011 Adam Shaw
+ * Dual licensed under the MIT and GPL licenses, located in
+ * MIT-LICENSE.txt and GPL-LICENSE.txt respectively.
+ *
+ * Date: Mon Feb 6 22:40:40 2012 -0800
+ *
+*/
+
+
+.fc {
+		direction: ltr;
+		text-align: left;
+}
+
+.fc table {
+		border-collapse: collapse;
+		border-spacing: 0;
+}
+
+html .fc,
+.fc table {
+		font-size: 1em;
+}
+
+.fc td,
+.fc th {
+		padding: 0;
+		vertical-align: top;
+}
+
+
+/* Header
+------------------------------------------------------------------------*/
+
+.fc-header td {
+		white-space: nowrap;
+}
+
+.fc-header-left {
+		width: 25%;
+		text-align: left;
+}
+
+.fc-header-center {
+		text-align: center;
+}
+
+.fc-header-right {
+		width: 25%;
+		text-align: right;
+}
+
+.fc-header-title {
+		vertical-align: top;
+}
+
+.fc-header-title h2 {
+		margin-top: 0;
+		white-space: nowrap;
+}
+
+.fc .fc-header-space {
+		padding-left: 10px;
+}
+
+.fc-header .fc-button {
+		margin-bottom: 1em;
+		vertical-align: top;
+}
+
+/* buttons edges butting together */
+
+.fc-header .fc-button {
+		margin-right: -1px;
+}
+
+.fc-header .fc-corner-right {
+		margin-right: 1px; /* back to normal */
+}
+
+.fc-header .ui-corner-right {
+		margin-right: 0; /* back to normal */
+}
+
+/* button layering (for border precedence) */
+
+.fc-header .fc-state-hover,
+.fc-header .ui-state-hover {
+		z-index: 2;
+}
+
+.fc-header .fc-state-down {
+		z-index: 3;
+}
+
+.fc-header .fc-state-active,
+.fc-header .ui-state-active {
+		z-index: 4;
+}
+
+
+
+/* Content
+------------------------------------------------------------------------*/
+
+.fc-content {
+		clear: both;
+}
+
+.fc-view {
+		width: 100%; /* needed for view switching (when view is absolute) */
+		overflow: hidden;
+}
+
+
+
+/* Cell Styles
+------------------------------------------------------------------------*/
+
+.fc-widget-header,    /* <th>, usually */
+.fc-widget-content {  /* <td>, usually */
+		border: 1px solid #f1f2f2;
+}
+
+.fc-state-highlight { /* <td> today cell */ /* TODO: add .fc-today to <th> */
+		background: #DDDDDD;
+}
+
+.fc-first {
+		color: #666;
+		height: 3em;font-family: 'SoleilBk';
+}
+
+.fc-widget-header {
+		border: none;
+}
+
+.fc-cell-overlay { /* semi-transparent rectangle while dragging */
+		background: #9cf;
+		opacity: .2;
+		filter: alpha(opacity=20);  /*for IE*/
+}
+
+
+
+/* Buttons
+------------------------------------------------------------------------*/
+
+.fc-button {
+		position: relative;
+		display: inline-block;
+		cursor: pointer;
+}
+
+.fc-state-default { /* non-theme */
+		border-style: solid;
+		border-width: 1px 0;
+}
+
+.fc-button-inner {
+		position: relative;
+		float: left;
+		overflow: hidden;
+}
+
+.fc-state-default .fc-button-inner { /* non-theme */
+		border-style: solid;
+		border-width: 0 1px;
+}
+
+.fc-button-content {
+		position: relative;
+		float: left;
+		height: 1.9em;
+		line-height: 1.9em;
+		padding: 0 .6em;
+		white-space: nowrap;
+}
+
+/* icon (for jquery ui) */
+
+.fc-button-content .fc-icon-wrap {
+		position: relative;
+		float: left;
+		top: 50%;
+}
+
+.fc-button-content .ui-icon {
+		position: relative;
+		float: left;
+		margin-top: -50%;
+		*margin-top: 0;
+		*top: -50%;
+}
+
+/* gloss effect */
+
+.fc-state-default .fc-button-effect {
+		position: absolute;
+		top: 50%;
+		left: 0;
+}
+
+.fc-state-default .fc-button-effect span {
+		position: absolute;
+		top: -100px;
+		left: 0;
+		width: 500px;
+		height: 100px;
+		border-width: 100px 0 0 1px;
+		border-style: solid;
+		border-color: #fff;
+		background: #444;
+		opacity: .09;
+		filter: alpha(opacity=9);
+}
+
+/* button states (determines colors)  */
+
+.fc-state-default,
+.fc-state-default .fc-button-inner {
+		border-style: solid;
+		border-color: #ccc #bbb #aaa;
+		background: #F3F3F3;
+		color: #000;
+}
+
+.fc-state-hover,
+.fc-state-hover .fc-button-inner {
+		border-color: #999;
+}
+
+.fc-state-down,
+.fc-state-down .fc-button-inner {
+		border-color: #555;
+		background: #777;
+}
+
+.fc-state-active,
+.fc-state-active .fc-button-inner {
+		border-color: #555;
+		background: #777;
+		color: #fff;
+}
+
+.fc-state-disabled,
+.fc-state-disabled .fc-button-inner {
+		color: #999;
+		border-color: #ddd;
+}
+
+.fc-state-disabled {
+		cursor: default;
+}
+
+.fc-state-disabled .fc-button-effect {
+		display: none;
+}
+
+/* custom event colors ucroo */
+
+.fc-event-skin {
+		/* default BORDER color */
+		/* default BACKGROUND color */
+		/* default TEXT color */
+		/*color: #464646;
+		background-color: #ffffff;*/
+		border-left: none;
+		/*padding: 0 2px 0 3px;*/
+		/*border: none;*/
+}
+
+.fc-event-head.fc-event-skin {
+		/*height: 14px;*/
+}
+
+#timetable1 .fc-event.fc-event-skin {
+		/*padding-left: 7px;*/
+		/*margin: 0;*/
+}
+
+.fc-event.fc-event-skin {
+		/*border-color: rgba(141, 255, 152, 1);
+		background-color: rgba(205, 255, 210, 1);
+		color: rgba(80,80,81, 1);*/
+		/*margin-top: 1px;*/
+}
+
+.fc-event.fc-event-skin.fc-event-vert {
+		/*box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);*/
+}
+
+.fc-event.fc-event-skin.event-lecture,
+.fc-event.fc-event-skin.event-lecture01,
+.fc-event.fc-event-skin.event-lecture02,
+.fc-event.fc-event-skin.event-class {
+		/*border-bottom: 5px solid #36B2E8;
+		border-top: 5px solid #36B2E8;
+		background-color: rgba(243, 241, 122, 0.6);
+		color: rgba(104,91,52, 1);*/
+}
+
+.fc-event.fc-event-skin.event-lab, .fc-event.fc-event-skin.event-laboratory  {
+		/*border-bottom: 5px solid #65E27E;
+		border-top: 5px solid #65E27E;
+		background-color: rgba(189,100,245, 0.6);
+		color: rgba(82,31,95, 1);*/
+}
+
+.fc-event.fc-event-skin.event-consultation {
+	/*border-color: rgba(242,146,7, 1);
+	background-color: rgba(255,193,0, 0.6);
+	color: rgba(46,33,0, 1);
+	border-bottom: 5px solid #800080;
+	border-top: 5px solid #800080;*/
+}
+
+.fc-event.fc-event-skin.event-assessment,
+.fc-event.fc-event-skin.event-exam,
+.fc-event.fc-event-skin.event-examination {
+		/*border-bottom: 5px solid #F13D28;
+		border-top: 5px solid #F13D28;
+		background-color: rgba(243,142,142, 0.6);
+		color: rgba(161,38,38, 1);*/
+}
+
+.fc-event.fc-event-skin.event-tutorial,
+.fc-event.fc-event-skin.event-tut,
+.fc-event.fc-event-skin.event-studio,
+.fc-event.fc-event-skin.event-workshop,
+.fc-event.fc-event-skin.event-presentation {
+		/*border-bottom: 5px solid  #F38D3A;
+		border-top: 5px solid  #F38D3A;
+		background-color: rgba(38,171,226, 0.6);
+		color: rgba(52,65,104, 1);*/
+}
+
+event-consultation
+
+/*.fc-event.fc-event-skin.event-studio,
+.fc-event.fc-event-skin.event-workshop,
+.fc-event.fc-event-skin.event-presentation {
+		border-color: rgba(104,74,31, 0.5);
+		background-color: rgba(232,137,0, 0.6);
+		color: rgba(104,62,0, 1);
+}*/
+
+.fc-event.fc-event-skin.event-seminar {
+		border-color: rgba(63,181,132, 1);
+		background-color: rgba(156,255,191, 0.6);
+		color: rgba(52,65,104, 1);
+}
+/*all others
+.fc-event.fc-event-skin.event- {
+		border-color: rgba(125,125,125, 1);
+		background-color: rgba(119,119,119, 0.6);
+		color: rgba(80,80,81, 1);
+}*/
+
+
+/* Global Event Styles
+------------------------------------------------------------------------*/
+
+.fc-event {
+		/*border-style: none;*/
+		border-width: 0;
+		font-size: .85em;
+		cursor: default;
+}
+
+a.fc-event,
+.fc-event-draggable {
+		cursor: pointer;
+}
+
+a.fc-event {
+		text-decoration: none;
+}
+
+.fc-rtl .fc-event {
+		text-align: right;
+}
+
+.fc-event-inner {
+		/*position: relative;*/
+		width: 100%;
+		height: 100%;
+		border-style: solid;
+		border-width: 0;
+		overflow: hidden;display: table-cell;vertical-align: middle;
+}
+
+.fc-event-time,
+.fc-event-title {
+		/*padding: 0 1px;*/
+		/*text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.6);*/
+}
+
+.fc-event-time{
+		line-height: 17px;
+		/*font-weight: bold;*/
+}
+.fc-event-title {
+		/*margin-top: -3px;*/
+		line-height: 1em;
+		/*margin-top: 0px;*/font-size: 12px;
+}
+
+.fc .ui-resizable-handle { /*** TODO: don't use ui-resizable anymore, change class ***/
+		display: block;
+		position: absolute;
+		z-index: 99999;
+		overflow: hidden; /* hacky spaces (IE6/7) */
+		font-size: 300%;  /* */
+		line-height: 50%; /* */
+}
+
+
+
+/* Horizontal Events
+------------------------------------------------------------------------*/
+
+.fc-event-hori {
+		border-width: 1px 0;
+		margin-bottom: 1px;
+}
+
+/* resizable */
+
+.fc-event-hori .ui-resizable-e {
+		top: 0           !important; /* importants override pre jquery ui 1.7 styles */
+		right: -3px      !important;
+		width: 7px       !important;
+		height: 100%     !important;
+		cursor: e-resize;
+}
+
+.fc-event-hori .ui-resizable-w {
+		top: 0           !important;
+		left: -3px       !important;
+		width: 7px       !important;
+		height: 100%     !important;
+		cursor: w-resize;
+}
+
+.fc-event-hori .ui-resizable-handle {
+		_padding-bottom: 14px; /* IE6 had 0 height */
+}
+
+
+
+/* Fake Rounded Corners (for buttons and events)
+------------------------------------------------------------*/
+
+.fc-corner-left {
+		margin-left: 1px;
+}
+
+.fc-corner-left .fc-button-inner,
+.fc-corner-left .fc-event-inner {
+		margin-left: -1px;
+}
+
+.fc-corner-right {
+		margin-right: 1px;
+}
+
+.fc-corner-right .fc-button-inner,
+.fc-corner-right .fc-event-inner {
+		margin-right: -1px;
+}
+
+.fc-corner-top {
+		/*margin-top: 1px;*/
+		margin-top: 1px;
+}
+
+.fc-corner-top .fc-event-inner {
+		/*margin-top: -1px;*/
+		margin-top: 0;
+}
+
+.fc-corner-bottom {
+		/*margin-bottom: 1px;*/
+		margin-bottom: 0;
+}
+
+.fc-corner-bottom .fc-event-inner {
+		/*margin-bottom: -1px;*/
+		margin-bottom: 0;
+}
+
+/* Reusable Separate-border Table
+------------------------------------------------------------*/
+
+table.fc-border-separate {
+		border-collapse: separate;
+}
+
+.fc-border-separate th,
+.fc-border-separate td {
+		border-width: 1px 0 0 1px;
+		border-color: #dfdfdf;
+}
+
+.fc-border-separate th.fc-last,
+.fc-border-separate td.fc-last {
+		border-right-width: 1px;
+}
+
+tr.fc-first.fc-last {
+		background-color: #ffffff;
+}
+
+th.fc-widget-header {
+		background-color: #f1f2f2;
+}
+
+.fc-agenda-axis.fc-widget-header.fc-first {
+		box-shadow: none;
+		background-color: #f1f2f2;
+		border: none;
+		border-bottom: 1px solid #dfdfdf;
+}
+
+.fc-agenda-axis.fc-widget-header {
+		text-transform: uppercase;
+}
+
+.fc-border-separate tr.fc-last th,
+.fc-border-separate tr.fc-last td {
+		border-bottom: 1px solid #dfdfdf;
+		font-size: 16px;
+		vertical-align: middle;font-weight: normal;
+}
+
+tr.fc-first.fc-last th.fc-widget-header {
+		/*box-shadow: 0px 0px 10px #ccc inset;*/
+		/*border-right-color: #7fc4e0;
+		border-left-color: #7FC4E0;
+		border-top-color: #7FC4E0;*/
+		text-transform: capitalize;  border-right: 1px solid #dfdfdf;
+}
+
+tr.fc-first.fc-last th.fc-widget-header.fc-first {
+		box-shadow: none;
+}
+
+.fc-border-separate tr th.fc-agenda-axis {
+		border-bottom: none;
+		border-right-color: #7fc4e0;
+		box-shadow: none;
+}
+
+.fc-border-separate tbody tr.fc-first td,
+.fc-border-separate tbody tr.fc-first th {
+		border-top-width: 0;
+}
+
+
+
+/* Month View, Basic Week View, Basic Day View
+------------------------------------------------------------------------*/
+
+.fc-grid th {
+		text-align: center;
+}
+
+.fc-grid .fc-day-number {
+		float: right;
+		padding: 0 2px;
+}
+
+.fc-grid .fc-other-month .fc-day-number {
+		opacity: 0.3;
+		filter: alpha(opacity=30); /* for IE */
+		/* opacity with small font can sometimes look too faded
+			 might want to set the 'color' property instead
+			 making day-numbers bold also fixes the problem */
+}
+
+.fc-grid .fc-day-content {
+		clear: both;
+		padding: 2px 2px 1px; /* distance between events and day edges */
+}
+
+/* event styles */
+
+.fc-grid .fc-event-time {
+		/*font-weight: bold;*/
+}
+
+/* right-to-left */
+
+.fc-rtl .fc-grid .fc-day-number {
+		float: left;
+}
+
+.fc-rtl .fc-grid .fc-event-time {
+		float: right;
+}
+
+
+
+/* Agenda Week View, Agenda Day View
+------------------------------------------------------------------------*/
+
+.fc-agenda table {
+		border-collapse: separate;
+}
+
+.fc-agenda-days th {
+		text-align: center;
+}
+
+.fc-agenda .fc-agenda-axis {
+		width: 32px;
+		height: 35px;
+		padding: 0 5px 0 0;
+		vertical-align: middle;
+		line-height: 16px;
+		text-align: right;
+		white-space: nowrap;
+		/*font-weight: normal;*/
+		background: #fff;
+		color: #9e9e9e;
+		font-size: 16px;
+		border-width: 1px 1px 0 1px;
+		border-color: #f1f2f2;
+		border-style: solid;font-family: 'SoleilLt';
+}
+
+.timetable_navigation
+{
+	float: left;
+	width: 20%;
+}
+
+.color_code_legend
+{
+	clear: both;
+	width: 100%;
+	text-align: center;
+	margin: 20px 0 0;
+}
+
+.color_code_legend li
+{
+	list-style: none;
+	display: inline-block;
+	padding: 5px 7px 3px 7px;
+	background-color: #dfdfdf;
+	margin: 0 0 .3em 0;
+	font-size: 15px;
+}
+
+
+li.fc-lecture
+{
+	background-color: #0a8f76;
+}
+
+li.fc-assessment
+{
+	background-color: #b988b9 ;
+}
+
+li.fc-activity {
+	background-color: #97c2b9 ;
+}
+
+li.fc-laboratory
+{
+	background-color: #e9abc7;
+}
+
+li.fc-class
+{
+	background-color: #ffbcb1;
+}
+
+li.fc-tutorial
+{
+	background-color: #caa882;
+}
+
+li.fc-seminar
+{
+	background-color: #e67a90 ;
+}
+
+li.fc-workshop
+{
+	background-color: #c5c55b;
+}
+
+.fc-agenda .fc-day-content {
+		padding: 2px 2px 1px;
+}
+
+/* make axis border take precedence */
+
+.fc-agenda-days .fc-agenda-axis {
+		border-right-width: 0;
+}
+
+.fc-agenda-days .fc-col0 {
+		border-left-width: 0;
+}
+
+/* all-day area */
+
+.fc-agenda-allday th {
+		border-width: 0 1px;
+}
+
+.fc-agenda-allday .fc-day-content {
+		min-height: 34px; /* TODO: doesnt work well in quirksmode */
+		_height: 34px;
+}
+
+/* divider (between all-day and slots) */
+
+.fc-agenda-divider-inner {
+		height: 2px;
+		overflow: hidden;
+}
+
+.fc-widget-header .fc-agenda-divider-inner {
+		background: #eee;
+}
+
+/* slot rows */
+
+.fc-agenda-slots th {
+		border-width: 1px 1px 0;
+		border-color: #dfdfdf;
+}
+
+.fc-agenda-slots td {
+		border-width: 1px 0 0;
+		background: none;
+}
+
+.fc-agenda-slots td div {
+		height: 25px;
+}
+
+.fc-agenda-slots tr.fc-slot0 th,
+.fc-agenda-slots tr.fc-slot0 td {
+		border-top-width: 0;
+}
+
+.fc-agenda-slots tr.fc-minor th,
+.fc-agenda-slots tr.fc-minor td {
+		/*border-top-style: dotted;*/
+}
+
+.fc-agenda-slots .fc-widget-content {
+		/*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) inset;*/
+}
+
+.fc-agenda-slots tr.fc-minor th.ui-widget-header {
+		/*border-top-style: solid; /* doesn't work with background in IE6/7 */
+}
+
+
+
+/* Vertical Events
+------------------------------------------------------------------------*/
+
+.fc-event-vert {
+		border-width: 0;
+		margin: 0 0 0 -2px;
+}
+
+.fc-event-vert .fc-event-head,
+.fc-event-vert .fc-event-content {
+		position: relative;
+		z-index: 2;
+		padding: 2px;
+		overflow: hidden;
+}
+
+.fc-event-vert .fc-event-time {
+		white-space: nowrap;
+		font-size: 10px;
+}
+
+.fc-event-vert .fc-event-bg { /* makes the event lighter w/ a semi-transparent overlay  */
+		/*position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: .3;*/
+}
+
+.fc .ui-draggable-dragging .fc-event-bg, /* TODO: something nicer like .fc-opacity */
+.fc-select-helper .fc-event-bg {
+		display: none\9; /* for IE6/7/8. nested opacity filters while dragging don't work */
+}
+
+/* resizable */
+
+.fc-event-vert .ui-resizable-s {
+		bottom: 0        !important; /* importants override pre jquery ui 1.7 styles */
+		width: 100%      !important;
+		height: 8px      !important;
+		overflow: hidden !important;
+		line-height: 8px !important;
+		font-size: 11px  !important;
+		font-family: monospace;
+		text-align: center;
+		cursor: s-resize;
+}
+
+.fc-agenda .ui-resizable-resizing { /* TODO: better selector */
+		_overflow: hidden;
+}
+
+/* Calender/Edit classes stuff for profile, first steps and edit timetable page */
+
+#content #search .search .ui-multiselect.ui-widget, .class-fields .ui-multiselect.ui-widget {
+  margin-left: 10px;
+	background: none repeat scroll 0 0 #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+  color: #244372;
+  font-family: 'SoleilLt',sans-serif;
+  font-size: 14px;
+  outline: medium none;
+  padding: 6px 15px;
+  font-weight: normal !important;
+}
+
+div.class-fields .ui-multiselect.ui-widget {
+	margin-left: 0;
+	padding: 7px 13px;
+}
+
+#content #search .search .ui-state-default span
+{
+	line-height: 30px;
+}
+
+#content #search .ui-multiselect .ui-icon-triangle-2-n-s
+{
+	/*background: url(/assets/images/icons/dropdown_arrow_icon.png) no-repeat center center;*/
+	/*border-left: 1px solid #CDCDCD;*/
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #000;
+    height: 100%;
+    margin-top: 0;
+    padding: 2px 0;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 0;
+}
+
+@-moz-document url-prefix()
+{
+	#content #search .ui-multiselect .ui-icon-triangle-2-n-s
+	{
+		height: 29px;
+	}
+}
+
+#content #search .search .remove-class,
+.timetable-delete, #form-enroll .search .remove-class
+{
+	/*-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+    height: 20px;
+    width: 20px;
+    margin-top: -10px;
+    border-radius: 20px;
+    padding: 0;
+    line-height: 18px;
+    border: 1px solid #acacac;
+    color: #464646;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);*/
+    background-color: #fff;
+    /*position: absolute;*/
+    float: right;
+    border: 0px;
+    /*top: 50%;*/
+}
+
+.timetable-delete {
+		/*padding-left: 11px;*/
+		text-decoration: none;
+		/*vertical-align: bottom;*/
+		/*font-weight: bold;*/
+		display: inline-block;
+		margin: 0;
+		text-align: center;
+}
+
+.timetable-delete:hover	{
+		cursor:pointer;
+}
+
+
+#content #search .search .remove_class,
+.timetable_delete, #form-enroll .search .remove_class
+{
+    position: absolute;
+    right: 0;
+    background: none;
+    border: 0px;
+}
+
+.timetable_delete {
+		/*padding-left: 11px;*/
+		text-decoration: none;
+		/*vertical-align: bottom;*/
+		/*font-weight: bold;*/
+		display: inline-block;
+		margin: 0;
+		text-align: center;
+}
+
+.timetable_delete:hover	{
+		cursor:pointer;
+}
+
+.disabled_field
+{
+	color: #acacac;
+	background-color: #f1f1f1;
+}
+
+#form-enroll {
+	margin-top: 1em;
+}
+.only-child #form-enroll {
+	margin-top: 0;
+}
+
+.edit-timetable .btn.btn-dark_blue,
+.edit-timetable .btn-success,
+#form-enroll .btn.btn-dark_blue,
+#form-enroll .btn-success
+{
+	width: 350px;
+	font-size: 1em;
+	margin-bottom: 10px;
+}
+
+#form-enroll .btn.btn-dark_blue,
+#form-enroll .btn-success,
+#form-enroll .search .search_class {
+	width: 250px;
+}
+
+#content .content .note.signup.step.connection {
+    width: 760px;
+}
+
+#content .content .note.signup .con .search-box {
+    width: 261px;
+}
+
+.con.steps .right {
+    float: right;
+    margin: 20px 0;
+}
+
+#content .content .note.signup .con .search_class,
+#content .edit-timetable .edit-classes .search_class {
+    float: left;
+    margin-top: 0;
+    width: 200px;
+}
+
+#content .edit-timetable .edit-classes .search_class, #form-enroll .search_class {
+		/*-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		width: 350px;
+		height: 35px;
+		border: 1px solid #acacac;
+		font-size: 1.2em;*/
+}
+
+#content .edit-timetable .edit-classes .search, #form-enroll .search {
+	margin-bottom: 15px;
+	position: relative;
+}
+
+#content .edit-timetable .edit-classes .search:last-child, #form-enroll .search:last-child
+{
+	margin-bottom: 1em;
+}
+
+.con.steps h1, .con.steps h2 {
+    margin: 0 auto 25px auto;
+    text-align: center;
+}
+
+.con.steps form {
+    margin-top: 20px;
+}
+
+#step_display {
+    height: 31px;
+    margin: 0 0 35px 40px;
+    position: relative;
+}
+
+#step_display .step {
+    background-image: url(/assets/images/sprite.png);
+    float: left;
+    height: 31px;
+    position: absolute;
+}
+
+#step_display .step.one {
+    background-position: -247px -7px;
+    width: 98px;
+    z-index: 4;
+}
+
+#step_display .step.one.active {
+    background-position: -247px -42px;
+}
+
+#step_display .step.two {
+    background-position: -247px -78px;
+    left: 84px;
+    width: 120px;
+    z-index: 3;
+}
+
+#step_display .step.two.active {
+    background-position: -247px -115px;
+}
+
+#step_display .step.three {
+    background-position: -247px -152px;
+    left: 190px;
+    width: 150px;
+    z-index: 2;
+}
+
+#step_display .step.three.active {
+    background-position: -247px -186px;
+}
+
+#step_display .step.four {
+    background-position: -247px -221px;
+    left: 300px;
+    width: 150px;
+    z-index: 1;
+}
+
+#step_display .step.four.active {
+    background-position: -247px -255px;
+}
+
+.con.steps #search .search {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#select-subject {
+    clear: left;
+    height: 28px;
+    margin: 2px 0 0 35px;
+}
+
+/*.ui-autocomplete {
+		z-index: 1001 !important;
+}*/
+
+/* removed as using global autocomple loader
+.ui-autocomplete-loading, .loading {
+    background: url(/assets/images/ajax-loader.gif) no-repeat 190px;
+}
+*/
+
+.loading.big {
+    background: url(/assets/images/ajax-loader-big-004b84.gif) no-repeat;
+		height: 5px;
+}
+
+.search .loading {
+    background-position: 0;
+    height: 15px;
+    float: left;
+    margin: 10px 0 0 10px;
+    width: 128px;
+    position: static;
+}
+
+.loading.loading_small
+{
+    background: url(/assets/images/ajax-loader.gif) no-repeat;
+    width: 16px;
+    height: 11px;
+    margin: 13px 10px 0;
+}
+
+.search .message {
+    line-height: 14px;
+    font-size: 0.9em;
+    width: 229px;
+    float: left;
+    margin-left: 10px;margin-top: 17px;
+}
+
+#content .content #timetable {
+    -moz-border-image: url('/assets/images/index/note_small.png') 70 70 round; /* Firefox */
+    -webkit-border-image: url('/assets/images/index/note_small.png') 70 70 round; /* Safari */
+    -o-border-image: url('/assets/images/index/note_small.png') 70 70 round; /* Opera */
+    border-image: url('/assets/images/index/note_small.png') 70 70 round;
+    border-width: 70px;
+    height: 0px;
+    padding: 0px;
+    position: absolute;
+    width: 480px;
+    right: -150px;
+    top: -25px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+#timetable .bg {
+    background: url('/assets/images/index/note_bg.jpg') repeat;
+}
+
+#timetable.open {
+    display: block;
+}
+
+#timetable.no {
+    display: none;
+}
+
+/*
+ * Edit classes
+*/
+
+.part-content.edit-classes {
+		margin-bottom: 0px;
+}
+
+.part-content.edit-classes .desc {
+		margin: 20px 0;
+}
+
+.part-content.edit-classes .desc div.step1 {
+		float: left;
+		margin-right: 19px;
+		width: 315px;
+}
+
+.part-content.edit-classes #select-subject {
+		height: 29px;
+		margin: 0 0 0 20px;
+		width: 225px;
+}
+
+.part-content.edit-classes .search .remove-class,
+.part-content.edit-classes .search .select-subject {
+		vertical-align: top;
+}
+
+.part-content.edit-classes .manu {
+		margin: 15px 0 0 0;
+		border-top: 1px solid #dfdfdf;
+		padding-top: 15px
+}
+
+.part-content.edit-classes .manu h3 {
+		font-size: 1.1em;
+		/*font-weight: bold;*/
+		margin: 0 0 0.5em 0;
+}
+
+#imdonelink {
+		float: right;
+		/*font-weight: bold;*/
+		margin: 18px -10px 0 0;
+		height: 25px;
+		width: 110px;
+}
+
+.ui-multiselect-menu {
+		z-index: 999 !important;
+}
+
+.halfbr
+{
+	height: 5px;
+}
+
+.panel-body .part-content.edit-classes .search{
+    width: 100%;
+    margin-top: 5px;
+}
+
+.panel-body .part-content.edit-classes .search .message{
+    float: none;
+    display: inline-block;
+}
+
+.panel-body .part-content.edit-classes .search .remove-class{
+    position: relative;
+    float: right;
+}
+
+.panel-body .part-content.edit-classes .search .loading {
+    background-position: 0;
+    height: 15px;
+    float: none;
+    display: inline-block;
+    margin: 10px 0 0 10px;
+    width: 128px;
+    position: static;
+}
+
+.calendar-event-right {
+	float: right;
+	text-align: right;
+	margin-top: -15px;
+	vertical-align: middle;
+}
+
+div.radio-cust {float: left;}
+div.radio-cust label {padding: 0 25px 0 18px;}
+
+/*06-02-2015------------------------------------*/
+.class-fields{margin: 20px 0;}
+.class-fields select{width:45%;margin: 0 10px 0 0;}
+.class-fields .input-medium{width: 65%}
+.class-fields #unit_id{width: 55%}
+.class-fields .input-small{width: 30%}
+.class-manual-fields{margin:20px 0;}
+.class-manual-fields .input-large{width: 70%;}
+.class-manual-fields .input-medium{width: 31%;}
+.class-manual-fields .input-small{width: 22%;}
+.class-manual-fields label{color: #000;margin:0 0 10px 0;font-family: "SoleilBk";}
+.activity-fields{margin:20px 0; }
+.activity-fields .form-group .input-small{width: 21%;}
+.repeat-activity .input-small{width: 20% !important;}
+.assessment-fields{margin:20px 0;}
+.assessment-fields input.input-large {width: 390px;}
+.assessment-fields select.input-large {width: 413px;}
+.duration .input-small{width: 26%;}
+.timetable_set{border-bottom: 1px solid #dfdfdf;margin-bottom: 10px;  padding-bottom: 15px;}
+#event-listing .heading{font-size: 15px;margin-bottom: 0;}
+.calendar-viewer{background: #f1f2f2;padding: 10px 20px;border-bottom: 1px solid #dfdfdf;}
+.calendar-selector{float: left;margin:9px 0 0 0;}
+.edit-timetable input,.edit-timetable select{padding: 13px 10px;}
+.no-end-time{margin:15px 10px; display: inline-block;}
+.fancy_formatted_date{float: none;}
+.timetable_container {display: inline-block; vertical-align: middle; width: 530px;}
+.timetable_cross {display: inline-block; vertical-align: middle; width: 20px;}
+div.profile-timetable {padding: 0;}
+label.block {display: block;}
+div.no-cal-event {color: #3a91e0; text-align: center; }
+
+.activity-fields .form-group .input-medium{width: 26%;}
+.label-margin{margin: 0 5px 0 11px;}
+.assessment-fields label.block{color: #000;margin:0 0 10px 0;font-family: "SoleilBk";}
+.week-title {float:left; margin: 9px 0 0; font-weight: bold; color: #000; width: 35%; text-align: center;}
+input[value='cant_find'] + span {font-weight: bold;}
+.import-calendar {margin: 20px 0 -20px;}
+
+/*28-05-2015 - 4323*/
+#timetable1 .fc-header-title h2{
+	color: #000;
+    font-size: 100%;
+    font-weight: bold;
+    margin: 9px 0 0;
+    text-align: center;
+    font-family: "SoleilLt" !important;
+}
+#timetable1 .fc-header > tbody {
+    background: none repeat scroll 0 0 #f1f2f2;
+    border-bottom: 1px solid #dfdfdf;
+}
+#timetable1 .fc-header .fc-corner-right{
+	margin: 10px;
+}
+#timetable1 .fc-header td{
+	vertical-align: middle;
+}
+
+#timetable1 .fc-state-default .fc-button-effect span{ background: #5E769A !important; position: relative;}
+#timetable1 .fc-corner-right .fc-button-inner, .fc-corner-right .fc-event-inner{ border: none !important;background: #5E769A !important;}
+#timetable1 .fc-header-right .fc-button-content{ background: url(/assets/images/next_arrow_white.png) center center no-repeat; width: 18px; display: block; padding: 2px 8px}
+#timetable1 .fc-header-left .fc-button-content{ background: url(/assets/images/back_arrow_white.png) center center no-repeat; width: 18px; display: block;padding: 2px 8px}
+#timetable1 .fc-state-hover,#timetable1 .fc-state-default{ border: none !important}
+#timetable1 .closon{ background: #5e769a url(/assets/images/icon-close.png) center center no-repeat;   /*border-radius: 10px;*/
+    height: 10px;
+    padding: 3px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10px; cursor: pointer; background-size: 40%;  }
+#timetable1 .fc-event-inner{ position: relative;}

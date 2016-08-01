@@ -1,0 +1,23 @@
+#news-section {
+   .news-heading {
+      height: 141px;
+      width: 100%;
+      color: $color-white;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      font: 28px 'Latolight';
+      @include gradient(1);
+      span {
+         padding: 19px 20px 19px 20px;
+         position: absolute;
+         bottom: 0;
+         left: 0;
+      }
+   }
+   .post-text {
+      font-size: $font14;
+      margin-bottom: 10px;
+      line-height: 28px;
+   }
+}

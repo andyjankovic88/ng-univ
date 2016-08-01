@@ -1,0 +1,19 @@
+<div tabindex="0" dropdown class="combo-with-checkbox" >
+    <div class="select-white wrap-dd-select" dropdown-trigger>
+        <span class="selected ng-binding">{{selectedText}}</span>
+    </div>
+    <div dropdown-body class="drop-holder clearfix" on-hide="onHide()">
+        <div class="drop-content">
+            <ul class="edit-drop">
+                <li ng-repeat="item in options">
+                    <div class="checkbox">
+                        <input id="{{idAttrPrefix + item[idKey]}}" type="checkbox" ng-model="options[$index].selected">
+                        <label for="{{idAttrPrefix + item[idKey]}}">
+                            <span>{{item[labelKey]}}</span>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

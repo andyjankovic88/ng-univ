@@ -1,0 +1,28 @@
+.category-block {
+   .category-header {
+      display: table;
+      clear: both;
+      content: '';
+      h2 {
+         font-size: 13px;
+         font-family: 'latobold';
+         float: left;
+      }
+      svg {
+         width: 10px;
+         height: 10px;
+         margin: 5px 0 0 3px;
+         use {
+            fill: $color-grey-middle;
+         }
+      }
+   }
+}
+.category-content {
+   li {
+      width: 100%;
+      margin: 0 0 5px;
+   }
+   margin: 0 0 10px;
+}
+

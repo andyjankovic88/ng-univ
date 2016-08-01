@@ -1,0 +1,34 @@
+<div id="clubs">
+   <!-- content-heading -->
+   <div class="content-heading ng-scope">
+      <h1>Clubs &amp; Societies</h1>
+   <span class="float-right default-btn">
+      <button type="button" class="btn-blue" ui-sref="createClub">Create Club page</button>
+   </span>
+   </div>
+   <!-- sub-menu -->
+   <div class="sub-menu">
+      <ul>
+         <li ui-sref-active="active">
+            <a href="#" ui-sref="clubsList">
+               <svg class="ico-list"><use xlink:href="#feeds-list" /></svg>
+               <span>CLUB LIST</span>
+            </a>
+         </li>
+         <li ui-sref-active="active">
+            <a href="#" ui-sref="clubsSuggestions">
+               <svg class="ico-suggestions"><use xlink:href="#icon-suggestions" /></svg>
+               <span>SUGGESTIONS</span>
+            </a>
+         </li>
+         <li ui-sref-active="active">
+            <a href="#" ui-sref="clubsEvents">
+               <svg class="ico-calendar"><use xlink:href="#profile-calendar" /></svg>
+               <span>UPCOMING EVENTS</span>
+            </a>
+         </li>
+      </ul>
+   </div>
+   <!-- clubs-content -->
+   <div class="clubs-content" ui-view></div>
+</div>

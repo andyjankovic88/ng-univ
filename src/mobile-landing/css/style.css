@@ -1,0 +1,23 @@
+@font-face { font-family: 'SoleilBk'; src: url('fonts/2AE920_0_0.eot'); src: url('fonts/2AE920_0_0.eot?#iefix') format('embedded-opentype'), url('fonts/2AE920_0_0.woff') format('woff'), url('fonts/2AE920_0_0.ttf') format('truetype'); }
+@font-face { font-family: 'SoleilLt'; src: url('fonts/2AE920_1_0.eot'); src: url('fonts/2AE920_1_0.eot?#iefix') format('embedded-opentype'), url('fonts/2AE920_1_0.woff') format('woff'), url('fonts/2AE920_1_0.ttf') format('truetype'); }
+
+
+body{margin:0;padding:0;font-family: 'SoleilLt';}
+p{padding:0;margin:0;}
+header,section,footer{display:block;}
+.header{background:#213e6a;}
+.layout-width{margin:0 auto;width:96%;}
+.logo{padding:20px 0; width: 150px; height: 46px;}
+.middle-wrapper{display:block;background:#4f97e8;}
+.middle-wrapper p{font-size:20px;color:#dbe7f9;padding:40px 0;}
+.play-store{display:block;padding-bottom:50px;}
+.mrgnRt{margin-right:12px;}
+.banner{text-align:center;padding-bottom:50px;}
+.footer{background:#292929;padding:30px 0;}
+.footer .title{text-transform:uppercase;color:#999999;padding-bottom:30px;font-size:15px;font-family: 'SoleilBk';}
+.contact-detail{font-size:14px;color:#656565;}
+.contact-detail a{color:#656565;text-decoration:none;}
+.contact-detail a:hover{color:#ccc;text-decoration:none;}
+.contact-detail .row{margin-bottom:15px;clear:both;}
+.contact-detail .row .icon{font-size:16px;color:#656565;float:left;margin:3px 10px 10px 0;}
+

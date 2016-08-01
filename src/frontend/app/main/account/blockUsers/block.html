@@ -1,0 +1,50 @@
+<div class="block-users-section">
+   <h2>
+      <span>Blocked users</span>
+   </h2>
+   <div class="section">
+      <ul>
+         <li ng-repeat="student in settings.blocked_users" class="ucr-as-row ucr-clearfix">
+            <figure class="img-holder">
+               <img ng-show="student.pic" ng-src="{{student.pic}}" class="photo" width="38" height="38">
+               <img ng-hide="student.pic" ng-src="https://background.ucroo.com.au/assets_new/images/user/avatar_male_thumb.jpg" width="38">
+            </figure>
+            <div class="row-actions r-side">
+               <button class="btn btn-blue" ng-click="unblockUser(student)">Unblock</button>
+            </div>
+            <div class="row-info">{{student.username}}</div>
+         </li>
+      </ul>
+   </div>
+   <div class="subtitle">Add by name</div>
+   <div class="section">
+      <ul>
+         <li ng-repeat="student in candidateList" class="ucr-as-row ucr-clearfix">
+            <figure class="img-holder">
+               <img ng-show="student.photoUrl" ng-src="{{student.photoUrl}}" class="photo" width="38" height="38">
+               <img ng-hide="student.photoUrl" ng-src="https://background.ucroo.com.au/assets_new/images/user/avatar_male_thumb.jpg" width="38">
+            </figure>
+            <div class="row-actions r-side">
+               <button class="btn btn-link" ng-click="removeFromCandidateList(student, $index)">Cancel</button>
+               <button class="btn btn-danger" ng-click="blockUser(student, $index)">Block user</button>
+            </div>
+            <div class="row-info">{{student.name}}</div>
+         </li>
+      </ul>
+
+      <div class="user_searchbox">
+         <form name="userSearchForm" ng-submit="addToCandidateList()">
+            <i ng-show="loadingUsers" class="icon-search-loading"><svg><use xlink:href="#icon-loading-spinner" /></svg></i>
+            <input type="text" ng-model="selectedStudent" placeholder="Type student's name"
+                class="input-typeahead"
+                typeahead="student as student.name for student in searchStudents($viewValue)"
+                typeahead-min-length="2"
+                typeahead-loading="loadingUsers"
+                typeahead-template-url="typeahead-match-student.html">
+            <div class="r-side">
+               <button class="btn btn-blue btn-confirm">Confirm</button>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>

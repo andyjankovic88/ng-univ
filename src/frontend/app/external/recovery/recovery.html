@@ -1,0 +1,30 @@
+<!-- recovery pad -->
+<div class="recovery-pad">
+   <!-- form -->
+   <form id="recoveryForm" name="recoveryForm" accept-charset="utf-8" ng-submit="requestRecovery()" novalidate>
+      <div class="recovery-box-new">
+         <div class="home-logo">
+            <svg><use xlink:href="#header-homepage-logo2"></use></svg>
+         </div>
+         <div class="row splitter">
+            <div class="splitter-l-label">Enter your email address and we'll<br> get you back on track.</div>
+         </div>
+         <div class="row" id="email_row_id" ng-class="{'has-error': (recoveryForm.$submitted || recoveryForm.$dirty) && recoveryForm.email.$invalid}">
+            <div class="form-group">
+               <div class="form-label-error ng-hide" ng-class="{'show': emailDoesNotExist}">A user with this email does not exist</div>
+               <div class="form-label-error" ng-hide="emailDoesNotExist">Field must contain a valid email address</div>
+               <div class="form-label">Email</div>
+               <input type="email" name="email" class="form-object" ng-model="recoveryEmail" tabindex="0" required>
+            </div>
+         </div>
+         <div class="row">
+            <button type="submit" class="btn-blue btn-login" tabindex="0">Request Reset Link</button>
+         </div>
+      </div>
+   </form><!-- form -->
+   <div class="bottom-row">
+      <span class="linkto-login"><a ui-sref="login">Back to Login</a></span>
+   </div>
+</div><!-- recovery pad -->
+
+

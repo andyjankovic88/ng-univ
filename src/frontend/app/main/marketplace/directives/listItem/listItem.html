@@ -1,0 +1,38 @@
+<div class="marketplace-list-item">
+    <img class="item-img" ng-src="{{item.item_image_thumb}}" />
+    <div class="type" ng-class="{'for-sale': getType() === 'FOR SALE', 'wanted': getType() === 'WANTED'}">{{getType()}}</div>
+    <div class="description">
+        <a class="name" >{{item.item_name}}</a>
+        <p>${{item.price}}</p>
+        <!-- <p>0</p> -->
+    </div>
+    <div class="background">
+        <item-brief-info item="item"></item-brief-info>
+        <div class="edit">
+            <div ng-if="userId == item.user.id">
+                <button class="btn-sold" ng-click="soldItem()">SOLD</button>
+                <ul class="post-options r-side">
+                    <li>
+                        <a href="#"  class="ng-scope" ui-sref="marketplaceCreateItem({id: item.item_id})">
+                            <svg class="ico-pencil">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-pencil"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" ng-click="deleteItem()" class="ng-scope">
+                            <svg class="ico-remove">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-remove"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="rubber-list" ng-if="userId != item.user.id">
+                <li>
+                    <user-item data="item.user" link-to-profile="true"></user-item>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

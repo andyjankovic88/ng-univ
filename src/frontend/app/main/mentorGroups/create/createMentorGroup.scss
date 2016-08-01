@@ -1,0 +1,72 @@
+ul.rubber-list {
+   li {
+      margin: 0 0 10px;
+      overflow: hidden;
+      img {
+         width: 36px;
+         height: 36px;
+         float: left;
+         margin: 0 10px 0 0;
+      }
+      .user-name {
+         margin: 7px 0 0;
+         max-width: 238px;
+      }
+   }
+   .photo-holder {
+      position: relative;
+      float: left;
+   }
+   .status {
+      bottom: 1px;
+      right: 6px;
+      background: none;
+      border: 0;
+   }
+}
+
+.table {
+   display: table;
+}
+
+.search-section {
+   .autoinput {
+      border: 1px solid $color-light-grey;
+      padding: 13px 8px;
+      cursor: pointer;
+      width: 100%;
+      color: $color-inactive;
+   }
+   .txt {
+      font-size: 11px;
+      color: $color-inactive-icon;
+   }
+   .search-box {
+      padding: 10px;
+      -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+   }
+}
+
+.img-holder {
+   img {
+      display: block;
+   }
+}
+
+.create-mentor-group {
+   label {
+      &.red {
+         color: #f00;
+      }
+      &.green {
+         color: green;
+      }
+   }
+   .options-btn {
+      float: right;
+      li {
+         display: inline-block;
+      }
+   }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: bin/sketchtool 1.4 (305) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape Copy</title>
+    <desc>Created with bin/sketchtool.</desc>
+    <defs></defs>
+    <g id="Mentor-Groups" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group-view---Mentor-Groups-root-1a" sketch:type="MSArtboardGroup" transform="translate(-1059.000000, -254.000000)" fill="#3A91E0">
+            <g id="Group-filter" sketch:type="MSLayerGroup" transform="translate(815.000000, 159.000000)">
+                <g id="Dropdown-menu" sketch:type="MSShapeGroup">
+                    <g id="option-copy" transform="translate(0.000000, 85.000000)">
+                        <g id="Post-type-button-3" transform="translate(16.000000, 10.000000)">
+                            <path d="M233.138462,9.56923077 L229.584615,6.01538462 L228.4,7.2 L233.138462,11.9384615 L243.292308,1.78461538 L242.107692,0.6 L233.138462,9.56923077 Z" id="Shape-Copy"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

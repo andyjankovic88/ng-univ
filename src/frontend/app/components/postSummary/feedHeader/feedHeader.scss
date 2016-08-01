@@ -1,0 +1,10 @@
+.feed-header {
+   .post-options.r-side {
+      display: none;
+   }
+   &:hover {
+      .post-options.r-side {
+         display: table;
+      }
+   }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "sEcho": {
+      "type": "integer"
+    },
+    "iTotalRecords": {
+      "type": "integer"
+    },
+    "iTotalDisplayRecords": {
+      "type": "integer"
+    },
+    "aaData": {
+      "type": "array",
+      "items": []
+    }
+  },
+  "required": [
+    "sEcho",
+    "iTotalRecords",
+    "iTotalDisplayRecords",
+    "aaData"
+  ]
+}

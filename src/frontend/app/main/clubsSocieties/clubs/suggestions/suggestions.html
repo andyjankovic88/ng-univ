@@ -1,0 +1,47 @@
+<div class="suggestions-section">
+   <!-- content-heading -->
+   <h2>
+      <svg class="ico-add-user pink">
+         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-connections"></use>
+      </svg>
+      <span>Based on your connections</span>
+   </h2>
+
+   <div class="section" ng-if="basedOnYourConnectionsEnable">
+      <div class="item" ng-repeat="suggestion in dataClubs.club_suggestions">
+         <figure class="img-holder">
+            <a href="#"><img class="photo" ng-src="{{suggestion.picture}}"></a>
+         </figure>
+         <div class="item-info">
+            <h3>
+               <a href="#">{{suggestion.name}}</a>
+               <svg class="tick red" ng-if="connection.connected"><use xlink:href="#profile-tick" /></svg>
+            </h3>
+            <span>[soon]Membership: &#036;9.95</span>
+            <span><a class="link" href="#">[soon]5 connections</a> have joined</span>
+         </div>
+      </div>
+   </div>
+   <h2>
+
+      <svg class="ico-heart pink">
+         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use>
+      </svg>
+      <span>Based on your interests</span>
+   </h2>
+   <div class="section" ng-if="basedOnYourInterestsEnable">
+      <div class="item" ng-repeat="suggestion in dataClubs.club_suggestions">
+         <figure class="img-holder">
+            <a href="#"><img class="photo" ng-src="{{suggestion.picture}}"></a>
+         </figure>
+         <div class="item-info">
+            <h3>
+               <a href="#">{{suggestion.name}}</a>
+               <svg class="tick red" ng-if="connection.connected"><use xlink:href="#profile-tick" /></svg>
+            </h3>
+            <span>[soon]Membership: &#036;9.95</span>
+            <span><a class="link" href="#">[soon]5 connections</a> have joined</span>
+         </div>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "subject_academics_total": {
+          "type": "integer"
+        },
+        "subject_academics": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "user_id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "photo_url": {
+                  "type": "string"
+                },
+                "group_id": {
+                  "type": "string"
+                },
+                "faculty": {
+                  "type": "array",
+                  "items": []
+                },
+                "campus": {
+                  "type": "string"
+                },
+                "karma_points": {
+                  "type": "string"
+                },
+                "connected": {
+                  "type": "boolean"
+                },
+                "sent_connection_request": {
+                  "type": "boolean"
+                },
+                "received_connection_request": {
+                  "type": "boolean"
+                },
+                "declined_request": {
+                  "type": "boolean"
+                },
+                "user_blocked_me": {
+                  "type": "boolean"
+                },
+                "academic_consultations": {
+                  "type": "array",
+                  "items": []
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

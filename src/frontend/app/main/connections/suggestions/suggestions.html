@@ -1,0 +1,33 @@
+<div class="connections-section connections-suggestions-section">
+   <h2 class="row connections-header">
+      <div class="l-side color-grey-middle" ng-show="selectedFilters.length">Filter by:</div>
+      <div class="r-side">
+        <div class="ur-dropdown-menu">
+          <a dropdown-menu="suggestionFilterOptions" dropdown-model="suggestionFilter" dropdown-onchange="suggestionFilterChanged(selected)">Filter by</a>
+        </div>
+      </div>
+      <div class="lst-selected-filters">
+         <div class="l-side" ng-repeat="filter in selectedFilters">
+            <span>{{filter.text}}</span>
+            <a ng-click="removeFilter($index)"><svg class="ico-close"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close-circle"></use></svg></a>
+         </div>
+      </div>
+   </h2>
+   <div class="section" infinite-scroll='fetchSuggestions()' infinite-scroll-disabled='listRequestInProgress || noMoreData' infinite-scroll-distance='1' infinite-scroll-container='scrollContainer'>
+      <div class="item" ng-repeat="connection in listSuggestions">
+         <figure class="img-holder">
+            <a href="#" ui-sref="profile({id:connection.user_id})"><img class="photo" ng-src="{{connection.image_url}}"></a>
+         </figure>
+         <div class="r-side">
+            <button type="button" class="btn-green" ng-click="sendConnectRequest($index, connection.user_id)">Connect</button>
+         </div>
+         <div class="item-info">
+            <h3>
+               <a href="#" ui-sref="profile({id:connection.user_id})">{{connection.name}}</a>
+            </h3>
+            <span ng-repeat="(field, value) in connection.summary_options">{{field|uppercaseEx:'_'}}: <em>{{value}}</em></span>
+         </div>
+      </div>
+   </div>
+   <loader is-active="listRequestInProgress" position="static"></loader>
+</div>

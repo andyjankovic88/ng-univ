@@ -1,0 +1,50 @@
+<div class="other-section">
+   <h2>
+      <span>Change your password</span>
+   </h2>
+   <div class="section">
+      <div class="ucr-as-row">
+         <div class="virtical-form-label"><label for="as-old-password">Old Password</label></div>
+         <input type="password" id="as-old-password" class="form-control-size-middle" ng-model="changePassword.oldPassword">
+      </div>
+      <div class="ucr-as-row">
+         <div class="virtical-form-label"><label for="as-new-password">New Password</label></div>
+         <input type="password" id="as-new-password" class="form-control-size-middle" ng-model="changePassword.newPassword">
+      </div>
+      <div class="ucr-as-row">
+         <div class="virtical-form-label"><label for="as-confirm-password">Confirm New Password</label></div>
+         <input type="password" id="as-confirm-password" class="form-control-size-middle" ng-model="changePassword.confirmPassword">
+      </div>
+   </div>
+   <h2>
+      <span>Preferred Email for Notifications</span>
+   </h2>
+   <div class="section">
+      <div class="ucr-as-row">
+         <div class="virtical-form-label"><label for="as-other-email">Email</label></div>
+         <input type="text" id="as-other-email" class="form-control-size-middle" ng-model="preferredEmail">
+      </div>
+   </div>
+   <h2>
+      <span>Social Networks</span>
+   </h2>
+   <div class="section">
+      <div class="ucr-as-row">
+         <button class="btn btn-blue btn-facebook r-side">
+            <svg class="icon-button"><use xlink:href="#login-social-network" /></svg>
+            <span>Connect to Facebook</span>
+         </button>
+         <div>
+            <div class="facebook-title">Facebook</div>
+            <div>We will never post or message your friends without your permission</div>
+         </div>
+      </div>
+   </div>
+   <h2>
+      <span>Delete account</span>
+   </h2>
+   <div class="section">
+      <div>Permanently delete your account and all of your content</div>
+      <button class="btn btn-link" ng-click="deleteAccount()">Delete my account</button>
+   </div>
+</div>

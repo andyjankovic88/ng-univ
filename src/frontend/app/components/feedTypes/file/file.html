@@ -1,0 +1,17 @@
+<div>
+   <div class="post-txt">
+      <p ng-bind-html="text"></p>
+   </div>
+   <ng-gallery
+      ng-if="images.length"
+      images="images"
+      img-key="url"
+      thumb-key="url"
+      can-download
+   ></ng-gallery>
+   <h4 class="color-grey" ng-if="files.length">Uploaded files:</h4>
+   <file-list ng-if="files.length"
+      list="files"
+      can-download
+   ></file-list>
+</div>

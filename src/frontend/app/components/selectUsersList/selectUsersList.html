@@ -1,0 +1,8 @@
+<div class="holder table">
+  <ul class="rubber-list list-33">
+     <li ng-repeat="member in users | limitTo: paginationLimit()">
+        <user-item data="member"></user-item>
+     </li>
+  </ul>
+</div>
+<a href class="blue-link r-side" ng-show="hasMoreItemsToShow()" ng-click="showMoreItems()">Show more</a>

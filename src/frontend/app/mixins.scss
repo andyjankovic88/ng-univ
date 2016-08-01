@@ -1,0 +1,171 @@
+$font-regular:    latoregular;
+$font-italic:    latoitalic;
+$font-bold:    latobold;
+
+// colors:
+$color-black: #000;
+$color-white: #fff;
+$color-header: #1565c0;
+$color-inactive: #5A5A5A;
+$color-inactive-icon: #a8a8a8;
+$color-section-border: #cbcbcb;
+$color-menu-grey: #6E6E6E;
+$color-grey-dark: #5A5A5A;
+$color-grey: #616161;
+$color-grey-middle: #a8a8a8;
+$color-light-grey: #e9e9e8;
+$color-dark-blue: #26476f;
+$color-left-menu: #f1f2f2;
+$color-blue: #3a91e0;
+$color-app-ico: rgba(255,255,255,0.60);
+$color-blue-hover: #3F85C4;
+$color-green: #79bc5d;
+$color-green-hover: #6EA358;
+$color-yellow: #f5a623;
+$color-red: #e16277;
+$color-red-hover: #BA5F6E;
+$color-bg-grey: #f5f5f5;
+$color-pink: #f44c57;
+
+
+// fonts
+$font10: 10px;
+$font11: 11px;
+$font12: 12px;
+$font13: 13px;
+$font14: 14px;
+$font16: 16px;
+$font18: 18px;
+$font20: 20px;
+$font24: 24px;
+$font28: 28px;
+
+/* css3 mixins */
+@mixin css3-prefix($property, $value) {
+-webkit-#{$property}: #{$value};
+-khtml-#{$property}: #{$value};
+-moz-#{$property}: #{$value};
+-ms-#{$property}: #{$value};
+-o-#{$property}: #{$value};
+#{$property}: #{$value};
+}
+
+/* border-radius */
+@mixin border-radius($val) {
+  -webkit-border-radius: $val;
+  border-radius: $val;
+}
+
+/* box-shadow */
+@mixin box-shadow ($val, $val2, $val3, $val4, $val5, $val6, $val7) {
+  -webkit-box-shadow: $val $val2 $val3 rgba($val4,$val5,$val6,$val7);
+  box-shadow: $val $val2 $val3 rgba($val4,$val5,$val6,$val7);
+}
+
+/* rotate */
+@mixin rotate($val) {
+   -moz-transform: rotate($val);
+   -ms-transform: rotate($val);
+   -webkit-transform: rotate($val);
+   -o-transform: rotate($val);
+   transform: rotate($val);
+}
+
+/* transition */
+@mixin transition($val1) {
+   -webkit-transition: $val1;
+   -moz-transition: $val1;
+   -o-transition: $val1;
+   transition: $val1;
+}
+
+/* css3 mixins end */
+
+@mixin gradient ($endColor) {
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,1+100 */
+   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+   background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,$endColor) 100%); /* FF3.6-15 */
+   background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,$endColor) 100%); /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,$endColor) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+/* border-radius */
+.popup-holder,
+.btn-submit,
+.post .points,
+textarea,
+input,
+.holder-txt,
+.btn-green,
+.btn-blue,
+.btn-red,
+.btn-transparent,
+#main-content .row,
+.option-item li,
+.bg-colored,
+.tooltip,
+.select-grey,
+select,
+.select-white,
+#import-file .holder,
+.select-custom,
+[type="checkbox"] + label:before {
+  @include border-radius(2px);
+}
+
+.status,
+.university .photo,
+.photo-holder img,
+img.avatar,
+.img-holder img,
+.icon-circle,
+.endorsed-block li img,
+.rubber-list img,
+.sell-tickets .photo-holder svg {
+  @include border-radius(50%);
+}
+.post .points,
+.search-block,
+.filter-block,
+.item .img-holder a {
+   @include border-radius(50px);
+}
+.login-box-new {
+   @include border-radius(7px);
+}
+
+.amount,
+.bar-container,
+.bg-bar {
+   @include border-radius(10px);
+}
+.holder-signup-box,
+.connect-fb a,
+.signup-select {
+   @include border-radius(5px);
+}
+li:first-of-type a {
+   @include border-radius(0);
+}
+
+   /* rotate */
+.icon-scroll {
+   @include rotate(180deg);
+}
+
+/* transition */
+/*
+a, button {
+   @include transition(all 0.2s linear 0s);
+
+}
+.btn-blue {
+   @include transition(all 0.3s ease 0s);
+}
+
+a:hover, a:focus {
+   @include transition(all 0.2s ease-in);
+}
+
+*/

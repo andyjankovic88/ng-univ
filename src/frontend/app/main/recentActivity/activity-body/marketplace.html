@@ -1,0 +1,29 @@
+<div class="holder" ng-class="{ 'without-img' : !item.pic}">
+   <figure class="simple-img middle">
+      <a href="#">
+         <img ng-if="item.item_image" ng-src="{{item.item_image}}">
+      </a>
+      <div class="img-info">
+         <div class="img-description">
+            <h2><a href ui-sref="marketplaceItem({id: activity.body.object.item_id})">{{item.item_name}}</a></h2>
+            <div class="holder">
+               <div class="coll l-side">
+                  <div class="coll l-side">
+                     <div class="holder">
+                        <span class="date">
+                          <strong>{{item.price}}$</strong>
+                        </span>
+                     </div>
+                  </div>
+               </div>
+               <button type="button" ng-hide="item.is_joined" class="btn-blue" ui-sref="newMessage({recepient: activity.body.user.id})">Send Message to Seller</button>
+            </div>
+         </div>
+      </div>
+   </figure>
+</div>
+<comments
+   feed-type="{{activity.title.object.type}}"
+   feed-type-id="{{activity.title.object.item_id}}"
+   post-id="{{activity.body.object.post_id}}">
+</comments>

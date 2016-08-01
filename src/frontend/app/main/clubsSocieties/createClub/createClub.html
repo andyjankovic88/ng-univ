@@ -1,0 +1,133 @@
+<!-- createCustomGroup -->
+<div id="createClub">
+    <div class="profile-header not-created">
+        <div class="banner"
+             ngf-drop="ctrl.uploadImages($files)"
+             ngf-select="ctrl.uploadImages($files)"
+             ngf-max-size="10MB"
+             accept="image/*">
+            <img class="photo" ng-src="" alt="cover-pic">
+        </div>
+        <div class="holder-info">
+            <div class="user-info">
+                <figure class="img-holder">
+                    <div class="avatar-holder" ng-class="{error : !ctrl.newClub.clubpicture && formCreate.description.$touched}"
+                         ngf-drop="ctrl.uploadImages($files)"
+                         ngf-select="ctrl.uploadImages($files)"
+                         ngf-max-size="10MB"
+                         accept="image/*">
+                        <a href="#"><img class="avatar" src="/assets_new/images/userpic.png" alt="avatar"></a>
+                    </div>
+                     <figcaption class="user-name">
+                        <fieldset>
+                            <input class="input-name" style="padding-right: 20px;" ng-model="ctrl.newClub.name" type="text" placeholder="Club name"/>
+                           <svg class="ico-pencil" style="margin-left: -20px;"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-pencil"></use></svg>
+                        </fieldset>
+                     </figcaption>
+                 </figure>
+             </div>
+         </div>
+     </div>
+     <form id="form-create-club" name="formCreate">
+         <fieldset>
+            <div class="holder-txt row">
+               <label for="short-name" ng-class="{red: formCreate.short_name.$touched, green: formCreate.short_name.$valid}">Abbreviated Name</label>
+                <input id="short-name" type="text" name="short_name" placeholder="MESS, LSS, MFS, etc." ng-model="ctrl.newClub.short_name" minlength="3" maxlength="10" required>
+            </div>
+             <div class="holder-txt row">
+                 <label for="club-description" ng-class="{red: formCreate.description.$touched, green: formCreate.description.$valid}">Club description</label>
+                 <textarea id="club-description" name="description" class="textarea" cols="20" rows="3" placeholder="" ng-model="ctrl.newClub.description" minlength="50" required ></textarea>
+             </div>
+             <div class="row">
+                 <div class="col">
+                     <label for="club-description" ng-class="{green: ctrl.newClub.website.length > 4}">Club Website</label>
+                     <input type="text" placeholder="club-example.com.au" ng-model="ctrl.newClub.website" />
+                 </div>
+                 <div class="col">
+                     <label for="club-description" ng-class="{green: ctrl.newClub.phone.length}">Club Contact</label>
+                     <input type="text" name="phone" placeholder="(0) 0000 0000" ng-model="ctrl.newClub.phone"/>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="holder">
+                     <div class="col">
+                         <label for="club-description" ng-class="{green: formCreate.email.$valid}">Club Email</label>
+                         <input type="email" name="email" placeholder="info@yourclub.com.au" ng-model="ctrl.newClub.email" required />
+                     </div>
+                     <div class="col">
+                         <label for="club-description" ng-class="{red: formCreate.email2.$valid && ctrl.newClub.email != ctrl.newClub.email_confirm, green: formCreate.email2.$valid && ctrl.newClub.email === ctrl.newClub.email_confirm}">Confirm Club Email
+                            <span class="error-msg" ng-if="formCreate.email2.$valid && ctrl.newClub.email != ctrl.newClub.email_confirm">Emails don’t match</span>
+                         </label>
+                         <input type="email" name="email2" placeholder="info@yourclub.com.au" ng-model="ctrl.newClub.email_confirm" required />
+                     </div>
+                 </div>
+                 <p>It is important that you keep your club email address up-to-date. Membership and event notifications will be sent to this address</p>
+             </div>
+             <div class="row">
+                <div class="col">
+                   <label for="dropdown-faculty">Post to Faculty</label>
+                   <div class="select-custom">
+                        <select class="selected" ng-model="ctrl.selectedFaculty" ng-options="faculty.name for faculty in faculties">
+
+                        </select>
+                   </div>
+                </div>
+                 <div class="col">
+                     <label for="club-description" ng-class="{green: ctrl.newClub.owner_position.length > 0}">Your Club Position</label>
+                     <input type="text" placeholder="Director, Head of Sponsorship, ..." ng-model="ctrl.newClub.owner_position" required/>
+                 </div>
+             </div>
+             <div class="row">
+                  <div class="holder float-elements">
+                      <label ng-class="{green: ctrl.newClub.member_fee > 0}" for="membership-fee">Membership Fee ($)</label>
+                      <label ng-class="{green: ctrl.newClub.student_discount > 0}" for="discount-fee">Student Union Member Discount ($)</label>
+                  </div>
+                  <div class="holder">
+                     <input name ="membership" id="membership-fee" type="text" ng-model="ctrl.newClub.member_fee" format-as-currency class="small-input" required />
+                     <input name ="discount" id="discount-fee" type="text" ng-model="ctrl.newClub.student_discount" format-as-currency class="small-input" required/>
+                  </div>
+             </div>
+             <div class="row">
+                 <ul class="checkbox-list">
+                     <li>
+                         <div class="checkbox">
+                             <input id="join" type="checkbox" name="join" checked="checked" title="join" ng-model="ctrl.newClub.can_student_join">
+                             <label for="join">Students can join the Club/Society through this Page</label>
+                         </div>
+                     </li>
+                     <li>
+                         <div class="checkbox">
+                             <input id="gst" type="checkbox" name="gst" checked="checked" title="gst" ng-model="ctrl.newClub.collect_gst">
+                             <label for="gst">Collect GST?</label>
+                         </div>
+                     </li>
+                     <li>
+                         <div class="checkbox">
+                             <input id="membership-cards" type="checkbox" name="membership-cards" checked="checked"
+                                    title="membership-cards" ng-model="ctrl.newClub.digital_card">
+                             <label for="membership-cards">
+                                <span>Digital Membership Cards?</span>
+                                <svg class="ico ico-help"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-help"></use></svg>
+                             </label>
+                         </div>
+                     </li>
+                 </ul>
+             </div>
+            <div class="holder-txt row">
+               <label for="new-message"l ng-class="{red: formCreate.massage.$touched, green: formCreate.massage.$valid}">New Member Message</label>
+               <textarea id="new-message" name="massage" class="textarea" cols="20" rows="3" minlength="20" ng-model="ctrl.newClub.member_message" required></textarea>
+            </div>
+            <label class="color-grey">Add Benefits Of Membership</label>
+            <fields-list options="ctrl.newClub.benefits" type="oneField" placeholder="Type in new benefit..." field="text" ></fields-list>
+            <p>You can also sort your Benefits by dragging and dropping the list elements.</p>
+            <ul class="options-btn">
+               <li>
+                  <button type="button" class="btn-link no-decoration" ng-click="ctrl.cancel()">Cancel</button>
+               </li>
+               <li>
+                  <button type="button" class="btn-blue btn-small" ng-disabled="!(formCreate.$valid && ctrl.additionalValidation())" ng-click="ctrl.submit()">Create Club page</button>
+               </li>
+            </ul>
+         </fieldset>
+     </form>
+ </div>

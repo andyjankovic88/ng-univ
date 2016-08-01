@@ -1,0 +1,59 @@
+<div class="calendar-popup drop-content">
+   <div class="header clearfix">
+      <h2 class="l-side">Target post to:</h2>
+      <svg class="ico-clear r-side" dropdown-inner-trigger>
+         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-clear"></use>
+      </svg>
+   </div>
+   <div class="target-post">
+      <form action="#" id="target-form">
+         <fieldset>
+            <div class="category-block">
+               <target-category
+                  title="Faculty"
+                  list="faculties">
+               </target-category>
+               <target-category
+                  title="Campus"
+                  list="campuses">
+               </target-category>
+               <div class="category-header">
+                  <h2>Year Level</h2>
+                  <svg class="chevron-right">
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-chevron-right"></use>
+                  </svg>
+               </div>
+               <ul class="col">
+                  <li>
+                     <div class="radio">
+                        <input type="radio" name="first_year" value="0" title="Checkbox" ng-model="year" id="first_year" >
+                        <label for="first_year">First Year Students</label>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="radio">
+                        <input type="radio" name="final_year" value="1" title="Checkbox" ng-model="year" id="final_year" >
+                        <label for="final_year">Final Year Students</label>
+                     </div>
+                  </li>
+               </ul>
+               <target-category
+                  title="Other"
+                  list="other">
+               </target-category>
+            </div>
+         </fieldset>
+      </form>
+   </div>
+   <ul class="options-btn">
+      <li>
+         <button type="button" class="btn-link" ng-click="clear()">Clear</button>
+      </li>
+      <li>
+         <button type="button" class="btn-blue btn-small"
+                 ng-click="save()"
+                 dropdown-inner-trigger>Done
+         </button>
+      </li>
+   </ul>
+</div>

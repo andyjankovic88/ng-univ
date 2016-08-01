@@ -1,0 +1,185 @@
+@import "mixins";
+
+.content {
+   .login-pad {
+      width: 520px;
+      margin: 80px auto 150px;
+   }
+   .login-box-new {
+      font-size: $font13;
+      padding: 40px;
+      background: #fff;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+
+      .checkbox {
+         label {
+            color: #5C6068;
+            line-height: 16px;
+         }
+      }
+      [type="checkbox"] + label {
+         padding-left: 22px;
+      }
+
+      /* [type="checkbox"]:not(:checked) + label:after, [type="checkbox"]:checked + label:after {
+         top: 0;
+         /*left: 3px;
+      } */
+
+      .splitter-label {
+         color: #BBB;
+         text-align: center;
+      }
+
+      .form-group {
+         margin: 5px 0 10px;
+         width: 100%;
+      }
+
+      .form-label {
+         color: #6C6C6C;
+      }
+
+      .form-label-error {
+         color: #F4565E;
+         float: right;
+         display: none;
+      }
+
+      .form-object {
+         //margin: 8px 0;
+         width: 100%;
+         color: #5A5A5A;
+         padding: 12px 15px;
+         font-size: 16px;
+      }
+      div.form-object {
+         padding: 0;
+      }
+
+      .has-error {
+         .form-label {
+            color: #F4565E;
+         }
+         .form-label-error {
+            display: block;
+         }
+         .form-object {
+            border-color: #F4565E;
+         }
+      }
+
+      .no-error {
+         .form-label {
+            color: #8DC168;
+            &.success-blue {
+               color: #3A91E0;
+            }
+         }
+      }
+
+      .btn-login {
+         width: 100%;
+         height: auto !important;
+         font-size: $font18;
+         line-height: 32px;
+         padding: 9px 0;
+      }
+   }
+   .btn-facebook {
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      background: #3B5998;
+      transition: all 0.3s ease 0s;
+      font-size: $font18;
+      height: 50px;
+      line-height: 50px;
+      color: #fff;
+      text-decoration: none;
+      padding: 0;
+      cursor: pointer;
+      text-align: center;
+      margin: 0 0 20px 0;
+
+      a {
+         display: block;
+         color: #fff;
+         line-height: 32px;
+         padding: 9px 0;
+      }
+      .login-facebook {
+         width: 21px;
+         height: 40px;
+      }
+   }
+   .btn-facebook .icon, .btn-email .icon {
+      vertical-align: middle;
+      text-align: center;
+      font-size: 21px;
+      line-height: 40px;
+      padding-right: 10px;
+      float: none;
+   }
+   .login-social-network {
+      fill: #fff;
+      width: 26px;
+      height: 19px;
+      top: 3px;
+      margin: 7px 0 0;
+      vertical-align: top;
+      use {
+         fill: #fff;
+      }
+   }
+   .bottom-row {
+      margin-top: 20px;
+      color: #fff;
+      font-size: $font13;
+      .linkto-signup {
+         float: right;
+      }
+      .linkto-forgot-password {
+
+      }
+      a {
+         text-decoration: underline;
+         color: #fff;
+      }
+   }
+}
+.wrap-dd-select {
+   &.select-grey {
+      &.active-color {
+         span.selected {
+            color: $color-grey-dark;
+         }
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .signup-bg .content .pad {
+      width: 80%;
+   }
+}
+
+@media (max-width: 540px) {
+   .content {
+      .login-pad {
+         width: 100%;
+         margin: 20px auto 50px;
+      }
+      .login-box-new {
+         padding: 20px;
+      }
+   }
+}
+
+.lbl-warning {
+   color: $color-red;
+}
+
+

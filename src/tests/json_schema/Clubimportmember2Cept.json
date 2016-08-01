@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "club_id": {
+          "type": "integer"
+        },
+        "club_name": {
+          "type": "string"
+        },
+        "picture": {
+          "type": "string"
+        },
+        "content_heading": {
+          "type": "string"
+        },
+        "back_url": {
+          "type": "string"
+        },
+        "send_invoice": {
+          "type": "integer"
+        },
+        "new_member_data": {
+          "type": "string"
+        },
+        "table_html": {
+          "type": "string"
+        },
+        "email_data": {
+          "type": "object",
+          "properties": {
+            "success": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "duplicate": {
+              "type": "array",
+              "items": []
+            },
+            "failed": {
+              "type": "array",
+              "items": []
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

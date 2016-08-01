@@ -1,0 +1,21 @@
+<div class="search-section">
+   <input class="autoinput" ng-model="searchTerm" placeholder="Enter user name" ng-change="search()" ng-keydown="onKeydown($event)" />
+   <div class="search-box" ng-show="(results.length || loading ) && searchTerm.length">
+      <div class="holder"><span class="r-side txt">search suggestions</span></div>
+      <div class="holder table">
+         <loader is-active="loading" position="static"></loader>
+         <ul class="rubber-list">
+            <ul class="rubber-list">
+               <li ng-repeat="item in results | limitTo: listLimit" ng-click="select($index, item)" ng-class="{active: $index === activeItem}">
+                  <figure class="img-holder">
+                     <a href="#">
+                        <img class="ico-small" ng-src="{{item.pic}}" />
+                     </a>
+                     <strong class="user-name">{{item.value}}</strong>
+                  </figure>
+               </li>
+            </ul>
+         </ul>
+      </div>
+   </div>
+</div>

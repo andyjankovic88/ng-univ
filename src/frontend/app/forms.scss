@@ -1,0 +1,340 @@
+/* general style */
+* {
+   outline: none;
+   /* &:focus {
+      outline: 1px solid #b0b0b0;
+   }*/
+}
+
+button {
+   color: $color-white;
+   font: inherit;
+}
+
+button[disabled] {
+   opacity: 0.5;
+   &:hover {
+      background: $color-blue;
+   }
+   &.btn-link:hover {
+      background: none;
+      color: $color-inactive-icon;
+   }
+}
+
+/* form */
+fieldset {
+   border: 0;
+   padding: 0;
+   margin: 0;
+}
+#main-content {
+   fieldset {
+      border: 0;
+      padding: 0;
+      margin: 0;
+   }
+   .fieldset {
+      float: left;
+   }
+}
+.row  {
+   display: table;
+   label {
+      display: block;
+      margin: 0 0 10px;
+      font-size: 13px;
+      display: table;
+      content: '';
+      clear: none;
+      svg {
+         margin: 0 0 0 10px;
+      }
+   }
+   .col {
+      display: table-cell;
+   }
+}
+
+/* input file */
+.custom {
+   opacity: 0;
+   padding: 0;
+}
+
+/* checkbox */
+
+/* Base for label styling */
+[type="checkbox"] {
+   position: absolute;
+   left: -9999px;
+}
+[type="checkbox"] + label {
+   position: relative;
+   padding-left: 20px;
+   cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"] + label:before {
+   background-color: $color-inactive-icon;
+   border-color: $color-inactive-icon;
+   content: '';
+   position: absolute;
+   left:0; top: 1px;
+   width: 20px;
+   height: 20px;
+}
+/*[type="checkbox"]:checked + label:before {
+   background: $color-blue;
+}*/
+[type="checkbox"] + label:before {
+   width: 14px;
+   height: 14px;
+   height: 14px;
+   top: 1px;
+   font-size: 15px;
+}
+/* checked mark aspect */
+[type="checkbox"] + label:after {
+   content: url(/assets_new/images/svg/checkbox.svg);
+   position: absolute;
+   top: 1px;
+   left: 0;
+   font-size: 11px;
+   color: #fff;
+   transition: all .2s;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+   opacity: 0;
+   transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+   opacity: 1;
+   transform: scale(1);
+}
+[type="checkbox"]:checked + label:before {
+   background: none;
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled + label:before {
+   background-color: $color-inactive-icon;
+   border-color: $color-inactive-icon;
+}
+[type="checkbox"]:disabled:checked + label:after {
+   color: $color-white;
+}
+[type="checkbox"]:disabled + label {
+   color: #aaa;
+}
+.checkbox {
+   label {
+      margin: 0 0 5px;
+   }
+}
+/* accessibility */
+/* [type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+   border: 1px dotted blue;
+}*/
+
+input,
+select,
+.search-block,
+.filter-block {
+   border: 1px solid #e1e1e1;
+   color: #000;
+   font-size: 14px;
+   padding: 13px 15px;
+   outline: none;
+}
+#main-content input {
+   font-size: 14px;
+}
+.search-block,
+.filter-block {
+   width: 170px;
+   padding: 6px 30px 7px 12px;
+   position: relative;
+   input {
+      border: 0;
+      padding: 0;
+      width: 95%;
+   }
+   .search {
+      position: absolute;
+      right: -6px;
+      top: 0;
+      min-width: 20px;
+   }
+}
+.filter-block {
+   background: #f8f8f8;
+   border: 0;
+   width: 245px;
+   input {
+      background: #f8f8f8;
+   }
+   button {
+      background: none;
+   }
+   .ico-cancel {
+      position: absolute;
+      top: 6px;
+      right: 9px;
+   }
+}
+
+/* textarea */
+textarea.colored {
+   background: #f4f4f4;
+   border: 0;
+}
+textarea {
+   width: 100%;
+   resize: none;
+   font-size: 14px;
+   padding: 15px;
+   float: left;
+   background: #f9f9f9;
+   border: 0;
+}
+textarea:focus:-moz-placeholder { color: $color-dark-blue;}
+textarea:focus::-webkit-input-placeholder { color: $color-dark-blue;}
+
+textarea:-moz-placeholder {
+   color: $color-grey-middle;
+   font-weight: normal;
+}
+textarea::-webkit-input-placeholder { color: $color-grey-middle;}
+
+.textarea-white,
+.select-custom select {
+   border: 1px solid $color-light-grey;
+}
+
+.textarea-white {
+   font-size: 14px;
+}
+
+.time-holder input:-moz-placeholder { color: $color-inactive;}
+.time-holder input::-webkit-input-placeholder { color: $color-inactive;}
+
+input:-moz-placeholder {
+   font-size: 14px;
+   font-family: latoregular;
+}
+input::-webkit-input-placeholder {
+   font-size: 14px;
+   font-family: latoregular;
+}
+
+
+#form-comment .btn-blue {
+   width: 105px;
+   height: 35px;
+   line-height: 35px;
+}
+#form-search {
+   .search {
+      background: none;
+   }
+}
+
+/* radiobuttons */
+.customradio {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   background-color: #fafafa;
+   border: 1px solid $color-grey;
+   box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+   padding: 9px !important;
+   border-radius: 50px;
+   display: inline-block;
+   position: relative;
+   margin-right: 10px !important;
+
+}
+
+.customradio:checked:after {
+   content: '';
+   width: 18px;
+   height: 18px;
+   border-radius: 50px;
+   position: absolute;
+   left: 3px;
+   top:0;
+   background: $color-green;
+   text-shadow: 0;
+   left: 0;
+   font-size: 32px;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   color: $color-green;
+}
+[type="radio"]:checked:after {
+   padding: 0 0 0 4px;
+   content: '✔';
+   position: absolute;
+   top: 0;
+   left: 0;
+   font-size: 14px;
+   color: #fff;
+   -webkit-transition: all .2s;
+   transition: all .2s;
+}
+
+/* custom select */
+.select-custom {
+   border: 1px solid $color-light-grey;
+   width: 100%;
+   overflow: hidden;
+   position: relative;
+   &::after {
+      width: 0;
+      height: 0;
+      content:'';
+      position: absolute;
+      top: 50%;
+      margin: -1px 0 0;
+      right: 10px;
+      border-top: 5px solid #5A5A5A;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+   }
+   select {
+      padding: 13px 15px;
+      width: 100%;
+      border: none;
+      box-shadow: none;
+      background-color: transparent;
+      background-image: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      color: $color-grey-middle;
+      font-size: $font14;
+   }
+   option {
+      color: $color-grey-dark;
+   }
+   &.select-big {
+      padding: 0;
+   }
+   &.select-small select{
+      padding: 7px 13px;
+   }
+   .selected {
+      color: $color-grey-dark;
+   }
+}
+label {
+   &.red {
+      color: #f00;
+   }
+   &.green {
+      color: green;
+   }
+}

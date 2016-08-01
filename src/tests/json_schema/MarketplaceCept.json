@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "post_id": {
+                  "type": "integer"
+                },
+                "item_id": {
+                  "type": "integer"
+                },
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "username": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "integer"
+                    },
+                    "profile_pic": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "item_name": {
+                  "type": "string"
+                },
+                "item_image": {
+                  "type": "string"
+                },
+                "item_image_thumb": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "item_posted_date": {
+                  "type": "string"
+                },
+                "category": {
+                  "type": "string"
+                },
+                "campus_name": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "integer"
+                },
+                "item_type": {
+                  "type": "string"
+                },
+                "is_report": {
+                  "type": "boolean"
+                },
+                "is_message": {
+                  "type": "boolean"
+                },
+                "is_edit": {
+                  "type": "boolean"
+                },
+                "is_remove": {
+                  "type": "boolean"
+                },
+                "is_markassold": {
+                  "type": "boolean"
+                },
+                "is_sold": {
+                  "type": "boolean"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

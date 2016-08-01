@@ -1,0 +1,14 @@
+<ul class="post-options">
+   <li class="likes" ng-class="{'active': isLiked}">
+      <a href="#" ng-click="like()">
+         <svg><use xlink:href="#feeds-filledHart" /></svg>
+         <span class="number active">{{likes}}</span>
+      </a>
+   </li>
+   <li class="comments">
+      <a href="#comments">
+         <svg><use xlink:href="#feeds-chat" /></svg>
+         <span class="number">{{comments}}</span>
+      </a>
+   </li>
+</ul>

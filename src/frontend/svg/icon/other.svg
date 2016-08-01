@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: bin/sketchtool 1.4 (305) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape Copy 14</title>
+    <desc>Created with bin/sketchtool.</desc>
+    <defs></defs>
+    <g id="Custom-Groups" stroke="none" stroke-width="1" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group-view---Custom-Groups-root-2" sketch:type="MSArtboardGroup" transform="translate(-917.000000, -562.000000)">
+            <g id="Group-filter" sketch:type="MSLayerGroup" transform="translate(896.000000, 451.000000)">
+                <g id="Dropdown-menu" transform="translate(0.000000, 16.000000)" sketch:type="MSShapeGroup">
+                    <g id="option-copy" transform="translate(0.000000, 85.000000)">
+                        <g id="Post-type-button-3" transform="translate(15.000000, 4.000000)">
+                            <g id="Shape-+-Rectangle-43">
+                                <path d="M20.5454545,17.6363636 L10.3636364,17.6363636 L10.3636364,7.45454545 L20.5454545,7.45454545 L20.5454545,17.6363636 Z M20.5454545,6 L10.3636364,6 C9.56031309,6 8.90909091,6.65122218 8.90909091,7.45454545 L8.90909091,17.6363636 C8.90909091,18.4396869 9.56031309,19.0909091 10.3636364,19.0909091 L20.5454545,19.0909091 C21.3487778,19.0909091 22,18.4396869 22,17.6363636 L22,7.45454545 C22,6.65122218 21.3487778,6 20.5454545,6 L20.5454545,6 Z M7.45454545,8.90909091 L6,8.90909091 L6,20.5454545 C6,21.3487778 6.65122218,22 7.45454545,22 L19.0909091,22 L19.0909091,20.5454545 L7.45454545,20.5454545 L7.45454545,8.90909091 L7.45454545,8.90909091 Z" id="Shape-Copy-14"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

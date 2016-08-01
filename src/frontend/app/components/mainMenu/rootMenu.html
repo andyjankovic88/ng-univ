@@ -1,0 +1,183 @@
+<div>
+	<a class="item active" activate ui-sref="recentActivity">
+		<svg class="icon">
+			<use class="ic-use" xlink:href="#icon-recent-activity" />
+		</svg>
+		<span tabindex="0">Recent Activity</span>
+	</a>
+	<section>
+		<h6 class="group-title"><span>groups</span></h6>
+		<ul class="list">
+			<li>
+				<a class="item" activate ui-sref="universityGroupsFeed" tabindex="1">
+					<svg class="icon">
+						<use xlink:href="#icon-university" />
+					</svg>
+					<span>University</span>
+				</a>
+			</li>
+         <li ng-if="inMenu('university_staff')">
+            <a class="item" activate ui-sref="staffFeeds" tabindex="2">
+               <svg class="icon">
+                  <use xlink:href="#icon-academic" />
+               </svg>
+               <span>Staff</span>
+            </a>
+         </li>
+			<li ng-if="inMenu('unit')">
+				<a class="item" ng-click="goSub($event, 'unit', 'Subject', '#icon-subject', 'subjectFeed')" ui-sref="subjectsList" tabindex="2">
+					<svg class="icon">
+						<use xlink:href="#icon-subject" />
+					</svg>
+					<span>Subject</span>
+				</a>
+			</li>
+			<li ng-if="inMenu('study_group')">
+				<a class="item" ng-click="goSub($event, 'study_group', 'Study', '#icon-study', 'studyGroupsFeed')" ui-sref="studyGroupsList" tabindex="3">
+					<svg class="icon">
+						<use xlink:href="#icon-study" />
+					</svg>
+					<span>Study</span>
+				</a>
+			</li>
+			<li ng-if="inMenu('service_page')">
+				<a class="item" ng-click="goSub($event, 'service_page', 'Student Services', '#icon-student-services', 'studentServicesFeed')" ui-sref="studentServicesListGeneral" tabindex="4">
+					<svg class="icon">
+						<use xlink:href="#icon-student-services" />
+					</svg>
+					<span>Student Services</span>
+				</a>
+			</li>
+			<li ng-if="inMenu('club')">
+				<a class="item" ng-click="goSub($event, 'club', 'Clubs & Societes', '#icon-clubs', 'clubFeed')" ui-sref="clubsList" tabindex="4">
+					<svg class="icon">
+						<use xlink:href="#icon-clubs" />
+					</svg>
+					<span>Clubs & Societes</span>
+				</a>
+			</li>
+			<li ng-if="inMenu('mentors')">
+				<a class="item" ng-click="goSub($event, 'mentors', 'Mentors', '#icon-mentors', 'mentorGroupsFeed')" ui-sref="mentorGroupsList" tabindex="4">
+					<svg class="icon">
+						<use xlink:href="#icon-mentors" />
+					</svg>
+					<span>Mentors</span>
+				</a>
+			</li>
+			<li ng-if="inMenu('customgroups')">
+				<a class="item" ng-click="goSub($event, 'customgroups', 'Custom', '#icon-custom', 'customGroupsFeed')" ui-sref="customGroupsList" tabindex="4">
+					<svg class="icon">
+						<use xlink:href="#icon-custom" />
+					</svg>
+					<span>Custom</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<section>
+		<h6 class="group-title"><span>other</span></h6>
+		<ul class="list">
+			<li>
+				<a class="item" ui-sref="universityCalendar" activate>
+					<svg class="icon">
+						<use xlink:href="#icon-calendar" />
+					</svg>
+					<span>University Calendar</span>
+				</a>
+			</li>
+			<li ng-if="isStudent()">
+				<a class="item" activate ui-sref="studyTimerGraph">
+					<svg class="icon">
+						<use xlink:href="#icon-timer" />
+					</svg>
+					<span>Study Timer</span>
+				</a>
+			</li>
+			<li ng-show="menu.student_news">
+				<a class="item" activate ui-sref="news.list">
+					<svg class="icon">
+						<use xlink:href="#icon-news" />
+					</svg>
+					<span>{{menu.student_news.title}}</span>
+				</a>
+			</li>
+			<li>
+				<a class="item" activate ui-sref="marketplaceList">
+					<svg class="icon">
+						<use xlink:href="#icon-marketplace" />
+					</svg>
+					<span>Marketplace</span>
+				</a>
+			</li>
+			<li>
+				<a class="item" activate ui-sref="connectionsList">
+					<svg class="icon">
+						<use xlink:href="#icon-connections" />
+					</svg>
+					<span>Connections</span>
+				</a>
+			</li>
+			<li>
+				<a class="item" ui-sref="conversationList">
+					<svg class="icon">
+						<use xlink:href="#header-messages" />
+					</svg>
+					<span>Messages</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<section ng-if="univMenu.length">
+		<h6 class="group-title"><span>university links</span></h6>
+		<ul class="list">
+			<li ng-repeat="item in univMenu">
+				<a class="item" activate ng-href="{{item.url}}">
+					<svg class="icon">
+						<use xlink:href="#icon-a-s-k" />
+					</svg>
+					<span>{{item.title}}</span>
+				</a>
+			</li>
+			<!-- <li>
+				<a class="item" activate>
+					<svg class="icon">
+						<use xlink:href="#icon-lms" />
+					</svg>
+					<span>Learning Management System (LMS)</span>
+				</a>
+			</li>
+			<li>
+				<a class="item" activate>
+					<svg class="icon">
+						<use xlink:href="#icon-library" />
+					</svg>
+					<span>Library</span>
+				</a>
+			</li>
+			<li>
+				<a class="item" activate>
+					<svg class="icon">
+						<use xlink:href="#icon-sol" />
+					</svg>
+					<span>StudentOnLine</span>
+				</a>
+			</li>
+			<li>
+				<a class="item" activate ui-sref="postUnfollow">
+					<svg class="icon">
+						<use xlink:href="#icon-allocate" />
+					</svg>
+					<span>Allocate</span>
+				</a>
+			</li>
+			<li>
+				<a class="item" activate ui-sref="postEdit">
+					<svg class="icon">
+						<use xlink:href="#icon-a-s-k" />
+					</svg>
+					<span>ASK La Trobe</span>
+				</a>
+			</li> -->
+		</ul>
+	</section>
+</div>

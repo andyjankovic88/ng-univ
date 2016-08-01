@@ -1,0 +1,33 @@
+#groupView {
+  .item {
+    float: none;
+    display: table;
+    clear: both;
+    content: '';
+  }
+   .profile-header {
+      margin: 0;
+   }
+   .error {
+      label {
+         color: $color-pink;
+         position: relative;
+         width: 342px;
+      }
+      .error-msg {
+         position: absolute;
+         top: 1px;
+         right: 1px;
+      }
+   }
+   font-size: 13px;
+   input {
+      width: 100%;
+      font-size: 14px;
+   }
+   .row {
+      h2 {
+         font-size: 13px;
+      }
+   }
+}

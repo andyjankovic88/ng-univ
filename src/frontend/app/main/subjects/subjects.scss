@@ -1,0 +1,55 @@
+.icon-circle {
+  a {
+    background: $color-white;
+  }
+}
+.subjects-section {
+  .item-info {
+    padding: 0;
+  }
+  .scheldule {
+     float: right;
+     font-size: 14px;
+ }
+}
+.rubber-list {
+  .icon-circle {
+    float: left;
+    margin: 0 10px 0 0;
+    width: 36px;
+    height: 36px;
+    .ico-subject-small {
+      margin: 4px 0 0 5px;
+    }
+  }
+}
+.row {
+  .col {
+    padding: 0 10px 0 0;
+    &:last-child {
+      padding: 0;
+    }
+  }
+}
+
+/* time-section */
+.time-section,
+.input-blocks {
+  .option-item li {
+    border: 0;
+    display: table;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 10px;
+    .ico-remove {
+      margin: 0 8px 0 0;
+    }
+  }
+}
+.time-section {
+  .ico-remove {
+    position: relative;
+    top: 18px;
+    right: 2px;
+  }
+}

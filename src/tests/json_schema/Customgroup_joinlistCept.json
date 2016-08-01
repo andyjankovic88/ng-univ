@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "group_type": {
+              "type": "string"
+            },
+            "category_name": {
+              "type": "string"
+            },
+            "can_leave": {
+              "type": "boolean"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

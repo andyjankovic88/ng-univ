@@ -1,0 +1,53 @@
+<div class="item-view">
+    <h1>
+      <a href="#" ui-sref="marketplaceList">
+         <svg class="arrow-l"><use xlink:href="#news-arrow-l" /></svg>
+      </a>
+   </h1>
+    <div class="post">
+        <div class="holder">
+            <figure class="post-heading clearfix">
+                <a class="photo-holder" href="#">
+                    <img class="ico" ng-src="{{item.user.photo_url}}" />
+                </a>
+                <div class="wrapper-user">
+                    <div class="user-details clearfix">
+                        <div class="l-side">
+                            <a href="#" ui-sref="profile({id: item.user.id})" class="user-name">{{item.user.name}}</a>
+                        </div>
+                    </div>
+                    <figcaption class="time-category">
+                        <div class="user-info clearfix">
+                            <span class="date">{{item.how_long_ago}}</span>
+                        </div>
+                        <a href="#comments" class="comments-info">
+                            <svg>
+                                <use xlink:href="#feeds-chat" />
+                            </svg>
+                            <span class="number">{{commentsCount}}</span>
+                        </a>
+                    </figcaption>
+                </div>
+            </figure>
+        </div>
+    </div>
+    <div class="item-body">
+    	<div>
+	        <div class="images">
+	            <img ng-src="{{item.item_image_thumb}}" ng-click="openImage()" />
+	        </div>
+	    	<item-brief-info item="item"></item-brief-info>
+	    	<button ui-sref="newMessage({recepient: item.user.id})" ng-if="item.user.id !== currentUserId">Send Message to Seller</button>
+    	</div>
+    	<div class="description clearfix">
+    		<p>{{item.description}}</p>
+    	</div>
+    </div>
+
+    <comments
+            feed-type="marketplace"
+            feed-type-id="{{item.item_id}}"
+            post-id="{{item.post_id}}"
+            count="commentsCount">
+     </comments>
+</div>

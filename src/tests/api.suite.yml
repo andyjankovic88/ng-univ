@@ -1,0 +1,10 @@
+class_name: ApiTester
+modules:
+    enabled:
+      - \Helper\Api
+      - \Helper\JsonSchema
+      - Db:
+      - REST:
+          url: http://backend.localhost.ucroo/
+          depends: PhpBrowser
+          part: Json

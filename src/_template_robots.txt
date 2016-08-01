@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: @seo.settings@
+Sitemap: @server.url@sitemap_1.xml.gz
+Sitemap: @server.url@sitemap_2.xml.gz
+
+Disallow: @server.url@user/courselist
+Disallow: @server.url@user/courseList
+Disallow: @server.url@user/checkEmail
+Disallow: @server.url@home/channel
+Disallow: @server.url@user/signup_aaf_style

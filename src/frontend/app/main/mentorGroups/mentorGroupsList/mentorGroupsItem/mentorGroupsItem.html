@@ -1,0 +1,47 @@
+<div class="item">
+   <figure class="img-holder">
+      <a href="#"><img class="photo" ng-src="{{data.group_icon}}" alt="avatar-image"></a>
+   </figure>
+   <div class="item-info">
+      <h3>
+           <a ui-sref="mentorGroupsFeed({id: data.group_id})" eat-click-if="!data.is_joined">{{data.group_name}}</a>           
+           <svg class="tick" ng-if="data.is_joined"><use xlink:href="#profile-tick" /></svg>
+      </h3>
+      <button type="button" class="btn-green" ng-click="join()" ng-if="!data.is_joined">Join</button>
+      <div class="holder">
+         <strong class="subheading">MENTORS</strong>
+         <div class="personal-detail clearfix">
+             <user-gallery 
+               list="data.mentors"
+               id-key="user_id"
+               name-key="name"
+               photo-key="photo_url"           
+               >
+            </user-gallery>
+         </div>
+      </div>
+      <div class="holder-col">
+         <div class="col">
+            <div class="holder">
+               <strong class="subheading">MENTOR PROGRAM</strong>
+               <p>{{data.program_name}}</p>
+            </div>
+<!--             <div class="holder">
+               <strong class="subheading">ACADEMIC TOPICS</strong>
+               <p>[soon] Advanced Taxation II, Management
+                  <br/>Accounting</p>
+            </div> -->
+         </div>
+         <div class="col">
+            <div class="holder" ng-if="data.languages.length">
+               <strong class="subheading">LANGUAGES</strong>
+               <p>{{data.languages.join(', ')}}</p>
+            </div>
+            <div class="holder" ng-if="data.hobbies.length"> 
+               <strong class="subheading">INTERESTS & HOBBIES</strong>
+               <p>{{data.hobbies.join(', ')}}</p>
+            </div> 
+         </div>
+      </div>
+   </div>
+</div>

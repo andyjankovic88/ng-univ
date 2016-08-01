@@ -1,0 +1,28 @@
+<div>
+   <figure class="img-holder">
+      <a href="#"><img class="photo" ng-src="{{message.profile_pic}}"></a>
+   </figure>
+   <div class="info-holder">
+      <div class="clearfix width100">
+         <h3 class="l-side"><a href="#">{{message.username}}</a></h3>
+         <figcaption class="r-side time-category">
+            <div class="user-info clearfix">
+               <span class="date">{{message.how_long_ago}}</span>
+            </div>
+         </figcaption>
+      </div>
+      <p ng-bind-html="message.message_text"></p>
+      <ng-gallery
+         ng-if="images.length"
+         images="images"
+         img-key="file"
+         thumb-key="file"
+         can-download
+      ></ng-gallery>
+      <file-list ng-if="files.length"
+                 list="files"
+                 can-download
+      ></file-list>
+   </div>
+</div>
+

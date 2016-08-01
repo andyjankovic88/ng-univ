@@ -1,0 +1,1282 @@
+
+/*for 1024*/
+@media only screen and (min-width: 1024px) and (max-width: 1169px) {
+/**
+* #3597 - Set Graph LI Width  ( account-list li )
+* @Anuj - 23-06-2015
+*
+*/
+.account-list li { width: 30%; }
+/*Recent Activity page start------------------------------------*/
+.content_default_normal { padding-top: 0; }
+.top_fixed_header { position: relative; }
+.content_default { padding-top: 0; }
+#top { width: 98%; margin: 0 auto; }
+#top .logo { padding: 18px 20px 0 0; }
+.top_navigation { width: 85%; }
+.mail_icon { margin: 12px 5px 0 0; }
+.bell_icon { margin: 15px 10px 0 0; }
+.global.search_form { width: 33%; margin: 10px 7px 0 0; }
+.global.search_form input { padding: 3px 15px 0 25px; }
+.search_icon { left: 10px; }
+#top .top-right { margin: 13px 0 0 0; }
+.top_name { padding: 0 20px 0 0; font-size: 14px; }
+.top_name img { width: 35px; height: 35px; }
+.admin_icon { margin: 7px 0 0 5px; }
+.study-timer a { padding: 20px 0 19px 8px; }
+.study-timer em { display: inline-block; }
+#content { width: 100%; }
+.layout-width { width: 98%; margin: 0 auto; }
+#side_menu { font-size: 14px; }
+.sidebar-left { width: 22%; padding-right: 10px; }
+.menu_icon { margin: 0 10px 0 0; }
+#side_menu ul ul li a { padding-left: 30px; }
+.oncampus-img { margin: 0 5px 0 0; }
+.oncampus-description .title { font-size: 13px; }
+.add-icon { font-size: 14px; }
+#side_menu .nav_current { margin-right: -10px; }
+.middle-section { margin: 0 10px; width: 46%; }
+.sidebar-right { width: 28%; }
+.post-details { font-size: 14px; width: 79% }
+.post-details .user-name { font-size: 15px; }
+.post-main { padding: 10px; }
+.post-icon { margin: 0 15px 0 0; }
+.welcome-box-icon { margin: 0 10px 0 0; }
+.welcome-box-icon img { width: 50px; height: 50px; }
+.post-link-icon { width: 45px; height: 45px; margin: 0 10px 0 0; line-height: 45px; }
+.panel-body, .panel-heading { padding: 10px; }
+.anonymous-pic, .vote-icon, .answer-icon { margin: 0 10px 0 0; }
+.anonymous-details, .vote-details { width: 82%; }
+.comment-box-small { width: auto; }
+.panel-small { width: auto; }
+.comment-box { padding: 10px; font-size: 14px; width: 95%; }
+.post-details .time-category { font-size: 13px; }
+.getting-start .heading { padding: 10px; }
+.progress-bar { margin: 0; }
+.progress-bar img { width: 100%; }
+.sidebar_content, .side-box .heading { padding: 10px; }
+.side_details { margin: 0; width: 78%; }
+.side_details .icon { margin: 0 10px 0px 0; }
+.to-do-list li, .side_details .student-details .stud-name span { font-size: 13px; }
+.invite-students .sidebar_content, .show-love .sidebar_content { padding: 10px; text-align: center; }
+.btn-invite_facebook_friends, .btn-invite_gmail, .btn-invite_email, .btn-invite_twitter { display: inline-block; margin: 0 3px; }
+.btn-invite_facebook_friends .text, .btn-invite_gmail .text, .btn-invite_email .text, .btn-invite_twitter .text { display: none; }
+/*Recent Activity page complete------------------------------------*/
+
+/*University Feed page start---------------------------------------*/
+.poll-box, .feed-box .padder { padding: 10px; }
+.search-feed { float: none; margin: 0 0 10px 0; }
+.search-feed input { width: 93%; }
+.poll-box .tabs-theme-2 > label { height: 33px; line-height: inherit; }
+.poll-box .tabs > ul { font-size: 14px; }
+.poll-content .add-answer { width: 50%; }
+.poll-content .add-answer input { width: 89%; }
+.post-option { margin-bottom: 20px; float: none; }
+.post-bar label { margin: 0; }
+.post-text { font-size: 14px; margin: 10px 0; }
+.feedbox-list li .post-details .time-category { display: block; margin: 0; }
+.form-group .control-label { float: none; padding-top: 0; text-align: left; width: auto; }
+.advance-post-setting .form-group .form-control { margin-left: 0; }
+.advance-post-setting .form-group select { width: 100%; }
+input, select, textarea { padding: 8px 10px; }
+.white-box .padder { padding: 10px; }
+.feedbox-list li { padding: 15px 10px; }
+.answer-box { padding: 10px; }
+/*University Feed page complete---------------------------------------*/
+
+/*Profile page start---------------------------------------*/
+.profile-extracur li .icon-extracur { margin-top: 0; }
+.profile-right { width: 117px; }
+.profile-pic { margin: 0 10px 0 0; width: 100px; height: 100px; }
+.profile-pic-fix { height: 100px; width: 100px; }
+.profile-right .avtar-points span { display: inline-block; }
+.profile-connections li { margin: 0 10px 10px 0; }
+a.link { background-position: right 3px; }
+/*Profile page complete---------------------------------------*/
+
+/*First steps staff start--------------------------------------------------------------*/
+.welcome-box p { width: 100%; }
+.step-box { width: 78%; padding: 29px 20px 29px 53px; }
+/*First steps staff complete--------------------------------------------------------------*/
+
+/*First steps student start--------------------------------------------------------------*/
+.get-start .grey-arrow { top: 35px; }
+.complete-steps .blue-arrow { top: 0; left: 25px; }
+.follow-steps { width: 92%; }
+.follow-steps li { padding: 14px 40px 20px 46px; }
+/*First steps student complete--------------------------------------------------------------*/
+
+/*Add Answer start--------------------------------------------------------------*/
+.add-answer-main .editor img { width: 99%; }
+/*Add Answer complete--------------------------------------------------------------*/
+
+/*New Message start---------------------------------------------------------*/
+.new-message-form .form-group input { padding: 15px; width: 93%; }
+.new-message-form .form-group textarea { padding: 15px; width: 93%; box-shadow: none; }
+.new-message-form .msg-area { height: auto; }
+.new-message-form .attachment { padding: 0 15px 10px 15px; width: 93%; }
+/*New Message complete---------------------------------------------------------*/
+
+/*Member List start------------------------------------------------------------*/
+.member-list li { width: 46%; margin: 0 7px 18px 7px; }
+/*Member List complete------------------------------------------------------------*/
+
+/*Search page start---------------------------------------------------------------------*/
+.class-icon { margin: 0 10px 0 0; }
+.class-details { width: 87%; }
+/*Search page complete---------------------------------------------------------------------*/
+
+/*Joined Groups start------------------------------------------------------------------*/
+.group-title { width: 78%; }
+/*Joined Groups complete------------------------------------------------------------------*/
+
+/*Event Post start----------------------------------------------------------------------*/
+.content_heading_main h1 span { float: none; display: inline-block; margin: 0 0 0 10px; }
+.search-feed-box .search-feed input { width: 88%; }
+.add-member input { width: 91%; }
+.group-member .heading span { display: block; padding: 0; }
+.event-details .event-pic { width: 100px; height: 100px; margin: 0 10px 0 0; }
+.event-details .event-description { width: 74%; }
+.event-details .event-description span { width: 92%; }
+.event-details .customgroups-join-event-icons-content .academic-student-description { width: 87%; }
+.event-heading { height: auto; padding: 10px; line-height: normal; }
+.event-heading .icon { margin-top: 0; }
+.event-heading .button { float: none; margin: 10px 0 0 0 !important; }
+/*Event Post complete----------------------------------------------------------------------*/
+
+/*Create new event start----------------------------------------------------*/
+.create-event-form .input-large { width: 95%; }
+.form-group .form-control { margin-left: 0; }
+.create-event-form textarea { width: 95%; }
+.date-time input.input-small { width: 85%; }
+.date-time .at { padding: 7px 13px; }
+.sell-tickets ul { width: 440px; }
+.sell-tickets li { width: 218px; font-size: 14px; }
+.sell-ticket-confirm .checkbox label:before { bottom: 2px; }
+.sell-ticket-confirm { width: 385px; }
+/*Create new event complete----------------------------------------------------*/
+
+/*Create new form start--------------------------------------------------------------------------------*/
+.benefit-membership .form-control .add-member { top: 1px; right: 1px; }
+.error-icon { margin: 0 10px 0 0; }
+/*Create new form complete--------------------------------------------------------------------------------*/
+
+
+/*Connection start----------------------------------------------------------------------*/
+.student-connection { width: 93%; }
+/*Connection complete----------------------------------------------------------------------*/
+
+
+/*Invite students start-------------------------------------------------------------------*/
+.drop-campus-tabs ul li { margin: 0 10px 0 0; }
+.invite-lt .search-feed input { width: 93%; }
+.invite-lt { width: 100%; margin: 0; }
+.invite-rt { clear: both; margin: 20px 0 0 0; width: 100%; }
+/*Invite students complete-------------------------------------------------------------------*/
+
+/*Mentor Groups start------------------------------------------------*/
+.mentor-list li { width: 48.4%; margin-right: 10px; }
+.mentor-list li .mentor-pic-bg { left: 25%; }
+.mentor-list li .mentor-detail .row span { font-size: 13px; }
+/*Mentor Groups complete------------------------------------------------*/
+
+/*11-07-2014-----------------------------------------------------------*/
+.heading-left { float: none; width: 100%; margin: 0; }
+.heading-right { float: none; text-align: left; width: 100%; }
+.advance-post-block .ms-choice > span { top: 39px; }
+.advance-post-block .ms-choice > div { top: 46px; }
+.advance-post-setting .form-group .control-label { text-align: left; }
+.more-options { border-top: 1px solid #dfdfdf; clear: both; float: none; line-height: 52px; margin: 0; text-align: center; width: 100%; }
+.more-options .questionamin { font-size: 14px; }
+.feedbox-list li .comments_right .time-category { margin: 0 0 0 10px; }
+#pinning-date-span { top: -3px; }
+.content_heading_main h1 span.#subscription_button_span {
+float: right;
+}
+.heading-right .float-right { float: none; }
+/*.event-pic img,.event-pic{width: 60px;height: 60px;}*/
+.event-list .event-info { width: 83%; }
+.event-list .event-info1 { width: 53%; padding-right: 4px; }
+.event-list .event-info2 { padding: 0; width: 44%; }
+.event-list .event-info2 .created-by .stud-name { width: 72%; }
+.edit-classes .search_class { margin-bottom: 10px; }
+.edit-classes button.ui-multiselect.ui-widget { margin: 0 !important; }
+.list-title { display: inline-block; padding: 0; width: 100%; }
+.list-btn { display: inline-block; }
+.search-mentor { position: inherit; right: inherit; top: inherit; }
+.feed-details-left-col { float: none; width: 100%; border-bottom: 1px solid #dfdfdf; margin-bottom: 0; padding-bottom: 0 !important; }
+.feed-details-right-col { float: none; width: 100%; }
+.view-btn-mrgnbtm, .msg-btn-mrgnbtm { margin-bottom: 5px !important; }
+.filter-select-box { float: none; margin: 0; }
+.filter-select-box button { width: 100% !important; margin-bottom: 10px; }
+.search-feed #filter_input:focus { width: 88%; }
+.sell-form .form-group label { text-align: left; width: 100%; }
+.sell-form .form-group .form-control { float: left; width: 100%; }
+.sell-header-bar .close { top: 20px; }
+#club-staff_members .icon { margin-right: 10px; }
+.side-box .heading { overflow: hidden; }
+.staff-member .add-new-link { float: right; padding: 0; }
+.color_code_legend li { padding: 0.4em 7px; text-transform: capitalize; font-size: 15px; }
+.advance-post-setting .checkbox label:before { top: 5px; }
+.heading-right .profile-actions .float-right { float: right; }
+.date-time .date, .date-time .time { width: 145px; padding-right: 0; }
+.date-time .date input.input-small, .date-time .time input.input-small { width: 84%; }
+.content_heading_main h1 span { float: right; }
+.column-two .form-group { width: 38%; }
+.column-two .form-group input { width: 82%; }
+.footer-bar-padding { overflow: hidden; }
+.footer-bar-padding .button { margin: 0 4px 0 0; }
+.profile-detail { width: 75%; }
+.profile-right { float: none; width: 100%; margin-top: 15px; }
+.profile-right .button { line-height: 50px; height: 50px; display: inline-block; padding: 0 20px !important; width: auto; }
+.profile-right .avtarbox { display: inline-block; vertical-align: top; margin-top: 0; }
+.profile-extracur ul { width: 47%; }
+.profile-extracur li .icon-extracur { margin-right: 5px; }
+.profile-extracur li .detail { width: 77%; }
+.new-message-form .form-group input { width: 70%; }
+.new-message-form .form-group textarea { width: 100%; }
+.best_answer_container { padding: 10px; }
+table.mceLayout { width: 100% !important; }
+/*14-07-2014------------------------------------------------------------------------------------------*/
+
+.service-staff-tabs .drop-campus-tabs ul li a, .club-tabs .drop-campus-tabs ul li a { padding: 0 !important; font-size: 13px !important; }
+.club-event-pic { width: 70px; height: 70px; margin: 0 10px 0 0; }
+.club-event-pic img { width: 70px; height: 70px; overflow: hidden; border-radius: 87px; }
+.club-event-detail { width: 80%; }
+.club-event-right { float: none; width: 100%; margin-top: 15px; }
+.edit-staff .form-group .control-label { width: 44%; display: inline-block; margin-right: 10px; }
+#club-form #club-admins input, #club-form #group-members input, #club-form #club-committees input, .edit-staff .new-row input { width: 37%; margin-right: 10px; }
+.btn-remove-ipad { background: none; /*background: url(/assets/images/icon-close.png) no-repeat;*/ width: 13px; height: 14px; line-height: 15px; margin: 10px 0 0 5px; padding: 0; overflow: hidden }
+.btn-remove-ipad:before { content: "\e678"; font-family: "icomoon"; font-size: 21px; left: -4px; line-height: 1; position: relative; text-transform: none; top: -8px; color: #d6d6d6 }
+.btn-remove-ipad:after { background: none; }
+.dataTables_filter { text-align: left; }
+#office-locations .input-large { width: 88%; margin-right: 10px; }
+#dropinTable .btn-remove-ipad { margin-left: 10px; }
+/*15-07-2014------------------------------------------------------------------------------------*/
+.profile-class li .detail { width: 89%; }
+.attendance { float: none; display: block; clear: both; }
+#club-form select.small_dd { padding: 7px 10px; }
+.add-consult-time .rows select { margin: 0 20px 0 5px; }
+.rows .remove-item, .class_tags .new-row .remove-item { top: 13px; }
+.user-info-tbl input.input-large { width: 87%; }
+/*16-07-2014---------------------------------------------------------------------------------*/
+.change-pw-form .form-group .control-label { float: left; width: 160px; padding: 7px 0; }
+.tagline span { float: left !important; width: 100%; margin: 0 !important; }
+.side_max { width: 100%; }
+.comments_right { width: 84%; }
+/*16-07-2014----------------------------------------------------------------------*/
+.club-table input { width: 125px !important; }
+/*Analytic pages-----------------------------------------------------*/
+.middle-full-section { width: 74%; margin: 0 0 0 10px; }
+#side_menu_admin .menu_icon { margin-right: 10px; }
+#side_menu_admin { font-size: 13px; }
+.students-info li { margin-right: 5px; width: 26.8%; }
+.analytic-listing th { font-size: 14px; }
+.transformer-tabs ul { border-bottom: 0; overflow: hidden; position: relative; border: 1px solid #e1e1e1; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;/* fallback */ background: url(/assets/images/arrow-down-grey.png) no-repeat 95% 23px; background-color: #fff; line-height: inherit }
+.transformer-tabs ul.open a { position: relative; display: block; padding: 0 10px !important; margin: 0; }
+.transformer-tabs ul li { display: block !important; margin: 0 !important; padding: 0 10px; line-height: 50px; }
+.drop-campus-tabs.transformer-tabs ul li a.active { cursor: pointer !important; margin: 0 !important; background: transparent; position: relative; border-bottom: 0 !important; padding: 0 10px !important; }
+.transformer-tabs a { position: absolute; top: 0; left: 0; width: 97%; height: 100%; padding: 0 10px; line-height: inherit }
+.drop-campus-tabs ul li a:hover, .drop-campus-tabs ul li a, .drop-campus-tabs ul li.active a { border: 0 !important; }
+.transformer-tabs ul li a { display: none; }
+.transformer-tabs ul li a.active { display: block; }
+.transformer-tabs ul.open { display: block; }
+select { background: #ffffff url(/assets/images/arrow-down-grey.png) no-repeat 95% center !important; cursor: pointer; padding: 8px 25px 8px 10px; appearance: none; -moz-appearance: none; -webkit-appearance: none; -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08); -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08); box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08); }
+/*10-02-2015-------------------------------------------------------------------------*/
+.side_actions { float: right; width: auto; margin: 10px 0 0 0; }
+.staff-member-details .icon { margin: 0 10px 0 0; }
+.best_answer_container .post-details { width: 60%; }
+.top-likes { width: 23%; }
+.top-answer { font-size: 13px; }
+.questions.padder-left-right { padding: 10px; }
+.feedbox-list .feed-post-section li { padding: 0 10px !important; }
+.padder-left-right .post-answers .post_answers_container .post-details { width: 85%; }
+.activity_answer_box.padder-answer-image { padding: 0 10px 10px; width: 96%; }
+.white-box .feed-post-section .padder { padding: 10px; }
+.attachment-small { width: 91% !important; }
+.post-anonymous .feed-padding { top: 70px !important; }
+.staff-member-details .student-details { width: 71%; }
+.reset-link { margin: 8px 20px 10px 0; }
+.filter-connection-suggestion { width: 100%; float: none; }
+.filter-connection-suggestion .ms-choice { width: 250px !important; }
+.search-connection-suggestion .search-control { width: 288px; }
+.search-connection-suggestion .search-control input { width: 100%; }
+.search-connection-suggestion .search_icon { right: -20px; }
+.connection-suggestion-list li { width: 46%; margin: 0 5px 40px; }
+.connection-suggestion-list li .connection-suggestion-name { font-size: 16px; }
+.students-may-know .rhs-link { width: 100%; }
+.post-anonymous .feed-padding-ra { top: 39px; }
+.side_details .student-details { width: 73%; }
+/*11-02-2015-------------------------------------------------------------------------*/
+.seller-member-details .seller-details .seller-name { width: 100%; }
+.seller-full-description-bar .seller-details, .seller-full-description-bar .seller-details a { font-size: 15px; }
+.padder .comments_right { width: 84%; }
+.filter-mentor { float: none; }
+.connection-suggestion-list li .connection-suggestion-pic-bg { left: 75px; }
+/*12-02-2015-------------------------------------------------------------------------*/
+.footer-section { width: 21%; }
+.connect-us { width: 17%; }
+.footer-logo { width: 20%; }
+#my_clubs .list-icon { display: inline-block; vertical-align: middle; width: 50px; height: 50px; overflow: hidden; padding: 0; margin: 0 15px 0 0; }
+#my_clubs .list-title-club { display: inline-block; vertical-align: middle; width: 77%; padding: 0; }
+#my_clubs .list-btn { display: block; width: 100%; margin: 10px 0 0 0; }
+.week-title { width: 100%; float: none; text-align: right; }
+.calendar-viewer #event-form-shower { margin: 10px 0 0 0 !important; }
+.event_type_box div.radio-cust label { padding: 0 20px 0 18px; }
+.class-fields #unit_id { width: 100%; margin: 0 0 10px 0; padding: 13px 30px 13px 10px; }
+.class-fields button { width: 100% !important; }
+.class-manual-fields .input-large { width: 100%; padding: 13px 30px 13px 10px; }
+.class-manual-fields .input-medium { width: 100%; margin-bottom: 10px; }
+.class-manual-fields .input-small { padding: 13px 4px; width: 32.5%; }
+.activity-fields .form-group .input-medium { width: 94%; margin-bottom: 10px; }
+.activity-fields .form-group .input-small { width: 31.5%; padding: 13px 4px; }
+.repeat-activity #activity_repeat-event-value { width: 82%; margin-bottom: 10px; }
+.repeat-activity .input-small { width: 35% !important; }
+.assessment-fields input.input-large { width: 95%; }
+.assessment-fields select.input-large { width: 100%; }
+.assessment-fields .input-small { width: 30.8%; }
+.assessment-fields #repeat-event-value { width: 54%; margin-bottom: 10px; }
+.assessment-fields label.label-margin { margin-left: 0; }
+.timetable_container { width: 94%; }
+/*16-02-2015-------------------------------------------------------------------------*/
+.custom-wrapper { width: 100%; }
+/*24-02-2015-------------------------------------------------------------------------*/
+.connection-list li { width: 40%; min-height: 80px; }
+.connection-list li .icon { width: 50px; height: 50px; }
+.connection-list li .stud-name { width: 66%; }
+/*25-02-2015-------------------------------------------------------------------------*/
+.study-timer a { padding: 20px 0 10px 8px; }
+.mce-flow-layout-item { margin-right: 0; margin-bottom: 0; }
+.search-feed .icon-serach { right: 0; }
+.search-area .search-feed input { width: 87%; }
+.account_icon { margin: 9px 0 0 0; }
+/*session history css*/
+.event-heading .float-left { float: none; }
+.post .event-details .event-pic { width: 70px; }
+.sidebar-connection { text-align: center; }
+.profile-complete .side_connection { margin-bottom: 10px; width: 100%; }
+.mentors-search-control .form-control { width: 100% !important }
+.mentors-search-control .form-control .ms-parent { width: 100% !important }
+.mentors-search-control .mentors-filters1 .ms-parent { width: 100% !important; }
+.activity_feed .comment-box { padding: 10px; width: 93%; }
+.activity_feed .comment-box-detail { width: 79%; }
+}
+
+@media only screen and (min-width: 980px) and (max-width: 1023px) {
+/*Recent Activity page start------------------------------------*/
+.content_default_normal { padding-top: 0; }
+.top_fixed_header { position: relative; }
+.content_default { padding-top: 0; }
+#top { margin: 0 auto; width: 98%; }
+#top .logo { padding: 18px 10px 0 0; }
+.top_navigation { width: 81%; }
+.mail_icon { margin: 12px 5px 0 0; }
+.bell_icon { margin: 15px 5px 0 0; }
+.global.search_form { width: 43%; }
+.global.search_form input { padding: 3px 15px 0 25px; }
+.search_icon { left: 10px; }
+#top .top-right { margin: 13px 0 0 0; }
+.top_name { padding: 0 20px 0 0; font-size: 14px; }
+.top_name img { width: 35px; height: 35px; }
+.admin_icon { margin: 10px 0 0 5px; }
+.study-timer a { padding: 20px 0 17px 8px; }
+.study-timer em { display: inline-block; font-size: 14px; }
+.study-timer a span.timer-icon { margin: 0 10px 0 0; }
+#content { width: 100%; }
+.layout-width { width: 98%; margin: 0 auto; }
+#side_menu { font-size: 14px; }
+.sidebar-left { width: 22%; padding-right: 10px; }
+.menu_icon { margin: 0 10px 0 0; }
+#side_menu ul ul li a { padding-left: 30px; }
+.oncampus-img { margin: 0 5px 0 0; }
+.oncampus-description { width: 74%; }
+.oncampus-description .title { font-size: 14px; }
+.add-icon { font-size: 14px; }
+#side_menu .nav_current { margin-right: -19px; }
+.middle-section { margin: 0 10px; width: 44%; }
+.sidebar-right { width: 28%; }
+.post-details { font-size: 14px; width: 85% }
+.post-details .user-name { font-size: 15px; }
+.post-main { padding: 10px; }
+.post-icon { margin: 0 5px 0 0; }
+.welcome-box-icon { margin: 0 10px 0 0; }
+.welcome-box-icon img { width: 50px; height: 50px; }
+.post-link-icon { width: 45px; height: 45px; margin: 0 10px 0 0; line-height: 45px; }
+.panel-body, .panel-heading { padding: 10px; }
+.anonymous-pic, .vote-icon, .answer-icon { margin: 0 10px 0 0; }
+.anonymous-details, .vote-details { width: 82%; }
+.comment-box-small { width: auto; }
+.panel-small { width: auto; }
+.comment-box { padding: 10px; font-size: 14px; width: 94%; }
+.comment-box-detail { width: 83%; }
+.post-details .time-category { font-size: 13px; }
+.getting-start .heading { padding: 10px; }
+.complete-status-text { float: left; }
+.progress-bar { margin: 0; }
+.progress-bar img { width: 100%; }
+.sidebar_content, .side-box .heading { padding: 10px; }
+.side_details { float: none; margin: 0; width: 100%; }
+.side_details .icon { margin: 0 10px 0px 0; }
+.to-do-list li, .side_details .student-details .stud-name span { font-size: 13px; }
+.invite-students .sidebar_content, .show-love .sidebar_content { padding: 10px; text-align: center; }
+.btn-invite_facebook_friends, .btn-invite_gmail, .btn-invite_email, .btn-invite_twitter { display: inline-block; margin: 0 3px; }
+.btn-invite_facebook_friends .text, .btn-invite_gmail .text, .btn-invite_email .text, .btn-invite_twitter .text { display: none; }
+.feed-post-details { width: 73%; }
+.comments_left { margin-right: 5px; }
+.comments_right { width: 84%; }
+/*Recent Activity page complete------------------------------------*/
+
+/*University Feed page start---------------------------------------*/
+.poll-box, .feed-box .padder { padding: 10px; }
+.search-feed { float: none; margin: 0 0 10px 0; }
+.search-feed input { width: 90%; }
+.poll-box .tabs label { margin: 0 11px 0 0; font-size: 13px; }
+.poll-box .tabs-theme-2 > label { height: 33px; line-height: inherit; }
+.poll-box .tabs > ul { font-size: 14px; }
+.poll-content .add-answer { width: 65%; }
+.poll-content .add-answer input { width: 89%; }
+.post-option { margin-bottom: 20px; float: none; }
+.post-bar label { margin: 0; }
+.post-text { margin: 10px 0; font-size: 15px; }
+.feedbox-list li .post-details .time-category { display: block; margin: 0; }
+.default-btn.mrgnLt25 { margin-left: 0; }
+.form-group .control-label { float: none; padding-top: 0; text-align: left; width: auto; }
+.advance-post-setting .form-group .form-control { margin-left: 0; }
+.advance-post-setting .form-group select { width: 100%; }
+input, select, textarea { padding: 8px 10px; }
+.white-box .padder { padding: 10px; }
+.feedbox-list li { padding: 15px 10px; }
+.answer-box { padding: 10px; }
+.poll-box .tabs-height-auto ul li textarea { width: 87%; }
+#pinning-date-span { top: -3px; }
+.advance-post-block .ms-choice > span { top: 39px; }
+.advance-post-block .ms-choice > div { top: 46px; }
+.advance-post-setting .form-group .control-label { text-align: left; }
+.more-options { border-top: 1px solid #dfdfdf; clear: both; float: none; line-height: 52px; margin: 0; text-align: center; width: 100%; }
+.more-options .questionamin { font-size: 14px; }
+.feedbox-list li .comments_right .time-category { margin: 0 0 0 10px; }
+.heading-left { float: none; width: 100%; margin: 0; }
+.heading-right { float: none; text-align: left; width: 100%; }
+/*University Feed page complete---------------------------------------*/
+
+/*Profile page start---------------------------------------*/
+.profile-pic { margin: 0 10px 0 0; width: 70px; height: 70px; }
+.profile-pic-fix { height: 70px; width: 70px; }
+.profile-right { float: none; width: 100%; margin: 15px 0 0 0; }
+.profile-extracur li .icon-extracur { margin-top: 0; }
+.profile-right .button { padding: 0 40px; display: inline-block; }
+.profile-right .avtar-points { width: auto; padding: 17px 0 0 10px; }
+.profile-right .avtar-points span { display: inline-block; }
+.profile-connections ul { clear: both; }
+.profile-connections li { margin: 0 10px 10px 0; }
+a.link { background-position: right 3px; }
+/*Profile page complete---------------------------------------*/
+
+/*First steps staff start--------------------------------------------------------------*/
+.welcome-box p { width: 100%; }
+.step-box { width: 75%; padding: 29px 15px 29px 40px; }
+/*First steps staff complete--------------------------------------------------------------*/
+
+/*First steps student start--------------------------------------------------------------*/
+.get-start .grey-arrow { top: 35px; }
+.complete-steps .blue-arrow { top: -15px; }
+.follow-steps { width: 92%; }
+/*First steps student complete--------------------------------------------------------------*/
+
+/*Add Answer start--------------------------------------------------------------*/
+.add-answer-main .editor img { width: 99%; }
+/*Add Answer complete--------------------------------------------------------------*/
+
+/*New Message start---------------------------------------------------------*/
+.new-message-form .form-group input { padding: 15px; width: 90%; }
+.new-message-form .form-group textarea { padding: 15px; width: 90%; box-shadow: none; }
+.new-message-form .msg-area { height: auto; }
+.new-message-form .attachment { padding: 0 15px 10px 15px; width: 92.5%; }
+/*New Message complete---------------------------------------------------------*/
+
+/*Member List start------------------------------------------------------------*/
+.member-list li { width: 45%; margin: 0 5px 18px 5px; }
+.member-list li .stream-detail { font-size: 13px; }
+/*Member List complete------------------------------------------------------------*/
+
+/*Search page start---------------------------------------------------------------------*/
+.class-icon { margin: 0 10px 0 0; }
+.class-details { width: 82%; }
+/*Search page complete---------------------------------------------------------------------*/
+
+/*Joined Groups start------------------------------------------------------------------*/
+.group-title { width: 72%; }
+.custom-groupp-btn { float: none; }
+/*Joined Groups complete------------------------------------------------------------------*/
+
+/*Event Post start----------------------------------------------------------------------*/
+.content_heading_main h1 span {/*float:none;*/ margin: 0 0 0 10px; clear: both; }
+.search-feed-box .search-feed input { width: 84%; }
+.add-member input { width: 89%; }
+.group-member .heading span { display: block; padding: 0; }
+.event-details .event-pic { width: 100px; height: 100px; margin: 0 10px 0 0; }
+.event-details .event-description { width: 63%; }
+.event-details .event-description span { width: 87%; }
+.event-details .customgroups-join-event-icons-content .academic-student-description { width: 85%; }
+.event-heading { height: auto; padding: 10px; line-height: normal; }
+.event-heading .icon { margin-top: 0; }
+.event-heading .button { float: none; margin: 10px 0 0 0 !important; }
+/*Event Post complete----------------------------------------------------------------------*/
+
+
+/*Create new event start----------------------------------------------------*/
+.create-event-form .input-large { width: 93%; }
+.form-group .form-control { margin-left: 0; }
+.create-event-form textarea { width: 93%; }
+.date-time input.input-small { width: 85%; }
+.date-time .at { padding: 7px 13px; }
+.sell-tickets ul, .sell-ticket-confirm { width: auto; }
+.sell-tickets li { width: auto; display: block; }
+.sell-ticket-confirm .checkbox label:before { bottom: 26px; }
+.date-time .date, .date-time .time { width: 145px; padding-right: 0; }
+.date-time .date input.input-small, .date-time .time input.input-small { width: 84%; }
+/*Create new event complete----------------------------------------------------*/
+
+/*Create new form start--------------------------------------------------------------------------------*/
+.benefit-membership .form-control .add-member { top: 1px; right: 1px; }
+.error-icon { margin: 0 10px 0 0; }
+/*Create new form complete--------------------------------------------------------------------------------*/
+
+/*Connection start----------------------------------------------------------------------*/
+.student-connection { width: 91%; }
+/*Connection complete----------------------------------------------------------------------*/
+
+/*Invite students start-------------------------------------------------------------------*/
+.drop-campus-tabs ul li { margin: 0 10px 0 0 !important; font-size: 12px !important; padding: 0 !important; }
+.drop-campus-tabs ul li a { margin: 0 10px 0 0 !important; font-size: 12px !important; padding: 0 !important; }
+.invite-lt .search-feed input { width: 90%; }
+.invite-lt { width: 100%; margin: 0; }
+.invite-rt { clear: both; margin: 20px 0 0 0; width: 100%; }
+/*Invite students complete-------------------------------------------------------------------*/
+
+
+/*Mentor Groups start------------------------------------------------*/
+.mentor-list li { width: 100%; }
+.mentor-list li .mentor-pic-bg { left: 35%; }
+/*Mentor Groups complete------------------------------------------------*/
+
+/*11-07-2014-----------------------------------------------------------*/
+.content_heading_main h1 span.#subscription_button_span {
+float: right;
+}
+.heading-right .float-right { float: none; }
+/*.event-pic img,.event-pic{width: 80px;height: 80px;}*/
+.event-list .event-info { width: 68%; }
+.event-list .event-info1 { border-right: 0; }
+.event-list .event-info2 { padding: 0; }
+.edit-classes .search_class { margin-bottom: 10px; }
+.edit-classes button.ui-multiselect.ui-widget { margin: 0 !important; }
+.list-title { display: inline-block; padding: 0; width: 100%; }
+.list-btn { display: inline-block; }
+.search-mentor { position: inherit; right: inherit; top: inherit; }
+.feed-details-left-col { float: none; width: 100%; border-bottom: 1px solid #dfdfdf; margin-bottom: 0; padding-bottom: 0 !important; }
+.feed-details-right-col { float: none; width: 100%; }
+.view-btn-mrgnbtm, .msg-btn-mrgnbtm { margin-bottom: 5px !important; }
+.filter-select-box { float: none; margin: 0; }
+.filter-select-box button { width: 100% !important; margin-bottom: 10px; }
+.search-feed #filter_input:focus { width: 83%; }
+.sell-form .form-group label { text-align: left; width: 100%; }
+.sell-form .form-group .form-control { float: left; width: 100%; }
+.sell-header-bar .close { top: 20px; }
+#club-staff_members .icon { margin-right: 10px; }
+.side-box .heading { overflow: hidden; }
+.staff-member .add-new-link { float: left; padding: 0; clear: both; width: 100%; text-align: left; }
+.color_code_legend li { padding: 0.4em 7px; text-transform: capitalize; font-size: 15px; }
+.heading-right .profile-actions .float-right { float: right; }
+/*.content_heading_main h1 span{float: right;}*/
+/*.event-pic,.event-pic img{width: 60px;height: 60px;}*/
+.create-mentor-group .remove-btn-mrgn { font-size: 13px; margin-left: 15px; margin-top: 5px; padding: 0 3px; }
+.column-two .form-group { width: 39%; }
+.column-two .form-group input { width: 75%; }
+.profile-detail { width: 74%; }
+.profile-right { float: none; width: 100%; margin-top: 15px; }
+.profile-right .button { line-height: 50px; height: 50px; display: inline-block; padding: 0 14px !important; width: auto; }
+.profile-right .avtarbox { display: inline-block; vertical-align: top; margin-top: 0; }
+.profile-extracur ul { width: 100%; }
+.profile-extracur li { width: 100%; }
+.profile-extracur li .icon-extracur { margin-right: 5px; }
+.profile-extracur li .detail { width: 88%; }
+.new-message-form .form-group input { width: 58%; }
+.new-message-form .form-group textarea { width: 100%; }
+.best_answer_container { padding: 10px; }
+table.mceLayout { width: 100% !important; }
+.add_answer_choice .float-right { float: none; }
+/*14-07-2014------------------------------------------------------------------------------------------*/
+.service-staff-tabs .drop-campus-tabs ul li a, .club-tabs .drop-campus-tabs ul li a { padding: 0 !important; font-size: 12px !important; }
+.service-staff-tabs .drop-campus-tabs ul li a span, .club-tabs .drop-campus-tabs ul li a span { display: none; }
+.club-event-pic { width: 70px; height: 70px; margin: 0 10px 0 0; }
+.club-event-detail { width: 74%; }
+.club-event-right { float: none; width: 100%; margin-top: 15px; }
+.edit-staff .form-group .control-label { width: 44%; display: inline-block; margin-right: 10px; }
+#club-form #club-admins input, #club-form #group-members input, #club-form #club-committees input, .edit-staff .new-row input { width: 37%; margin-right: 10px; }
+.btn-remove-ipad { background: none; /*background: url(/assets/images/icon-close.png) no-repeat;*/ width: 13px; height: 14px; line-height: 15px; margin: 10px 0 0 5px; padding: 0; overflow: hidden }
+.btn-remove-ipad:before { content: "\e678"; font-family: "icomoon"; font-size: 21px; left: -4px; line-height: 1; position: relative; text-transform: none; top: -3px; color: #d6d6d6 }
+.btn-remove-ipad:after { background: none; }
+.drop-time-controls input.start-time-input, .drop-time-controls input.end-time-input { width: 20%; }
+.drop-time-controls input.input-small { width: 37%; }
+.type-benefit input { width: 43%; }
+.dataTables_length { width: 100%; }
+.dataTables_filter { float: none; width: 100%; text-align: left; }
+.dataTables_info { width: 100%; }
+.dataTables_paginate { float: none; clear: both; display: block; width: 100%; text-align: left; margin: 0; }
+.dataTables_info, .dataTables_paginate { margin-bottom: 10px; }
+#office-locations .input-large { width: 84%; margin-right: 10px; }
+#dropinTable .btn-remove-ipad { margin-left: 10px; }
+#form-enroll .search .search_class { width: 84%; }
+/*15-07-2014------------------------------------------------------------------------------------*/
+.profile-class li .detail { width: 85%; }
+.attendance { float: none; display: block; clear: both; }
+#club-form select.small_dd { padding: 6px 2px; }
+.pin-post-div { width: 100%; }
+.add-consult-time .rows label { float: left; width: 100%; }
+.add-consult-time .rows select { margin: 0 0 10px 0; width: 85%; }
+.rows .remove-item, .class_tags .new-row .remove-item { top: 13px; }
+.classes-step-box .rows { width: 100%; }
+/*16-07-2014----------------------------------------------------------------------*/
+.notification-menu .top-arrow { right: 10px; }
+.privacy-setting ul li .title { width: 61%; }
+.user-info-tbl input.input-large { width: 84%; }
+.price-width input { width: 23% !important; }
+.side_max { width: 100%; }
+.sidebar_content input { width: 145px !important; }
+.sidebar_staffs button.save-staff_member, .sidebar_staffs button.remove-staff_member, .sidebar_content button.remove-staff_member, .sidebar_content button.save-staff_member, .sidebar_content button.remove-admin-member, .sidebar_content button.save-admin_member_rhs { padding: 0 9px; margin: 0; }
+/*16-07-2014----------------------------------------------------------------------*/
+.club-table#no-more-tables td { padding-left: 25%; }
+.club-table input { width: 90% !important; }
+.buy-ticket-table#no-more-tables td { padding-left: 35%; }
+/*Analytic pages-----------------------------------------------------*/
+.middle-full-section { width: 74%; margin: 0 0 0 10px; }
+#side_menu_admin .menu_icon { margin-right: 10px; }
+#side_menu_admin { font-size: 13px; }
+.students-info li { margin-right: 5px; width: 24%; min-height: 98px; vertical-align: top; }
+.analytic-listing th { font-size: 14px; }
+.transformer-tabs ul { border-bottom: 0; overflow: hidden; position: relative; border: 1px solid #e1e1e1; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;/* fallback */ background: url(/assets/images/arrow-down-grey.png) no-repeat 95% 23px; background-color: #fff; line-height: inherit }
+.transformer-tabs ul.open a { position: relative; display: block; padding: 0 10px !important; margin: 0; }
+.transformer-tabs ul li { display: block !important; margin: 0 !important; padding: 0 10px; line-height: 50px; }
+.drop-campus-tabs.transformer-tabs ul li a.active { cursor: pointer !important; margin: 0 !important; background: transparent; position: relative; border-bottom: 0 !important; padding: 0 10px !important; }
+.transformer-tabs a { position: absolute; top: 0; left: 0; width: 97%; height: 100%; padding: 0 10px; line-height: inherit }
+.drop-campus-tabs ul li a:hover, .drop-campus-tabs ul li a, .drop-campus-tabs ul li.active a { border: 0 !important; }
+.transformer-tabs ul li a { display: none; }
+.transformer-tabs ul li a.active { display: block; }
+.transformer-tabs ul.open { display: block; }
+select { background: #ffffff url(/assets/images/arrow-down-grey.png) no-repeat 95% center !important; cursor: pointer; padding: 8px 25px 8px 10px; appearance: none; -moz-appearance: none; -webkit-appearance: none; -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08); -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08); box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08); }
+/*10-02-2015-------------------------------------------------------------------------*/
+.side_actions { float: right; width: auto; margin: 10px 0 0 0; }
+.staff-member-details .icon { margin: 0 10px 0 0; }
+.best_answer_container .post-details { width: 60%; }
+.top-likes { width: 23%; }
+.top-answer { font-size: 13px; }
+.questions.padder-left-right { padding: 10px; }
+.feedbox-list .feed-post-section li { padding: 0 10px !important; }
+.padder-left-right .post-answers .post_answers_container .post-details { width: 86%; }
+.activity_answer_box.padder-answer-image { padding: 0 10px 10px; width: 94%; }
+.white-box .feed-post-section .padder { padding: 10px; }
+.attachment-small { width: 90% !important; }
+.post-anonymous .feed-padding { top: 84px !important; }
+.staff-member-details .student-details { width: 75%; }
+.advance-post { width: 100%; margin: 0 0 5px 0; }
+.reset-link { margin: 8px 20px 10px 0; }
+.filter-connection-suggestion { width: 100%; float: none; }
+.filter-connection-suggestion .ms-choice { width: 250px !important; }
+.search-connection-suggestion .search-control { width: 288px; }
+.search-connection-suggestion .search-control input { width: 100%; }
+.search-connection-suggestion .search_icon { right: -20px; }
+.connection-suggestion-list li { width: 46%; margin: 0 5px 40px; }
+.connection-suggestion-list li .connection-suggestion-name { font-size: 16px; }
+.students-may-know .rhs-link { width: 100%; }
+.post-anonymous .feed-padding-ra { top: 39px; }
+.side_details .student-details { width: 75%; }
+.search-mentor .search-control { width: 97%; }
+.filter-mentor { float: none; }
+.campus-info li .info-sec2 { width: 55%; }
+.seller-full-description-bar .seller-details, .seller-full-description-bar .seller-details a { font-size: 15px; }
+.padder .comments_right { width: 87%; }
+.club-event-pic img { width: 70px; height: 70px; overflow: hidden; }
+.filter-mentor .ms-choice { width: 340px !important; }
+/*11-02-2015-------------------------------------------------------------------------*/
+.seller-full-description-bar .seller-member-details { width: 100%; margin-bottom: 10px; }
+/*12-02-2015-------------------------------------------------------------------------*/
+.account-setting-btns .text { float: right; margin-bottom: 10px; }
+.change-pw-form .input-large { width: 90%; }
+.footer-section { width: 21%; }
+.connect-us { width: 17%; }
+.footer-logo { width: 20%; }
+#my_clubs .list-icon { display: inline-block; vertical-align: middle; width: 50px; height: 50px; overflow: hidden; padding: 0; margin: 0 15px 0 0; }
+#my_clubs .list-title-club { display: inline-block; vertical-align: middle; width: 77%; padding: 0; }
+#my_clubs .list-btn { display: block; width: 100%; margin: 10px 0 0 0; }
+.week-title { width: 100%; float: none; }
+.calendar-viewer #event-form-shower { margin: 10px 0 0 0 !important; }
+.event_type_box div.radio-cust label { padding: 0 20px 0 18px; }
+.class-fields #unit_id { width: 100%; margin: 0 0 10px 0; padding: 13px 30px 13px 10px; }
+.class-fields button { width: 100% !important; }
+.class-manual-fields .input-large { width: 100%; padding: 13px 30px 13px 10px; }
+.class-manual-fields .input-medium { width: 100%; margin-bottom: 10px; }
+.class-manual-fields .input-small { padding: 13px 4px; width: 32.5%; }
+.activity-fields .form-group .input-medium { width: 94%; margin-bottom: 10px; }
+.activity-fields .form-group .input-small { width: 31.5%; padding: 13px 4px; }
+.repeat-activity #activity_repeat-event-value { width: 81%; margin-bottom: 10px; }
+.repeat-activity .input-small { width: 34% !important; }
+.assessment-fields input.input-large { width: 94%; }
+.assessment-fields select.input-large { width: 100%; }
+.assessment-fields .input-small { width: 30.5%; }
+.assessment-fields #repeat-event-value { width: 50%; margin-bottom: 10px; }
+.assessment-fields label.label-margin { margin-left: 0; }
+.timetable_container { width: 92%; }
+/*16-02-2015-------------------------------------------------------------------------*/
+.custom-wrapper { width: 100%; }
+/*24-02-2015-------------------------------------------------------------------------*/
+.connection-list li { width: 40%; min-height: 80px; }
+.connection-list li .icon { width: 50px; height: 50px; }
+.connection-list li .stud-name { width: 66%; }
+/*25-02-2015-------------------------------------------------------------------------*/
+.study-timer a { padding: 20px 0 10px 8px; }
+/*session history css*/
+.event-heading .float-left { float: none; }
+.mentors-search-control .form-control { width: 100% !important }
+.mentors-search-control .form-control .ms-parent { width: 100% !important }
+.mentors-search-control .mentors-filters1 .ms-parent { width: 100% !important; }
+.sidebar-connection { text-align: center; }
+.profile-complete .side_connection { margin-bottom: 10px; width: 100%; }
+.activity_feed .post-link-icon { margin: 0 10px 0 0; }
+.activity_feed .comment-box { padding: 10px; width: 92%; }
+/*29/7/2015 - #4923 - aaditya bharucha - universityFeeds desing as per psd*/
+.feed-general-comment-box-content .feed-general-comment-container { padding-left: 10px; }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+/**
+* #3597 - Set Graph LI Width  ( account-list li )
+* @Anuj - 23-06-2015
+*
+*/
+.account-list li { width: 46%; }
+/*Recent Activity page start------------------------------------*/
+.content_default_normal { padding-top: 0; }
+.top_fixed_header { position: relative; }
+.content_default { padding-top: 0; }
+#top { margin: 0 auto; width: 98%; }
+#top .logo { padding: 18px 10px 0 0; }
+.top_navigation { width: 81%; }
+.mail_icon { margin: 12px 5px 0 0; }
+.bell_icon { margin: 15px 5px 0 0; }
+.global.search_form { width: 43%; }
+.global.search_form input { padding: 3px 15px 0 25px; }
+.search_icon { left: 10px; }
+#top .top-right { margin: 13px 0 0 0; }
+.top_name { padding: 0 20px 0 0; font-size: 14px; }
+.top_name img { width: 35px; height: 35px; }
+.admin_icon { margin: 7px 0 0 5px; }
+.study-timer { width: 35px; }
+.study-timer a { padding: 20px 0 17px 8px; }
+.study-timer em { display: none; }
+.study-timer a span.timer-icon { margin: 0; }
+#content { width: 100%; }
+.layout-width { width: 98%; margin: 0 auto; }
+#side_menu { font-size: 14px; }
+.sidebar-left { width: 22%; padding-right: 10px; }
+.menu_icon { margin: 0 10px 0 0; }
+#side_menu ul ul li a { padding-left: 30px; }
+.oncampus-img { margin: 0 5px 0 0; }
+.oncampus-description { width: 74%; }
+.oncampus-description .title { font-size: 14px; }
+.add-icon { font-size: 14px; }
+#side_menu .nav_current { margin-right: -10px; }
+.middle-section { margin: 0 10px; width: 44%; }
+.sidebar-right { width: 28%; }
+.post-details { font-size: 14px; width: 80% }
+.post-details .user-name { font-size: 15px; }
+.post-main { padding: 10px; }
+.post-icon { margin: 0 5px 0 0; }
+.welcome-box-icon { margin: 0 10px 0 0; }
+.welcome-box-icon img { width: 50px; height: 50px; }
+.post-link-icon { width: 45px; height: 45px; margin: 0 10px 0 0; line-height: 45px; }
+.panel-body, .panel-heading { padding: 10px; }
+.anonymous-pic, .vote-icon, .answer-icon { margin: 0 10px 0 0; }
+.anonymous-details, .vote-details { width: 82%; }
+.comment-box-small { width: auto; }
+.panel-small { width: auto; }
+.comment-box { padding: 10px; font-size: 14px; width: 93%; }
+.comment-box-detail { width: 80%; }
+.post-details .time-category { font-size: 13px; }
+.getting-start .heading { padding: 10px; }
+.complete-status-text { float: left; }
+.progress-bar { margin: 0; }
+.progress-bar img { width: 100%; }
+.sidebar_content, .side-box .heading { padding: 10px; font-size: 15px; }
+.side_details { float: none; margin: 0; width: 100%; }
+.side_details .icon { margin: 0 10px 0px 0; }
+.to-do-list li, .side_details .student-details .stud-name span { font-size: 13px; }
+.invite-students .sidebar_content, .show-love .sidebar_content { padding: 10px; text-align: center; }
+.btn-invite_facebook_friends, .btn-invite_gmail, .btn-invite_email, .btn-invite_twitter { display: inline-block; margin: 0 3px; }
+.btn-invite_facebook_friends .text, .btn-invite_gmail .text, .btn-invite_email .text, .btn-invite_twitter .text { display: none; }
+.feed-post-details { width: 73%; }
+.comments_left { margin-right: 5px; }
+.comments_right { width: 84%; }
+/*Recent Activity page complete------------------------------------*/
+
+/*University Feed page start---------------------------------------*/
+.poll-box, .feed-box .padder { padding: 10px; }
+.search-feed { float: none; margin: 0 0 10px 0; }
+.search-feed input { width: 90%; }
+.poll-box .tabs label { margin: 0 9px 0 0; font-size: 13px; }
+.poll-box .tabs-theme-2 > label { height: 33px; line-height: inherit; }
+.poll-box .tabs > ul { font-size: 14px; }
+.poll-content .add-answer { width: 65%; }
+.poll-content .add-answer input { width: 89%; }
+.post-option { margin-bottom: 20px; float: none; }
+.post-bar label { margin: 0; }
+.post-text { margin: 10px 0; font-size: 15px; }
+.feedbox-list li .post-details .time-category { display: block; margin: 0; }
+.default-btn.mrgnLt25 { margin-left: 0; }
+.form-group .control-label { float: none; padding-top: 0; text-align: left; width: auto; }
+.advance-post-setting .form-group .form-control { margin-left: 0; }
+.advance-post-setting .form-group select { width: 100%; }
+input, select, textarea { padding: 8px 10px; }
+.white-box .padder { padding: 10px; }
+.feedbox-list li { padding: 15px 10px; }
+.answer-box { padding: 10px; }
+.poll-box .tabs-height-auto ul li textarea { width: 87%; }
+#pinning-date-span { top: -3px; }
+.advance-post-block .ms-choice > span { top: 39px; }
+.advance-post-block .ms-choice > div { top: 46px; }
+.advance-post-setting .form-group .control-label { text-align: left; }
+.more-options { border-top: 1px solid #dfdfdf; clear: both; float: none; line-height: 52px; margin: 0; text-align: center; width: 100%; }
+.more-options .questionamin { font-size: 14px; }
+.feedbox-list li .comments_right .time-category { margin: 0 0 0 10px; }
+.heading-left { float: none; width: 100%; margin: 0; }
+.heading-right { float: none; text-align: left; width: 100%; }
+/*University Feed page complete---------------------------------------*/
+
+/*Profile page start---------------------------------------*/
+.profile-pic { margin: 0 10px 0 0; width: 70px; height: 70px; }
+.profile-pic-fix { height: 70px; width: 70px; }
+.profile-right { float: none; width: 100%; margin: 15px 0 0 0; }
+.profile-extracur li .icon-extracur { margin-top: 0; }
+.profile-right .button { padding: 0 40px; display: inline-block; }
+.profile-right .avtar-points { width: auto; padding: 17px 0 0 10px; }
+.profile-right .avtar-points span { display: inline-block; }
+.profile-connections ul { clear: both; }
+.profile-connections li { margin: 0 10px 10px 0; }
+a.link { background-position: right 3px; }
+/*Profile page complete---------------------------------------*/
+
+/*First steps staff start--------------------------------------------------------------*/
+.welcome-box p { width: 100%; }
+.step-box { width: 75%; padding: 29px 15px 29px 40px; }
+/*First steps staff complete--------------------------------------------------------------*/
+
+/*First steps student start--------------------------------------------------------------*/
+.get-start .grey-arrow { top: 35px; }
+.complete-steps .blue-arrow { top: -15px; }
+.follow-steps { width: 92%; }
+/*First steps student complete--------------------------------------------------------------*/
+
+/*Add Answer start--------------------------------------------------------------*/
+.add-answer-main .editor img { width: 99%; }
+/*Add Answer complete--------------------------------------------------------------*/
+
+/*New Message start---------------------------------------------------------*/
+.new-message-form .form-group input { padding: 15px; width: 90%; }
+.new-message-form .form-group textarea { padding: 15px; width: 90%; box-shadow: none; }
+.new-message-form .msg-area { height: auto; }
+.new-message-form .attachment { padding: 0 15px 10px 15px; width: 90%; }
+/*New Message complete---------------------------------------------------------*/
+
+/*Member List start------------------------------------------------------------*/
+.member-list li { width: 45%; margin: 0 5px 18px 5px; }
+.member-list li .stream-detail { font-size: 13px; }
+/*Member List complete------------------------------------------------------------*/
+
+/*Search page start---------------------------------------------------------------------*/
+.class-icon { margin: 0 10px 0 0; }
+.class-details { width: 82%; }
+/*Search page complete---------------------------------------------------------------------*/
+
+/*Joined Groups start------------------------------------------------------------------*/
+.group-title { width: 72%; }
+.custom-groupp-btn { float: none; }
+/*Joined Groups complete------------------------------------------------------------------*/
+
+/*Event Post start----------------------------------------------------------------------*/
+.content_heading_main h1 span {/*float:none;*/ margin: 0 0 0 10px; clear: both; }
+.search-feed-box .search-feed input { width: 84%; }
+.add-member input { width: 89%; }
+.group-member .heading span { display: block; padding: 0; }
+.event-details .event-pic { width: 100px; height: 100px; margin: 0 10px 0 0; }
+.event-details .event-description { width: 63%; }
+.post .event-details .event-description { width: 100% }
+.event-details .event-description span { width: 87%; }
+.event-details .customgroups-join-event-icons-content .academic-student-description { width: 85%; }
+.event-heading { height: auto; padding: 10px; line-height: normal; }
+.event-heading .icon { margin-top: 0; }
+.event-heading .button { float: none; margin: 10px 0 0 0 !important; }
+/*Event Post complete----------------------------------------------------------------------*/
+
+
+/*Create new event start----------------------------------------------------*/
+.create-event-form .input-large { width: 93%; }
+.form-group .form-control { margin-left: 0; }
+.create-event-form textarea { width: 93%; }
+.date-time input.input-small { width: 85%; }
+.date-time .at { padding: 7px 13px; }
+.sell-tickets ul, .sell-ticket-confirm { width: auto; }
+.sell-tickets li { width: auto; display: block; }
+.sell-ticket-confirm .checkbox label:before { bottom: 26px; }
+.date-time .date, .date-time .time { width: 144px; padding-right: 0; }
+.date-time .date input.input-small, .date-time .time input.input-small { width: 84%; }
+/*Create new event complete----------------------------------------------------*/
+
+/*Create new form start--------------------------------------------------------------------------------*/
+.benefit-membership .form-control .add-member { top: 1px; right: 1px; }
+.error-icon { margin: 0 10px 0 0; }
+/*Create new form complete--------------------------------------------------------------------------------*/
+
+/*Connection start----------------------------------------------------------------------*/
+.student-connection { width: 91%; }
+/*Connection complete----------------------------------------------------------------------*/
+
+/*Invite students start-------------------------------------------------------------------*/
+.drop-campus-tabs ul li { margin: 0 5px 0 0 !important; font-size: 12px !important; padding: 0 !important; }
+.drop-campus-tabs ul li a { margin: 0 10px 0 0 !important; font-size: 12px !important; padding: 0 !important; }
+.invite-lt .search-feed input { width: 90%; }
+.invite-lt { width: 100%; margin: 0; }
+.invite-rt { clear: both; margin: 20px 0 0 0; width: 100%; }
+/*Invite students complete-------------------------------------------------------------------*/
+
+
+/*Mentor Groups start------------------------------------------------*/
+.mentor-list li { width: 100%; }
+.mentor-list li .mentor-pic-bg { left: 35%; }
+/*Mentor Groups complete------------------------------------------------*/
+
+/*11-07-2014-----------------------------------------------------------*/
+.content_heading_main h1 span.#subscription_button_span {
+float: right;
+}
+.heading-right .float-right { float: none; }
+.event-pic img, .event-pic { width: 80px; height: 80px; }
+.event-list .event-info { width: 68%; }
+.event-list .event-info1 { border-right: 0; }
+.event-list .event-info2 { padding: 0; }
+.edit-classes .search_class { margin-bottom: 10px; }
+.edit-classes button.ui-multiselect.ui-widget { margin: 0 !important; }
+.list-title { display: inline-block; padding: 0; width: 100%; }
+.list-btn { display: inline-block; }
+.search-mentor { position: inherit; right: inherit; top: inherit; }
+.feed-details-left-col { float: none; width: 100%; border-bottom: 1px solid #dfdfdf; margin-bottom: 0; padding-bottom: 0 !important; }
+.feed-details-right-col { float: none; width: 100%; }
+.view-btn-mrgnbtm, .msg-btn-mrgnbtm { margin-bottom: 5px !important; }
+.filter-select-box { float: none; margin: 0; }
+.filter-select-box button { width: 100% !important; margin-bottom: 10px; }
+.search-feed #filter_input:focus { width: 83%; }
+.sell-form .form-group label { text-align: left; width: 100%; }
+.sell-form .form-group .form-control { float: left; width: 100%; }
+.sell-header-bar .close { top: 20px; }
+#club-staff_members .icon { margin-right: 10px; }
+.side-box .heading { overflow: hidden; }
+.staff-member .add-new-link { float: left; padding: 0; clear: both; width: 100%; text-align: left; }
+.color_code_legend li { padding: 0.4em 7px; text-transform: capitalize; font-size: 15px; }
+.heading-right .profile-actions .float-right { float: right; }
+/*.content_heading_main h1 span{float: right;}*/
+.event-pic, .event-pic img { width: 60px; height: 60px; }
+.create-mentor-group .remove-btn-mrgn { font-size: 13px; margin-left: 5px; margin-top: 5px; padding: 0 3px; }
+.column-two .form-group { width: 39%; }
+.column-two .form-group input { width: 75%; }
+.profile-detail { width: 74%; }
+.profile-right { float: none; width: 100%; margin-top: 15px; }
+.profile-right .button { line-height: 50px; height: 50px; display: inline-block; padding: 0 14px !important; width: auto; }
+.profile-right .avtarbox { display: inline-block; vertical-align: top; margin-top: 0; }
+.profile-extracur ul { width: 100%; }
+.profile-extracur li { width: 100%; }
+.profile-extracur li .icon-extracur { margin-right: 5px; }
+.profile-extracur li .detail { width: 88%; }
+.new-message-form .form-group input { width: 58%; }
+.new-message-form .form-group textarea { width: 100%; }
+.best_answer_container { padding: 10px; }
+table.mceLayout { width: 100% !important; }
+.add_answer_choice .float-right { float: none; }
+/*14-07-2014------------------------------------------------------------------------------------------*/
+.service-staff-tabs .drop-campus-tabs ul li a, .club-tabs .drop-campus-tabs ul li a { padding: 0 !important; font-size: 12px !important; }
+.service-staff-tabs .drop-campus-tabs ul li a span, .club-tabs .drop-campus-tabs ul li a span { display: none; }
+.club-event-pic { width: 70px; height: 70px; margin: 0 10px 0 0; }
+.club-event-detail { width: 74%; }
+.club-event-right { float: none; width: 100%; margin-top: 15px; }
+.edit-staff .form-group .control-label { width: 44%; display: inline-block; margin-right: 10px; }
+#club-form #club-admins input, #club-form #group-members input, #club-form #club-committees input, .edit-staff .new-row input { width: 37%; margin-right: 10px; }
+.btn-remove-ipad { background: none; /*background: url(/assets/images/icon-close.png) no-repeat;*/ width: 13px; height: 14px; line-height: 15px; margin: 10px 0 0 5px; padding: 0; overflow: hidden }
+.btn-remove-ipad:before { content: "\e678"; font-family: "icomoon"; font-size: 21px; left: -4px; line-height: 1; position: relative; text-transform: none; top: -3px; color: #d6d6d6 }
+.btn-remove-ipad:after { background: none; }
+.drop-time-controls input.start-time-input, .drop-time-controls input.end-time-input { width: 20%; }
+.drop-time-controls input.input-small { width: 37%; }
+.type-benefit input { width: 43%; }
+.dataTables_length { width: 100%; }
+.dataTables_filter { float: none; width: 100%; text-align: left; }
+.dataTables_info { width: 100%; }
+.dataTables_paginate { float: none; clear: both; display: block; width: 100%; text-align: left; margin: 0; }
+.dataTables_info, .dataTables_paginate { margin-bottom: 10px; }
+#office-locations .input-large { width: 84%; margin-right: 10px; }
+#dropinTable .btn-remove-ipad { margin-left: 10px; }
+#form-enroll .search .search_class { width: 84%; }
+/*15-07-2014------------------------------------------------------------------------------------*/
+.profile-class li .detail { width: 84%; }
+.attendance { float: none; display: block; clear: both; }
+#club-form select.small_dd { padding: 6px 2px; width: 18%; }
+.add-consult-time .rows label { float: left; width: 100%; }
+.add-consult-time .rows select { margin: 0 0 10px 0; width: 85%; }
+.rows .remove-item, .class_tags .new-row .remove-item { top: 13px; }
+.classes-step-box .rows { width: 100%; }
+/*16-07-2014----------------------------------------------------------------------*/
+.notification-menu .top-arrow { right: 10px; }
+.privacy-setting ul li .title { width: 61%; }
+.user-info-tbl input.input-large { width: 84%; }
+.price-width input { width: 23% !important; }
+.side_max { width: 100%; }
+.sidebar_content input { width: 90px !important; }
+.sidebar_staffs button.save-staff_member, .sidebar_staffs button.remove-staff_member, .sidebar_content button.remove-staff_member, .sidebar_content button.save-staff_member, .sidebar_content button.remove-admin-member, .sidebar_content button.save-admin_member_rhs { padding: 0 9px; margin: 0; }
+/*16-07-2014----------------------------------------------------------------------*/
+.club-table#no-more-tables td { padding-left: 25%; }
+.club-table input { width: 90% !important; }
+.buy-ticket-table#no-more-tables td { padding-left: 35%; }
+/*Analytic pages-----------------------------------------------------*/
+.middle-full-section { width: 74%; margin: 0 0 0 10px; }
+#side_menu_admin .menu_icon { margin-right: 10px; }
+#side_menu_admin { font-size: 13px; }
+.students-info li { margin-right: 5px; width: 24%; min-height: 98px; vertical-align: top; }
+.analytic-listing th { font-size: 14px; }
+.transformer-tabs ul { border-bottom: 0; overflow: hidden; position: relative; border: 1px solid #e1e1e1; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;/* fallback */ background: url(/assets/images/arrow-down-grey.png) no-repeat 95% 23px; background-color: #fff; line-height: inherit }
+.transformer-tabs ul.open a { position: relative; display: block; padding: 0 10px !important; margin: 0; }
+.transformer-tabs ul li { display: block !important; margin: 0 !important; padding: 0 10px; line-height: 50px; }
+.drop-campus-tabs.transformer-tabs ul li a.active { cursor: pointer !important; margin: 0 !important; background: transparent; position: relative; border-bottom: 0 !important; padding: 0 10px !important; }
+.transformer-tabs a { position: absolute; top: 0; left: 0; width: 97%; height: 100%; padding: 0 10px; line-height: inherit }
+.drop-campus-tabs ul li a:hover, .drop-campus-tabs ul li a, .drop-campus-tabs ul li.active a { border: 0 !important; }
+.transformer-tabs ul li a { display: none; }
+.transformer-tabs ul li a.active { display: block; }
+.transformer-tabs ul.open { display: block; }
+select { position: relative; background: #ffffff url(/assets/images/arrow-down-grey.png) no-repeat 95% center !important; cursor: pointer; padding: 8px 25px 8px 10px; appearance: none; -moz-appearance: none; -webkit-appearance: none; -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08); -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08); box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08); }
+select:before { position: absolute; content: "\e6d2"; font-family: "icomoon"; font-style: normal; font-variant: normal; font-weight: normal; line-height: 1; text-transform: none; position: absolute; left: 13px; top: 11px; }
+/*10-02-2015-------------------------------------------------------------------------*/
+.side_actions { float: right; width: auto; margin: 10px 0 0 0; }
+.staff-member-details .icon { margin: 0 10px 0 0; }
+.best_answer_container .post-details { width: 50%; }
+.top-likes { width: 29%; }
+.top-answer { font-size: 13px; }
+.questions.padder-left-right { padding: 10px; }
+.feedbox-list .feed-post-section li { padding: 0 10px !important; }
+.padder-left-right .post-answers .post_answers_container .post-details { width: 81%; }
+.activity_answer_box.padder-answer-image { padding: 0 10px 10px; width: 94%; }
+.white-box .feed-post-section .padder { padding: 10px; }
+.attachment-small { width: 87% !important; }
+.post-anonymous .feed-padding { top: 92px !important; }
+.staff-member-details .student-details { width: 71%; }
+.reset-link { margin: 8px 20px 10px 0; }
+.filter-connection-suggestion { width: 100%; float: none; }
+.filter-connection-suggestion .ms-choice { width: 250px !important; }
+.search-connection-suggestion .search-control { width: 288px; }
+.search-connection-suggestion .search-control input { width: 100%; }
+.search-connection-suggestion .search_icon { right: -20px; }
+.connection-suggestion-list li { width: 46%; margin: 0 5px 40px; }
+.connection-suggestion-list li .connection-suggestion-name { font-size: 16px; }
+.students-may-know .rhs-link { width: 100%; }
+.post-anonymous .feed-padding-ra { top: 75px; }
+.side_details .student-details { width: 71%; }
+.search-mentor .search-control { width: 95%; }
+.filter-mentor { float: none; }
+.campus-info li .info-sec2 { width: 42%; }
+.seller-full-description-bar .seller-details, .seller-full-description-bar .seller-details a { font-size: 15px; }
+.padder .comments_right { width: 87%; }
+.club-event-pic img { width: 70px; height: 70px; overflow: hidden; }
+.filter-mentor .ms-choice { width: 248px !important; }
+.staff-member-details .mentee-name { width: 70%; }
+.sidebar_staffs input.search-user { width: 89px !important; }
+/*11-02-2015-------------------------------------------------------------------------*/
+.seller-full-description-bar .seller-member-details { width: 100%; margin-bottom: 10px; text-align: left; }
+.seller-full-description-bar .seller-member-details.last { width: 100%; }
+.padder .comments_right { width: 83%; }
+#import-user.btn-blue, #import-csv.btn-blue { padding: 8px !important; font-size: 12px; }
+.connection-suggestion-list li .connection-suggestion-pic-bg { left: 45px; }
+/*12-02-2015-------------------------------------------------------------------------*/
+.advanced_connection_suggestion .side_details { width: 100%; }
+.account-setting-btns .text { float: right; margin-bottom: 10px; }
+.change-pw-form .input-large { width: 90%; }
+.anonymous-details .title { margin-bottom: 5px; }
+.footer-section { width: 21%; }
+.connect-us { width: 17%; }
+.footer-logo { width: 20%; }
+#my_clubs .list-icon { display: inline-block; vertical-align: middle; width: 50px; height: 50px; overflow: hidden; padding: 0; margin: 0 15px 0 0; }
+#my_clubs .list-title-club { display: inline-block; vertical-align: middle; width: 77%; padding: 0; }
+#my_clubs .list-btn { display: block; width: 100%; margin: 10px 0 0 0; }
+.week-title { width: 100%; float: none; clear: both; text-align: left; }
+.calendar-viewer #event-form-shower { margin: 10px 0 0 0 !important; }
+.event_type_box div.radio-cust label { padding: 0 3px 0 18px; }
+.class-fields #unit_id { width: 100%; margin: 0 0 10px 0; padding: 13px 30px 13px 10px; }
+.class-fields button { width: 100% !important; }
+.class-manual-fields .input-large { width: 100%; padding: 13px 30px 13px 10px; }
+.class-manual-fields .input-medium { width: 100%; margin-bottom: 10px; }
+.class-manual-fields .input-small { padding: 13px 4px; width: 32%; }
+.activity-fields .form-group .input-medium { width: 92%; margin-bottom: 10px; }
+.activity-fields .form-group .input-small { width: 31%; padding: 13px 4px; }
+.repeat-activity #activity_repeat-event-value { width: 75%; margin-bottom: 10px; }
+.repeat-activity .input-small { width: 29% !important; }
+.assessment-fields input.input-large { width: 92%; }
+.assessment-fields select.input-large { width: 100%; }
+.assessment-fields .input-small { width: 29.5%; }
+.assessment-fields #repeat-event-value { width: 47%; margin-bottom: 10px; }
+.assessment-fields label.label-margin { margin-left: 0; }
+.timetable_container { width: 91%; }
+/*16-02-2015-------------------------------------------------------------------------*/
+.custom-wrapper { width: 100%; }
+/*24-02-2015-------------------------------------------------------------------------*/
+.connection-list li { width: 40%; min-height: 80px; }
+.connection-list li .icon { width: 50px; height: 50px; }
+.connection-list li .stud-name { width: 66%; }
+/*25-02-2015-------------------------------------------------------------------------*/
+.study-timer .top-arrow { right: 5px; }
+.study-timer a { padding: 20px 0 10px 8px; }
+ul.poll_answers_list .radio-cust label:before { top: 4px; }
+.mce-flow-layout-item { margin-right: 0; margin-bottom: 0; }
+.mce-flow-layout { padding-bottom: 20px; }
+.search-area .search-feed input { width: 83%; }
+.filter-connection-suggestion .select2-container .select2-choice { width: 195px; }
+.account_icon { margin: 9px 0 0 0; }
+/*session history css*/
+.event-heading .float-left { float: none; }
+.post .event-details .event-pic { display: none; }
+.mentors-search-control .form-control { width: 100% !important }
+.mentors-search-control .form-control .ms-parent { width: 100% !important }
+.mentors-search-control .mentors-filters1 .ms-parent { width: 100% !important; }
+.progress-bar-grey, .progress-bar-green { height: 15px; }
+.sidebar-connection { text-align: center; }
+.profile-complete .side_connection { margin-bottom: 10px; width: 100%; }
+.RA-comment-box-content textarea { width: 75% !important; }
+/* 27/07/15 - #4923 - Jaymit - Feeds general write a comment box as per psd design */
+.feed-general-comment-box-content textarea { width: 75% !important; }
+.activity_feed .post-link-icon { margin: 0 10px 0 0; }
+.activity_feed .comment-box { padding: 10px; width: 91%; }
+/*4950 - retina display - 25/8/2015*/
+.notification-msg p { display: inline-block; margin-left: 15px; width: 82%; }
+.profile-title-name { width: 84%; }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1280px) {
+.drop-campus-tabs ul li a span.icon-info-tab { /*float: left; margin: 0px 9px 0 0; */ }
+.drop-campus-tabs ul li a span.icon-event { margin-top: -4px; }
+.list-box-main { width: 100%; box-sizing: border-box; }
+.class-fields select { height: 70px; text-indent: 10px }
+.activity-fields select { height: 48px; text-indent: 10px }
+.assessment-fields select { height: 48px; text-indent: 10px }
+.post .event-details .event-pic { width: 70px; }
+.post .event-details .event-pic img { height: 70px; width: 70px; }
+.RA-comment-box-content textarea { width: 80% !important; }
+/* 27/07/15 - #4923 - Jaymit - Feeds general write a comment box as per psd design */
+.feed-general-comment-box-content textarea { width: 80% !important; }
+/*4950 - retina display - 25/8/2015*/
+.notification-msg p { display: inline-block; margin-left: 15px; width: 82%; }
+/*.schedule-post-btn{ margin:0}*/
+}
+
+@media only screen and (max-width: 800px) {
+.post-anonymous .feed-padding { top: 75px !important; }
+/*session history css*/
+.event-heading .float-left { float: none; }
+.post .event-details .event-pic { display: none; }
+.messages-container .white-box .padder { padding: 10px; }
+.messages-container .post-details { margin-left: 20px; width: 76.5%; }
+}
+
+@media only screen and (max-width: 768px) {
+.post-anonymous .feed-padding { top: 92px !important; }
+.search-feed .icon-serach { right: 0; }
+.activity_feed .post-link-icon { margin: 0 10px 0 0; }
+.activity_feed .comment-box { padding: 10px; width: 90%; }
+.activity_feed .comment-box-detail { width: 79%; }
+}
+
+/***************************************************************************************
+*MEDIA QUERY FOR DEVICE WIDTH MORE THEN 768 STARTS
+**************************************************************************************/
+@media only screen and (min-width: 768px) {
+.custom-wrapper .left { width: 122px; }
+.answers_ra_container .answerer-pic { margin: 0 10px 0 0; }
+.padder .post-answers .answers_ra_container .post-details { width: 82%; }
+/*aaditya bharucha - #4664*/
+.campus-info.mentors-info .info-sec2 { width: 100%; }
+/*aaditya bharucha -4664*/
+.mentor-profile-content { padding: 15px; }
+.mentor-profile-content .group-title { width: 100%; }
+.mentor-prof-img { border-radius: 30px; display: inline-block; height: 30px; margin: 0 10px 5px 0; position: relative; text-align: center; vertical-align: middle; width: 30px; }
+.mentor-prof-img img { border-radius: 30px; max-width: 30px; }
+.mentor-profile-content .group-name { text-align: left }
+.group-label { color: #464646; float: left; margin-right: 8px; margin-top: 3px; min-width: 106px; text-align: right; }
+.mentor-profile-content .group-name { float: left; width: 61%; }
+#load_mentors_section .join-group { margin-bottom: 20px; }
+.mentor-profile-content .group-title h3 { color: #464646; float: left; margin-top: 3px; min-width: 106px; text-align: right; }
+.group-name-title { word-wrap: break-word; float: left; width: 61%; color: #464646; font-family: "SoleilBk"; font-size: 16px; }
+/*29/7/2015 - #4923 - aaditya bharucha - universityFeeds desing as per psd*/
+.feed-general-comment-box-content .feed-general-comment-container { background: #fff; border: 1px solid #e1e1e1; border-radius: 5px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08); color: #000; font-family: "SoleilLt", sans-serif; font-size: 14px; outline: medium none; padding: 10px 10px 12px; }
+.feed-box-main-marketplace .feedbox-list li, .feed-box-main-ucroonews .feedbox-list li { padding: 15px 10px; }
+.feed-details-right-col .seller-name-section.padder { padding: 15px 10px }
+.feed-box-main-generalfeed .feedbox-list li { padding: 15px 10px }
+.feed-box-main-generalfeed .white-box-container .padder { padding: padding: 15px 10px
+}
+.feed-box-main-generalfeed .white-box-container .questions .answers .padder { padding: 15px 5px; }
+.feed-box-main-ucroonews .feed-general-white-box .padder { padding: 15px 10px; }
+.feed-more-options-lt { padding: 20px 0; }
+.feed-more-options-lt .like-default { margin-top: 0; margin-left: 0 }
+}
+
+/***************************************************************************************
+*MEDIA QUERY FOR DEVICE WIDTH MORE THEN 992 STARTS
+**************************************************************************************/
+@media only screen and (min-width: 992px) {
+.messages-container .post-details { width: 81.5%; }
+#message_menu .msg-details { width: 80%; }
+.answers_ra_container .answerer-pic { margin: 0 20px 0 0; }
+.group-name-title { width: 66%; }
+.mentor-profile-content .group-name { width: 66%; }
+}
+
+/***************************************************************************************
+*MEDIA QUERY FOR DEVICE WIDTH MORE THEN 1024 STARTS
+**************************************************************************************/
+@media only screen and (min-width: 1024px) {
+.padder .post-answers .answers_ra_container .post-details { width: 85%; }
+/*aaditya bharucha - #4664*/
+.campus-info.mentors-info .info-sec2 { width: 67%; }
+/*aaditya bharucha -4664*/
+.mentor-profile-content { padding: 15px 20px; }
+.mentor-profile-content .group-title { width: 84%; }
+.group-name-title { width: 67%; }
+.group-label { text-align: right; }
+.mentor-profile-content .group-name { width: 66%; }
+}
+
+/***************************************************************************************
+*MEDIA QUERY FOR DEVICE WIDTH MORE THEN 1280 STARTS
+**************************************************************************************/
+@media only screen and (min-width: 1280px) {
+.messages-container .white-box .padder { padding: 24px 20px 24px 30px; }
+.messages-container .post-details { margin-left: 37px; width: 83.5%; }
+#message_menu .msg-details { width: 81%; }
+.custom-wrapper .left { width: 210px; }
+.answers_ra_container .answerer-pic { margin: 0 20px 0 0; }
+.padder .post-answers .answers_ra_container .post-details { width: 88%; }
+.group-name-title { width: 74%; }
+/*29/7/2015 - #4923 - aaditya bharucha - universityFeeds desing as per psd*/
+.feed-general-comment-box-content .feed-general-comment-container { padding: 10px 30px 1px; }
+.feed-general-comment-box-content textarea { min-height: 39px; }
+.feed-box-main-marketplace .feedbox-list li { padding: 15px 20px 18px; }
+.feed-details-right-col .seller-name-section.padder { padding: 15px 15px 15px 17px }
+.feed-box-main-generalfeed .feedbox-list li, .feed-box-main-ucroonews .feedbox-list li { padding: 20px 30px 18px; }
+.feed-box-main-generalfeed .white-box-container .padder { padding: 20px 28px 11px; }
+.feed-box-main-ucroonews .comments_right { width: 478px; }
+.feed-box-main-marketplace .feed-general-comment-container { padding: 10px 20px 1px; }
+.feed-box-main-generalfeed .white-box-container .questions .answers .padder { padding: 15px 5px; }
+.feed-box-main-ucroonews .feed-general-white-box .padder { padding: 20px 28px 11px; }
+.feed-more-options-lt { padding: 0 }
+.feed-more-options-lt .like-default { margin-top: 18px; margin-left: 10px }
+}

@@ -1,0 +1,11 @@
+<div class="simple-img" ng-if="activity.body.object.linked_object_img_url">
+   <img ng-src="{{activity.body.object.img_url}}" alt="{{activity.body.object.name}}">
+</div>
+<div class="post-txt" ui-sref="news.details({id: activity.body.object.id})">
+   <p>{{activity.body.object.name}}</p>
+</div>
+<comments ng-if="!notifications"
+   feed-type="{{activity.title.object.type}}"
+   feed-type-id="{{activity.title.object.id}}"
+   post-id="{{activity.body.object.id}}">
+</comments>

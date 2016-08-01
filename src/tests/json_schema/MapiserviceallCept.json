@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "joined": {
+      "type": "array",
+      "items": []
+    },
+    "headings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "headings_data": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "image_url": {
+                "type": "string"
+              },
+              "faculty": {
+                "type": "string"
+              },
+              "campus": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "creator": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "photo_url": {
+                    "type": "string"
+                  },
+                  "group_id": {
+                    "type": "integer"
+                  },
+                  "user_type": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "joined",
+    "headings",
+    "headings_data"
+  ]
+}

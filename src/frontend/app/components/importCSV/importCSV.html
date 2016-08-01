@@ -1,0 +1,5 @@
+<label for="import-file">Add by File</label>
+<div id="import-file">
+   <button ng-hide="csvFiles.length" type="button" class="btn-green" ng-click="importEmailsList()">Import CSV file</button>
+   <file-list list="csvFiles" can-edit></file-list>
+</div>

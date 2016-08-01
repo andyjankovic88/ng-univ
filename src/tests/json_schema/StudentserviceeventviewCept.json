@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "service_name": {
+          "type": "string"
+        },
+        "is_service_admin": {
+          "type": "boolean"
+        },
+        "is_service_follower": {
+          "type": "boolean"
+        },
+        "upcoming_events": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "title": {
+                "type": "string"
+              },
+              "pic": {
+                "type": "string"
+              },
+              "start_date": {
+                "type": "string"
+              },
+              "start_time": {
+                "type": "string"
+              },
+              "end_date": {
+                "type": "string"
+              },
+              "end_time": {
+                "type": "string"
+              },
+              "timezone": {
+                "type": "string"
+              },
+              "campus": {
+                "type": "string"
+              },
+              "location": {
+                "type": "string"
+              },
+              "max_attendees": {
+                "type": "string"
+              },
+              "creator": {
+                "type": "object",
+                "properties": {
+                  "user_id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "profile_pic": {
+                    "type": "string"
+                  }
+                }
+              },
+              "atendees_list": {
+                "type": "array",
+                "items": []
+              },
+              "is_joined": {
+                "type": "boolean"
+              },
+              "is_event_creater": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "past_events": {
+          "type": "array",
+          "items": []
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

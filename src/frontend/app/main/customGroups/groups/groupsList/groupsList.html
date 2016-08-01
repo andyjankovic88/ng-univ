@@ -1,0 +1,73 @@
+<div class="clubs-list-section">
+   <h2>
+      <svg class="ico-add-user pink">
+         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-add-user"></use>
+      </svg>
+      <span>Trending Groups</span>
+   </h2>
+   <div class="section trending-list">
+      <div class="item" ng-repeat="group in trending_group" ui-sref="customGroupsFeed({id:group.id})">
+         <figure class="img-holder">
+            <a href><img class="photo" alt="avatar-image" ng-src="{{group.picture}}" ng-if="group.picture.length"></a>
+         </figure>
+         <div class="item-info">
+            <h3>
+               <a href>{{group.name}}</a>
+               <svg class="tick" ng-if="group.is_joined"><use xlink:href="#profile-tick" /></svg>
+            </h3>
+            <span>{{group.category_name}}</span>
+            <span ng-if="group.members">{{group.members}} members</span>
+         </div>
+      </div>
+   </div>
+   <div class="filter-section">
+     <form name="filtersForm">
+      <ul>
+         <li dropdown dropdown-trigger>
+            <a href="#" class="blue-link">Filter Groups</a>
+            <div dropdown-body id="filter-dropdown" class="drop-holder clearfix">
+               <div class="arrow-holder">
+                  <span class="arrow-top-w"></span>
+                  <span class="arrow-top"></span>
+               </div>
+               <div class="drop-content">
+                  <ul class="edit-drop">
+                     <li ng-repeat="category in filters">
+                        <div class="checkbox">
+                           <input id="{{category.category_name | removeSpaces}}" type="checkbox" ng-model="filtersForm[category.id]" ng-change="filterList({{category.id}})">
+                           <label for="{{category.category_name | removeSpaces}}">
+                              <div class="ico">
+                                 <svg class="ico-{{category.category_name | removeSpaces}}">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" ng-href="#icon-{{category.category_name | removeSpaces}}"></use>
+                                 </svg>
+                              </div>
+                              <span>{{category.category_name}}</span>
+                           </label>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </li>
+      </ul>
+      </form>
+   </div>
+   <div class="section" infinite-scroll='loadNextPage()' infinite-scroll-disabled='listRequestInProgress' infinite-scroll-distance='1' infinite-scroll-container='".middle-section"'>
+      <div class="item" ng-repeat="group in groups" ui-sref="customGroupsFeed({id:group.id})">
+         <figure class="img-holder">
+            <a href>
+               <img class="photo" ng-src="{{group.picture}}" ng-if="group.picture.length" alt="avatar-image">
+            </a>
+         </figure>
+         <div class="item-info">
+            <h3>
+               <a href>{{group.name}}</a>
+               <svg class="tick" ng-if="group.is_joined"><use xlink:href="#profile-tick" /></svg>
+            </h3>
+            <span>{{group.category_name}}</span>
+            <span ng-if="group.members">{{group.members}} members</span>
+         </div>
+      </div>
+   </div>
+   <loader is-active="loaderActive" position="static"></loader>
+</div>

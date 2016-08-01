@@ -1,0 +1,66 @@
+.header-search {
+    height: 100%;
+    position: relative;
+    .ico-search {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -9px;
+        cursor: pointer;
+        height: 18px;
+        width: 18px;
+        use {
+            fill: rgba(255, 255, 255, 0.6);
+        }
+    }
+    .input-holder {
+        width: 100%;
+        padding: 0 50px;
+        height: 100%;
+        font-size: 0px;
+        input {
+            vertical-align: middle;
+            background-color: transparent;        
+            min-width: 200px;
+            width: 100%;
+            color: white;
+            font-size: 18px;
+            border: none;
+            &::-webkit-input-placeholder {
+                color: #93B8E7;
+                font-size: 18px;
+            }
+            &::-moz-placeholder {
+                color: red;
+                font-size: 18px;
+            }
+            &:-moz-placeholder {
+                color: red;
+                font-size: 18px;
+            }
+            &:-ms-input-placeholder {
+                color: red;
+                font-size: 18px;
+            }
+            &:focus {
+                outline-width: 0;
+            }
+        }
+
+    }
+    .close-btn {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -7px;
+
+
+        cursor: pointer;
+        height: 14px;
+        width: 14px;
+        vertical-align: middle;
+        use {
+            fill: white;
+        }
+    }
+}

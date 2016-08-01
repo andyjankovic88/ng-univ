@@ -1,0 +1,144 @@
+@CHARSET "UTF-8";
+
+.connection-inclass	{
+	background:#ff0000;width: 10px; height: 10px; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; position: absolute; top: 20px; right: 0px;
+}
+
+.connection-notaround	{
+	background: maroon;width: 10px; height: 10px; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; position: absolute; top: 20px; right: 0px;
+}
+
+.connection-finished	{
+	background: orange;width: 10px; height: 10px; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; position: absolute; top: 20px; right: 0px;
+}
+
+.connection-arriving	{
+	background:#91e2fe;width: 10px; height: 10px; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; position: absolute; top: 20px; right: 0px;
+}
+
+.connection-free	{
+	background: #26b505;width: 10px; height: 10px; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; position: absolute; top: 20px; right: 0px; 
+}
+
+.connection-lazy	{
+	border-left: 5px solid #2bb8bb;
+}
+
+.on-campus-connection	{
+	clear: both;
+	height: 40px;
+	cursor: pointer;
+	margin: 8px 0 0 0;
+}
+
+.on-campus-connection img	{
+	float: left;
+	height: 40px;
+	width: 40px;
+	overflow: none;
+	margin-right: 5px;
+	margin-bottom: 10px;
+}
+
+.on-campus-name	{
+	font-family: verdana;
+	font-size: 10px;
+	line-height: 14px;
+}
+
+.on-campus-name a {
+	color: #000;
+}
+
+
+#checkin-menu-container	{
+	position: relative;
+}
+
+#checkin-header h3	{
+	float: left;
+	font-size: 17px;
+	color: #676668;
+	margin-top: 8px;
+	font-weight: bold;
+	margin-left: 3px;
+}
+
+#checkin-header	{
+	vertical-align: middle;
+	clear: both;
+	height: 35px;
+}
+
+#checkin-button	{
+	position: relative;
+	padding-top: 1px;
+	padding-right: 5px;
+	padding-left: 2px;
+	float: right;
+	margin-top: 3px;
+	margin-right: 3px;
+	cursor: pointer;
+	border: 1px solid #9FB9C8;
+	font-weight: bold;
+	height: 25px;
+	text-align: right;
+}
+
+#checkin-button img	{
+	margin-left: 4px;
+	vertical-align: middle;
+	margin-bottom: 3px;
+}
+
+
+#checkin-menu	{
+	display: none;
+	position: absolute;
+	top: 100%;
+	right: -1px;
+	cursor: pointer;
+	z-index: 9999;
+	box-shadow: 2px 2px 2px #888;
+	-moz-box-shadow: 2px 2px 2px #888;
+	-webkit-box-shadow: 2px 2px 2px #888;
+	margin-top: -4px;
+	margin-right: 5px;
+}
+
+
+.checkin-menu-item	{
+	padding: 2px 10px 2px 6px;
+	border: 1px solid #9FB9C8;
+	font-weight: bold;
+}
+
+#on-campus-list-inner
+{	
+	padding: 0 0 10px 0;
+	outline: none;
+	overflow-x: hidden;
+}
+
+#num-on-campus, .sidebar-left-header	{
+	color: #ffffff;
+	background-color: #464646;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#4f4f4f), to(#3e3e3e));
+	background-image: -webkit-linear-gradient(top, #4f4f4f, #3e3e3e);
+	background-image:    -moz-linear-gradient(top, #4f4f4f, #3e3e3e);
+	background-image:      -o-linear-gradient(top, #4f4f4f, #3e3e3e);
+	background-image:         linear-gradient(to bottom, #4f4f4f, #3e3e3e);
+	text-transform: uppercase;
+	font-size: 11px;
+	padding: 5px 5px 5px 10px;
+}
+
+#num-on-campus a.btn.btn-light_blue {
+	height: 20px;
+	margin: 0;
+	float: right;
+	padding-top: 1px;
+	line-height: 19px;
+	padding-right: 8px;
+	padding-left: 8px;
+}

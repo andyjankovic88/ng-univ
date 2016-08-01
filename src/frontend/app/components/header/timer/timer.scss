@@ -1,0 +1,132 @@
+    .vert-helper {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    .timer {
+        height: 100%;
+        color: white;
+        .subjects-first {
+            float: left;
+            margin: 0 10px;
+            height: 100%;
+            li {
+                height: 100%;
+                display: inline-block;
+                margin: 0 10px;
+                .icon {
+                    margin-right: 8px;
+                    display: inline-block;
+                    height: 42px;
+                    width: 42px;
+                    border: white solid 2px;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 54px;
+                    svg {
+                        height: 23px;
+                        width: 20px;
+                       use {
+                          fill: white;
+                       }
+                    }
+                }
+                &.active {
+                    .icon {
+                        background-color: white;
+                        svg use {
+                            fill: $color-red;
+                        }
+                    }
+                }
+                span {
+                    vertical-align: middle;
+                }
+            }
+        }
+        .extend-list-btn {
+            color: $color-green;
+            font-size: 10px;
+            margin: 0 20px;
+            display: inline-block;
+            position: relative;
+        }
+        .popup-notification {
+            color: #6e6e6e;
+            top: 17px;
+            font-size: 14px;
+            left: -12px;
+            right: auto;
+            .arrow-top {
+                right: auto;
+                left: 21px;
+            }
+            .popup-holder {
+                width: auto;
+                display: block;
+                .subjects-additional {
+                    margin: 14px 0 14px 0;
+                    li {
+                        min-width: 150px;
+                        display: block;
+                        padding: 9px 0 9px 13px;
+                        svg {
+                            fill: $color-red;
+                            height: 20px;
+                            width: 16px;
+                            vertical-align: middle;
+                            margin-right: 6px;
+                        }
+                        span {
+                            vertical-align: middle;
+                        }
+                        &.active {
+                            background-color: #f8f8f8;
+                        }
+                    }
+                }
+            }
+        }
+        .right-btns {
+            float: right;
+            height: 100%;
+            margin: 0 9px;
+        }
+        .counter {
+            margin: 0 10px;
+            font-size: 18px;
+            height: 100%;
+            display: inline-block;
+            span {
+                vertical-align: middle;
+            }
+        }
+        .close-btn {
+            cursor: pointer;
+            height: 14px;
+            width: 14px;
+            vertical-align: middle;
+           use {
+              fill: white;
+           }
+        }
+        .btn {
+            color: white;
+            display: inline-block;
+            width: 130px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            border-radius: 2px;
+            cursor: pointer;
+            margin: 0 75px 0 24px;
+            vertical-align: middle;
+            &.start {
+                background-color: $color-green;
+            }
+            &.stop {
+                background-color: $color-red;
+            }
+        }
+    }

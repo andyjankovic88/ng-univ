@@ -1,0 +1,32 @@
+<!-- university -->
+<div class="university rhs-connections">
+   <!-- side-box -->
+    <div class="side-box invite-students at-univerity">
+        <div class="heading">
+        <h1><span>{{title}}</span><span class="amount"><a href="#">{{list.length}}</a></span></h1></div>
+        <section class="section">
+            <ul class="list-inner">
+                <li ng-repeat="(key, value) in list | limitTo:limit" ui-sref="profile({id: value.user_id})">
+                    <div>
+                        <figure class="img-holder">
+                            <img class="photo" ng-src="{{value.image_url}}">
+                        </figure>
+                        <div class="popup-info">
+                            <h3>
+                                <a href="#" ui-sref="profile({id: value.user_id})">{{value.name}}</a>
+                                <div class="options-icons">
+                                    <!-- <svg class="icon-hide"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#connections-eyehide"></use></svg> -->
+                                    <a href ng-click="sendConnectRequest($index, value.user_id); $event.stopPropagation();"><svg  class="icon-add"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#popup-plus"></use></svg></a>
+                                </div>
+                            </h3>
+                            <div ng-if="value.summary_options" class="message-update" ng-repeat="(key, value) in value.summary_options">{{key}}: {{value}}</div>
+                            <div ng-if="value.user_relationship_summary_text" class="text" ng-bind-html="value.user_relationship_summary_text"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <span class="collapse seeAll link" ng-if="!isExpandable"><a href="#" ui-sref="connectionsSuggestions">See all</a></span>
+    <span class="collapse" ng-if="isExpandable && list.length > collapsedLimit" ng-click="switchState()">{{isCollapsed ? "Expand" : "Collapse"}}</span>
+</div>

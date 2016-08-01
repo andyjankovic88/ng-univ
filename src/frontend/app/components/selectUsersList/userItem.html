@@ -1,0 +1,15 @@
+<figure>
+    <a href="#" ng-click="data.added = !data.added" ng-if="!linkToProfile">
+        <span class="photo-holder">
+               <img ng-src="{{data.photo_url}}">
+               <svg ng-show="data.added" class="status ico-check"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-check"></use></svg>
+            </span>
+        <strong class="user-name">{{data.name}}</strong>
+    </a>
+    <a href="#" ui-sref="profile({id: data.id})" ng-if="linkToProfile">
+        <span class="photo-holder">
+               <img ng-src="{{data.photo_url}}">
+            </span>
+        <strong class="user-name">{{data.name}}</strong>
+    </a>
+</figure>

@@ -1,0 +1,96 @@
+<!-- createCustomGroup -->
+<div id="createCustomGroup">
+    <div class="profile-header not-created">
+        <div class="banner">
+           <form id="upload-cover-pic">
+              <fieldset>
+                 <input for="txt" type="file" placeholder="" />
+                 <svg class="ico-test"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-test"></use></svg>
+                 <label id="txt">Click to upload your Cover Pic or just drag it here</label>
+              </fieldset>
+           </form>
+        </div>
+        <div class="holder-info">
+            <div class="user-info">
+                <figure class="img-holder">
+                   <div class="avatar-holder" ngf-select="uploadLogo($file)" ngf-max-size="10MB" accept="image/*">
+                      <a href="#"><img class="avatar" src="/assets_new/images/userpic.png" alt="avatar"></a>
+                   </div>
+                    <figcaption class="user-name">
+                       <fieldset>
+                           <input class="input-name" style="padding-right: 20px;" ng-model="newCGroup.name" type="text" placeholder="Custom Group Name"/>
+                          <svg class="ico-pencil" style="margin-left: -20px;"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-pencil"></use></svg>
+                       </fieldset>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <form id="form-custom-group" name="groupForm">
+        <fieldset>
+            <div class="holder-txt row">
+               {{groupForm.description.$touched}}
+                <label for="group-description" ng-class="{red: groupForm.description.$touched, green: groupForm.description.$valid}">Group Description</label>
+                <textarea tabindex="0"
+                     id="group-description"
+                     class="textarea-white"
+                     cols="20" rows="3"
+                     ng-model="newCGroup.description"
+                     placeholder="A few words about your group…"
+                     name="description"
+                     ng-minlength ="50"
+                     required>
+                  </textarea>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="purpose-group" ng-class="{green: selectedCategory.id >0}">Purpose of Group</label>
+                    <div tabindex="1" class="select-white" id="purpose-group" dropdown-select="categories" dropdown-model="selectedCategory" dropdown-item-label="category_name"></div>
+                </div>
+                <div class="col">
+                    <label for="group-privacy">
+                       Group Privacy
+                       <svg class="ico-help"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-help"></use></svg>
+                    </label>
+                    <div tabindex="2" class="select-white" id="group-privacy" dropdown-select="privacyStatus" dropdown-model="selectedPrivacy" dropdown-item-label="name"></div>
+                </div>
+            </div>
+           <div class="row">
+              <div class="col">
+                 <label ng-class="{green: selectedFaculty.id >0}">Faculty</label>
+                   <div tabindex="3" class="select-white" id="dropdown-faculty" dropdown-select="faculty" dropdown-model="selectedFaculty" dropdown-item-label="name"></div>
+              </div>
+              <div class="col">
+                 <label for="Campus" ng-class="{green: selectedCampus.id > -2}">Campus</label>
+                 <div tabindex="4" class="select-white" id="Campus" dropdown-select="campus" dropdown-model="selectedCampus" dropdown-item-label="name"></div>
+              </div>
+           </div>
+           <div class="row" ng-if="editID">
+              <h2>Connections</h2>
+              <users-list users="connectedUsers"></users-list>
+           </div>
+           <div class="row">
+              <h2>Add Connections</h2>
+              <users-list users="connections"></users-list>
+           </div>
+           <div class="row">
+               <label>Add by Email</label>
+               <fields-list options="usersEmail" type="oneField" placeholder="Add email" field="email" ></fields-list>
+           </div>
+           <div class="row">
+              <import-csv files="csvFiles" type="customgroups"></import-csv>
+           </div>
+           <div class="row">
+              <ul class="options-btn">
+                 <li>
+                    <button type="button" class="btn-link" ng-click="cancel()">Cancel</button>
+                 </li>
+                 <li>
+                    <button type="button" ng-if="!editID" ng-disabled="groupForm.$invalid || requiredAll()" class="btn-blue btn-small" ng-click="submit()">Create Custom Group</button>
+                    <button type="button" ng-if="editID" ng-disabled="groupForm.$invalid || requiredAll()" class="btn-blue btn-small" ng-click="submit()">Save Custom Group</button>
+                 </li>
+              </ul>
+           </div>
+        </fieldset>
+    </form>
+</div>

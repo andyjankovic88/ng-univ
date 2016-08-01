@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string"
+          },
+          "group_name": {
+            "type": "string"
+          },
+          "program_name": {
+            "type": "string"
+          },
+          "creator_user_id": {
+            "type": "string"
+          },
+          "hobbies": {
+            "type": "array",
+            "items": []
+          },
+          "languages": {
+            "type": "array",
+            "items": []
+          },
+          "is_joined": {
+            "type": "boolean"
+          },
+          "can_edit": {
+            "type": "boolean"
+          },
+          "can_leave_as_mentee": {
+            "type": "boolean"
+          },
+          "can_leave_as_mentor": {
+            "type": "boolean"
+          },
+          "group_icon": {
+            "type": "string"
+          },
+          "mentors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "user_id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "photo_url": {
+                  "type": "string"
+                },
+                "group_id": {
+                  "type": "string"
+                },
+                "campus": {
+                  "type": "string"
+                },
+                "karma_points": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

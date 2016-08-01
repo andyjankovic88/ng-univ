@@ -1,0 +1,27 @@
+<div class="ur-study-group">
+   <!-- content-heading -->
+   <div class="content-heading ng-scope">
+      <h1>Study Groups</h1>
+      <div class="r-side">
+         <a class="btn btn-blue" ui-sref="studyGroupsCreate">Create Study Group</a>
+      </div>
+   </div>
+   <!-- sub-menu -->
+   <div class="sub-menu">
+      <ul>
+         <li ui-sref-active="active">
+            <a href="#" ui-sref="studyGroupsList">
+               <svg class="ico-list"><use xlink:href="#feeds-list" /></svg>
+               <span>GROUP LIST</span>
+            </a>
+         </li>
+         <li ui-sref-active="active">
+            <a href="#" ui-sref="studyGroupsSuggestions">
+               <svg class="ico-suggestions"><use xlink:href="#icon-suggestions" /></svg>
+               <span>SUGGESTIONS</span>
+            </a>
+         </li>
+      </ul>
+   </div>
+   <div class="ur-study-group-content" ui-view></div>
+</div>

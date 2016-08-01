@@ -1,0 +1,20 @@
+<div class="submenu">
+	<h6 class="group-title"><span>groups</span></h6>
+	<a class="item" activate ng-click="goTo(sectionState)">
+		<svg class="icon">
+			<use class="ic-use" xlink:href="{{subIcon}}" />
+		</svg>
+		<span>{{subTitle}}</span>
+	</a>
+	<section>
+		<ul class="list">
+			<li ng-repeat="(key, value) in subList">
+				<a class="item" activate ng-click="goTo(subState, value.id)">
+					<svg class="icon">
+					</svg>
+					<span>{{value.title}}</span>
+				</a>
+			</li>
+         </ul>
+	</section>
+</div>

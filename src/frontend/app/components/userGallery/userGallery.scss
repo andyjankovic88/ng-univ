@@ -1,0 +1,54 @@
+.small-gallery {
+
+	  float: right;
+      .label {
+         float: right;
+         margin: 9px 15px 0 0;
+      }
+      ul {
+         float: right;
+      }
+      li {
+         float: left;
+         margin: 0 8px 0 0;
+         img {
+            width: 36px;
+            height: 36px;
+            @include border-radius(50%);
+         }
+      }
+      .arrow-blue {
+         float: right;
+         margin: 13px 0 0 8px;
+         svg {
+            width: 7px;
+            height: 12px;
+         }
+         &:hover polyline {
+            stroke-width: 15;
+         }
+      }
+      .tooltip-holder {
+         .tooltip {
+            top: -3px;
+            left: 1px;
+            padding: 5px 10px 5px;
+            p {
+               margin: 0;
+            }
+         }
+         .arrow-top {
+            top: -3px;
+            left: 15px;
+            border-bottom: 4px solid #000;
+            opacity: 0.7;
+            border-width: 4px;
+         }
+         strong {
+            font-family: 'latobold';
+         }
+         font-size: 10px;
+         line-height: 14px;
+      }
+
+}

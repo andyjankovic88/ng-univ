@@ -1,0 +1,63 @@
+<!-- clubInside -->
+<div class="ur-ss-profile">
+   <div ng-if="pageStatus('success')">
+      <div class="banner">
+         <img class="photo" ng-src="/assets_new/images/profile.jpg" alt="cover-pic">
+      </div>
+      <div class="holder-info">
+         <div class="user-info">
+            <figure class="img-holder">
+               <div class="avatar-holder">
+                  <a href="#"><img ng-if="service.picture" class="avatar" ng-src="{{service.picture}}" alt="Virginia Henderson"></a>
+               </div>
+               <figcaption class="user-name">
+                  <h1>{{service.name}}</h1>
+                  <span>Student Service</span>
+               </figcaption>
+            </figure>
+            <div class="profile-actions">
+               <span class="float-right default-btn white-btn" ng-show="service.is_joined">
+                  <input type="button" ng-click="unfollow()" value="Unfollow">
+               </span>
+               <span class="float-right" ng-show="service.can_edit">
+                  <button type="button" class="btn-green" ng-click="follow()" >Follow</button>
+               </span>
+               <span class="float-right m-left">
+                  <button type="button" class="btn-blue" ui-sref="newEvent({group_type: group_type, group_id: serviceID})" >Create Event</button>
+               </span>
+               <span class="float-right" ng-show="service.can_edit">
+                  <button type="button" class="btn-blue" ui-sref="studentServicesEdit({service_id: service.id})" >Edit</button>
+               </span>
+            </div>
+         </div>
+      </div>
+      <!-- sub-menu -->
+      <div class="sub-menu">
+         <ul>
+            <li ui-sref-active="active">
+               <a href="#" ui-sref="studentServicesFeed">
+                  <svg class="ico-list"><use xlink:href="#feeds-list" /></svg>
+                  <span>DISCUSSION</span>
+               </a>
+            </li>
+            <li ui-sref-active="active">
+               <a href="#" ui-sref="studentServicesEvents({})">
+                  <svg class="ico-star"><use xlink:href="#feeds-star" /></svg>
+                  <span>EVENTS</span>
+               </a>
+            </li>
+            <li ui-sref-active="active">
+               <a href="#" ui-sref="studentServicesInfo">
+                  <svg class="ico-info"><use xlink:href="#icon-info" /></svg>
+                  <span>INFO</span>
+               </a>
+            </li>
+         </ul>
+      </div>
+      <div class="profile-content" ui-view></div>
+   </div>
+   <div class="failure-container" ng-if="pageStatus('failed')">
+      <div class="ur-message ur-message-warning">Could not find this student service, please go to the <a ui-sref="studentServicesList">student service list</a> page.</div>
+   </div>
+   <loader is-active="pageStatus('loading')" position="static"></loader>
+</div>

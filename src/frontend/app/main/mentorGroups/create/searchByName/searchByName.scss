@@ -1,0 +1,12 @@
+.search-section {
+   position: relative;
+   .search-box {
+      position: absolute;
+      li.active {
+         background: $color-inactive;
+      }
+   }
+   .loader {
+      height: 36px;
+   }
+}

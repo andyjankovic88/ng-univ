@@ -1,0 +1,95 @@
+@import "mixins";
+
+.ur-ss-create {
+   margin-top: -20px;
+
+   .has-error {
+      label {
+         color: $color-red;
+      }
+      input.ng-invalid {
+         border: 1px solid $color-red;
+      }
+      select.ng-invalid {
+         border: 1px solid $color-red;
+      }
+   }
+   .no-error {
+      label {
+         color: $color-green;
+      }
+   }
+   select.ng-dirty {
+      color: $color-grey-dark;
+   }
+   .input-error {
+      border-color: $color-red;
+      &::-webkit-input-placeholder {
+         color: $color-red;
+      }
+
+      &:-moz-placeholder {
+         color: $color-red;
+      }
+
+      &::-moz-placeholder {
+         color: $color-red;
+      }
+
+      &:-ms-input-placeholder  {
+         color: $color-red;
+      }
+   }
+
+   .failure-container {
+      margin: 100px 50px;
+   }
+}
+
+.consultation-times-list {
+   .list-fields {
+      margin-right: 30px;
+   }
+   .list-row {
+      padding-bottom: 8px;
+      &:before,
+      &:after {
+         content: " ";
+         display: table;
+      }
+      &:after {
+         clear: both;
+      }
+   }
+   .col-campus {
+      width: 40%;
+      float: left;
+      padding-right: 10px;
+   }
+   .col-location {
+      width: 60%;
+      float: left;
+      input {
+         padding: 8px 10px;
+      }
+   }
+   .col-day {
+      width: 24%;
+      float: left;
+      padding-right: 10px;
+   }
+   .col-start {
+      width: 16%;
+      float: left;
+      padding-right: 10px;
+   }
+   .col-end {
+      width: 15%;
+      float: left;
+   }
+   .select-custom {
+      select {
+         padding: 7px;
+      }
+   }
+}

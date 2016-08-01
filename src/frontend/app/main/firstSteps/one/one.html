@@ -1,0 +1,50 @@
+<div id="first-steps-one">
+   <div class="title-wrapper">
+      <h1 class="title">Bring some individuality to your profile</h1>
+      <p class="title-tip">You can always customise it later</p>
+   </div>
+   <div class="profile-header not-created">
+      <div class="banner">
+         <form id="upload-cover-pic">
+            <fieldset>
+               <input for="txt" type="file" placeholder="" />
+               <svg class="ico-test">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-test"></use>
+               </svg>
+               <label id="txt">Click to upload your Cover Pic or just drag it here</label>
+            </fieldset>
+         </form>
+      </div>
+      <div class="holder-info">
+         <div class="user-info">
+            <figure class="img-holder">
+               <div class="avatar-holder" ngf-select="uploadUserPic($file)" ngf-max-size="10MB" accept="image/*">
+                  <img class="avatar" ng-if="info.photo_url" ng-src="{{info.photo_url}}" alt="avatar">
+                  <img class="avatar" ng-if="!info.photo_url" src="/assets_new/images/userpic.png" alt="avatar">
+                  <span class="link-update" ng-if="!info.photo_url">update</span>
+               </div>
+               <figcaption class="user-name">
+                  <h1>{{info.name}}</h1>
+                  <span>{{info.subject}}</span>
+               </figcaption>
+            </figure>
+         </div>
+         <div class="personal-detail clearfix">
+            <ul>
+               <li>
+                  <svg>
+                     <use xlink:href="#profile-campus" />
+                  </svg>
+                  <span>{{info.campus}}</span>
+               </li>
+               <li ng-if="info.group == 'student'">
+                  <svg>
+                     <use xlink:href="#profile-years" />
+                  </svg>
+                  <span>{{info.commencement}}-{{info.year_of_completion}}</span>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</div>

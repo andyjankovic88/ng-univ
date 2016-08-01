@@ -1,0 +1,41 @@
+/* edit-profile */
+#edit-profile {
+  margin: -20px 0 0;
+  .holder-info {
+    border: 0;
+  }
+  .profile-header {
+    margin: 0 0 30px;
+  }
+}
+input.input-big {
+  padding: 14px !important;
+}
+.avatar-holder {
+  .link-update {
+    position: absolute;
+    top: 41px;
+    left: 32px;
+    font-size: 13px;
+    text-decoration: underline;
+    color: $color-white;
+  }
+}
+.not-created {
+  .link-update,
+  .user-name h1 {
+    color: $color-inactive;
+  }
+}
+.col-holder {
+  width: 50%;
+  display: table;
+  float: left;
+  .col,
+  div.col:last-child {
+    padding: 0 20px 0 0;
+  }
+  .checkbox-list {
+    padding: 30px 0 0;
+  }
+}

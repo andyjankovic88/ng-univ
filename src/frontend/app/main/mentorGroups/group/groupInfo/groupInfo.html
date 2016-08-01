@@ -1,0 +1,22 @@
+<div class="info-section">
+    <!-- info-section -->
+    <div class="holder">
+        <h2>
+         Mentors
+      </h2>
+        <div class="personal-detail clearfix">
+            <user-gallery
+                list="group.mentors"
+                id-key="user_id"
+                name-key="name"
+                photo-key="photo_url"
+                arrow="true">
+            </user-gallery>
+        </div>        
+        <h2 ng-if="group.academic_topics">Academic topics</h2>
+        <tags-list ng-if="group.academic_topics" list="group.academic_topics"></tags-list>
+
+        <h2 ng-if="group.languages.length">Languages</h2>
+        <tags-list ng-if="group.languages.length" list="group.languages"></tags-list>
+    </div>
+</div>

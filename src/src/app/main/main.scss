@@ -1,0 +1,263 @@
+.site-wrapper {
+   margin: 0 0 -99px;
+
+}
+#header-wrapper {
+   background-color: $color-header;
+   height: 60px;
+   position: fixed;
+   width: 100%;
+   z-index: 999;
+}
+
+/* main */
+#main-content {
+   margin: 0 auto;
+   width: 100%;
+   height: 100%;
+   padding: 60px 0 0;
+
+   .left-section {
+     overflow-y: scroll;
+     height: 100%;
+     width: 290px;
+     border-right: 1px solid rgba(0,0,0,0.1);
+     /*background: $color-left-menu;*/
+     float: left;
+	}
+	.middle-section {
+      overflow-y: scroll;
+      overflow-x: hidden;
+      height: 100%;
+      padding: 0 25px 0;
+      min-width: 400px;
+      color: $color-inactive;
+      p a {
+         /*color: $color-blue;
+         &:hover {
+            color: $color-dark-blue;
+         }*/
+      }
+	}
+	.sidebar-right {
+       overflow-y: scroll;
+       height: 100%;
+       width: 300px;
+       height: 100%;
+       padding: 0 20px 0;
+       float: right;
+    }
+}
+.middle-section>div{
+   padding: 20px 0 0;
+}
+.sidebar-right .university {
+   padding: 33px 0 0;
+}
+.main-menu {
+   padding: 0 0 20px;
+}
+.row {
+   input {
+      width: 100%;
+   }
+   .col {
+      width: 50%;
+   }
+}
+.col-one {
+   label {
+      float: left;
+      margin: 0 10px 0 0;
+   }
+   .col {
+      width: 80px;
+      input {
+         width: 87px;
+      }
+   }
+}
+.time-section .select {
+   width: 150px;
+   float: left;
+   margin: 0 20px 0 0;
+}
+
+/* Custom-zendesk-help-section */
+.custom-zendesk-help-button {
+   background: #343e7f none repeat scroll 0 0;
+   border-radius: 80px;
+   bottom: 11px;
+   cursor: pointer;
+   height: 42px;
+   padding: 2px;
+   position: fixed;
+   right: 21px;
+   width: 103px;
+   z-index: 999998;
+   -webkit-transition: all 0.3s;
+   -moz-transition: all 0.3s;
+   transition: all 0.3s;
+}
+.question-mark {
+   color: #fff;
+   vertical-align: top;
+   width: 23px;
+   height: 23px;
+   cursor: pointer;
+   margin-left: 15px;
+   margin-top: 7px;
+}
+.help-btn-text {
+   color: #ffffff;
+   display: inline-block;
+   font-size: 16px;
+   margin-top: 12px;
+   vertical-align: middle;
+}
+.custom-zendesk-help-loader {
+   bottom: 17px;
+   position: fixed;
+   right: 50px;
+   background: url(/assets/images/loading-boring.gif) no-repeat right top;
+   height: 32px;
+   width: 32px;
+   z-index: 999998;
+}
+.scrollbtn {
+   background: rgba(56,56,56,0.5);
+   border-radius: 40px;
+   height: 40px;
+   text-indent: 0;
+   position: fixed;
+   bottom: 63px;
+   right: 22px;
+   display: none;
+   width: 106px;
+   height: 44px;
+   text-indent: 0px;
+   z-index: 2;
+}
+.scroll-btn-arrow {
+   display: inline-block;
+   height: 15px;
+   margin-top: 11px;
+   position: relative;
+   vertical-align: top;
+   width: 47px;
+}
+.icon-scroll {
+   width: 19px;
+   height: 19px;
+   margin-left: 20px;
+   margin-top: 13px;
+}
+.scroll-btn-text {
+   color: #fff;
+   display: inline-block;
+   font-size: 16px;
+   margin-top: 14px;
+   vertical-align: top;
+   text-indent: 0;
+}
+figure {
+   margin: 0;
+   display: table;
+   clear: both;
+   content: '';
+}
+.status {
+   position: absolute;
+   bottom: 2px;
+   right: 3px;
+   width: 10px;
+   height: 10px;
+}
+.sidebar-right .status {
+   bottom: 3px;
+   right: 9px;
+   width: 8px;
+   height: 8px;
+}
+.status.online {
+   background: $color-green;
+}
+.status.away {
+   background: $color-yellow;
+}
+.default-btn {
+   float: right;
+   font-size: $font14;
+   input {
+      padding: 6px 20px;
+      background: none;
+      border: 1px solid $color-inactive-icon;
+      color: $color-inactive-icon;
+      &:hover{
+         border:1px solid #c4c3c3;
+         -webkit-border-radius:2px;
+         -moz-border-radius:2px;
+         border-radius:2px;
+      }
+   }
+}
+
+/* sub-menu */
+.sub-menu {
+   border-bottom: 1px solid $color-light-grey;
+   margin: 0 0% 20px;
+   font-size: 14px;
+   text-transform: uppercase;
+   ul {
+      overflow: hidden;
+   }
+   svg {
+      color: $color-grey-middle;
+      float: left;
+      use {
+         fill: $color-grey-middle;
+      }
+   }
+   li:hover use,
+   li.active use,
+   li:hover a,
+   li.active a,
+   li:hover span,
+   li.active span {
+      fill: $color-blue;
+      color: $color-blue;
+   }
+   li:hover a,
+   li.active a {
+      border-bottom: 2px solid $color-blue;
+   }
+   svg {
+      width: 20px;
+      height: 20px;
+   }
+   li {
+      float: left;
+      margin: 0 2.5% 0 0;
+      min-height: 38px;
+      span {
+         float: left;
+         padding: 2px 0 0 8px;
+         color: $color-grey-middle;
+      }
+      a {
+         float: left;
+         padding: 0 5px 15px;
+      }
+   }
+   a {
+      float: left;
+   }
+   .ico-list {
+      margin: 5px 0 0;
+   }
+   .ico-star {
+      margin: 2px 0 0;
+   }
+
+}
+

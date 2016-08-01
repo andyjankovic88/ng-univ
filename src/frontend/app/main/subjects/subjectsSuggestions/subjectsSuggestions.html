@@ -1,0 +1,39 @@
+<div class="subjects-section">
+   <div class="item-holder clearfix" ng-repeat="subject in suggestions">
+      <div class="item">
+         <figure class="img-holder">
+            <div class="icon-circle">
+               <a ui-sref="subjectFeed({id:subject.id})">
+                  <svg>
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-subject"></use>
+                  </svg>
+               </a>
+            </div>
+         </figure>
+         <div class="item-info">
+            <h3>
+               <a ui-sref="subjectFeed({id:subject.id, name:subject.name})">{{subject.code}}</a>
+               <a ng-click="endorse(subject)" ng-if="(profileInfo.user_id != currentUserId) && (!isAlreadyEndorsed(subject.endorsements)) ">
+                  <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#popup-plus"></use></svg>
+               </a>
+               <!-- <svg class="tick"><use xlink:href="#profile-tick" /></svg> -->
+            </h3>
+            <span class="message-update">{{subject.name}}</span>
+         </div>
+      </div>
+      <div class="small-gallery" ng-if="subject.endorsements.length">
+            <a href="#" class="arrow-blue">
+               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
+                       <polyline fill="none" stroke="#42a5f5" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" points="
+               0.375,0.375 45.63,38.087 0.375,75.8 "></polyline>
+                </svg>
+            </a>
+            <ul>
+               <li ng-repeat="user in subject.endorsements | limitTo:6">
+                  <a ui-sref="profile({id: user.user_id})" title="{{user.name}}"><img class="photo" ng-src="{{user.photo_url}}"></a>
+               </li>
+            </ul>
+            <span class="label">Endorsed by</span>
+      </div>
+   </div>
+</div>

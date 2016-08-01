@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="74px" height="74px" viewBox="0 0 74 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: bin/sketchtool 1.4 (305) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape Copy</title>
+    <desc>Created with bin/sketchtool.</desc>
+    <defs></defs>
+    <g id="Custom-Groups" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group-view---Custom-Groups-root-5" sketch:type="MSArtboardGroup" transform="translate(-696.000000, -116.000000)" stroke="#979797" fill="#DEDEDE">
+            <g id="You-can-always-custo-+-Bring-some-individua-+-button-+-Mask-+-profile-Copy" sketch:type="MSLayerGroup" transform="translate(331.000000, 64.000000)">
+                <g id="Mask-+-profile" sketch:type="MSShapeGroup">
+                    <g id="profile" transform="translate(0.000000, -1.000000)">
+                        <g id="cover-page">
+                            <path d="M438,118 L438,62 C438,57.6 434.4,54 430,54 L374,54 C369.6,54 366,57.6 366,62 L366,118 C366,122.4 369.6,126 374,126 L430,126 C434.4,126 438,122.4 438,118 L438,118 Z M388,96 L398,108 L412,90 L430,114 L374,114 L388,96 L388,96 Z" id="Shape-Copy"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

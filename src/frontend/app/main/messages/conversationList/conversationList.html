@@ -1,0 +1,34 @@
+<!-- conversatin-list -->
+<div id="conversation-list" class="holder-item">
+   <div class="heading-holder clearfix width100">
+      <h1>Messages</h1>
+      <a ui-sref="newMessage" class="btn-blue r-side">New Message</a>
+   </div>
+   <span class="notes" ng-show="!conversations.length">You haven’t received any messages yet.</span>
+   <ul class="item-list" infinite-scroll='loadNextPage()' infinite-scroll-disabled='listRequestInProgress' infinite-scroll-distance='1' infinite-scroll-container='".middle-section"'>
+      <li ng-repeat="conversation in conversations" ui-sref="conversation({id: conversation.conversation_id, isRead: conversation.isRead, title: conversation.title})">
+         <figure class="img-holder">
+            <a href="#"><img class="photo" ng-src="{{conversation.profile_pic[0]}}"></a>
+         </figure>
+         <div class="info-holder">
+            <div class="overflow-hidden">
+               <h2 class="l-side"><a href="#">{{conversation.title}}</a></h2>
+               <figcaption class="r-side time-category">
+                  <div class="user-info clearfix">
+                     <span class="date">{{conversation.how_long_ago}}</span>
+                  </div>
+               </figcaption>
+            </div>
+            <ul class="sublist">
+               <li>
+                  <figure class="img-holder" ng-if="conversation.profile_pic[1]">
+                     <a href="#"><img class="photo" ng-src="{{conversation.profile_pic[1]}}"></a>
+                  </figure>
+                  <p ng-class="{'unread': !conversation.is_read}"><a href="#">{{conversation.message_text}}</a></p>
+               </li>
+            </ul>
+         </div>
+      </li>
+   </ul>
+   <loader is-active="loaderActive" position="static"></loader>
+</div>

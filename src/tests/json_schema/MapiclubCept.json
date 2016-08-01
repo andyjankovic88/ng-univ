@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "upcoming": {
+      "type": "array",
+      "items": []
+    },
+    "past": {
+      "type": "array",
+      "items": []
+    }
+  },
+  "required": [
+    "upcoming",
+    "past"
+  ]
+}

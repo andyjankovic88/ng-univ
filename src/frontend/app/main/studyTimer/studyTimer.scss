@@ -1,0 +1,177 @@
+.study-schedule {
+   float: right;
+   padding: 15px 0 0 60px;
+   font-size: 16px;
+   .duration {
+      margin: 0 30px 0 0;
+      font-family: latobold;
+   }
+   h2 {
+      overflow: hidden;
+      width: 100%;
+   }
+}
+#study-timer {
+   .btn-green,
+   .btn-transparent {
+      margin: 3px 0 0;
+   }
+   .period {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10px;
+      input {
+         width: 210px;
+      }
+      .arrow-top-w {
+         left:103px;
+      }
+      .arrow-top {
+         left:95px;
+      }
+      [dropdown-body] {
+         right: 0;
+         left: auto;
+         top: 100%;
+         width: 160px;
+         font-size: 13px;
+         padding: 10px 0;
+         margin-top: 7px;
+         li {
+            padding: 8px 15px;
+            &:hover, &.dropdown-active {
+               background: $color-light-grey;
+            }
+            li {
+               background: none !important;
+            }
+         }
+         [dropdown] {
+            position: static;
+            [dropdown-body] {
+               top: 40px;
+               right: 100%;
+               width: auto;
+               margin-right: 5px;
+               padding: 20px 0;
+               input {
+                  width: 220px;
+                  margin: 0 19px;
+                  float: left;
+               }
+               &:after{
+                  width: 0;
+                  height: 0;
+                  content: '';
+                  position: absolute;
+                  top: 50%;
+                  margin: -1px 0 0;
+                  right: 10px;
+                  border-top: 5px solid #5A5A5A;
+                  border-right: 5px solid transparent;
+                  border-left: 5px solid transparent;
+               }
+            }
+
+         }
+         #options-btn {
+            padding-right: 5px;
+         }
+      }
+      .date-picker-ex {
+         margin-bottom: 0px;
+         .date-picker-date-time {
+            padding: 10px;
+         }
+      }
+   }
+   .timer-start.item-holder {
+      background: $color-blue;
+      color: $color-white;
+      padding: 12px 10px 8px;
+      h3,
+      span {
+         color: $color-white;
+      }
+      .icon-circle {
+         border-color: $color-white;
+      }
+      .ico-subject {
+         display: none;
+      }
+   }
+   .active2.item-holder {
+      background: $color-green;
+      color: $color-white;
+      padding: 10px 10px 8px;
+      h3,
+      span {
+         color: $color-white;
+      }
+      .icon-circle {
+         border-color: $color-white;
+      }
+      .ico-subject {
+         display: none;
+      }
+   }
+   .study-timer-section {
+      .item-holder {
+         padding-left: 10px;
+         .remove-btn {
+            display: none;
+            -webkit-transition: width 5s; /* Safari */
+            transition: width 5s;
+            min-width: 18px;
+            background: none;
+            float: right;
+            margin-top: 8px;
+            svg {
+               width: 18px;
+               height: 18px;
+            }
+         }
+         &:hover {
+            .remove-btn {
+               display: block;
+               -webkit-transition: width 5s; /* Safari */
+               transition: width 5s;
+            }
+            .study-schedule {
+               display: none;
+               -webkit-transition: width 5s; /* Safari */
+               transition: width 5s;
+            }
+         }
+      }
+      .item-info {
+         padding-top: 0;
+      }
+   }
+
+}
+.item-holder {
+   .item {
+      h3 {
+         font-family: latoregular;
+      }
+   }
+}
+#chart {
+   width: 100%;
+}
+.calendar-right-side {
+   [dropdown] [dropdown-body] {
+      left: -6px;
+      top: 100%;
+      margin-top: 6px;
+      .arrow-top {
+          top: -4px;
+          left: -3px;
+      }
+      .arrow-top-w {
+          top: -5px;
+          left: 5px;
+      }
+   }
+}

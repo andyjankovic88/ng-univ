@@ -1,0 +1,17 @@
+.marketplace {	
+    .row {
+        .col {
+            .select-white {
+                width: 170px;
+            }
+        }
+    }
+    .goods-list {
+    		position: relative;
+    		left: -10px;
+        .goods-item {
+            display: inline-block;
+            margin: 10px;
+        }
+    }
+}

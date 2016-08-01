@@ -1,0 +1,28 @@
+
+<button ng-click="academics = []">FOR TEST</button>
+<div class="info" ng-hide="hidePopup" ng-if="academics.length === 0">
+   <a href ng-click="hidePopup = true" class="close">Close</a>
+   yugdoeiudewiudhwe
+</div>
+<rhs-users-list-directive ng-if="academics.length" list="academics" title="Academics" is-expandable="true"></rhs-users-list-directive>
+<rhs-users-list-directive list="connections" title="Connections" is-expandable="true"></rhs-users-list-directive>
+<rhs-users-list-directive list="students" title="Classmates" is-expandable="true"></rhs-users-list-directive>
+
+<div class="assessments" ng-if="assessments.length">
+   <h2>Assessments</h2>
+   <ul>
+      <li ng-repeat="assessment in assessments">
+         {{assessments.title}}
+         <strong>{{assessments.time_day}} — {{assessments.time_from}} - {{assessments.time_to}}</strong>
+      </li>
+   </ul>
+</div>
+
+<div class="topics" ng-if="topics.length">
+   <h2>Topics</h2>
+   <ul>
+      <li ng-repeat="topic in topics">
+         {{topic.title}}
+      </li>
+   </ul>
+</div>

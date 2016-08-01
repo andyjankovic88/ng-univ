@@ -1,0 +1,155 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "show_recommended": {
+          "type": "integer"
+        },
+        "is_event_ticketing_enabled": {
+          "type": "boolean"
+        },
+        "is_club_membership_enabled": {
+          "type": "boolean"
+        },
+        "is_csu_uni": {
+          "type": "boolean"
+        },
+        "is_user_NikGranger": {
+          "type": "boolean"
+        },
+        "content_heading": {
+          "type": "string"
+        },
+        "create_club": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            }
+          }
+        },
+        "tabs": {
+          "type": "object",
+          "properties": {
+            "club_list": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "link": {
+                  "type": "string"
+                }
+              }
+            },
+            "memberships": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "link": {
+                  "type": "string"
+                }
+              }
+            },
+            "events": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "link": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "upcoming_events": {
+          "type": "object",
+          "properties": {
+            "heading": {
+              "type": "string"
+            },
+            "data": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "link": {
+                      "type": "string"
+                    },
+                    "pic": {
+                      "type": "string"
+                    },
+                    "start_date": {
+                      "type": "string"
+                    },
+                    "start_time": {
+                      "type": "string"
+                    },
+                    "timezone": {
+                      "type": "string"
+                    },
+                    "location": {
+                      "type": "string"
+                    },
+                    "hosted_by": {
+                      "type": "object",
+                      "properties": {
+                        "pic": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "link": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "ticket_details": {
+                      "type": "string"
+                    },
+                    "view_event": {
+                      "type": "object",
+                      "properties": {
+                        "title": {
+                          "type": "string"
+                        },
+                        "link": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

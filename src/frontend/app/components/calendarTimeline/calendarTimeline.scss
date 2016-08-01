@@ -1,0 +1,26 @@
+.timeline {
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    top: 300px;
+    left: 0;
+    .time {
+        width: 40px;
+        height: 15px;
+        background-color: #8bc34a;
+        border-radius: 17px;
+        text-align: center;
+        color: white;
+        font: 12px $font-bold, sans-serif;
+        line-height: 15px;
+        float: left;
+    }
+    .line {
+        height: 2px;
+        width: 100%;
+        background-color: #8bc34a;
+        position: relative;
+        top: 7px;
+        left: 40px;
+    }
+}

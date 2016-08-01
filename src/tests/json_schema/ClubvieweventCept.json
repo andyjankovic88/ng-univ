@@ -1,0 +1,126 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "now": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "string"
+            },
+            "timezone_type": {
+              "type": "integer"
+            },
+            "timezone": {
+              "type": "string"
+            }
+          }
+        },
+        "is_admin": {
+          "type": "boolean"
+        },
+        "is_committee": {
+          "type": "boolean"
+        },
+        "is_event_ticketing_enabled": {
+          "type": "boolean"
+        },
+        "content_heading": {
+          "type": "string"
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "pic": {
+              "type": "string"
+            },
+            "back": {
+              "type": "string"
+            },
+            "edit_ticket": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                }
+              }
+            },
+            "edit_event": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                }
+              }
+            },
+            "date": {
+              "type": "string"
+            },
+            "time": {
+              "type": "string"
+            },
+            "timezone": {
+              "type": "string"
+            },
+            "location": {
+              "type": "string"
+            },
+            "hosted_by": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "link": {
+                  "type": "string"
+                }
+              }
+            },
+            "description": {
+              "type": "string"
+            },
+            "end_date": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string"
+                },
+                "timezone_type": {
+                  "type": "integer"
+                },
+                "timezone": {
+                  "type": "string"
+                }
+              }
+            },
+            "ticket_details": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

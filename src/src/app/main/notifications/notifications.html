@@ -1,0 +1,246 @@
+<div id="notifications">
+    <div class="content-heading">
+        <h1>Notifications</h1>
+    </div>
+    <div class="post">
+        <!-- post-section -->
+        <div class="post-section post-description">
+            <div class="subtitle">
+                <a href="#" class="user-name">Jeffrey Montgomery </a> liked your post <span class="blue-link">Association for the Promotion of Interplanetary Expansion (HAPIE)</span>
+            </div>
+            <div class="holder">
+                <figure class="post-heading clearfix">
+                    <a class="photo-holder" href="#">
+                        <img ng-src="/assets/images/photo-small.jpg" src="/assets/images/photo-small.jpg">
+                    </a>
+                    <div class="wrapper-user">
+                        <div class="user-details clearfix">
+                            <div class="l-side">
+                                <a href="#" class="user-name">Walter Porter</a>
+                                <span class="points">2117 pts.</span>
+                            </div>
+                        </div>
+                        <figcaption class="time-category">
+                            <div class="user-info clearfix">
+                                <span class="date">4 hours ago</span>
+                                <ul class="post-options">
+                                    <li class="likes">
+                                        <a href="#">
+                                            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#feeds-filledHart"></use></svg>
+                                            <span class="number">78</span>
+                                        </a>
+                                    </li>
+                                    <li class="comments">
+                                        <a href="#">
+                                            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#feeds-chat"></use></svg>
+                                            <span class="number">2</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </figcaption>
+                    </div>
+                </figure>
+            </div>
+            <div class="post-txt">
+                <p>I am hosting a jobs fair in the Sports Hall next Wednesday, 23 April 2014. Employers attending include Apple…</p>
+            </div>
+            <ul class="sublist">
+                <li>
+                    <figure class="img-holder">
+                        <a href="#"><img class="photo" src="/assets/images/photo-small.jpg"></a>
+                    </figure>
+                    <div class="wrapper-user">
+                        <div class="user-details clearfix">
+                            <div class="l-side">
+                                <p><a href="#" class="user-name">Walter Porter</a> created an event <a href="#" class="blue-link">Law School Interactive Tour</a> in
+                                    <a href="#" class="blue-link">Jeffrey Montgomery's  Mentor Group</a> </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- post-section -->
+        <div class="post-section post-description">
+            <div class="subtitle">
+                <a href="#" class="user-name">Nicole Greene</a> commented on your post in  <span class="blue-link">Evening with Champions</span>
+            </div>
+            <div class="holder">
+                <figure class="post-heading clearfix">
+                    <a class="photo-holder" href="#">
+                        <img ng-src="/assets/images/photo-small.jpg" src="/assets/images/img-1.jpg">
+                    </a>
+                    <div class="wrapper-user">
+                        <div class="user-details clearfix">
+                            <div class="l-side">
+                                <a href="#" class="user-name">Walter Porter</a>
+                                <span class="points">2117 pts.</span>
+                            </div>
+                        </div>
+                        <figcaption class="time-category">
+                            <div class="user-info clearfix">
+                                <span class="date">4 hours ago</span>
+                                <ul class="post-options">
+                                    <li class="likes">
+                                        <a href="#">
+                                            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#feeds-filledHart"></use></svg>
+                                            <span class="number">78</span>
+                                        </a>
+                                    </li>
+                                    <li class="comments">
+                                        <a href="#">
+                                            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#feeds-chat"></use></svg>
+                                            <span class="number">2</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </figcaption>
+                    </div>
+                </figure>
+            </div>
+            <div class="holder" ng-if="event.pic">
+                <figure class="simple-img middle">
+                    <a href="#">
+                        <img ng-if="event.pic" ng-src="{{event.picture}}">
+                    </a>
+                    <div class="img-info">
+                        <div class="img-description">
+                            <h2>{{event.title}}</h2>
+                            <div class="holder">
+                                <div class="coll l-side">
+                                    <div class="coll l-side">
+                                        <div class="holder">
+                                 <span class="date">
+                                   {{event.start_date | date:'d'}}<strong>{{event.start_date | date:'MMM'}}</strong>
+                                 </span>
+                                        </div>
+                                    </div>
+                                    <div class="coll r-side">
+                                        <div class="holder">
+                                            <svg class="ico-schedule ico-white"><use xlink:href="#icon-schedule" /></svg>
+                                            <span><strong>{{event.start_time}}</strong> - <strong><span ng-if="event.end_date !== event.start_date">{{event.end_date | date:'dMMM'}} </span>{{event.end_time}}</strong> (<strong>{{event.timezone}}</strong>)</span>
+                                        </div>
+                                        <div class="holder">
+                                            <svg class="ico-location ico-white"><use xlink:href="#icon-location" /></svg>
+                                            <span>{{event.location}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" ng-hide="event.is_joined" class="btn-blue" ng-click="joinEvent(event, key)">Join Event</button>
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+            <div class="post-txt">
+                <p>I am hosting a jobs fair in the Sports Hall next Wednesday, 23 April 2014. Employers attending include Apple, Microsoft, Verizon, Cisco and more. Free entry, doors open at 10.30am. Hope to see you all there!</p>
+            </div>
+            <div class="post-comment-wrapper">
+                <span style="color:red">Take plase block of from University</span>
+            </div>
+        </div>
+        <!-- post-section -->
+        <div class="post-section post-description">
+            <div class="subtitle">
+                <a href="#" class="user-name">Kimberly Ryan</a> is selling an item in the  <span class="blue-link">Marketplace</span>
+            </div>
+            <div class="holder">
+                <figure class="post-heading clearfix">
+                    <a class="photo-holder" href="#">
+                        <img ng-src="/assets/images/photo-small.jpg" src="/assets/images/img-1.jpg">
+                    </a>
+                    <div class="wrapper-user">
+                        <div class="user-details clearfix">
+                            <div class="l-side">
+                                <a href="#" class="user-name">Kimberly Ryan</a>
+                                <span class="points">2117 pts.</span>
+                            </div>
+                        </div>
+                        <figcaption class="time-category">
+                            <div class="user-info clearfix">
+                                <span class="date">4 hours ago</span>
+                                <ul class="post-options">
+                                    <li class="likes">
+                                        <a href="#">
+                                            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#feeds-filledHart"></use></svg>
+                                            <span class="number">78</span>
+                                        </a>
+                                    </li>
+                                    <li class="comments">
+                                        <a href="#">
+                                            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#feeds-chat"></use></svg>
+                                            <span class="number">2</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </figcaption>
+                    </div>
+                </figure>
+            </div>
+            <div class="holder" ng-if="event.pic">
+                <figure class="simple-img middle">
+                    <a href="#">
+                        <img ng-if="event.pic" ng-src="{{event.picture}}">
+                    </a>
+                    <div class="img-info">
+                        <div class="img-description">
+                            <h2>{{event.title}}</h2>
+                            <div class="holder">
+                                <div class="coll l-side">
+                                    <div class="coll l-side">
+                                        <div class="holder">
+                                 <span class="date">
+                                   {{event.start_date | date:'d'}}<strong>{{event.start_date | date:'MMM'}}</strong>
+                                 </span>
+                                        </div>
+                                    </div>
+                                    <div class="coll r-side">
+                                        <div class="holder">
+                                            <svg class="ico-schedule ico-white"><use xlink:href="#icon-schedule" /></svg>
+                                            <span><strong>{{event.start_time}}</strong> - <strong><span ng-if="event.end_date !== event.start_date">{{event.end_date | date:'dMMM'}} </span>{{event.end_time}}</strong> (<strong>{{event.timezone}}</strong>)</span>
+                                        </div>
+                                        <div class="holder">
+                                            <svg class="ico-location ico-white"><use xlink:href="#icon-location" /></svg>
+                                            <span>{{event.location}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" ng-hide="event.is_joined" class="btn-blue" ng-click="joinEvent(event, key)">Send Message to Seller</button>
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+            <div class="post-txt">
+                <p>I am hosting a jobs fair in the Sports Hall next Wednesday, 23 April 2014. Employers attending include Apple, Microsoft, Verizon, Cisco and more. Free entry, doors open at 10.30am. Hope to see you all there!</p>
+            </div>
+            <div class="post-comment-wrapper">
+                <span style="color:red">Take plase block of from University</span>
+            </div>
+        </div>
+        <div class="post-section post-description">
+            <div class="subtitle">
+                <a href="#" class="user-name">Kimberly Ryan</a> joined <span class="blue-link">Golden Key International Honour Society</span>
+            </div>
+            <div class="holder">
+                <figure class="post-heading clearfix">
+                    <a class="photo-holder" href="#">
+                        <img ng-src="/assets/images/photo-small.jpg" src="/assets/images/img-1.jpg">
+                    </a>
+                    <div class="wrapper-user">
+                        <div class="user-details clearfix">
+                            <h3>
+                                <a href="#">Golden Key International Honour Society</a>
+                            </h3>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div>
+
+

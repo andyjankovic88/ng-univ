@@ -1,0 +1,1643 @@
+/* @override
+  http://simplesaml.sucroo.com/assets/css/buttons.css?2157
+  http://simplesaml.sucroo.com/assets/css/buttons.css?2179
+  http://simplesaml.sucroo.com/assets/css/buttons.css?2391
+*/
+
+/* --------------------------------------------------------------
+   Normalize form elements
+-------------------------------------------------------------- */
+/*
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+    border: 0; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/*
+ * 1. Corrects font family not being inherited in all browsers.
+ * 2. Corrects font size not being inherited in all browsers.
+ * 3. Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
+ */
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 2 */
+    margin: 0; /* 3 */
+}
+
+/*
+ * Addresses Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+    line-height: normal;
+}
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+}
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to `content-box` in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE 8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+
+/* --------------------------------------------------------------
+   Standard button classes
+-------------------------------------------------------------- */
+
+.btn,
+.btn-icon,
+.btn-mini,
+.btn-mini-icon
+{
+  background-color: #ededed;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#ebebeb));
+  background-image: -webkit-linear-gradient(top, #f4f4f4, #ebebeb);
+  background-image:    -moz-linear-gradient(top, #f4f4f4, #ebebeb);
+  background-image:      -o-linear-gradient(top, #f4f4f4, #ebebeb);
+  background-image:         linear-gradient(to bottom, #f4f4f4, #ebebeb);
+  background-repeat: no-repeat;
+  /*background-position: 6px center;
+  -webkit-box-shadow: inset 0 1px 1px #ffffff
+            , 0 1px 0 #b2b1b1
+            , 0 2px 0 #a5a5a5
+            , 0 3px 1px #cfcfcf
+            , 0 3px 1px rgba(0, 0, 0, 0.25)
+  ;
+  -moz-box-shadow: inset 0 1px 1px #ffffff
+            , 0 1px 0 #b2b1b1
+            , 0 2px 0 #a5a5a5
+            , 0 3px 1px #cfcfcf
+            , 0 3px 1px rgba(0, 0, 0, 0.25)
+  ;
+  box-shadow: inset 0 1px 1px #ffffff
+            , 0 1px 0 #b2b1b1
+            , 0 2px 0 #a5a5a5
+            , 0 3px 1px #cfcfcf
+            , 0 3px 1px rgba(0, 0, 0, 0.25)
+  ;*/
+  font-size: 11px;
+  color: #555555;
+  display: inline-block;
+  text-decoration: none;
+  /*border: 1px solid #bababa;
+  border-bottom: 1px solid #a5a5a5;*/
+  padding: 0 7px;
+  line-height: 2.363636364;
+  margin: 0 4px;
+  cursor: pointer;
+  position: relative;
+   text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  white-space:nowrap;
+}
+
+.btn.dark
+{
+  background-color: #4a4a4a;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#686868), to(#444444));
+  background-image: -webkit-linear-gradient(top, #686868, #444444);
+  background-image:    -moz-linear-gradient(top, #686868, #444444);
+  background-image:      -o-linear-gradient(top, #686868, #444444);
+  background-image:         linear-gradient(to bottom, #686868, #444444);
+  background-repeat: no-repeat;
+  /*background-position: 6px center;*/
+  -webkit-box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.5)
+            , 0 1px 0 #414141
+            , 0 2px 0 #343434
+            , 0 3px 1px #414141
+            , 0 3px 1px rgba(0, 0, 0, 0.25)
+  ;
+  -moz-box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.5)
+            , 0 1px 0 #414141
+            , 0 2px 0 #343434
+            , 0 3px 1px #414141
+            , 0 3px 1px rgba(0, 0, 0, 0.25)
+  ;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.5)
+            , 0 1px 0 #414141
+            , 0 2px 0 #343434
+            , 0 3px 1px #414141
+            , 0 3px 1px rgba(0, 0, 0, 0.25)
+  ;
+  font-weight: normal;
+  font-size: 11px;
+  color: #ffffff;
+  display: inline-block;
+  border: 1px solid #444444;
+  border-bottom: 1px solid #5b5b5b;
+  padding: 0 7px;
+  line-height: 2.363636364;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  text-shadow: 0 1px 0 #000000;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+}
+
+.btn.btn-dark_blue
+, .edit-class.btn-mini-icon.btn-dark_blue
+{
+  background-color: #005393;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0069b5), to(#004376));
+  background-image: -webkit-linear-gradient(top, #0069b5, #004376);
+  background-image:    -moz-linear-gradient(top, #0069b5, #004376);
+  background-image:      -o-linear-gradient(top, #0069b5, #004376);
+  background-image:         linear-gradient(to bottom, #0069b5, #004376);
+  background-repeat: no-repeat;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3)
+            , inset 0 1px 1px rgba(255, 255, 255, 0.2)
+  ;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3)
+            , inset 0 1px 1px rgba(255, 255, 255, 0.2)
+  ;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3)
+            , inset 0 1px 1px rgba(255, 255, 255, 0.2)
+  ;
+  font-size: 11px;
+  color: #ffffff;
+  display: inline-block;
+  border: 1px solid #005899;
+  border-bottom: 3px solid #002d4e;
+  padding: 0 7px;
+  line-height: 2.363636364;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  text-shadow: 0 1px 0 #000000;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@-moz-document url-prefix()
+{
+  input.btn,
+  input.btn-icon,
+  input.btn-mini,
+  input.btn-mini-icon,
+  input.btn.btn-dark_blue,
+  input.btn.dark
+  {
+    padding-top: 5px;
+    padding-bottom: 6px;
+  }
+}
+
+
+/*.btn.plus
+ {
+ background-image: url(/assets/images/buttons/icons/plus_shadow.png);
+  background-position: 6px center;
+  padding: 0 6px 0 20px;
+}
+
+.btn.plus_white
+{
+  background-image: url(/assets/images/buttons/icons/plus_shadow-white.png);
+  background-position: 6px center;
+  padding: 0 6px 0 20px;
+}
+
+.btn .plus_white
+{
+  background-image: url(/assets/images/buttons/icons/plus_shadow-white.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 8px;
+  height: 9px;
+  padding-right: 6px;
+}*/
+
+.btn.tick
+{
+  background-image: url(/assets/images/buttons/icons/tick.png);
+  background-position: 6px center;
+  padding: 0 6px 0 23px;
+}
+
+.btn.next
+{
+  background-image: url(/assets/images/buttons/icons/next_arrow.png);
+  padding: 0 6px 0 23px;
+}
+
+.btn.btn-arrow-left
+{
+  background-image: url(/assets/images/buttons/icons/back_arrow.png);
+  background-position: 6px center;
+  padding: 0 6px 0 23px;
+}
+
+.btn_round
+{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+    height: 20px;
+    width: 20px;
+    margin: 0;
+    border-radius: 20px;
+    padding: 0;
+    line-height: 18px;
+    border: 1px solid #acacac;
+    color: #464646;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+    background-color: #fff;
+    display: block;
+  text-align: center;
+  font-weight: bold;
+}
+
+.btn_round:hover
+{
+  text-decoration: none;
+  color: #000;
+}
+
+.btn-auto_width
+{
+  width: auto;
+}
+
+.btn-serif
+{
+  font-family: "Kreon", Garamond, serif;
+}
+
+#club-form .submit-form-action input.btn-auto_width
+{
+  width: auto;
+}
+
+/* --------------------------------------------------------------
+   Active/click state
+-------------------------------------------------------------- */
+
+.btn:active,
+.btn-icon:active,
+.btn-mini:active,
+.btn-mini-icon:active
+{
+  top: 1px;
+}
+
+/* --------------------------------------------------------------
+   Sizes
+-------------------------------------------------------------- */
+
+.btn,
+.btn-icon
+{
+  /*font-size: 12px;*/
+  /*height: 32px;*/
+  /*line-height: 29px;*/
+  /*padding: 0 1.364em;*/
+}
+
+.btn.btn-small,
+.btn-icon.btn-small
+{
+  /*background-image: url(/assets/images/buttons/button_sprite-small.png);
+  font-size: 11px;
+  line-height: 20px;
+  height: 22px;*/
+}
+
+.btn.btn-medium,
+.btn-icon.btn-medium
+{
+  /*background-image: url(/assets/images/buttons/button_sprite-medium.png);
+  font-size: 11px;
+  line-height: 25px;
+  height: 27px;
+  padding: 0 1em;*/
+}
+
+.btn.btn-large,
+.btn-icon.btn-large
+{
+  font-size: 20px;
+  height: 45px;
+  line-height: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.btn.btn-super_large
+{
+  font-size: 28px;
+  padding: 0 0.8em;
+  line-height: 2;
+  text-shadow: 0 -1px #212121;
+}
+
+.btn-large.btn-serif
+{
+  font-weight: 400;
+}
+
+.btn.btn-sidebar
+{
+  /*width: 60px;
+  padding: 0;*/
+}
+
+.btn-vote_up,
+.btn-vote_down
+{
+  background-image: url(/assets/images/buttons/vote/vote_buttons.png);
+  background-repeat: no-repeat;
+  background-color: #E8E8E8;
+  background-position: 0 0;
+  border: none;
+  width: 19px;
+  height: 11px;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-appearance: none;
+  text-indent: -9999px;
+}
+
+.btn-vote_up:hover
+{
+  background-position: -19px 0;
+}
+
+.btn-vote_up:active
+{
+  background-position: -38px 0;
+}
+
+.btn-vote_down
+{
+  background-position: 0 -11px;
+}
+
+.btn-vote_down:hover
+{
+  background-position: -19px -11px;
+}
+
+.btn-vote_down:active
+{
+  background-position: -38px -11px;
+}
+
+.btn-secondary_action
+{
+    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #ffffff;
+    font-family: 'Kreon', Garamond, serif;
+    text-shadow: 0 -1px 0px #252525;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background-clip: padding-box;
+}
+
+.btn-call_to_action
+{
+    color: #ffffff;
+    font-family: 'Kreon', Garamond, serif;
+    font-weight: 700;
+    font-size: 1.652892562em;
+    text-shadow: 0 -1px 0px rgba(56, 56, 56, .5);
+    border: 1px solid #004B84;
+    background-color: #005A9E;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#348DD1), to(#005A9E)); /* Chrome, Safari 4+ */
+    background-image: -webkit-linear-gradient(top, #348DD1, #005A9E); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+    background-image:    -moz-linear-gradient(top, #348DD1, #005A9E); /* Firefox 3.6-15 */
+    background-image:      -o-linear-gradient(top, #348DD1, #005A9E); /* Opera 11.10-12.00 */
+    background-image:         linear-gradient(to bottom, #348DD1, #005A9E); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    line-height: normal;
+    line-height: 2;
+    padding: 0 0.5em;
+}
+
+a.btn-call_to_action {
+    padding: 0.2em 18px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-call_to_action:hover {
+    background-color: #0060A9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#3693DA), to(#0060A9)); /* Chrome, Safari 4+ */
+    background-image: -webkit-linear-gradient(top, #3693DA, #0060A9); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+    background-image:    -moz-linear-gradient(top, #3693DA, #0060A9); /* Firefox 3.6-15 */
+    background-image:      -o-linear-gradient(top, #3693DA, #0060A9); /* Opera 11.10-12.00 */
+    background-image:         linear-gradient(to bottom, #3693DA, #0060A9); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+.btn-call_to_action:active {
+    -webkit-box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.53);
+    -moz-box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.53);
+    box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.53);
+    background-color: #3693DA;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#0060A9), to(#3693DA)); /* Chrome, Safari 4+ */
+    background-image: -webkit-linear-gradient(top, #0060A9, #3693DA); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+    background-image:    -moz-linear-gradient(top, #0060A9, #3693DA); /* Firefox 3.6-15 */
+    background-image:      -o-linear-gradient(top, #0060A9, #3693DA); /* Opera 11.10-12.00 */
+    background-image:         linear-gradient(to bottom, #0060A9, #3693DA); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+/* --------------------------------------------------------------
+   Sizes - Line height for A buttons need to be different
+-------------------------------------------------------------- */
+
+a.btn,
+a.btn-icon
+{
+  /*height: 32px;*/
+  /*line-height: 32px;*/
+  /*padding-bottom: 0;*/
+}
+
+a.btn.btn-small,
+a.btn-icon.btn-small
+{
+  /*padding-bottom: 0;
+  height: 20px;*/
+}
+
+a.btn.btn-medium,
+a.btn-icon.btn-medium
+{
+  /*line-height: 27px;*/
+  /*padding-bottom: 0;*/
+}
+
+a.btn.btn-large,
+a.btn-icon.btn-large
+{
+  /*line-height: 42px;*/
+  /*padding-bottom: 0;*/
+}
+
+.btn-call_to_action.heavy {
+  font-size: 2em;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 2;
+  font-weight: normal;
+}
+
+/* --------------------------------------------------------------
+   Invite friends via email button
+   TODO: clean up gnarly selector
+-------------------------------------------------------------- */
+
+/*#invite_friends_by_email .smallbutton.Detail.btn.btn-medium.btn-grey
+{
+  margin-top: 1px;
+}
+*/
+
+/* --------------------------------------------------------------
+   Fix the button in IE7 :-(
+-------------------------------------------------------------- */
+
+*+html .btn,
+*+html .btn-icon
+{
+  /*border-color: none;
+  border: 1px solid transparent;*/
+}
+
+/* --------------------------------------------------------------
+   Set default button colors
+-------------------------------------------------------------- */
+
+.btn,
+.btn-icon,
+.btn-mini,
+.btn:visited,
+.btn-icon:visited,
+.btn-mini:visited,
+.btn-mini-icon:visited
+{
+  /*background-image: url(/assets/images/buttons/sprite_test.png);*/
+  /*background-position: 0 0;
+  background-color: #F90;
+  border-color: #D58000;*/
+}
+
+.btn:hover,
+.btn-icon:hover,
+.btn-mini:hover
+{
+ /* text-decoration: underline;
+  background-color: #D58000;
+  background-image: none;
+  text-decoration: none;*/
+}
+
+/* --------------------------------------------------------------
+   Specific button colors
+   | Pink     .btn-pink
+   | Light Blue   .btn-light_blue
+   | Blue     .btn-blue
+   | Dark Blue    .btn-dark_blue
+   | Red      .btn-red
+   | Green      .btn-green
+   | Black      .btn-black
+   | Purple     .btn-purple
+   | Navy     .btn-navy
+   | Maroon     .btn-maroon
+   | Yellow     .btn-yellow
+   | Teal     .btn-teal
+   | Orange     .btn-orange
+   | Grey     .btn-grey
+   | Light Grey   .btn-light_grey
+-------------------------------------------------------------- */
+
+/* --------------------------------------------------------------
+   Pink = #FF0066
+-------------------------------------------------------------- */
+
+.btn-pink,
+.btn-pink:visited
+{
+  /*background-color: #FF0066;
+  border-color: #DA0C59;
+  color: #fff;*/
+}
+
+.btn-pink:hover
+{
+  /*background-color: #DA0C59;*/
+}
+
+/* --------------------------------------------------------------
+   Light Blue = #b6dfef
+   Gradient: #b6dfef to #abd3e3
+-------------------------------------------------------------- */
+
+.btn-light_blue,
+.btn-light_blue:visited
+{
+  /*background-color: #b6dfef;
+  background-position: 0 -44px;
+  border-color: #98c1d1;*/
+}
+
+.btn-light_blue:hover
+{
+  /*background-color: #b6dfef;*/
+}
+
+/* --------------------------------------------------------------
+   Blue = #066ECD
+-------------------------------------------------------------- */
+
+.btn-blue,
+.btn-blue:visited
+{
+  /*background-color: #066ECD;
+  border-color: #0561B4;*/
+}
+
+.btn-blue:hover
+{
+  /*background-color: #0561B4;*/
+}
+
+/* --------------------------------------------------------------
+   Dark Blue = #004b84
+   Gradient: #0065B2 to #004b84
+-------------------------------------------------------------- */
+
+/*.btn-dark_blue,
+.btn-dark_blue:visited
+{
+  color: #ffffff;
+  text-shadow: 0 -1px 1px #333;
+  background-color: #004b84;
+  background-image: -moz-linear-gradient(top, #0065B2, #004b84);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0065B2), to(#004b84));
+  background-image: -webkit-linear-gradient(top, #0000000, #004b84);
+  background-image: -o-linear-gradient(top, #0065B2, #004b84);
+  background-image: linear-gradient(to bottom, #0065B2, #004b84);
+  background-repeat: repeat-x;
+  background: -ms-linear-gradient(top, #0065B2, #004b84);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0065B2FF', endColorstr='#004b84FF', GradientType=0);
+  border-color: #00335B;
+}*/
+
+/*.btn-dark_blue:hover
+{
+  background-image: none;
+  background-color: #0069BA;
+}*/
+
+/* --------------------------------------------------------------
+   Red = #D33638
+-------------------------------------------------------------- */
+
+.btn-red,
+.btn-red:visited
+{
+  /*background-color: #D33638;
+  border-color: #7F2022;*/
+}
+
+.btn-red:hover
+{
+  /*background-color: #CC0000;*/
+}
+
+/* --------------------------------------------------------------
+   Light Red = #ff8e8e
+-------------------------------------------------------------- */
+
+.btn-light_red,
+.btn-light_red:visited
+{
+  /*background-color: #ff8e8e;
+  border-color: #ff7f7f;
+  color: #4D5E65;*/
+}
+
+.btn-light_red:hover
+{
+  /*background-color: #ff8e8e;
+  background-image: none;*/
+}
+
+/* --------------------------------------------------------------
+   Green = #2bb295
+-------------------------------------------------------------- */
+
+.btn-green,
+.btn-green:visited
+{
+  /*background-color: #2bb295;
+  border-color: #689C29;*/
+}
+
+.btn-green:hover
+{
+  /*background-color: #26a38a;*/
+}
+
+/* --------------------------------------------------------------
+   Black = #111
+-------------------------------------------------------------- */
+
+.btn-black,
+.btn-black:visited
+{
+  /*background-color: #111;
+  border-color: #000;*/
+}
+
+.btn-black:hover
+{
+  /*background-color: #000;*/
+}
+
+/* --------------------------------------------------------------
+   Purple = #7B0F75
+-------------------------------------------------------------- */
+
+.btn-purple,
+.btn-purple:visited
+{
+  /*background-color: #7B0F75;
+  border-color: #6A0D66;*/
+}
+
+.btn-purple:hover
+{
+  /*background-color: #6A0D66;*/
+}
+
+/* --------------------------------------------------------------
+   Navy = #002142
+-------------------------------------------------------------- */
+
+.btn-navy,
+.btn-navy:visited
+{
+  /*background-color: #002142;
+  border-color: #00172F;*/
+}
+
+.btn-navy:hover
+{
+  /*background-color: #00172F;*/
+}
+
+/* --------------------------------------------------------------
+   Maroon = #750000
+-------------------------------------------------------------- */
+
+.btn-maroon,
+.btn-maroon:visited
+{
+  /*background-color: #750000;
+  border-color: #530000;*/
+}
+
+.btn-maroon:hover
+{
+  /*background-color: #530000;*/
+}
+
+/* --------------------------------------------------------------
+   Yellow = #FFCC00
+-------------------------------------------------------------- */
+
+.btn-yellow,
+.btn-yellow:visited
+{
+  /*background-color: #FFCC00;
+  border-color: #D9AD01;*/
+}
+
+.btn-yellow:hover
+{
+  /*background-color: #D9AD01;*/
+}
+
+/* --------------------------------------------------------------
+   Teal = #39A7B6
+-------------------------------------------------------------- */
+
+.btn-teal,
+.btn-teal:visited
+{
+  /*background-color: #39A7B6;
+  border-color: #2E8794;*/
+}
+
+.btn-teal:hover
+{
+  /*background-color: #2E8794;*/
+}
+
+/* --------------------------------------------------------------
+   Orange = #F90
+-------------------------------------------------------------- */
+
+.btn-orange,
+.btn-orange:visited
+{
+  /*background-color: #F90;
+  border-color: #D58000;*/
+}
+
+.btn-orange:hover
+{
+  /*background-color: #D58000;*/
+}
+
+/* --------------------------------------------------------------
+   Grey = #e8e7e7
+   Gradient: #e8e7e7 to #c0bbbb
+-------------------------------------------------------------- */
+
+.btn-grey,
+.btn-grey:visited
+{
+  /*background-color: #e8e7e7;
+  background-image: -moz-linear-gradient(top, #e8e7e7, #c0bbbb);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e8e7e7), to(#c0bbbb));
+  background-image: -webkit-linear-gradient(top, #e8e7e7, #c0bbbb);
+  background-image: -o-linear-gradient(top, #e8e7e7, #c0bbbb);
+  background-image: linear-gradient(to bottom, #e8e7e7, #c0bbbb);
+  background-repeat: repeat-x;
+  background: -ms-linear-gradient(top, #e8e7e7, #c0bbbb);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e8e7e7FF', endColorstr='#c0bbbbFF', GradientType=0);
+  border-color: #aeaeae;
+  color: #817e7e;*/
+}
+
+.btn-grey:hover
+{
+  /*background-image: none;
+  background-color: #e8e7e7;*/
+}
+
+/* --------------------------------------------------------------
+   Light Grey = #f5f5f5
+   Gradient: #f5f5f5 to #e4e4e4
+-------------------------------------------------------------- */
+
+.btn-light_grey,
+.btn-light_grey:visited
+{
+  /*background-color: #f5f5f5;
+  border-color: #adadad;*/
+}
+
+.btn-light_grey:hover
+{
+  /*background-color: #f5f5f5;*/
+}
+
+/* --------------------------------------------------------------
+   Light Green = #c0ebda
+   Gradient: #c0ebda to #a4dcc7
+-------------------------------------------------------------- */
+
+.btn-light_green,
+.btn-light_green:visited
+{
+  /*background-color: #c0ebda;
+  background-position: 0 -22px;
+  border-color: #87bda9;*/
+}
+
+.btn-light_green:hover
+{
+  /*background-color: #c0ebda;*/
+}
+
+/* --------------------------------------------------------------
+   Image Overlays & Gradient Effect
+-------------------------------------------------------------- */
+
+/* --------------------------------------------------------------
+   50% Opacity for darker colors
+-------------------------------------------------------------- */
+
+.btn-blue,
+.btn-black,
+.btn-purple,
+.btn-navy,
+.btn-maroon,
+.btn-teal
+{
+  /*background-image: url(/assets/images/bg-dark.png) !important;*/
+}
+
+/* --------------------------------------------------------------
+   65% opacity for lighter colors
+-------------------------------------------------------------- */
+
+.btn-red,
+.btn-orange,
+.btn-green,
+.btn-yellow,
+.btn-pink
+{
+  /*background-image: url(/assets/images/bg-lite.png) !important;*/
+}
+
+/* --------------------------------------------------------------
+   Reset hover states for buttons
+-------------------------------------------------------------- */
+
+.btn-blue:hover,
+.btn-black:hover,
+.btn-purple:hover,
+.btn-navy:hover,
+.btn-maroon:hover,
+.btn-teal:hover,
+.btn-red:hover,
+.btn-orange:hover,
+.btn-green:hover,
+.btn-yellow:hover,
+.btn-light_red:hover,
+.btn-pink:hover
+{
+  /*background-image: none !important;*/
+}
+
+/* --------------------------------------------------------------
+   Icon Button Styles
+-------------------------------------------------------------- */
+
+.btn-icon
+{
+  /*padding-left: 24px !important;*/
+}
+
+*+html .btn-icon
+{
+  /*padding-left: 20px !important;
+  padding-right: 5px !important;*/
+}
+
+.btn-icon span, .btn-mini-icon span
+{
+  /*background-image: url(/assets/images/buttons/icons-sprite-btn_icon-1653.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;*/
+}
+
+.btn-icon span
+{
+  /*width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 6px;
+  top: 6px;*/
+}
+
+.btn-icon.btn-small span
+{
+  /*top: 3px;*/
+}
+
+.btn-icon.btn-large span
+{
+  /*top: 12px;*/
+}
+
+.btn-upper
+{
+  text-transform: uppercase;
+}
+
+.btn-remove_input
+{
+  font-weight: bold;
+  background-color: #004b84;
+  color: #fff;
+  padding: 7px;
+}
+
+.btn-remove_input:hover
+{
+  text-decoration: none;
+}
+
+.rows
+{
+  height: auto;
+  position: relative;
+  width: 70%;
+  margin-bottom: 0.5em;
+}
+
+#clubs-sgroups-sidebar td
+{
+  width: 100%;
+  margin-right: 10px;
+}
+
+#consultation .rows
+{
+  width: 100%;
+}
+
+#consultation .remove-item
+{
+  display: inherit;
+  margin-top: -10px;
+  padding: 0 0.2em;
+  margin: 0;
+  line-height: 1.3;
+  height: auto;
+  background: url(/assets/images/icon-delete.png) no-repeat;width: 12px;height: 12px;
+}
+
+.rows select
+{
+  margin: 0 30px 0 7px;
+  width: 20%;
+}
+
+.rows .input
+, .rows .remove-item
+, .class_tags .new-row input
+, .class_tags .new-row button
+, .blocked_users .new-row input
+, .blocked_users .new-row button
+{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.class_tags .new-row td, .blocked_users .new-row td
+{
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.rows .remove-item
+, .class_tags .new-row .remove-item
+{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /*background-color: #004b84;*/
+  color: #fff;
+  border-radius: 0;
+  border: none;
+  /*font-size: 16px;*/
+  padding: 0 0.6em;
+  text-align: center;
+  position: absolute;
+  right: 9px;
+  top: 18px;
+  height: 100%;
+  /*text-shadow: 0 -1px #000;*/
+  display: none;
+
+  background: url(/assets/images/icon-delete.png) no-repeat !important;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.class_tags .new-row .remove-item, .blocked_users .new-row .remove-item
+{
+  margin-top: 1px;
+  margin-right: 1px;
+  height: 31px;
+}
+
+.rows .remove-item:hover
+, .class_tags .new-row .remove-item:hover
+, .blocked_users .new-row .remove-item:hover
+{
+  background-color: #005697;
+}
+
+.rows .remove-item:active
+, .class_tags .new-row .remove-item:active
+{
+  box-shadow: inset 0 0 6px #333;
+  background-color: #004376;
+}
+
+.rows .input
+, .class_tags .new-row input[type="text"]
+, .blocked_users .new-row input[type="text"]
+{
+  width: 100%;
+  height: 100%;
+  padding-right: 39px;
+  font-size: 14px;
+}
+
+.class_tags .new-row input[type="text"], 
+.blocked_users .new-row input[type="text"]
+{
+  height: auto;
+  padding-right: 65px;width: 100% !important;
+}
+
+
+/* --------------------------------------------------------------
+   Mini Buttons
+-------------------------------------------------------------- */
+.btn-mini
+{
+  /*background-position: 0 0;
+  width: 32px;
+  height: 26px !important;
+  line-height: 500px !important;
+  overflow: hidden;
+  padding: 0;*/
+}
+
+.btn-mini span
+{
+  /*background-image: url(/assets/images/amp-btn-icon-sprite.png);
+  background-repeat: no-repeat;
+  display: block;
+  width: 16px;
+  height: 16px;
+  line-height: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -8px;
+  margin-top: -8px;*/
+}
+
+/* --------------------------------------------------------------
+   Mini Icon Classes
+-------------------------------------------------------------- */
+/*
+For image replacement so that users/screenreaders with images disabled
+still see something understandable
+*/
+.btn-mini-icon span:before
+{
+  /*content: "";
+  display: block;
+  width: 0;
+  height: 100%;*/
+}
+
+.btn-mini-icon span
+{
+  /*width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin: 0;
+  padding: 0;*/
+  /*border: 0;*/
+  /*overflow: hidden;*/
+  /* IE 6/7 fallback */
+  /*direction: ltr;
+  *text-indent: -9999px;*/
+}
+
+.remove-class.btn-mini-icon span:before
+, .edit-class.btn-mini-icon span:before
+{
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+}
+
+.remove-class.btn-mini-icon span
+, .edit-class.btn-mini-icon span
+{
+  background-image: url(/assets/images/buttons/icons-sprite-btn_icon-1653.png);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  direction: ltr;
+  *text-indent: -9999px;
+}
+
+.remove-class.btn-mini-icon
+, .edit-class.btn-mini-icon.btn-dark_blue
+{
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #005899;
+  border-bottom: none;
+  padding: 0;
+  line-height: 2;
+  cursor: pointer;
+  position: relative;
+  text-shadow: none;
+}
+
+.remove-class.btn-mini-icon.btn-red
+{
+  background-color: #E16F62;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#E16F62), to(#B83B2D));
+  background-image: -webkit-linear-gradient(top, #E16F62, #B83B2D);
+  background-image:    -moz-linear-gradient(top, #E16F62, #B83B2D);
+  background-image:      -o-linear-gradient(top, #E16F62, #B83B2D);
+  background-image:         linear-gradient(to bottom, #E16F62, #B83B2D);
+  background-repeat: no-repeat;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-size: 11px;
+  color: #ffffff;
+  display: inline-block;
+  border: 1px solid #B83B2D;
+  padding: 0 2px;
+  line-height: 2;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  text-shadow: none;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.remove-class.btn-minus span
+{
+  background-position: -97px -16px;
+}
+
+/* --------------------------------------------------------------
+   Icon Classes
+-------------------------------------------------------------- */
+
+.btn-arrow-down span
+{
+  background-position: -48px 0;
+}
+
+.btn-arrow-up span
+{
+  background-position: -32px 0;
+}
+
+.btn-arrow-right span
+{
+  background-position: -16px 0;
+}
+
+/*.btn-arrow-left span
+{
+  background-position: 0 0;
+}*/
+
+.btn-comment span
+{
+  background-position: -112px 0;
+}
+
+.btn-heart span
+{
+  background-position: -96px 0;
+}
+
+.btn-star span
+{
+  background-position: -80px 0;
+}
+
+.btn-cart span
+{
+  background-position: -64px 0;
+}
+
+.btn-print span
+{
+  background-position: -128px 0;
+}
+
+.btn-rss span
+{
+  background-position: -144px 0;
+}
+
+.btn-person span
+{
+  background-position: 0 -16px;
+}
+
+.btn-check span
+{
+  background-position: -16px -16px;
+}
+
+.btn-dollar span
+{
+  background-position: -32px -16px;
+}
+
+.btn-refresh span
+{
+  background-position: -48px -16px;
+}
+
+.btn-home span
+{
+  background-position: -64px -16px;
+}
+
+.btn-plus span
+{
+  background-position: -80px -16px;
+}
+
+.btn-minus span
+{
+  background-position: -96px -16px;
+}
+
+.btn-cross span
+{
+  background-position: -112px -16px;
+}
+
+.btn-edit span
+{
+  background-position: -128px -16px;
+}
+
+/* --------------------------------------------------------------
+   Transparent Button Styles
+-------------------------------------------------------------- */
+
+.btn-transparent,
+.btn-transparent:hover
+{
+  /*background-image: url(/assets/images/bg-lite.png);
+  background-color: transparent;
+  filter: none;
+  border-color: transparent\0/;
+  border-color: rgba(0,0,0,.4) !important;
+  margin: 0 1em 0 0;*/
+}
+
+*+html .btn-transparent
+{
+  /*border: none;*/
+}
+
+
+/* --------------------------------------------------------------
+   Specific Button Styles
+-------------------------------------------------------------- */
+/*.btn-invite_facebook_friends,
+.btn-invite_gmail,
+.btn-invite_email {
+  font-size: 12px;
+  height: 31px;
+  line-height: 31px;
+  margin-bottom: 7px;
+  margin-right: 0;
+  padding: 0 0 0 64px;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #000;
+  position: relative;
+}
+
+.btn-invite_facebook_friends
+{
+  background: transparent url('/assets/images/index/button-fb_blue.png') no-repeat 0 0;
+}
+
+.btn-invite_gmail
+{
+  background: transparent url('/assets/images/index/button-gmail.png') no-repeat 0 0;
+}
+
+.btn-invite_email
+{
+  background: transparent url('/assets/images/index/button-mail.png') no-repeat 0 0;
+}
+
+
+.btn-invite_facebook_friends:hover,
+.btn-invite_gmail:hover,
+.btn-invite_email:hover {
+  background-position: 0 -31px;
+  text-decoration: none;
+}
+
+.btn-invite_facebook_friends:active,
+.btn-invite_gmail:active,
+.btn-invite_email:active {
+  background-position: 0 -62px;
+  text-shadow: none;
+  top: 1px;
+}
+*/
+
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  margin-right: 5px;
+}
+
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  border: solid transparent;
+  /*border-width: 0 0 100px 200px;*/
+  opacity: 0;
+  filter: alpha(opacity=0);
+  /*-moz-transform: translate(-300px, 0) scale(4);*/
+  direction: ltr;
+  cursor: pointer;
+  /*left: 50px;*/
+}
+
+/* Fix for IE 6: */
+*html .fileinput-button {
+  margin-right: -2px;
+}
+
+*html .fileinput-button .ui-button-text {
+  line-height: 24px;
+}
+
+
+/* Fix for IE 7: */
+*+html .fileinput-button {
+  margin-right: 1px;
+}
+*+html .fileinput-button .ui-button-text {
+  line-height: 24px;
+}
+
+/* Fix for Firefox: */
+@-moz-document url-prefix()
+{
+  .fileinput-button
+  {
+    margin-top: 8px;
+    margin-bottom: 3px;
+  }
+}
+
+.btn-success {
+  background-color: #00A93A;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#10D855), to(#00AA39));
+  background-image: -webkit-linear-gradient(top, #10D855, #00AA39);
+  background-image:    -moz-linear-gradient(top, #10D855, #00AA39);
+  background-image:      -o-linear-gradient(top, #10D855, #00AA39);
+  background-image:         linear-gradient(to bottom, #10D855, #00AA39);
+  background-repeat: no-repeat;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3),
+                      inset 0 1px 1px rgba(255, 255, 255, 0.2);
+     -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3),
+                      inset 0 1px 1px rgba(255, 255, 255, 0.2);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3),
+                      inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  font-size: 11px;
+  color: #ffffff;
+  display: inline-block;
+  border: 1px solid #009A33;
+  border-bottom: 3px solid #007927;
+  margin: 0;
+  text-shadow: 0 1px 0 #333;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
+}
+
+
+.btn.btn-dark_blue_disabled
+, .edit-class.btn-mini-icon.btn-dark_blue_disabled
+{
+  /*background-color: #005393;*/
+  /*background-image: -webkit-gradient(linear, left top, left bottom, from(#0069b5), to(#004376));*/
+/*  background-image: -webkit-linear-gradient(top, #0069b5, #004376);
+  background-image:    -moz-linear-gradient(top, #0069b5, #004376);
+  background-image:      -o-linear-gradient(top, #0069b5, #004376);*/
+  /*background-image:         linear-gradient(to bottom, #0069b5, #004376);*/
+  background-repeat: no-repeat;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3)
+            , inset 0 1px 1px rgba(255, 255, 255, 0.2)
+  ;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3)
+            , inset 0 1px 1px rgba(255, 255, 255, 0.2)
+  ;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3)
+            , inset 0 1px 1px rgba(255, 255, 255, 0.2)
+  ;
+  font-size: 11px;
+  color: #ffffff;
+  display: inline-block;
+  /*border: 1px solid #005899;*/
+  /*border-bottom: 3px solid #002d4e;*/
+  padding: 0 7px;
+  line-height: 2.363636364;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  text-shadow: 0 1px 0 #000000;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  font-weight: bold;
+}
+.edit-profile-pic a.fileinput-button{margin:0 !important;}
+.edit-profile-pic a.editpic-button-padding{padding: 3px 9px !important;}
+
+.class_tags.blocked_users .rows .remove-item
+, .class_tags.blocked_users .new-row .remove-item
+{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /*background-color: #004b84;*/
+  color: #fff;
+  border-radius: 0;
+  border: none;
+  /*font-size: 16px;*/
+  padding: 0 0.6em;
+  text-align: center;
+  position: absolute;
+  right: 9px;
+  top: 18px;
+  height: 100% !important;
+  /*text-shadow: 0 -1px #000;*/
+  display: none;
+
+  background: url(/assets/images/unbloci-button.jpeg) no-repeat !important;
+  width: 95px !important;
+}
+
+.rows .remove-item:active
+, .class_tags.blocked_users .new-row .remove-item:active
+{
+  box-shadow: none !important;
+}
+
+table#club-sgroups-account_settings{ width: 100%}

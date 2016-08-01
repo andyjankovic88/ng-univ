@@ -1,0 +1,140 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "club_name": {
+          "type": "string"
+        },
+        "club_id": {
+          "type": "integer"
+        },
+        "back_url": {
+          "type": "string"
+        },
+        "menu": {
+          "type": "object",
+          "properties": {
+            "active": {
+              "type": "string"
+            },
+            "class": {
+              "type": "string"
+            },
+            "feed": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                }
+              }
+            },
+            "club_committee": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                }
+              }
+            },
+            "events": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                }
+              }
+            },
+            "info": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                }
+              }
+            },
+            "admin": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "title": {
+          "type": "string"
+        },
+        "done_url": {
+          "type": "string"
+        },
+        "imported_users": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "integer"
+            },
+            "note": {
+              "type": "string"
+            },
+            "users": {
+              "type": "object",
+              "properties": {
+                
+              }
+            }
+          }
+        },
+        "waiting_users": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "integer"
+            }
+          }
+        },
+        "existing_member": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "integer"
+            }
+          }
+        },
+        "failed_import": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

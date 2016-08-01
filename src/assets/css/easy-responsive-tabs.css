@@ -1,0 +1,197 @@
+﻿body {
+    margin: 0px;
+    padding: 0px;
+}
+ul.resp-tabs-list, p {
+   /* margin: 0px;*/
+    padding: 0px;
+}
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.resp-tabs-list li {
+    font-size: 18px;
+    display: inline-block;
+    padding: 17px 15px;
+    margin: 0;
+    list-style: none;
+    cursor: pointer;
+    float: left;font-family: 'Soleil';color:#869199;width:269px;text-align:center;border-right:1px solid #e7e7e7;
+}
+.resp-tabs-list li:last-child{border-right:0;}
+.resp-tabs-list li:hover{background:#4f97e8;color:#fff;}
+
+.resp-tabs-container {
+    padding: 0px;
+    clear: left;
+}
+
+div.resp-accordion {
+    cursor: pointer;
+    padding: 5px;
+    display: none;
+}
+
+.resp-tab-content {
+    display: none;
+}
+
+.resp-tab-active {
+   /* border: 1px solid #c1c1c1;*/
+    border-bottom: none;
+    margin-bottom: -1px !important;
+   /* padding: 12px 14px 14px 14px !important;*/
+   background:#4f97e8;
+}
+
+.resp-tab-active {
+    border-bottom: none;
+   background:#4f97e8;color:#fff !important;
+}
+
+.resp-content-active, .resp-accordion-active {
+    display: block;
+}
+
+.resp-tab-content {
+    /*border: 1px solid #c1c1c1;*/
+}
+
+div.resp-accordion {
+   /* font-size: 13px;
+    border: 1px solid #c1c1c1;
+    border-top: 0px solid #c1c1c1;
+    margin: 0px;
+    padding: 10px 15px;*/
+	webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;-webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2); box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);padding:15px 15px 15px 20px;background:#fff;color:#4f97e8;font-size:18px;margin:0 0 20px 0;
+	
+	
+}
+
+div.resp-tab-active {
+    /*border-bottom: 0px solid #c1c1c1 !important;
+    margin-bottom: 0px !important;
+    padding: 10px 15px !important;*/webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;-webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2); box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);padding:15px 15px 15px 20px;background:#fff;color:#4f97e8 !important;font-size:18px;margin:0 0 20px 0;
+}
+
+div.resp-tab-title:last-child {
+    border-bottom: 12px solid #c1c1c1 !important;
+    background: blue;
+}
+/*-----------Vertical tabs-----------*/
+.resp-vtabs ul.resp-tabs-list {
+    float: left;
+    width: 30%;
+}
+
+.resp-vtabs .resp-tabs-list li {
+    display: block;
+    padding: 15px 15px !important;
+    margin: 0;
+    cursor: pointer;
+    float: none;
+}
+
+.resp-vtabs .resp-tabs-container {
+    padding: 0px;
+    background-color: #fff;
+    border: 1px solid #c1c1c1;
+    float: left;
+    width: 68%;
+    min-height: 250px;
+    border-radius: 4px;
+    clear: none;
+}
+
+.resp-vtabs .resp-tab-content {
+    border: none;
+}
+
+.resp-vtabs li.resp-tab-active {
+    border: 1px solid #c1c1c1;
+    border-right: none;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    margin-right: -1px !important;
+    padding: 14px 15px 15px 14px !important;
+}
+
+.resp-arrow {
+    width: 0;
+    height: 0;
+    float: right;
+    margin-top: 10px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 12px solid #c1c1c1;
+}
+
+div.resp-tab-active span.resp-arrow {
+    border: none;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 12px solid #9B9797;
+}
+
+/*-----------Accordion styles-----------*/
+div.resp-tab-active {
+   /* background: #DBDBDB !important;*/
+}
+.resp-easy-accordion  div.resp-accordion {
+        display: block;
+}
+.resp-easy-accordion .resp-tab-content {
+    border: 1px solid #c1c1c1;
+}
+
+.resp-easy-accordion .resp-tab-content:last-child {
+    border-bottom: 1px solid #c1c1c1 !important;
+}
+
+.resp-jfit {
+    width: 100%;
+    margin: 0px;
+}
+
+.resp-tab-content-active {
+    display: block;
+}
+
+div.resp-accordion:first-child {
+   /* border-top: 1px solid #c1c1c1 !important;*/
+}
+
+/*Here your can change the breakpoint to set the accordion, when screen resolution changed*/
+@media only screen and (max-width: 767px) {
+    ul.resp-tabs-list {
+        display: none;
+    }
+
+    div.resp-accordion {
+        display: block;
+    }
+
+    .resp-vtabs .resp-tab-content {
+        border: 1px solid #C1C1C1;
+    }
+
+    .resp-vtabs .resp-tabs-container {
+        border: none;
+        float: none;
+        width: 100%;
+        min-height: initial;
+        clear: none;
+    }
+    .resp-accordion-closed {
+        display:none !important;
+    }
+    .resp-vtabs .resp-tab-content:last-child {
+        border-bottom: 1px solid #c1c1c1 !important;
+    }
+	
+	.resp-tab-content-active{background:#fafafa;webkit-border-radius:0 0 5px 5px; -moz-border-radius: 0 0 5px 5px; border-radius: 0 0 5px 5px;-webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2); box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);padding:10px 10px 20px 10px;margin-top:-3px;margin-bottom:20px;}
+	
+}

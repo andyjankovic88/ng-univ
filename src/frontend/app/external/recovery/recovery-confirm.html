@@ -1,0 +1,32 @@
+<!-- recovery pad -->
+<div class="recovery-pad">
+   <!-- form -->
+   <form id="resetForm" name="resetForm" accept-charset="utf-8" ng-submit="resetPassword(resetForm)" novalidate>
+      <div class="recovery-box-new">
+         <div class="home-logo">
+            <svg><use xlink:href="#header-homepage-logo2"></use></svg>
+         </div>
+         <div class="row" ng-class="{'has-error': (resetForm.$submitted || resetForm.$dirty) && resetForm.newPassword.$invalid}">
+            <div class="form-group">
+               <div class="form-label-error" ng-hide="emailDoesNotExist">Field must contain a valid email address</div>
+               <label class="form-label" for="new_password">Email</label>
+               <input type="password" name="newPassword" id="new_password" class="form-object" ng-model="newPassword" tabindex="0" required>
+            </div>
+         </div>
+         <div class="row" ng-class="{'has-error': (resetForm.$submitted || resetForm.$dirty) && resetForm.confirmPassword.$invalid}">
+            <div class="form-group">
+               <label class="form-label" for="confirm_password">Email</label>
+               <input type="password" name="confirmPassword" id="confirm_password" class="form-object" ng-model="confirmPassword" tabindex="0" required pw-check="new_password">
+            </div>
+         </div>
+         <div class="row">
+            <button type="submit" class="btn-blue btn-login" tabindex="0">Reset Password</button>
+         </div>
+      </div>
+   </form><!-- form -->
+   <div class="bottom-row">
+      <span class="linkto-login"><a ui-sref="login">Back to Login</a></span>
+   </div>
+</div><!-- recovery pad -->
+
+

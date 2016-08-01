@@ -1,0 +1,33 @@
+//Demo API Schema
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Universities List",
+        "type": "object",
+        "properties": {
+            "message": {
+                "type": "string"
+            },
+            "response": {
+                "type": "array",
+                "items":{
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "aaf": {
+                        "type": "boolean"
+                    },
+                    "url": {
+                        "type": "string"
+                    }
+                },
+                "required": ["id","name","aaf","url"]
+                }
+            }
+        },
+        "required": ["message","response"]
+    
+}

@@ -1,0 +1,142 @@
+<div class="signup-pad signup-pad-large">
+   <form ng-submit="signUp(signupForm)" name="signupForm" novalidate>
+      <div class="signup-pad-in">
+         <div class="row">
+            <div class="home-logo"><svg><use xlink:href="#header-homepage-logo2"></use></svg></div>
+         </div>
+         <div class="row row-info">
+            <div class="info-l-label">Complete your information</div>
+            <div class="info-label">Please review and provide missing information to finish signing up.</div>
+         </div>
+         <div class="row"></div>
+         <div ng-if="!isStaffRegister">
+            <div class="row">
+               <div class="form-group" ng-class="{'has-error': (signupForm.$submitted || signupForm.degree.$dirty) && signupForm.degree.$invalid, 'no-error': (signupForm.$submitted || signupForm.degree.$dirty) && signupForm.degree.$valid}">
+                  <label class="form-label">Degree</label>
+                  <!--<input class="form-object" type="text" name="degree" placeholder="Start typing your degree" ng-model="signupData.degree" tabindex="0" required />-->
+                  <input type="text" name="degree" ng-model="signupData.course" placeholder="Start typing your degree"
+                         class="form-object input-typeahead"
+                         typeahead="course as course.name for course in courses | filter:{name:$viewValue}" autocomplete="off" required>
+               </div>
+            </div>
+            <div class="row">
+               <div class="form-group col2" ng-class="{'has-error': (signupForm.$submitted || signupForm.faculty.$dirty) && signupForm.faculty.$invalid, 'no-error': (signupForm.$submitted || signupForm.faculty.$dirty) && signupForm.faculty.$valid}">
+                  <label class="form-label">Faculty</label>
+                  <div class="form-object">
+                     <combo-with-checkboxes name="faculty" options="faculties" id-key="id" label-key="name" id-attr-prefix="faculty-" ng-model="signupData.faculty" default-text="Select"></combo-with-checkboxes>
+                  </div>
+               </div>
+               <div class="form-group col2" ng-class="{'has-error': (signupForm.$submitted || signupForm.campus.$dirty) && signupForm.campus.$invalid, 'no-error': (signupForm.$submitted || signupForm.campus.$dirty) && signupForm.campus.$valid}">
+                  <label class="form-label">Campus</label>
+                  <div class="select-custom form-object">
+                     <select name="campus"
+                             ng-class="{'selected': signupData.campus!=''}"
+                             ng-options="campus.id as campus.name for campus in campuses track by campus.id"
+                             ng-model="signupData.campus" required tabindex="0">
+                        <option value="" disabled selected hidden>Select</option>
+                     </select>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="form-group col2" ng-class="{'has-error': (signupForm.$submitted || signupForm.course_start.$dirty) && signupForm.course_start.$invalid, 'no-error': (signupForm.$submitted || signupForm.course_start.$dirty) && signupForm.course_start.$valid}">
+                  <label class="form-label">Course Start</label>
+                  <div class="select-custom form-object">
+                     <select name="course_start"
+                             ng-class="{'selected': signupData.course_start!=''}"
+                             ng-options="year.value as year.title for year in courseStartYears"
+                             ng-model="signupData.course_start" required tabindex="0">
+                        <option value="" disabled selected hidden>Select</option>
+                     </select>
+                  </div>
+               </div>
+               <div class="form-group col2" ng-class="{'has-error': (signupForm.$submitted || signupForm.course_end.$dirty) && signupForm.course_end.$invalid, 'no-error': (signupForm.$submitted || signupForm.course_end.$dirty) && signupForm.course_end.$valid}">
+                  <label class="form-label">Course End</label>
+                  <div class="select-custom form-object">
+                     <select name="course_end"
+                             ng-class="{'selected': signupData.course_end!=''}"
+                             ng-options="year.value as year.title for year in courseEndYears"
+                             ng-model="signupData.course_end" required tabindex="0">
+                        <option value="" disabled selected hidden>Select</option>
+                     </select>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col2">
+                  <div class="checkbox">
+                     <input id="chk_student_international" type="checkbox" name="student_international" ng-model="signupData.isInternationalStudent" title="I am an international student" ng-true-value="1" ng-false-value="0">
+                     <label for="chk_student_international" tabindex="0">I am an international student</label>
+                  </div>
+               </div>
+               <div class="col2">
+                  <div class="checkbox">
+                     <input id="chk_student_vet" type="checkbox" name="student_vet" ng-model="signupData.isVetStudent" title="I am a VET student" ng-true-value="1" ng-false-value="0">
+                     <label for="chk_student_vet" tabindex="0">I am a VET student</label>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div ng-if="isStaffRegister">
+            <div class="row">
+               <div class="form-group" ng-class="{'has-error': (signupForm.$submitted || signupForm.staffType.$dirty) && signupForm.staffType.$invalid, 'no-error': (signupForm.$submitted || signupForm.staffType.$dirty) && signupForm.staffType.$valid}">
+                  <label class="form-label">Staff Type</label>
+                  <div class="select-custom form-object">
+                     <select name="staffType"
+                             ng-class="{'selected': signupData.staff_type!=''}"
+                             ng-model="signupData.staffType" required tabindex="0">
+                        <option value="" disabled selected hidden>Select</option>
+                        <option value="staff_academic">Academic Staff</option>
+                        <option value="staff_services">Student Services Staff</option>
+                        <option value="staff_mentor">Mentor Programs Staff</option>
+                        <option value="staff_first_year">First Year Experience Staff</option>
+                        <option value="staff_communications">Communications Staff</option>
+                        <option value="staff_other">Other</option>
+                     </select>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="form-group col2" ng-class="{'has-error': (signupForm.$submitted || signupForm.faculty.$dirty) && signupForm.faculty.$invalid, 'no-error': (signupForm.$submitted || signupForm.faculty.$dirty) && signupForm.faculty.$valid}">
+                  <label class="form-label">Faculty</label>
+                  <div class="form-object">
+                     <combo-with-checkboxes name="faculty" options="faculties" id-key="id" label-key="name" id-attr-prefix="faculty-" ng-model="signupData.faculty" default-text="Select"></combo-with-checkboxes>
+                  </div>
+               </div>
+               <div class="form-group col2" ng-class="{'has-error': (signupForm.$submitted || signupForm.campus.$dirty) && signupForm.campus.$invalid, 'no-error': (signupForm.$submitted || signupForm.campus.$dirty) && signupForm.campus.$valid}">
+                  <label class="form-label">Campus</label>
+                  <div class="select-custom form-object">
+                     <select name="campus"
+                             ng-class="{'selected': signupData.campus!=''}"
+                             ng-options="campus.id as campus.name for campus in campuses track by campus.id"
+                             ng-model="signupData.campus" required tabindex="0">
+                        <option value="" disabled selected hidden>Select</option>
+                     </select>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row"></div>
+         <div class="row">
+            <button type="submit" class="btn-blue btn-login">Let's Go!</button>
+         </div>
+         <div class="row"></div>
+         <div class="row"></div>
+         <div class="row"></div>
+         <div class="row"></div>
+         <div class="row"></div>
+         <div class="row"></div>
+         <div class="row">
+            <div class="l-side">
+               <button class="btn-link btn-default" ng-click="goBack(signupForm)"><svg class="ico-btn-left"><use xlink:href="#icon-arrow-left-nf"></use></svg>Back</button>
+            </div>
+            <ul class="step-indicator">
+               <li></li><li class="active"></li>
+            </ul>
+         </div>
+      </div>
+   </form>
+</div>
+<div class="overlay-entire" ng-class="{'active': isProgressing}">
+   <div><svg><use xlink:href="#icon-loading-spinner"></use></svg></div>
+</div>

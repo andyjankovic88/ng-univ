@@ -1,0 +1,80 @@
+.ticket-price {
+   width: 320px;
+   .checkbox label {
+      width: 20px;
+   }
+   td {
+      padding: 0 20px 0 0;
+      width: 80px;
+   }
+   th {
+      padding: 0;
+   }
+}
+#tickets-table {
+   width: 100%;
+   font-size: $font12;
+   thead>tr>th{
+      text-transform: uppercase;
+      padding: 10px;
+   }
+   th {
+      text-align: left;
+   }
+   tbody:nth-child(2n) tr {
+      &:first-child{
+         background: $color-left-menu;
+      }
+      .ticket-price {
+         tr {
+            background: none;
+         }
+      }
+   }
+   tbody {
+      td {
+         padding: 6px 10px;
+         &:last-child {
+            width: 20px;
+            padding-right: 15px;
+         }
+         &:first-child {
+            width: 30%;
+         }
+      }
+      .btn-blue {
+         min-width: 35px;
+         height: 30px;
+         line-height: 30px;
+      }
+      .quantity {
+         width: 40px;
+         height: 30px;
+         padding: 5px;
+         float: left;
+         margin: 0 10px 0 0;
+      }
+      .quantity-val {
+         display: inline-block;
+         vertical-align: middle;
+         line-height: 30px;
+      }
+      .separator {
+         margin: 7px 0 0;
+         float: left;
+      }
+      .quantity-holder {
+         float: left;
+         margin: 0 10px 0 0;
+      }
+   }
+   .create-ticket {
+      margin: 0 0 10px;
+   }
+}
+.create-ticket {
+   .error {
+      margin-top: 9px;
+      color: $color-red;
+   }
+}

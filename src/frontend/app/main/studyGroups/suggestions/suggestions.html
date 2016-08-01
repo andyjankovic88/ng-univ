@@ -1,0 +1,26 @@
+<div class="suggestions-section">
+   <!-- content-heading -->
+   <h2>
+      <svg class="ico-add-user pink">
+         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-connections"></use>
+      </svg>
+      <span>Based on your connections</span>
+   </h2>
+
+   <div class="section" infinite-scroll='loadNextPage()' infinite-scroll-container="scrollContainer" infinite-scroll-disabled='listRequestInProgress || noMoreData' infinite-scroll-distance='1' infinite-scroll-container='".middle-section"'>
+      <div class="item" ng-repeat="suggestion in groupSuggestions">
+         <figure class="img-holder">
+            <a ui-sref="studyGroupsFeed({id:{{suggestion.id}}})"><img class="photo" ng-src="{{suggestion.picture}}"></a>
+         </figure>
+         <div class="item-info">
+            <h3>
+               <a ui-sref="studyGroupsFeed({id:{{suggestion.id}}})">{{suggestion.name}}</a>
+               <svg class="tick red" ng-if="connection.connected"><use xlink:href="#profile-tick" /></svg>
+            </h3>
+            <span>{{suggestion.type}}</span>
+            <span ng-if="suggestion.connections > 0"><a class="link" href="#">{{suggestion.connections}} connections</a> have joined</span>
+         </div>
+      </div>
+   </div>
+   <loader is-active="listRequestInProgress" position="static"></loader>
+</div>

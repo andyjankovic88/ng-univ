@@ -1,0 +1,22 @@
+<div class="info-section">
+   <!-- info-section -->
+   <div class="holder">
+      <h2>
+         Description
+      </h2>
+      <p style="white-space: pre-line;">{{group.description}}</p>
+      <h2>Group Administrators</h2>
+      <ul ng-repeat="member in group.admins">
+         <li>
+            <figure class="img-holder">
+               <a title="{{member.username}}" ui-sref="profile({id:{{member.id}}})"><img class="photo"  ng-src="{{member.pic}}"></a>
+            </figure>
+            <div class="item-info">
+               <h3>
+                  <a ui-sref="profile({id:{{member.id}}})"><strong>{{member.name}}</strong></a>
+               </h3>
+            </div>
+         </li>
+      </ul>
+   </div>
+</div>

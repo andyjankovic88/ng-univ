@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+ "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "posts": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "likes_count": {
+                  "type": "integer"
+                },
+                "comments_count": {
+                  "type": "integer"
+                },
+                "how_long_ago": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "array"
+                },
+                "news_source": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "logo": {
+                      "type": "string"
+                    },
+                    "link": {
+                      "type": "string"
+                    }
+                  },
+                  "required":["name","logo","link"]
+                },
+                "link_details": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "meta": {
+                      "type": "string"
+                    },
+                    "feed_url": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    }
+                  },
+                  "required":["feed_url","description"]
+                },
+                "text": {
+                  "type": "string"
+                },
+                "is_anonymous": {
+                  "type": "integer"
+                },
+                "comments": {
+                  "type": "array",
+                  "items": []
+                },
+                "apo_text": {
+                  "type": "string"
+                },
+                "has_liked": {
+                  "type": "boolean"
+                },
+                "has_reported": {
+                  "type": "boolean"
+                }
+              },
+              "required":["id","type","user","is_anonymous","has_liked","has_reported","text"]
+            }
+          ]
+        },
+        "is_followed": {
+          "type": "boolean"
+        },
+        "can_edit": {
+          "type": "boolean"
+        },
+        "feed_title": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

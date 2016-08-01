@@ -1,0 +1,78 @@
+<!-- subjects-section -->
+<div class="subjects-section">
+   <form id="form-subjects" class="ng-pristine ng-valid">
+      <fieldset>
+         <div class="row">
+            <div class="checkbox r-side">
+               <input id="remember_university" type="checkbox" name="remember_university" checked="checked" tabindex="2"
+                      title="Remember my University" ng-model="showPastSubjects">
+               <label for="remember_university">Show past subjects</label>
+            </div>
+         </div>
+      </fieldset>
+   </form>
+   <div class="item-holder clearfix" ng-repeat="subject in profileInfo.classes">
+      <div class="item">
+         <figure class="img-holder">
+            <div class="icon-circle">
+               <a ui-sref="subjectFeed({id:subject.id})">
+                  <svg>
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-subject"></use>
+                  </svg>
+               </a>
+            </div>
+         </figure>
+         <div class="item-info">
+            <h3>
+               <a ui-sref="subjectFeed({id:subject.id})">{{subject.name}}</a>
+               <a ng-click="endorse(subject)" ng-if="(profileInfo.user_id != currentUserId) && (!isAlreadyEndorsed(subject.endorsements)) && currentUserEnrolled(subject.id)" class="link-endorse">
+                  <svg class="icon-small"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#popup-plus"></use></svg>
+               </a>
+               <!-- <svg class="tick"><use xlink:href="#profile-tick" /></svg> -->
+            </h3>
+            <span class="message-update">{{subject.extended_name}}</span>
+         </div>
+      </div>
+      <div class="small-gallery" ng-if="subject.endorsements.length">
+         <ul>
+            <li ng-repeat="user in subject.endorsements | limitTo:6">
+               <a ui-sref="profile({id: user.user_id})" title="{{user.name}}"><img class="photo" ng-src="{{user.photo_url}}"></a>
+            </li>
+            <a href="#" class="arrow-blue">
+               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
+                       <polyline fill="none" stroke="#42a5f5" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" points="
+               0.375,0.375 45.63,38.087 0.375,75.8 "></polyline>
+                   </svg>
+            </a>
+         </ul>
+
+
+
+            <span class="label">Endorsed by</span>
+
+      </div>
+   </div>
+   <div ng-if="showPastSubjects">
+      <h2 ng-repeat-start="subjectsInYear in pastSubjects | groupBy: 'year' | reverse">{{ subjectsInYear[0].year }}</h2>
+
+      <div class="item-holder clearfix inactive" ng-repeat-end ng-repeat="subject in subjectsInYear">
+         <div class="item">
+            <figure class="img-holder">
+               <div class="icon-circle">
+                  <a href="#">
+                     <svg>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-subject"></use>
+                     </svg>
+                  </a>
+               </div>
+            </figure>
+            <div class="item-info">
+               <h3>
+                  <a href="#">{{ subject.code }}</a>
+               </h3>
+               <span class="message-update">{{ subject.name }}</span>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

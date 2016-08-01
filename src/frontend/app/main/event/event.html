@@ -1,0 +1,123 @@
+<loader is-active="true" ng-if="!event" position="static"></loader>
+<div class="upcoming-events" ng-if="event">
+   <!-- post-section -->
+   <div class="post">
+      <div class="post-section post-description">
+         <div class="holder" ng-if="event.pic">
+            <figure class="simple-img middle">
+               <a href="#">
+                  <img ng-if="event.pic" ng-src="{{event.pic}}">
+               </a>
+
+               <div class="img-info">
+                  <div class="img-description">
+                     <h2>{{event.title}}</h2>
+
+                     <div class="holder">
+                        <div class="coll l-side">
+                           <div class="coll l-side">
+                              <div class="holder">
+                                 <span class="date">
+                                   {{event.start_date | date:'d'}}<strong>{{event.start_date | date:'MMM'}}</strong>
+                                 </span>
+                              </div>
+                           </div>
+                           <div class="coll r-side">
+                              <div class="holder">
+                                 <svg class="ico-schedule ico-white">
+                                    <use xlink:href="#icon-schedule"/>
+                                 </svg>
+                                 <span><strong>{{event.start_time}}</strong> - <strong><span
+                                    ng-if="event.end_date !== event.start_date">{{event.end_date | date:'dMMM'}} </span>{{event.end_time}}</strong> (<strong>{{event.timezone}}</strong>)</span>
+                              </div>
+                              <div class="holder">
+                                 <svg class="ico-location ico-white">
+                                    <use xlink:href="#icon-location"/>
+                                 </svg>
+                                 <span>{{event.location}}</span>
+                              </div>
+                           </div>
+                        </div>
+                        <button type="button" ng-hide="event.is_joined" class="btn-blue" ng-click="joinEvent()">Join
+                           Event
+                        </button>
+                        <button type="button" ng-show="event.is_joined" class="btn-blue" ng-click="leaveEvent()">Leave
+                           Event
+                        </button>
+                        <button type="button" ng-show="event.is_joined" class="btn-blue"
+                                ui-sref="newEvent({group_type: group_type, group_id: id, edit_id:$scope.event_id})">Edit
+                           Event
+                        </button>
+                        <button type="button" ng-show="event.is_joined" class="btn-blue" ng-click="deleteEvent()">Delete
+                           Event
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </figure>
+         </div>
+         <div class="content-heading">
+            <h1 ng-if="!event.pic">
+               <a href="#" ng-click="goBack()">
+                  <svg class="arrow-l"><use xlink:href="#news-arrow-l" /></svg>
+                  {{event.title}}
+               </a>
+            </h1>
+         </div>
+         <p>{{event.description}}</p>
+         <div class="holder without-img" ng-if="!event.pic">
+            <div class="img-info">
+               <div class="img-description">
+                  <div class="holder">
+                     <div class="coll l-side">
+                        <div class="coll l-side">
+                           <div class="holder">
+                                 <span class="date">
+                                   {{event.start_date | date:'d'}}<strong>{{event.start_date | date:'MMM'}}</strong>
+                                 </span>
+                           </div>
+                        </div>
+                        <div class="coll r-side">
+                           <div class="holder">
+                              <svg class="ico-schedule ico-white">
+                                 <use xlink:href="#icon-schedule"/>
+                              </svg>
+                              <span><strong>{{event.start_time}}</strong> - <strong><span
+                                 ng-if="event.end_date !== event.start_date">{{event.end_date | date:'dMMM'}} </span>{{event.end_time}}</strong> (<strong>{{event.timezone}}</strong>)</span>
+                           </div>
+                           <div class="holder">
+                              <svg class="ico-location ico-white">
+                                 <use xlink:href="#icon-location"/>
+                              </svg>
+                              <span>{{event.location}}</span>
+                           </div>
+                        </div>
+                     </div>
+                     <button type="button" ng-hide="event.is_joined" class="btn-blue" ng-click="joinEvent()">Join
+                        Event
+                     </button>
+                     <button type="button" ng-show="event.is_joined" class="btn-blue" ng-click="leaveEvent()">Leave
+                        Event
+                     </button>
+                     <button type="button" ng-show="event.is_joined" class="btn-blue"
+                             ui-sref="newEvent({group_type: group_type, group_id: id, edit_id:$scope.event_id})">Edit
+                        Event
+                     </button>
+                     <button type="button" ng-show="event.is_joined" class="btn-blue" ng-click="deleteEvent()">Delete
+                        Event
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div ng-if="isClub() && allEventData.is_event_ticketing_enabled">
+      <div class="row">
+         <h3>Create Ticket</h3>
+         <button type="button" ng-hide="isCreate" ng-click="showCreate()" class="btn-blue">Create Ticket</button>
+      </div>
+      <create-ticket ng-if="isCreate" ng-if="allEventData.is_event_ticketing_enabled && allEventData.is_admin" tickets="event.ticket_details.all_tickets.data" event-id="{{event_id}}"></create-ticket>
+      <tickets-list ng-if="allEventData.is_event_ticketing_enabled" tickets="event.ticket_details.all_tickets.data" event-id="{{event_id}}" is-admin="allEventData.is_admin"></tickets-list>
+   </div>
+</div>

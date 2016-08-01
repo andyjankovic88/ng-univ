@@ -1,0 +1,36 @@
+<form id="form-search" class="r-side">
+         <fieldset>
+            <div class="search-block l-side" ng-class="{'filter-block': filterMode}"> 
+               <input type="text" placeholder="Search mentors" ng-model="searchTerm" ng-change="search()" ng-keydown="onKeydown($event)"/>
+               <button class="search" ng-show="!filterMode" ng-click="search()">
+                  <svg class="ico-search"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#header-search"></use></svg>
+               </button>
+               <button ng-show="filterMode" ng-click="reset()" class="search">
+                  <svg class="ico-cancel"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-cancel"></use></svg>
+               </button>
+            </div>
+         </fieldset>
+         <div class="search-box" ng-show="results.length && !filterMode">
+               <div class="holder table">
+                  <loader is-active="loading" position="static"></loader>
+                  <ul class="rubber-list">
+                     <li ng-repeat="item in results | limitTo: listLimit" ng-click="select($index, item)" ng-class="{active: $index === activeItem}">
+                        <figure class="img-holder">                           
+                           <a href="#">                                 
+                              <img class="ico-small" ng-src="{{item.pic}}" />
+                           </a>
+                        
+                           <strong class="user-name">{{item.value}}</strong>
+                        </figure>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+<!--          <fieldset>
+            <legend class="none">filter</legend>
+            <div class="filter-block">
+               <input type="text" />
+               
+            </div>
+         </fieldset>
+ -->      </form>

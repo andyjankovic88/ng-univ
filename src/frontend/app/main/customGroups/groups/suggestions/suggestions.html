@@ -1,0 +1,50 @@
+<div class="suggestions-section">
+   <!-- content-heading -->
+   <h2>
+      <svg class="ico-add-user pink">
+         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-connections"></use>
+      </svg>
+      <span>Based on your connections</span>
+   </h2>
+
+   <div class="section" infinite-scroll='loadNextPage()' infinite-scroll-disabled='listRequestInProgress' infinite-scroll-distance='1' infinite-scroll-container='".middle-section"'>
+      <span class="notes" ng-show="!group_suggestions.length"> You do not have any suggestions.</span>
+      <div class="item" ng-repeat="suggestion in group_suggestions">
+         <figure class="img-holder">
+            <a ui-sref="customGroupEvents({id:{{suggestion.id}}})"><img class="photo" ng-src="{{suggestion.picture}}"></a>
+         </figure>
+         <div class="item-info">
+            <h3>
+               <a ui-sref="customGroupEvents({id:{{suggestion.id}}})">{{suggestion.name}}</a>
+               <svg class="tick red" ng-if="connection.connected"><use xlink:href="#profile-tick" /></svg>
+            </h3>
+            <span>{{suggestion.type}}</span>
+            <span ng-if="suggestion.connections > 0"><a class="link" href="#">{{suggestion.connections}} connections</a> have joined</span>
+         </div>
+      </div>
+   </div>
+   <h2>
+
+<!--
+      <svg class="ico-heart pink">
+         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use>
+      </svg>
+      <span>Based on your interests</span>
+   </h2>
+   <div class="section" ng-if="basedOnYourInterestsEnable">
+      <div class="item" ng-repeat="suggestion in dataGroups.group_suggestions">
+         <figure class="img-holder">
+            <a href="#"><img class="photo" ng-src="{{suggestion.picture}}"></a>
+         </figure>
+         <div class="item-info">
+            <h3>
+               <a href="#">{{suggestion.name}}</a>
+               <svg class="tick red" ng-if="connection.connected"><use xlink:href="#profile-tick" /></svg>
+            </h3>
+            <span>[soon]Membership: &#036;9.95</span>
+            <span><a class="link" href="#">[soon]5 connections</a> have joined</span>
+         </div>
+      </div>
+   </div>
+-->
+</div>

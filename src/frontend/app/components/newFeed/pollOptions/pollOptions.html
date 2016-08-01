@@ -1,0 +1,28 @@
+<div>
+   <ul class="poll-option-item">
+      <li ng-repeat="option in options track by $index">
+         <ng-form name="innerPollsForm">
+            <div ng-class="{'has-error': innerPollsForm.addTag.$invalid && innerPollsForm.addTag.$dirty}">
+               <textarea name="addTag" cols="30" rows="1"
+                      placeholder="input option text" ng-model="option.text" on-last-repeat="focus" required></textarea>
+               <!--<input class="autoinput" placeholder="Add an email…" />-->
+
+               <svg class="ico-remove r-side" ng-click="removeOption($index)">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-remove"></use>
+               </svg>
+            </div>
+         </ng-form>
+      </li>
+   </ul>
+   <div class="holder">
+      <ul class="post-options r-side">
+         <li>
+            <a href="#" ng-click="addOption()">
+               <svg class="ico-add">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#popup-plus"></use>
+               </svg>
+            </a>
+         </li>
+      </ul>
+   </div>
+</div>

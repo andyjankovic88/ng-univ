@@ -1,0 +1,26 @@
+<div class="uc-field-list input-blocks">
+   <ul class="option-item options-link">
+      <li ng-repeat="option in options track by $index">
+         <div class="col">
+            <input type="text" placeholder="{{placeholder}}" ng-model="option[field]" />
+         </div>
+         <div class="col">
+            <input type="text" placeholder="{{placeholder2}}" ng-model="option[field2]" />
+         </div>
+         <svg class="ico-remove r-side" ng-click="removeOption($index)">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-remove"></use>
+         </svg>
+      </li>
+   </ul>
+   <div class="holder">
+      <ul class="post-options r-side">
+         <li>
+            <a href="#" ng-click="addOption()">
+               <svg class="ico-add">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#popup-plus"></use>
+               </svg>
+            </a>
+         </li>
+      </ul>
+   </div>
+</div>

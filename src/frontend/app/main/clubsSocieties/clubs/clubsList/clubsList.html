@@ -1,0 +1,23 @@
+<div class="clubs-list-section">
+   <h2>
+      <svg class="ico-add-user pink">
+         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-add-user"></use>
+      </svg>
+      <span>Trending Groups</span>
+   </h2>
+   <div class="section">
+      <div class="item" ng-repeat="club in dataClubs.clubs">
+         <figure class="img-holder">
+            <a href="#"><img class="photo" alt="avatar-image" ng-src="{{club.picture}}" border="0"></a>
+         </figure>
+         <div class="item-info">
+            <h3>
+               <a href="#" ui-sref="clubFeed({id:club.id})">{{club.name}}</a>
+               <svg class="tick" ng-if="club.is_followed"><use xlink:href="#profile-tick" /></svg>
+            </h3>
+            <!-- <span>[soon]Membership: &#036;9.95</span>
+            <span>[soon]42 Members</span> -->
+         </div>
+      </div>
+   </div>
+</div>

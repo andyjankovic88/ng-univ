@@ -1,0 +1,80 @@
+<div class="content-heading">
+   <h1 ng-if="!editMode">Add Subject</h1>
+   <h1 ng-if="editMode">Edit Subject</h1>
+</div>
+<form action="#">
+   <fieldset>
+      <div class="row">
+         <label for="search">Subject Name</label>
+         <div class="search-section" dropdown>
+            <input class="autoinput" type="text" id="search" dropdown-trigger ng-model="search.keywords" ng-disabled="editMode" ng-change="searchSubject()" ng-click="resetValue()" ng-blur="returnValue()" placeholder="Start typing the name or code here...">
+            <div class="search-box" dropdown-body ng-show="searchResults.length">
+               <div class="holder"><span class="r-side txt">search suggestions</span></div>
+               <div class="holder table">
+                  <ul class="rubber-list">
+                     <li ng-repeat="item in searchResults | limitTo: 6" dropdown-inner-trigger ng-click="select(item)">
+                        <figure class="img-holder">
+                           <div class="icon-circle">
+                              <a href="#">
+                                 <svg class="ico-subject-small">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-subject-small"></use>
+                                 </svg>
+                              </a>
+                           </div>
+                           <strong class="user-name">{{item.name}}</strong>
+                        </figure>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <loader is-active="loading" position="static"></loader>
+      <div class="details" ng-if="showDetails">
+         <div class="row">
+            <h2>Add Consultation Times</h2>
+            <fields-list options="subject.consultation_times.current" consultation-data="subject.consultation_times.options" type="consultationTimes"></fields-list>
+         </div>
+         <div class="row">
+            <h2>Monitor Keywords/Topics</h2>
+            <p>Reduce workload by monitoring only key words and topics in your Subject group. Enter key words or topics below and we will send email notifications only when questions posted in this Subject group include a key word or topic.</p>
+            <p>If you would like to receive email notifications for all questions asked in your Subject group, do not monitor keywords.</p>
+            <label>Keywords/Topics</label>
+            <fields-list options="subject.monitor_keywords" type="twoField" placeholder="Enter keyword..." placeholder2="Enter university email address..." field="keyword" field2="email" ></fields-list>
+         </div>
+         <div class="row">
+            <h2>Add Coursework Topics</h2>
+            <p>Add the topics that will be studied in {{subject.code}}</p>
+            <label>Topics</label>
+            <fields-list options="subject.coursework_topics" type="oneField" placeholder="Add topic.." field="title" ></fields-list>
+         </div>
+         <div class="row">
+            <h2>Invite Colleagues</h2>
+            <p>Invite colleagues</p>
+            <label>Colleague University Email</label>
+            <fields-list options="subject.colleagues" type="oneField" placeholder="Add an email.." field="email" ></fields-list>
+         </div>
+         <div class="row">
+            <h2>Add Students</h2>
+            <label>Add by Name</label>
+            <select-user selected-users="subject.selectedUsers" placeholder="Type student's name"></select-user>
+            <!-- <label>Add by University Email</label>
+            <fields-list options="subject.students" type="oneField" placeholder="Add an email.." field="email" ></fields-list> -->
+         </div>
+         <div class="row">
+            <import-csv files="csvFiles" type="subject"></import-csv>
+         </div>
+         <div class="row">
+           <ul class="options-btn">
+              <li>
+                 <button type="button" class="btn-link">Cancel</button>
+              </li>
+              <li>
+                 <button ng-if="!editMode" type="button" class="btn-blue btn-small" ng-click="submit()">Add subject</button>
+                 <button ng-if="editMode" type="button" class="btn-blue btn-small" ng-click="submit()">Save subject</button>
+              </li>
+           </ul>
+         </div>
+      </div>
+   </fieldset>
+</form>

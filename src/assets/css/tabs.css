@@ -1,0 +1,112 @@
+/**/
+/* main styles */
+/**/
+.tabs { margin: 0; padding: 0; border: 0; outline: none; text-align: left; }
+.tabs > input { position: absolute; display: none; }
+.tabs > label { position: relative; display: inline-block; margin: 0; padding: 0; border: 0; outline: none; cursor: pointer; transition: all 0.1s; -o-transition: all 0.1s; -ms-transition: all 0.1s; -moz-transition: all 0.1s; -webkit-transition: all 0.1s;float:left; }
+.tabs > label i { display: block; float: left; margin: 0 8px 0 -2px; padding: 0; border: 0; outline: none; font-style: normal; font-size: 17px; }
+.tabs > ul { list-style: none; position: relative; display: block; overflow: hidden; margin: 0; padding: 0; border: 0; outline: none; font-size: 16px; }
+.tabs > ul > li { position: absolute; width: 100%; padding: 20px 0; opacity: 0; transition: all 0.5s; -o-transition: all 0.5s; -ms-transition: all 0.5s; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; overflow:auto;}
+.tabs > .tab-content-first:checked ~ ul .tab-content-first, .tabs > .tab-content-2:checked ~ ul .tab-content-2, .tabs > .tab-content-3:checked ~ ul .tab-content-3, .tabs > .tab-content-4:checked ~ ul .tab-content-4, .tabs > .tab-content-5:checked ~ ul .tab-content-5, .tabs > .tab-content-6:checked ~ ul .tab-content-6, .tabs > .tab-content-7:checked ~ ul .tab-content-7, .tabs > .tab-content-8:checked ~ ul .tab-content-8, .tabs > .tab-content-9:checked ~ ul .tab-content-9, .tabs > .tab-content-last:checked ~ ul .tab-content-last { z-index: 1; top: 0; left: 0; opacity: 1; -webkit-transform: scale(1, 1); -webkit-transform: rotate(0deg); }
+/*----------------------------------------------------------------------------*/
+/*                                 EXTENSIONS                                 */
+/*----------------------------------------------------------------------------*/
+
+/**/
+/* auto height */
+/**/
+.tabs-height-auto > ul { height: auto !important; }
+.tabs-height-auto > ul > li { position: static; display: none; height: auto !important; }
+.tabs-height-auto > .tab-content-first:checked ~ ul .tab-content-first, .tabs-height-auto > .tab-content-2:checked ~ ul .tab-content-2, .tabs-height-auto > .tab-content-3:checked ~ ul .tab-content-3, .tabs-height-auto > .tab-content-4:checked ~ ul .tab-content-4, .tabs-height-auto > .tab-content-5:checked ~ ul .tab-content-5, .tabs-height-auto > .tab-content-6:checked ~ ul .tab-content-6, .tabs-height-auto > .tab-content-7:checked ~ ul .tab-content-7, .tabs-height-auto > .tab-content-8:checked ~ ul .tab-content-8, .tabs-height-auto > .tab-content-9:checked ~ ul .tab-content-9, .tabs-height-auto > .tab-content-last:checked ~ ul .tab-content-last { display: block; }
+/**/
+/* steps */
+/**/
+.tabs-steps > label { cursor: default; }
+/**/
+/* animation effects */
+/**/
+.pcss3t-effect-scale > ul > li { -webkit-transform: scale(0.1, 0.1); }
+.pcss3t-effect-rotate > ul > li { -webkit-transform: rotate(180deg); }
+.pcss3t-effect-slide-top > ul > li { top: -40px; }
+.pcss3t-effect-slide-right > ul > li { left: 80px; }
+.pcss3t-effect-slide-bottom > ul > li { top: 40px; }
+.pcss3t-effect-slide-left > ul > li { left: -80px; }
+/*----------------------------------------------------------------------------*/
+/*                                   LAYOUTS                                  */
+/*----------------------------------------------------------------------------*/
+
+/**/
+/* top right */
+/**/
+.tabs-layout-top-right { text-align: right; }
+/**/
+/* top center */
+/**/
+.tabs-layout-top-center { text-align: center; }
+/**/
+/* top combi */
+/**/
+.tabs > .right { float: right; }
+
+/*----------------------------------------------------------------------------*/
+/*                               RESPONSIVENESS                               */
+/*----------------------------------------------------------------------------*/
+
+/**/
+/* pad */
+/**/
+@media screen and (max-width: 980px) {
+}
+
+/**/
+/* phone */
+/**/
+@media screen and (max-width: 767px) {
+.tabs > label { display: block; }
+.tabs > .right { float: none; }
+}
+/*----------------------------------------------------------------------------*/
+/*                                   THEMES                                   */
+/*----------------------------------------------------------------------------*/
+
+/**/
+/* default */
+/**/
+.tabs > label { margin: 0 15px 0 0; font-size: 14px; }
+.tabs > label:hover { background: #f2f2f2; }
+
+.tabs > ul { background: #fff; text-align: left; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; border: 1px solid #DFDFDF;  }
+.tabs-steps > label:hover { background: #e5e5e5; }
+
+.tabs > input:checked + label { color: #2b82d9; opacity: 1; }
+
+/**/
+/* theme 1 */
+/**/
+
+.tabs-theme-1 > ul { border-radius: 5px;  }
+.tabs-theme-1 > label { background: none; border-radius: 0; color: #7c8389; opacity: 1; height: 45px; position:relative;line-height:35px;}
+.tabs-theme-1 > label:hover { color: #3a91e0;  -webkit-transition: all 0.7s linear; -moz-transition: all 0.7s linear; -ms-transition: all 0.7s linear; -o-transition: all 0.7s linear; transition: all 0.7s linear; }
+.tabs-theme-1 > input:checked + label { color: #3a91e0; -webkit-transition: all 0.7s linear; -moz-transition: all 0.7s linear; -ms-transition: all 0.7s linear; -o-transition: all 0.7s linear; transition: all 0.7s linear;  }
+.tabs-theme-1 > input:checked + label span.icon-post { background: url(/assets/images/menu/icon-post-sprite.png) no-repeat; color: #3a91e0; background-position: 0 -13px; width: 13px; height: 12px; display: inline-block; }
+.tabs-theme-1 > input:checked + label span.icon-link-tab { background: url(/assets/images/menu/icon-link-sprite.png) no-repeat; background-position: 0 -15px; width: 13px; height: 14px; display: inline-block;  -webkit-transition: all 0.7s linear; -moz-transition: all 0.7s linear; -ms-transition: all 0.7s linear; -o-transition: all 0.7s linear; transition: all 0.7s linear; }
+.tabs-theme-1 > input:checked + label span.icon-file { background: url(/assets/images/menu/icon-file-sprite.png) no-repeat; background-position: 0 -17px; width: 15px; height: 16px; display: inline-block;  -webkit-transition: all 0.7s linear; -moz-transition: all 0.7s linear; -ms-transition: all 0.7s linear; -o-transition: all 0.7s linear; transition: all 0.7s linear; }
+.tabs-theme-1 > input:checked + label span.icon-poll { background: url(/assets/images/menu/icon-poll-sprite.png) no-repeat; background-position: 0 -17px; width: 13px; height: 14px; display: inline-block;  -webkit-transition: all 0.7s linear; -moz-transition: all 0.7s linear; -ms-transition: all 0.7s linear; -o-transition: all 0.7s linear; transition: all 0.7s linear; }
+.tabs-theme-1 > input:checked + label span.icon-question-tab { background: url(/assets/images/menu/icon-question-sprite.png) no-repeat; background-position: 0 -14px; width: 8px; height: 11px; display: inline-block; -webkit-transition: all 0.7s linear; -moz-transition: all 0.7s linear; -ms-transition: all 0.7s linear; -o-transition: all 0.7s linear; transition: all 0.7s linear;  }
+
+
+
+@media screen and (max-width: 767px) {
+.tabs-theme-1 > label { margin-right: 0; }
+.tabs-theme-1 > input:checked + label { margin-bottom: 5px; padding-bottom: 0; border-radius: 5px; }
+.tabs-theme-1 > .tab-content-first:checked ~ ul { border-top-left-radius: 5px; }
+}
+
+/*----------------------------------------------------------------------------*/
+/*                               CUSTOMIZATION                                */
+/*----------------------------------------------------------------------------*/
+
+/**/
+/* height */
+/**/
+.tabs > ul, .tabs > ul > li { height: 370px; }

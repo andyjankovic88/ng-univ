@@ -1,0 +1,46 @@
+<div class="row">
+   <div class="r-side">
+      Period
+      <div class="period" dropdown>
+         <input type="text" dropdown-trigger value="{{from | date : 'd MMM yyyy'}} - {{to | date : 'd MMM yyyy'}}">
+         <div dropdown-body class="popup-holder clearfix arr">
+            <div class="arrow-holder">
+               <span class="arrow-top-w"></span>
+               <span class="arrow-top"></span>
+            </div>
+            <ul>
+               <li ng-click="selectDays(2)" dropdown-inner-trigger>Last 2 days</li>
+               <li ng-click="selectDays(7)" dropdown-inner-trigger>Last 7 days</li>
+               <li ng-click="selectDays(30)" dropdown-inner-trigger>Last 30 days</li>
+               <li ng-click="selectDays('month')" dropdown-inner-trigger>This Month</li>
+               <li ng-click="selectDays('last_month')" dropdown-inner-trigger>Last Month</li>
+               <li ng-click="" dropdown>
+                  <span dropdown-trigger>Custom</span>
+                  <div dropdown-body style="top:0px !important;" class="popup-holder clearfix">
+                     <div class="row">
+                        <input type="text" value="from&#058; {{rangeFrom.format('DD MMM YYYY')}}">
+                        <input type="text" value="to&#058; {{rangeTo.format('DD MMM YYYY')}}">
+                     </div>
+                     <div class="date-picker-ex"
+                          date-range
+                          view="date"
+                          min-view="date"
+                          min-date=""
+                          max-view="date"
+                          start="rangeFrom"
+                          end="rangeTo">
+                     </div>
+                     <ul class="options-btn" style="float: right;">
+                        <li>
+                           <button ng-click="cancel()" class="btn-link">Cancel</button>
+                           <button ng-click="selectDays(rangeFrom,rangeTo)" class="btn-blue btn-small ng-scope">Done</button>
+                        </li>
+                     </ul>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</div>
+<highchart id="chart" config="chartConfig"></highchart>

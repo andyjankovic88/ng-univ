@@ -1,0 +1,319 @@
+/* @override 
+	http://localhost.ucroo/assets/css/connection.css
+	http://anita.sucroo.com/assets/css/connection.css?2085
+	http://localhost.ucroo/assets/css/connection.css?2117
+	http://simplesaml.sucroo.com/assets/css/connection.css?2179
+*/
+
+h1.connection	{
+	background: url(/assets/images/icon_connections.png) no-repeat 0;
+	padding-left: 33px;
+}
+
+h1.deselected	{
+	color: #676668;	
+}
+
+h1.students	{
+	background: url(/assets/images/icon_university.png) no-repeat 0;
+	padding-left: 28px;
+	margin-left: 20px;
+}
+
+h1.students.deselected {
+	background: url(/assets/images/icon_university_grey.png) no-repeat 0;
+}
+
+h1.connection.deselected{
+	background: url(/assets/images/icon_connections_grey.png) no-repeat 0;
+
+}
+
+.connection-sub-title{
+	font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.connection-current-menu-item {
+    border: 1px solid #999;
+}
+
+.connection-item {
+    list-style-type: none;
+}
+
+.connection-search {
+    margin-bottom: 20px;
+}
+
+/*.connection-delete	{
+	text-decoration: none;color: #929899;
+	text-decoration: none;
+	vertical-align: sub;
+	font-size: 1.5em;
+}*/
+
+.connection-delete:hover	{
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.search-box {
+    width: 92%;
+    min-height: 20px;
+	/*background: #fff url(/assets/images/menu/search_icon_s.png) no-repeat 97% 15px;*/;
+}
+
+.actions	{
+	float: right;
+}
+
+.actions a.btn {
+	float:right;
+	margin-left:10px; 
+	line-height: 23px; 
+	height: 24px;
+}
+
+.connection_area
+{
+	clear: both;
+	border-bottom: 1px solid #acacac;
+	min-height:52px;
+	padding: 10px 25px;
+	margin: 0 -26px 0 -24px;
+	position: relative;
+}
+
+div.stu_connection {
+	clear: both;
+	min-height:40px;
+
+	border-top: 1px solid #dfdfdf;
+	margin-left: -15px;
+	margin-right: -15px;
+	padding: 10px 15px;
+}
+
+.connection_request_area	{
+	background-color: #E5F5FE;
+}
+
+.connection_area .actions p	{
+	color: #3FB8FD;
+	font-weight: bold;
+}
+
+.connection_details span	{
+	padding-top: 14px;
+	float: left;
+	color: #454545;
+}
+
+.stu_details span
+{
+	padding-left: 6px;
+	float: left;
+	width: 180px;
+	line-height: 1.4em;
+	overflow: hidden;
+}
+
+
+.connection_details {
+	cursor: pointer;
+	padding-left: 5px;
+	float: left;
+	overflow: hidden;
+}
+
+.stu_max
+{
+	float: left;
+}
+
+.stu_actions
+{
+	float: right;
+	vertical-align: middle;
+	padding-top: 13px;
+}
+
+.side_connection {
+	clear: both;
+	line-height: 15px;
+	margin-bottom: 12px;
+}
+
+.side_connection:last-child
+, .side_connection.last-child
+{
+	margin-bottom: 0;
+}
+
+/*.side_details span	{
+	padding-left: 7px;
+	font-family: verdana;
+	font-size: 10px;
+	float: left;
+	color: #454545;
+	width: 200px;
+	padding-top: 3px;
+	margin-top: -5px;
+
+}*/
+
+.side_max
+{
+	height: 45px;
+	width: 259px;
+	float: left;
+	overflow: hidden;
+}
+
+.side_details .icon
+{
+	/*border-left: 4px solid #aaa;*/
+	/*padding-left: 5px;*/
+	height: 40px;
+	width: 40px;
+	overflow: hidden;
+}
+
+/*.side_actions
+{
+	float: right;
+	padding-top: 14px;
+}*/
+
+.side_action_hide {
+    font-size: 8px; 
+    right: 0px; 
+    position: absolute;
+    visibility: hidden;
+}
+
+.side_connection:hover .side_action_hide {
+    visibility: visible;
+}
+
+
+
+.findbox
+{
+
+}
+
+.findboxleft
+{
+	width: 314px;
+	border-right: 1px solid #acacac;
+	float: left;
+	border-top: 1px solid #acacac;
+	margin-left: -24px;
+	border-bottom: 1px solid #acacac;
+}
+
+.findboxright
+{
+	width: 328px;
+	float: left;
+	min-height: 250px;
+	margin-left: 13px;
+}
+
+.connection_requests h1.rating,
+.connection_suggestions h1.rating,
+.fb h1.rating,
+.findboxleft .rating
+{
+	font-size: 14px;
+	margin-bottom: 8px;
+}
+
+.connections_header .rating {
+	float:left;
+}
+
+.connection_requests,
+.fb
+{
+	padding: 12px 15px 3px;
+}
+
+.connection_suggestions
+{	
+	padding: 12px 15px 0;
+}
+
+.connection_requests
+{
+	margin-bottom: 15px;
+}
+
+#invites_sent
+{
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+
+.connections_results
+{
+	padding-right: 15px;
+}
+
+.connections_results .stu_connection
+{
+	margin-right: -15px;
+	padding-right: 20px;
+	padding-left: 20px;
+	margin-left: 0;
+}
+
+.connections_results .stu_connection:first-child
+{
+	border-top: none;
+}
+
+.connections_results .stu_details span a {
+	color: #353535;
+}
+
+.connections_results .stu_details span
+{
+	padding-top: 19px;
+}
+
+.connection-list
+{
+	/*border-top: 1px solid #acacac;*/
+}
+
+.req_action
+{
+	width: 145px;
+}
+
+.req_details
+{
+	width: 430px;
+	float: left;
+}
+
+div.request_name {
+	padding-left: 15px;
+	width: 350px;
+	float: left;
+}
+
+div.mainInfo {
+	margin-left: 140px;
+	width: 580px;
+	border: 1px solid #bfbfbf;
+	padding: 30px;
+	margin-top: 19px;
+	margin-bottom: 10px;
+}
+
+

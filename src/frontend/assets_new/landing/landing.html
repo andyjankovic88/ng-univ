@@ -1,0 +1,1632 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <title>Welcome to UCROO</title>
+    <meta charset="iso-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta name="description" content="UCROO The University Network - Connect with peers, student organisations and staff at your university">
+    <meta name="keywords" content="UCROO, University Network, University Network, You crew, Youcrew, Ucrew, Youcroo, U crew">
+    <meta name="msvalidate.01" content="0204DF6AD434C2C14BF80F81B8BD5E71" />
+    <meta property="fb:admins" content='571251499, 553294026' />
+    <meta name="apple-itunes-app" content="app-id=662021285" />
+    <meta name="google-play-app" content="app-id=com.ucroo">
+    <!-- <link rel="canonical" href="https://www.sucroo.com/" /> -->
+    <link href="/assets_new/landing/images/favicon.ico" rel="shortcut icon" type="image/ico" />
+    <!-- For iPad with high-resolution Retina display running iOS â‰¥ 7: -->
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets_new/landing/images/favicon-152.png">
+    <!-- For iPad with high-resolution Retina display running iOS â‰¤ 6: -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets_new/landing/images/favicon-144.png">
+    <!-- For iPhone with high-resolution Retina display running iOS â‰¥ 7: -->
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/assets_new/landing/images/favicon-120.png">
+    <!-- For iPhone with high-resolution Retina display running iOS â‰¤ 6: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets_new/landing/images/favicon-114.png">
+    <!-- For first- and second-generation iPad: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets_new/landing/images/favicon-72.png">
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel="apple-touch-icon-precomposed" href="/assets_new/landing/images/favicon-57.png">
+    <link rel="stylesheet" href="/assets_new/landing/css/public_0002.css" type="text/css" media="screen" />
+    <!--[if lt IE 9]>
+            <link rel="stylesheet" type="text/css" href="/assets_new/landing/css/index.css?0002" media="screen" charset="UTF-8"/>
+        <![endif]-->
+    <!--[if IE]>
+        <link rel="stylesheet" type="text/css" href="assets_new/landing/css/ie.css?0002" />
+    <![endif]-->
+    <script type="text/javascript">
+    if (!window.console)
+        console = {
+            log: function() {}
+        };
+
+
+    getSelectedUniv = function() {
+        var e = document.getElementById("idpentityid");
+
+        return window.universities[e.options[e.selectedIndex].value];
+    };
+    saveSelectedUniv = function() {
+        top.window.localStorage.setItem('selectedUniv', JSON.stringify(getSelectedUniv()));
+    };
+    universities = [];
+
+
+
+    initSelect = function(_universities) {
+        var select = document.querySelector('#idpentityid');
+        var startInd = select.options.length;
+
+        if (!_universities) return;
+        _universities.forEach(function(val, key) {
+            console.log('option: ', typeof Option);
+            select.options[startInd] = new Option(val.name, key);
+            startInd++;
+        });
+
+    };
+
+
+
+    //$(window).load(function(){
+    window.onload = function() {
+
+        top.window.onUnivLoaded = function(_universities) {
+            console.log('typeof univ: ', typeof _universities);
+
+            universities = _universities;
+            initSelect(universities);
+
+        };
+
+        if (universities.length < 1) {
+            if (top.window.universities) {
+                universities = top.window.universities;
+                initSelect(universities);
+            }
+
+        }
+
+        $(function() {
+            $('body').hide().show();
+        });
+
+        /*
+         * Ticket: #3687 : Security - CSRF
+         * Below line add CSRF token automatically in all GET and POST request
+         */
+        // this script needs to be loaded on every page where an ajax POST may happen
+        $.ajaxSetup({
+            data: {
+                'csrf_test_name': '315cd1ff283b1c3918be21453cd0815c'
+            }
+        });
+        // END
+
+        //fullpage landing page
+        $('#fullpage').fullpage({
+            verticalCentered: false
+        });
+
+
+        //Horizontal tabs
+        $('#horizontalTab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            closed: 'accordion', // Start closed if in accordion view
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#tabInfo');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+                $("#publicpage").mCustomScrollbar('update');
+            }
+        });
+
+
+        $('select').on('blur', function() {
+            $(".publicpage").mCustomScrollbar('update');
+            $('.mCS_no_scrollbar').css('margin-right', '30px');
+        });
+
+    };
+    </script>
+    <!-- New Design includes -->
+    <!--<script src="/assets_new/landing/js/tiny_mce/tiny_mce.js"></script>
+    <script src="/assets_new/landing/js/tiny_mce/jquery.tinymce.js"></script> -->
+    <!-- Old Jquery Files which are useful -->
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-62863672-3', 'auto');
+    ga('send', 'pageview');
+    </script>
+</head>
+
+<body class="homepage-fb">
+    <div id="wrapper" class="publicpage">
+        <!--Login start-->
+        <div id="fullpage">
+            <div id="sTop">
+                <div class="homepage-bg section">
+                    <div class="layout-width">
+                        <div class="homepage-logo">
+                            <a href="/" tabindex="1">
+                                <strong class="logo">
+                                    <svg>
+                                        <use xlink:href="#landing-homepage-logo" />
+                                    </svg>
+                                </strong>
+                            </a>
+                        </div>
+                        <div class="home-login"><a class="login-btn fancybox" href="#" onclick="top.window.goToState('login')" tabindex="2"><span class="icon-user login-user"></span>
+                    <!-- 12-08-2015 - #5201 - Change Login button label - Anuj -->
+                    <span class="text">Login</span></a>
+                            <div class="modal-main" id="login-popup" style="display: none;">
+                                <div class="modal-dialog">
+                                    <div>
+                                        <a id="close_login_popup" href="#" class="icon-cross"></a>
+                                    </div>
+                                    <div class="padder">
+                                        <div class="title">Log in with email</div>
+                                        <form action="https://www.sucroo.com/login" method="post" accept-charset="utf-8">
+                                            <div style="display:none">
+                                                <input type="hidden" name="csrf_test_name" value="315cd1ff283b1c3918be21453cd0815c" />
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form-control">
+                                                    <input type="text" name="email" value="" tabindex="3" id="email" autocomplete="off" autocorrect="off" placeholder="University Email Address" /> </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form-control">
+                                                    <input type="password" name="password" value="" tabindex="4" id="password" autocorrect="off" autocomplete="off" placeholder="UCROO Password" title="password" /> </div>
+                                            </div>
+                                            <input type="button" name="submit_login_menu" value="Log In" tabindex="5" id="login_btn_menu" class="login-btn" /> <span class="forgot-txt"><a href="https://www.sucroo.com/forgot_password" tabindex="6">Forgot your password?</a></span>
+                                        </form>
+                                    </div>
+                                    <div class="btn-facebook">
+                                        <a tabindex='7' href="https://www.facebook.com/v2.2/dialog/oauth?client_id=174268539315296&redirect_uri=https%3A%2F%2Fwww.sucroo.com%2Fuser%2Ffblogin_auth%2F&state=f3d6452cb40857013afae36b7426724b&sdk=php-sdk-4.0.20&scope=email%2Cuser_hometown%2Cuser_work_history%2Cuser_friends%2Cuser_education_history"><span class="icon icon-facebook"></span> <span class="text">Sign in with Facebook</span> </a>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="homepage-right"><img src="/assets_new/landing/images/home-mac-system.png" alt="" /></div>
+                        <div class="homepage-left">
+                            <div class="title">University life made easier</div>
+                            <p>UCROO connects your university community to improve communication, collaboration and everything in between. It's the modern way to experience education.</p>
+                            <div class="signup-main">
+                                <form accept-charset="utf-8" id="sigup_form" name="sigup_form" method="get" class="style-form"> <span class="custom-select">
+                <select id="idpentityid" name="web_signup" title="Select your university to get started">
+                  <option>Select your university to get started</option>
+
+                </select>
+              </span>
+                                    <button type="button" onclick="saveSelectedUniv();  top.window.goToState('signUpSelectUniversity');" class="btn-blue signup_mobile" type="button" id="signup_submit" name="signup_submit">Sign Up For Free</button>
+                                </form> <small><span class="lock icon-lock"></span>Only people with a verified email address can join your University network</small>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <!--footer start-->
+                    <footer>
+                        <div class="footer-home">
+                            <div class="layout-width">
+                                <ul>
+                                    <li><a href="#s1" rel="#s1"><span class="footer-icon icon-graduation"></span>Students</a></li>
+                                    <li><a href="#s2" rel="#s2"><span class="footer-icon icon-book"></span>Instructors</a></li>
+                                    <li><a href="#s3" rel="#s3"><span class="footer-icon icon-vcard"></span>Staff</a></li>
+                                    <li><a href="#s4" rel="#s4"><span class="footer-icon icon-trophy"></span>Clubs &amp; Societies</a></li>
+                                    <li><a href="#s5" rel="#s5"><span class="footer-icon icon-library"></span>Universities</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </footer>
+                    <!--footer complete-->
+                </div>
+            </div>
+        </div>
+        <!--Login complete-->
+        <div id="outer-wrap">
+            <div id="inner-wrap">
+                <!--Header start-->
+                <header id="top">
+                    <div class="header-bg">
+                        <div class="layout-width">
+                            <div class="block">
+                                <a class="nav-btn" id="nav-open-btn"></a>
+                            </div>
+                            <nav id="nav" role="navigation">
+                                <div class="block">
+                                    <ul>
+                                        <li><a href="#sTop" rel="#sTop"><span class="home-nav"></span></a></li>
+                                        <li><a rel="#s1" class="active"><span class="nav-icon icon-graduation"></span>Students</a></li>
+                                        <li><a rel="#s2"><span class="nav-icon icon-book"></span>Instructors</a></li>
+                                        <li><a rel="#s3"><span class="nav-icon icon-vcard"></span>Staff</a></li>
+                                        <li><a rel="#s4"><span class="nav-icon icon-trophy"></span>Clubs &amp; Societies</a></li>
+                                        <li><a rel="#s5"><span class="nav-icon icon-library"></span>Universities</a></li>
+                                    </ul>
+                                    <a class="close-btn" id="nav-close-btn">Return to Content</a>
+                                </div>
+                            </nav>
+                            <div class="login"><a href="https://www.sucroo.com/login" class="login-btn fancybox"><span class="icon-user login-user"></span><span>Log in</span></a>
+                                <!--            #3999 we can use get_login_url function once in a page
+                That's why I comment that line because I found we are not using that anywhere
+                23March2015 @sachin1-->
+                                <!--              <div class="login-box">
+                <div class="btn-facebook"><a href=""><span class="icon icon-facebook"></span> <span class="text">Sign in with Facebook</span> </a></div>
+                <div class="btn-email"><a href="#"><span class="icon icon-mail"></span> <span class="text">Sign in with Email</span> </a></div>
+                  <form action="https://www.sucroo.com/login" method="post" accept-charset="utf-8"><div style="display:none">
+<input type="hidden" name="csrf_test_name" value="315cd1ff283b1c3918be21453cd0815c" />
+</div>                  <div class="email-form">
+                    <div class="form-group">
+                      <label for="university">University Email</label>
+                      <div class="form-control">
+                        <input type="text" name="email" value="" id="email" placeholder="University Email" tabindex="8"  />                         <input id="university" type="text" placeholder="University Email" title="University Email">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Password</label>
+                      <div class="form-control">
+                        <input type="password" name="password" value="" id="password" placeholder="Password" tabindex="9" title="password"  />                         <input id="password" type="text" placeholder="Password" title="Password">
+                      </div>
+                    </div>
+                    <span class="forgot-txt"><a href="https://www.sucroo.com/forgot_password" tabindex='10'>Forgotten your password?</a></span>
+                    <div class="remember-me checkbox">
+                      <input type="checkbox" id="remember" name="remember" value="1" checked="true" title="Remember Me">
+                      <label for="remember">Remember Me</label>
+                    </div>
+                    <input type="button" name="submit_login_menu" value="Sign In" id="login_btn_menu" class="btn-blue " tabindex="12"  />                     <input id="login_btn1" class="btn-blue" type="button" tabindex="12" value="Sign In" name="submit">
+                  </div>
+                  </form>                <div class="clear"></div>
+              </div>-->
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </header>
+                <!--Header complete-->
+                <!--Middle start-->
+                <div id="middle">
+                    <!-- Student start-->
+                    <div id="s1">
+                        <div class="student-page">
+                            <div class="student-banner">
+                                <div class="layout-width">
+                                    <div class="title banner-title">University is easier when you are part of a community<span class="tagline">Connect to peers, classmates, instructors, clubs & societies, mentors, student services & events at your university</span></div>
+                                </div>
+                            </div>
+                            <div class="student-wrapper">
+                                <div class="student-left">
+                                    <ul>
+                                        <li>
+                                            <div class="icon-main-student icon-effect-1 icon-effect-1a"><span class="icon-student icon-question"></span></div>
+                                            <div class="detail">
+                                                <div class="title">Ask fellow students</div>questions, polls and more</div>
+                                        </li>
+                                        <li>
+                                            <div class="icon-main-student icon-effect-1 icon-effect-1a"><span class="icon-student icon-location"></span></div>
+                                            <div class="detail">
+                                                <div class="title">See upcoming events</div>at your university</div>
+                                        </li>
+                                        <li>
+                                            <div class="icon-main-student icon-effect-1 icon-effect-1a"><span class="icon-student icon-book"></span></div>
+                                            <div class="detail">
+                                                <div class="title">See who's in your class</div>and discuss coursework with them</div>
+                                        </li>
+                                        <li>
+                                            <div class="icon-main-student icon-effect-1 icon-effect-1a"><span class="icon-student icon-trophy"></span></div>
+                                            <div class="detail">
+                                                <div class="title">Join clubs &amp; societies</div>and buy tickets to their events</div>
+                                        </li>
+                                        <li>
+                                            <div class="icon-main-student icon-effect-1 icon-effect-1a"><span class="icon-student icon-flow-parallel"></span></div>
+                                            <div class="detail">
+                                                <div class="title">Find a mentor</div>to help with coursework &amp; student life</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="student-middle">
+                                    <div class="student-iphone"><img src="/assets_new/landing/images/iphone-white.png" alt="" /></div>
+                                </div>
+                                <div class="student-right">
+                                    <ul>
+                                        <li>
+                                            <div class="icon-main-student icon-effect-1 icon-effect-1a"><span class="icon-student icon-users"></span></div>
+                                            <div class="detail">
+                                                <div class="title">Find students like you</div>based on course, interests and more</div>
+                                        </li>
+                                        <li>
+                                            <div class="icon-main-student icon-effect-1 icon-effect-1a"><span class="icon-student icon-calendar"></span></div>
+                                            <div class="detail">
+                                                <div class="title">Share timetables</div>to see who's free between classes</div>
+                                        </li>
+                                        <li>
+                                            <div class="icon-main-student icon-effect-1 icon-effect-1a"><span class="icon-student icon-layout"></span></div>
+                                            <div class="detail">
+                                                <div class="title">Create study groups</div>to work on assignments</div>
+                                        </li>
+                                        <li>
+                                            <div class="icon-main-student icon-effect-1 icon-effect-1a"><span class="icon-student icon-cart"></span></div>
+                                            <div class="detail">
+                                                <div class="title">Buy/sell textbooks</div>&amp; more in the student marketplace</div>
+                                        </li>
+                                        <li>
+                                            <div class="icon-main-student icon-effect-1 icon-effect-1a"><span class="icon-student icon-info"></span></div>
+                                            <div class="detail">
+                                                <div class="title">Follow student services</div>for helpful updates and resources</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="join-now">
+                                    <em>Join your University Network now</em>
+                                    <a onclick="saveSelectedUniv();  top.window.goToState('signUpSelectUniversity');" class="btn-blue sign-up-btn signup_mobile">Sign Up For Free <span class="icon-arrow-right5"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Student complete-->
+                    <!-- Instructor start-->
+                    <div id="s2">
+                        <div class="instructor-page">
+                            <div class="instructor-banner">
+                                <div class="layout-width">
+                                    <div class="title banner-title">Your Class is a Community<span class="tagline">The role of the lecturer is to facilitate learning</span></div>
+                                </div>
+                            </div>
+                            <div class="instructor-top-detail">
+                                <div class="layout-width">
+                                    <div class="left-section"><img src="/assets_new/landing/images/ucroo-screen1.png" alt="" /></div>
+                                    <div class="right-section">
+                                        <div class="title">UCROO allows students to <span>share ideas</span> and <span>collaborate on coursework</span></div>
+                                        <p>Simple, refined and dynamic discussion tools enable academics to transform their classrooms into an online community of learners.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="middle-wrapper">
+                                <div class="class-community">
+                                    <ul>
+                                        <li>
+                                            <div class="icon-main-instrcutor"><span class="icon-instrcutor icon-house"></span></div>
+                                            <div class="community-details">
+                                                <div class="title">Class Community</div>
+                                                <p>Student interaction is critical for academic success. Dynamic online discussions between students improve learning outcomes. UCROO is designed to encourage participation and collaboration.</p>
+                                            </div>
+                                        </li>
+                                        <li class="last">
+                                            <div class="icon-main-instrcutor"><span class="icon-instrcutor icon-target"></span></div>
+                                            <div class="community-details">
+                                                <div class="title">Increase Teaching Efficiency</div>
+                                                <p>Reduce repetitive communication with students over email. Content is organized so finding answers is easy for students. Endorse student answers to provide feedback and save time.</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon-main-instrcutor"><span class="icon-instrcutor icon-graph"></span></div>
+                                            <div class="community-details">
+                                                <div class="title">Improved Learning Outcomes</div>
+                                                <p>Common comprehension gaps can be easily identified and resolved. Learning outcomes can be tied to topic tags so collaboration is structured. Use analytics dashboard to easily detect and monitor at-risk students.</p>
+                                            </div>
+                                        </li>
+                                        <li class="last">
+                                            <div class="icon-main-instrcutor"><span class="icon-instrcutor icon-upload2"></span></div>
+                                            <div class="community-details">
+                                                <div class="title">Seamless Integration</div>
+                                                <p>Seamless integration with your LMS to avoid discussion fragmentation. Integrating UCROO with your LMS is as simple as copying and pasting a URL. Contact UCROO via team@ucroo.com for further information.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="clear"></div>
+                                    <div class="join-now">
+                                        <em>Set up your Class Community now</em>
+                                        <a onclick="saveSelectedUniv();  top.window.goToState('signUpSelectUniversity');" class="btn-blue sign-up-btn signup_mobile"><span class="float-left">Sign Up For Free</span> <span class="icon-arrow-right5"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Instructor complete-->
+                    <!-- Staff start-->
+                    <div id="s3">
+                        <div class="staff-page">
+                            <div class="staff-banner">
+                                <div class="layout-width">
+                                    <div class="title banner-title">Staff make a university tick<span class="tagline">See how UCROO benefits orientation, transition, student services, and communications staff</span></div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="staff-img float-left"><img src="/assets_new/landing/images/staff-01.png" alt="" class="float-left" /></div>
+                            <div class="staff-detail float-left">
+                                <div class="staff-heading">
+                                    <div class="title">Student Services Staff</div>
+                                    <p>Student Services can create <span>Service Pages</span> to increase awareness, improve access and support students more easily</p>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="icon-main-staff"><span class="icon-staff icon-bell"></span></div>
+                                        <div class="details">Students following Service Pages are notified when staff post <span>resources</span>, <span>announcements</span> and <span>events</span></div>
+                                    </li>
+                                    <li class="nomrgnRt">
+                                        <div class="icon-main-staff"><span class="icon-staff icon-clock"></span></div>
+                                        <div class="details"><span>Drop-in times</span> and <span>events</span> are highlighted to students at the times they occur</div>
+                                    </li>
+                                    <li>
+                                        <div class="icon-main-staff"><span class="icon-staff icon-help"></span></div>
+                                        <div class="details"><span>Support queries</span> can be posted directly to Service Pages - especially useful for online students and local students with full timetables</div>
+                                    </li>
+                                    <li class="nomrgnRt">
+                                        <div class="icon-main-staff"><span class="icon-staff icon-mobile"></span></div>
+                                        <div class="details">Students receive posts and access resources posted on Support Pages anytime, anywhere with <span>UCROO's mobile applications</span></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="staff-img float-right"><img src="/assets_new/landing/images/staff-02.png" alt="" class="float-right" /></div>
+                            <div class="staff-detail float-right mrgnRt10">
+                                <div class="staff-heading">
+                                    <div class="title">Orientation &amp; Transition Staff</div>
+                                    <p>UCROO helps Orientation &amp; Transition Staff build a greater sense of community and support throughout the crucial first year of university </p>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="icon-main-staff"><span class="icon-staff icon-shuffle"></span></div>
+                                        <div class="details"><span>Start facilitating friendships</span> between enrolment &amp; orientation (high attrition zone) </div>
+                                    </li>
+                                    <li class="nomrgnRt">
+                                        <div class="icon-main-staff"><span class="icon-staff icon-airplane"></span></div>
+                                        <div class="details">Connect <span>international students</span> still overseas, <span>regional students</span> yet to arrive on campus &amp; <span>remote students</span> with local peers</div>
+                                    </li>
+                                    <li>
+                                        <div class="icon-main-staff"><span class="icon-staff icon-location"></span></div>
+                                        <div class="details"><span>Create events</span> for first year activities and see who has joined them</div>
+                                    </li>
+                                    <li class="nomrgnRt">
+                                        <div class="icon-main-staff"><span class="icon-staff icon-pictures"></span></div>
+                                        <div class="details"><span>Pin important posts</span> for greater attention &amp; <span>post videos/photos</span> from events</div>
+                                    </li>
+                                    <li>
+                                        <div class="icon-main-staff"><span class="icon-staff icon-bars"></span></div>
+                                        <div class="details"><span>Create polls</span> to check-in with students and automatically monitor important first year topics</div>
+                                    </li>
+                                    <li class="nomrgnRt">
+                                        <div class="icon-main-staff"><span class="icon-staff icon-location2"></span></div>
+                                        <div class="details"><span>Target posts</span> to first-years based on campus, faculty, international / domestic & study mode</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="staff-img float-left"><img src="/assets_new/landing/images/staff-03.png" alt="" class="float-left" /></div>
+                            <div class="staff-detail float-left nomrgnBtm">
+                                <div class="staff-heading">
+                                    <div class="title">Communications Staff</div>
+                                    <p>Communications Staff can use UCROO to better connect students with important information, announcements and events</p>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="icon-main-staff"><span class="icon-staff icon-location2"></span></div>
+                                        <div class="details"><span>Target posts</span> to students based on campus, faculty, mode of study, international/domestic and year level</div>
+                                    </li>
+                                    <li class="nomrgnRt">
+                                        <div class="icon-main-staff"><span class="icon-staff icon-new"></span></div>
+                                        <div class="details"><span>Pin important announcements</span> and resources to the top of large student groups for greater attention</div>
+                                    </li>
+                                    <li>
+                                        <div class="icon-main-staff"><span class="icon-staff icon-bars"></span></div>
+                                        <div class="details"><span>Post polls</span> to check-in and gather feedback from the student body</div>
+                                    </li>
+                                    <li class="nomrgnRt">
+                                        <div class="icon-main-staff"><span class="icon-staff icon-video"></span></div>
+                                        <div class="details">Easily post <span>videos</span>, <span>links</span>, <span>articles</span> and <span>photos</span> with communications</div>
+                                    </li>
+                                    <li>
+                                        <div class="icon-main-staff"><span class="icon-staff icon-location"></span></div>
+                                        <div class="details"><span>Create and highlight university events</span> and see who has joined them</div>
+                                    </li>
+                                    <li class="nomrgnRt">
+                                        <div class="icon-main-staff"><span class="icon-staff icon-mail"></span></div>
+                                        <div class="details"><span>University emails are often unopened</span> - comms on UCROO appear in full in students' Recent Activity</div>
+                                    </li>
+                                    <li>
+                                        <div class="icon-main-staff"><span class="icon-staff icon-mobile"></span></div>
+                                        <div class="details">Comms on UCROO can be posted as <span>push notifications</span> to native mobile applications</div>
+                                    </li>
+                                    <li class="nomrgnRt">
+                                        <div class="icon-main-staff"><span class="icon-staff icon-eye"></span></div>
+                                        <div class="details"><span>More students see university comms</span> made on UCROO compared to Facebook Pages</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="staff-sign-up">
+                                <div class="join-now">
+                                    <em>Start connecting better with your student body now</em>
+                                    <a onclick="saveSelectedUniv();  top.window.goToState('signUpSelectUniversity');" class="btn-blue sign-up-btn signup_mobile"><span class="float-left">Sign Up For Free</span> <span class="icon-arrow-right5"></span></a> </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <!-- Staff complete-->
+                    <!--Club Start-->
+                    <div id="s4">
+                        <div class="club-page">
+                            <div class="club-banner">
+                                <div class="layout-width">
+                                    <div class="title banner-title">Clubs &amp; Societies fully immerse students in university life<span class="tagline">Create a Club Page to process memberships, run ticketed events and improve communication for your student organisation</span></div>
+                                </div>
+                            </div>
+                            <div class="why-club">
+                                <div class="layout-width">
+                                    <div class="title">That's why we developed <span>Club Pages</span></div>
+                                    <ul>
+                                        <li>
+                                            <div class="icon-main-club">
+                                                <span class="icon-club icon-creditcard"></span>
+                                            </div>
+                                            <div class="text"><a href="#">Online Membership</a></div>
+                                        </li>
+                                        <li>
+                                            <div class="icon-main-club">
+                                                <span class="icon-club icon-ticket"></span>
+                                            </div>
+                                            <div class="text"><a href="#">Online Event Ticketing</a></div>
+                                        </li>
+                                        <li>
+                                            <div class="icon-main-club">
+                                                <span class="icon-club icon-hourglass"></span>
+                                            </div>
+                                            <div class="text"><a href="#">Save Admin Time</a></div>
+                                        </li>
+                                        <li>
+                                            <div class="icon-main-club">
+                                                <span class="icon-club icon-share"></span>
+                                            </div>
+                                            <div class="text"><a href="#">Connect with your University Community</a></div>
+                                        </li>
+                                        <li>
+                                            <div class="icon-main-club">
+                                                <span class="icon-club icon-mobile"></span>
+                                            </div>
+                                            <div class="text"><a href="#">Mobile Membership Cards</a></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="middle-wrapper">
+                                <div class="club-middle">
+                                    <div class="club-middle-rt">
+                                        <img tabindex="18" src="/assets_new/landing/images/club-video.png" alt="Club Video" id="img-video" onclick="$('#img-video').addClass('hidden');$('#img-video').next().attr('src', '//www.youtube.com/embed/NJJvFHQBpKc?fs=1&autoplay=1&hd=1&rel=0').removeClass('hidden');" onkeypress="if(event.keyCode==32||event.keyCode==13){$('#img-video').addClass('hidden');$('#img-video').next().attr('src', '//www.youtube.com/embed/NJJvFHQBpKc?rel=0').removeClass('hidden');}" />
+                                        <iframe title="Club Video" style="height: 300px; width: 520px;" class="hidden" src="" frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="club-middle-lt">
+                                        <div class="title">Clubs & Societies Pages on UCROO</div>
+                                        <p>Clubs & Societies are a great way for students to get involved in university life.</p>
+                                        <p>Unfortunately however, the growing popularity of online course delivery is causing students to lose touch with their campus.</p>
+                                        <p>We want to help Clubs & Societies bring life back to campus - that's why we developed Club Pages.</p>
+                                        <p>Club Pages allow students to easily join your club online and buy tickets to your events, while providing tools to reduce administration time and improve communication with members.</p>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="join-now">
+                                        <em>Create a Club Page for your Union, Club or Society now</em>
+                                        <a onclick="saveSelectedUniv();  top.window.goToState('signUpSelectUniversity');" class="btn-blue sign-up-btn signup_mobile"><span class="float-left">Sign Up For Free</span> <span class="icon-arrow-right5"></span></a> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Club Complete-->
+                    <!--University start-->
+                    <div id="s5">
+                        <div class="university-page">
+                            <div class="university-banner">
+                                <div class="title banner-title">Support &amp; Engage with Social Network Technology</div>
+                            </div>
+                            <!--Horizontal Tab-->
+                            <div class="middle-wrapper">
+                                <div id="horizontalTab" class="university-tabs">
+                                    <div class="university-tabs-nav">
+                                        <ul id="tabs-items" class="resp-tabs-list">
+                                            <li>Why UCROO?</li>
+                                            <li>University IT</li>
+                                            <li>FAQ</li>
+                                            <li>Request a Demo</li>
+                                        </ul>
+                                    </div>
+                                    <div class="resp-tabs-container">
+                                        <!-- why ucroo start-->
+                                        <div>
+                                            <div class="why-ucroo">
+                                                <div class="why-ucroo-lt">
+                                                    <img tabindex="18" src="/assets_new/landing/images/why-ucroo-video.png" alt="Video of students and university staff talking about their experience with UCROO" id="img2-video" onclick="$('#img2-video').addClass('hidden');$('#img2-video').next().attr('src', 'https://www.youtube.com/embed/iu4LHtv5QII?fs=1&amp;autoplay=1&amp;hd=1&rel=0').removeClass('hidden');" onkeypress="if(event.keyCode==32||event.keyCode==13){$('#img2-video').addClass('hidden');$('#img2-video').next().attr('src', 'https://www.youtube.com/embed/iu4LHtv5QII?fs=1&amp;autoplay=1&amp;hd=1&rel=0').removeClass('hidden');}" />
+                                                    <iframe title="UCROO Introductory Video" style="height: 300px; width: 520px;" class="hidden" src="" frameborder="0" allowfullscreen>UCROO Introductory Video</iframe>
+                                                </div>
+                                                <div class="why-ucroo-rt">
+                                                    <div class="title">Better connect with your students</div>
+                                                    <p>Fundamental shifts in Higher Education are affecting the traditional university's ability to provide a quality student experience and retain students.</p>
+                                                    <p>UCROO is helping universities adapt by providing social technology tailored specifically to better connect, support and engage students from enrolment to alumni.</p>
+                                                </div>
+                                                <div class="clear"></div>
+                                                <div class="why-ucroo-list">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="panel-heading" rel="ucroo-content1">
+                                                                <div class="icon">
+                                                                    <div class="icon-loop"></div>
+                                                                </div>
+                                                                <div class="detail"><a href="#">Connect an entire University Network</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="ucroo-content1">
+                                                                <ul>
+                                                                    <li>Intuitively bring together your entire university community in one place</li>
+                                                                    <li>Bridge across faculties, campuses, modes of study and year levels</li>
+                                                                    <li>Connect students with peers, classmates, mentors, instructors, clubs and student services</li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="ucroo-content2">
+                                                                <div class="icon">
+                                                                    <div class="icon-chat"></div>
+                                                                </div>
+                                                                <div class="detail"><a href="#">Create a Social Learning Experience</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="ucroo-content2">
+                                                                <ul>
+                                                                    <li>When students help each other learn, the entire class performs better</li>
+                                                                    <li>Collaborative tools, study groups & classmate profiles make learning social</li>
+                                                                    <li>Instructors can join the discussion to improve teaching performance</li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="ucroo-content3">
+                                                                <div class="icon">
+                                                                    <div class="icon-user-add"></div>
+                                                                </div>
+                                                                <div class="detail"><a href="#">Boost Support</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="ucroo-content3">
+                                                                <ul>
+                                                                    <li>Answers to student queries are crowd-sourced from across the university</li>
+                                                                    <li>Monitor keywords so common student queries are addressed quickly</li>
+                                                                    <li>Students can follow student services to receive helpful updates and resources</li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>
+                                                            <div class="panel-heading" rel="ucroo-content4">
+                                                                <div class="icon">
+                                                                    <div class="icon-cog"></div>
+                                                                </div>
+                                                                <div class="detail"><a href="#">Personalise the University Experience</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="ucroo-content4">
+                                                                <ul>
+                                                                    <li>Students see the latest university activity relevant to them</li>
+                                                                    <li>Individual profiles show students' subjects, aspirations, interests &amp; more</li>
+                                                                    <li>Profiles provide personality so students feel like a name, not a number</li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="ucroo-content5">
+                                                                <div class="icon">
+                                                                    <div class="icon-house"></div>
+                                                                </div>
+                                                                <div class="detail"><a href="#">Build Campus Community</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="ucroo-content5">
+                                                                <ul>
+                                                                    <li>Build 'sticky' campuses at your university</li>
+                                                                    <li>Timetable sharing shows when friends &amp; study partners are free</li>
+                                                                    <li>Staff consultation times &amp; university events are highlighted each day</li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="ucroo-content6">
+                                                                <div class="icon">
+                                                                    <div class="icon-pie"></div>
+                                                                </div>
+                                                                <div class="detail"><a href="#">Student Engagement Analytics</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="ucroo-content6">
+                                                                <ul>
+                                                                    <li>UCROO offers new insights into student connection, engagement and support</li>
+                                                                    <li>Compare analytics across faculties, campuses, modes of study and year levels</li>
+                                                                    <li>Export analytics to complement existing experience &amp; retention data</li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="clear"></div>
+                                                <div class="join-now">
+                                                    <em>Start better supporting your University's students today</em>
+                                                    <a id="request_demo_link" href="#s5" rel="#s5" class="btn-blue sign-up-btn"><span class="float-left">Request a Demo</span> <span class="icon-arrow-right5"></span></a> </div>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <!-- why ucroo complete-->
+                                        <!--University It start-->
+                                        <div>
+                                            <div class="university-it">
+                                                <div class="university-it-lt"><img src="/assets_new/landing/images/university-lappy-img.png" alt="" /></div>
+                                                <div class="university-it-rt">
+                                                    <div class="title">Social Yet Secure - Built for Universities</div>
+                                                    <p>Build community, boost support and drive student engagement by connecting your university with its very own private, secure and controlled social network.</p>
+                                                    <p>Easily brand, maintain, administrate and integrate UCROO to complement the rest of your university's IT systems.</p>
+                                                    <div class="clear"></div>
+                                                    <div class="university-it-list">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="panel-heading" rel="univ-content1">
+                                                                    <div class="icon">
+                                                                        <div class="icon-lock"></div>
+                                                                    </div>
+                                                                    <div class="detail"><a href="#">Privacy is Our Priority</a></div>
+                                                                    <div class="right-arrow">
+                                                                        <div class="icon-arrow-right6"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="panel-content" id="univ-content1">
+                                                                    <ul>
+                                                                        <li>A verified university email address is required to access the network</li>
+                                                                        <li>Users control their profile information from their privacy settings</li>
+                                                                        <li>UCROO complies with the latest privacy legislation in your region</li>
+                                                                        <li>For more information see <a href='javascript:void(0);' onclick="window.open('http://support.ucroo.com.au/privacy/', '_blank', 'width=800,height=600,scrollbars=yes,status=yes,resizable=yes,screenx=0,screeny=0');">UCROO Privacy Policy</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="panel-heading" rel="univ-content2">
+                                                                    <div class="icon">
+                                                                        <div class="icon-link"></div>
+                                                                    </div>
+                                                                    <div class="detail"><a href="#">Control Your Network</a></div>
+                                                                    <div class="right-arrow">
+                                                                        <div class="icon-arrow-right6"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="panel-content" id="univ-content2">
+                                                                    <ul>
+                                                                        <li>Brand your UCROO network with the university's logo and colours</li>
+                                                                        <li>Add or remove network features to suit the university's needs</li>
+                                                                        <li>Advanced moderation features keep control high & administrator work low</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="panel-heading" rel="univ-content3">
+                                                                    <div class="icon">
+                                                                        <div class="icon-key"></div>
+                                                                    </div>
+                                                                    <div class="detail"><a href="#">University Grade Security</a></div>
+                                                                    <div class="right-arrow">
+                                                                        <div class="icon-arrow-right6"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="panel-content" id="univ-content3">
+                                                                    <ul>
+                                                                        <li>UCROO protects university data by implementing rigorous security policies</li>
+                                                                        <li>Sensitive links are secured via SSL &amp; directed through HTTPS connections</li>
+                                                                        <li>Network data is backed up multiple times a day &amp; protected by encryption</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="panel-heading" rel="univ-content4">
+                                                                    <div class="icon">
+                                                                        <div class="icon-flow-tree"></div>
+                                                                    </div>
+                                                                    <div class="detail"><a href="#">Simple Set Up &amp; Maintenance</a></div>
+                                                                    <div class="right-arrow">
+                                                                        <div class="icon-arrow-right6"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="panel-content" id="univ-content4">
+                                                                    <ul>
+                                                                        <li>Start small with a single Faculty or roll out across the entire university</li>
+                                                                        <li>UCROO Support Team works with you to ensure a successful launch</li>
+                                                                        <li>Product updates pushed live - avoids upgrades &amp; ensures max uptime (99.9%)</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="panel-heading" rel="univ-content5">
+                                                                    <div class="icon">
+                                                                        <div class="icon-upload2"></div>
+                                                                    </div>
+                                                                    <div class="detail"><a href="#">Seamless Integration</a></div>
+                                                                    <div class="right-arrow">
+                                                                        <div class="icon-arrow-right6"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="panel-content" id="univ-content5">
+                                                                    <ul>
+                                                                        <li>Socialise existing systems by integrating UCROO with university technologies</li>
+                                                                        <li>Integrate UCROO with LMSs, SISs, Portals &amp; Google Apps</li>
+                                                                        <li>Latest open standards supported - LTI, CAS, SAML &amp; Shibboleth</li>
+                                                                        <li>UCROO Support Team works with you to implement system integrations</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                                <div class="join-now">
+                                                    <em>Start better supporting your University's students today</em>
+                                                    <a id="request_demo_link" href="#s5" rel="#s5" class="btn-blue sign-up-btn"><span class="float-left">Request a Demo</span> <span class="icon-arrow-right5"></span></a> </div>
+                                            </div>
+                                        </div>
+                                        <!--University It complete-->
+                                        <!--FAQ start-->
+                                        <div>
+                                            <div class="faq">
+                                                <div class="faq-top">
+                                                    <div class="title">Frequently Asked Questions</div>
+                                                    <p>Find answers to commonly asked questions about UCROO below. If you can't find an answer to your question, contact us at support@ucroo.com and we'll be happy to help.</p>
+                                                </div>
+                                                <div class="faq-list">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="panel-heading" rel="faq-content1">
+                                                                <div class="detail"><a href="#">What is UCROO?</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="faq-content1">
+                                                                <p>UCROO is a private, secure and controlled social network designed for universities and its students.</p>
+                                                                <p>For students, UCROO is a university technology that meets contemporary expectations and better connects them with peers, classmates, mentors, instructors, clubs &amp; societies and student services from enrolment to graduation.</p>
+                                                                <p>For universities, UCROO is an innovative tool for improving student experience and retention, which offers enterprise level privacy, security, control and analytics not available in other social networks.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li class="nomrgnRt">
+                                                            <div class="panel-heading" rel="faq-content2">
+                                                                <div class="detail"><a href="#">How can I get a demonstration of the UCROO product?</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="faq-content2">
+                                                                <p>You can request a demonstration of UCROO from the Request a Demo tab at the top of the page.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="faq-content3">
+                                                                <div class="detail"><a href="#">What is required to set up a university's UCROO network?</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="faq-content3">
+                                                                <p>Very little information is required to set up your university's UCROO network.</p>
+                                                                <p>Lists of the following are required:
+                                                                    <br>
+                                                                    <ul>
+                                                                        <li>Subjects</li>
+                                                                        <li>Degrees</li>
+                                                                        <li>Campuses</li>
+                                                                        <li>Faculties</li>
+                                                                    </ul>
+                                                                </p>
+                                                                <p>Should the university wish to brand its UCROO network, we will require the university's logo and colours.</p>
+                                                                <p>Once this information is provided, the university's UCROO network can be set up within a few days.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="faq-content4">
+                                                                <div class="detail"><a href="#">Do graduates or past staff members count towards the UCROO subscription fee?</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="faq-content4">
+                                                                <p>No.</p>
+                                                                <p>When a student is no longer enrolled at a university due to attrition or graduation, that user is considered inactive and is no longer counted towards the university's UCROO subscription fee.</p>
+                                                                <p>Likewise, when a staff member no longer works at the university, that user's account is considered inactive and is no longer counted towards the university's UCROO subscription.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="faq-content5">
+                                                                <div class="detail"><a href="#">How does UCROO limit access to ensure a university network is private?</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="faq-content5">
+                                                                <p>Australia</p>
+                                                                <p>When users create a UCROO account, they are required to verify themselves as a student or staff member of their university via the <a href="http://aaf.edu.au/" target="_blank">Australian Access Federation.</a></p>
+                                                                <p>Only those students and staff entering valid university credentials are given access to the respective university's UCROO network.</p>
+                                                                <p>Outside Australia</p>
+                                                                <p>Only students and staff with a verified university email address can access your university network.</p>
+                                                                <p>After creating an account, a user must verify the account from their university email before they are given access to the university's UCROO network.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="faq-content6">
+                                                                <div class="detail"><a href="#">Where is UCROO hosted?</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="faq-content6">
+                                                                <p>UCROO is cloud hosted at the Rackspace Data Centre in Sydney, Australia.</p>
+                                                                <p>Rackspace is the fastest growing cloud hosting provider, servicing over 200,000 companies worldwide.</p>
+                                                                <p>For more information, visit <a href="http://www.rackspace.com.au/" target="_blank">Rackspace</a>.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="faq-content7">
+                                                                <div class="detail"><a href="#">What level of control does a university have over its UCROO network?</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="faq-content7">
+                                                                <p>UCROO allows universities to brand their network with its logo and colours.</p>
+                                                                <p>Universities also have the option to add or remove entire features to suit their network needs.</p>
+                                                                <p>Furthermore, universities subscribed to UCROO have access to an Administration Control Centre for their network.</p>
+                                                                <p>The Administration Control Centre includes advanced moderation features such as reported/deleted content archives, group management, key word monitoring and usage policy set-up to ensure a high-level of administrative control.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="faq-content8">
+                                                                <div class="detail"><a href="#">How does UCROO collect user profile information?</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="faq-content8">
+                                                                <p>Generally, a user provides all user profile information during account creation.</p>
+                                                                <p>However, the university may provide this information when a student opts-in to UCROO if the necessary system integrations have been implemented.</p>
+                                                                <p>See: <a onclick="open_accordian('What integrations are possible with UCROO?')">'What integrations are possible with UCROO?'</a> for further integration information.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="faq-content9">
+                                                                <div class="detail"><a href="#">What support is available to students?</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="faq-content9">
+                                                                <p>Dedicated email support is provided to students. All student support enquiries lodged are addressed within 4 business hours.</p>
+                                                                <p>Students can easily lodge support enquiries from their Account Menu.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="faq-content10">
+                                                                <div class="detail"><a href="#">How does UCROO help ensure uptake of the university's network?</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="faq-content10">
+                                                                <p>New initiatives succeed when you choose tools that students genuinely want to use - UCROO has been built from the ground up to drive voluntary adoption and maximise engagement of your university network.</p>
+                                                                <p>We believe in a seamless user experience and deliver a quality experience across all devices in order to cater to 21st century expectations.</p>
+                                                                <p>Furthermore, an experienced and dedicated UCROO Support Team Member works with the university to determine the best means for creating awareness and engagement with UCROO based on best practice case studies.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="faq-content11">
+                                                                <div class="detail"><a href="#">How scalable is UCROO?</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="faq-content11">
+                                                                <p>UCROO's cloud infrastructure has been built to rapidly and automatically adjust to meet growing, fluctuating and unpredicted usage.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="faq-content13">
+                                                                <div class="detail"><a href="#">What data/analytics does UCROO provide?</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="faq-content13">
+                                                                <p>As a university subscriber, the university is provided with a UCROO Analytics Centre for its network.</p>
+                                                                <p>The Analytics Centre provides behavioural data on students and staff using your UCROO network; offering new insights into connection, engagement and support at the university.</p>
+                                                                <p>Analytics can be compared across faculties, campuses, modes of study, user type and year levels. All analytics are exportable.</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>
+                                                            <div class="panel-heading" rel="faq-content14">
+                                                                <div class="detail"><a href="#">Why should my university use UCROO?</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="faq-content14">
+                                                                <p>Fundamental shifts in Higher Education are affecting traditional universities' ability to provide a quality student experience and retain students.</p>
+                                                                <p>Student:staff ratios are widening at a higher rate than ever before - making it increasingly difficult to support individual students adequately.</p>
+                                                                <p>Online content delivery - while offering learning flexibility and cutting costs - continues to disconnect students from their university and each other.</p>
+                                                                <p>UCROO helps universities adapt by implementing social technology to better connect, support and engage students from enrolment to graduation.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="faq-content15">
+                                                                <div class="detail"><a href="#">When should a student start using UCROO?</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="faq-content15">
+                                                                <p>We recommend universities invite students to join their UCROO network from enrolment.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="faq-content16">
+                                                                <div class="detail"><a href="#">How much does UCROO cost?</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="faq-content16">
+                                                                <p>UCROO provides a low-cost, competitively priced solution for improving student experience and retention at your university.</p>
+                                                                <p>We charge yearly subscriptions based only on the students and staff at your university using UCROO.</p>
+                                                                <p>To find out more about UCROO and its estimated cost to your university:</p>
+                                                                <ul>
+                                                                    <li><a id="request_demo_link" href="#s5" rel="#s5">Request a Demo</a></li>
+                                                                    <li>Call us on +61 3 9533 6665</li>
+                                                                    <li>Email us on <a href="mailto:team@ucroo.com">team@ucroo.com</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="faq-content17">
+                                                                <div class="detail"><a href="#">What devices, minimum operating systems and browsers is UCROO compatible with?</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="faq-content17">
+                                                                <p>UCROO has been built to work seamlessly across all modern desktop, laptop, tablet and mobile devices.</p>
+                                                                <p>UCROO is also accessible via native iPhone and Android applications.</p>
+                                                                <p>Minimum Operating System Requirements
+                                                                    <br>
+                                                                    <ul>
+                                                                        <li>Windows XP+</li>
+                                                                        <li>OS X Snow Leopard+</li>
+                                                                    </ul>
+                                                                </p>
+                                                                <p>Minimum Browser Requirements</p>
+                                                                <p>Windows
+                                                                    <br>
+                                                                    <ul>
+                                                                        <li>Internet Explorer 9.0+</li>
+                                                                        <li>Firefox 3.0+</li>
+                                                                        <li>Opera 10.6+</li>
+                                                                        <li>Safari 4.0+</li>
+                                                                        <li>Chrome 14.0+</li>
+                                                                    </ul>
+                                                                </p>
+                                                                <p>Mac
+                                                                    <br>
+                                                                    <ul>
+                                                                        <li>Safari 4.0+</li>
+                                                                        <li>Firefox 4.0+</li>
+                                                                        <li>Chrome 14.0+</li>
+                                                                        <li>Opera 11.1+</li>
+                                                                    </ul>
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="faq-content18">
+                                                                <div class="detail"><a href="#">How do users control their privacy settings on UCROO?</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="faq-content18">
+                                                                <p>Users control the collection, correction, settings and/or deletion of profile information from their profile page and privacy settings.</p>
+                                                                <p>Students can also hide themselves from network search and other features should they wish to.</p>
+                                                                <p>For further privacy information please visit <a href="http://support.ucroo.com.au/privacy/" target="_blank">UCROO Privacy Policy</a></p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="faq-content19">
+                                                                <div class="detail"><a href="#">What measures are taken to ensure the privacy and security of user information?</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="faq-content19">
+                                                                <p>We take privacy and security very seriously and make a sustained effort to guarantee the safety of the information that we hold, through both virtual and physical security processes.</p>
+                                                                <p>We have extensive virtual security measures, such as not storing sensitive information in plain text, penetration testing all proprietary code and ensuring servers can only be accessed via secure and authenticated connections.</p>
+                                                                <p>Our employees are thoroughly trained and provided with supporting policies and procedures to safeguard against social engineering. UCROO developers are required to work with 'anonimised' user information on all pre-production servers.</p>
+                                                                <p>Furthermore, our servers are physically secured in locked and alarmed buildings with uninterruptable power supplies at the Rackspace Data Centre in Sydney, Australia.</p>
+                                                                <p>For more information, visit <a href="http://www.rackspace.com.au/" target="_blank">Rackspace</a>.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="faq-content20">
+                                                                <div class="detail"><a href="#">Can a UCROO university network be customised?</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="faq-content20">
+                                                                <p>This depends on the size and scope of the desired customisations - however, we are always open to hearing new ideas for a particular university's network.</p>
+                                                                <p>Keep in mind that we work closely with university subscribers to continually improve the product based on their feedback.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="faq-content21">
+                                                                <div class="detail"><a href="#">How much administration time does UCROO require?</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="faq-content21">
+                                                                <p>UCROO has been built to minimise active administration time, while maintaining a high-level of network moderation.</p>
+                                                                <p>Average estimated administration time per day: 5-10 minutes</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="faq-content22">
+                                                                <div class="detail"><a href="#">What support is available to university staff?</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="faq-content22">
+                                                                <p>UCROO provides universities with enterprise level support.</p>
+                                                                <p>We provide access to a dedicated UCROO University Support Team Member, detailed documentation and best practice case studies to ensure the successful implementation and maintenance of your university network.</p>
+                                                                <p>To ensure smooth on-boarding and higher staff engagement, support webinars and a dedicated UCROO Resource Centre are available to all staff at the university.</p>
+                                                                <p>All university staff also have access to dedicated email and telephone support during business hours.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="faq-content23">
+                                                                <div class="detail"><a href="#">What integrations are possible with UCROO?</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="faq-content23">
+                                                                <p><em>Information System Integration</em></p>
+                                                                <p>Universities can connect selected student and staff information with UCROO via the UCROO API.</p>
+                                                                <p>Connecting student and staff information with UCROO means:</p>
+                                                                <ul>
+                                                                    <li>Students and staff do not have to enter profile information when signing up (saves time &amp; increases sign ups)</li>
+                                                                    <li>Student and staff information stays up-to-date automatically</li>
+                                                                    <li>User management is administered automatically</li>
+                                                                </ul>
+                                                                <p><em>Single Sign On Integration (University/Student Portal)</em></p>
+                                                                <p>UCROO supports Single Sign On integration so that students do not have to log in again to access UCROO once they have already signed into another university system.</p>
+                                                                <p>UCROO's Single Sign On integration is generally implemented within University/Student Portals.</p>
+                                                                <p><em>Learning Tool Interoperability (LMS Integration)</em></p>
+                                                                <p>UCROO can be integrated with the university's Learning Management System via the Learning Tool Interoperability (LTI) standard.</p>
+                                                                <p>LTI allows unit coordinators/lecturers to embed UCROO as a class discussion tool within their subject on the LMS.</p>
+                                                                <p>Requirement: LTI must be enabled by the university. For more information visit: http://www.imsglobal.org</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="faq-content24">
+                                                                <div class="detail"><a href="#">How much downtime does UCROO experience?</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="faq-content24">
+                                                                <p>As a cloud hosted Software as a Service solution, we push feature updates and improvements as they are developed, which guarantees maximum possible uptime for users (99.9%).</p>
+                                                                <p>Should downtime be required, we will endeavor to ensure these times occur during relatively low periods of usage and will communicate these well in advance.</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="panel-heading" rel="faq-content25">
+                                                                <div class="detail"><a href="#">Where does UCROO fit with respect to other technologies used by students?</a></div>
+                                                                <div class="right-arrow">
+                                                                    <div class="icon-arrow-right6"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-content" id="faq-content25">
+                                                                <p><em>Learning Management Systems (LMSs)</em></p>
+                                                                <p>LMSs are educational platforms primarily used for an instructor's administrative purposes like lecture slides and grading.</p>
+                                                                <p>UCROO is a holistic student experience and retention technology that connects students across all aspects of their university lives - educational, social, personal (support) and professional - from enrolment to graduation.</p>
+                                                                <p>UCROO is primarily designed for interactive rather administrative purposes and has been built from the ground up to support user-generated exchanges, connections and community building.</p>
+                                                                <p><em>Facebook/Google+/Twitter</em></p>
+                                                                <p>Facebook, Google+ and Twitter are public social networks designed to connect users with people and content more efficiently.</p>
+                                                                <p>While UCROO also utilises social networking technology, the key differences between UCROO and Facebook/Google+/Twitter are:</p>
+                                                                <ul>
+                                                                    <li>UCROO is only accessible to students and staff at the university</li>
+                                                                    <li>UCROO is designed specifically for universities and its students</li>
+                                                                    <li>Students are more comfortable interacting with staff on UCROO</li>
+                                                                    <li>There is no advertising on UCROO</li>
+                                                                    <li>UCROO provides universities with insightful behavioural data</li>
+                                                                    <li>Universities control their UCROO network</li>
+                                                                    <li>UCROO integrates with university technologies</li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="clear"></div>
+                                                <div class="join-now">
+                                                    <em>Start better supporting your University's students today</em>
+                                                    <a id="request_demo_link" href="#s5" rel="#s5" class="btn-blue sign-up-btn"><span class="float-left">Request a Demo</span> <span class="icon-arrow-right5"></span></a> </div>
+                                                <div class="clear"></div>
+                                            </div>
+                                        </div>
+                                        <!--FAQ complete-->
+                                        <!--Request Demo start-->
+                                        <div>
+                                            <div class="request-demo">
+                                                <div class="request-lt">
+                                                    <div class="title">Want to see more of UCROO?</div>
+                                                    <p>If you'd like a demo of UCROO, fill out the form on this page. One of our helpful staff members will be in contact with you shortly after to organise a time that suits.</p>
+                                                </div>
+                                                <div class="request-rt">
+                                                    <div id="blur_form" class="blur hidden"></div>
+                                                    <div class="padder35">
+                                                        <form action="https://www.sucroo.com/home/send_demo_request" class="public-form" id="request-demo" method="post">
+                                                            <div style="display:none">
+                                                                <input type="hidden" name="csrf_test_name" value="315cd1ff283b1c3918be21453cd0815c">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label" for="name">Name</label>
+                                                                <div class="form-control">
+                                                                    <input name="name" id="name" placeholder="Enter your full name" title="Enter your full name" type="text" value="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label" for="college">College / University</label>
+                                                                <div class="form-control">
+                                                                    <input name="institution" id="college" placeholder="Enter the name of your institution" title="Enter the name of your institution" type="text" value="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label" for="position">Position</label>
+                                                                <div class="form-control">
+                                                                    <input name="position" id="position" placeholder="Enter your position/role" title="Enter your position/role" type="text" value="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-two">
+                                                                <div class="form-group">
+                                                                    <label class="control-label" for="email">Email</label>
+                                                                    <div class="form-control">
+                                                                        <input name="email" id="email" placeholder="Enter your email address" title="Enter your email address" type="email" value="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="control-label" for="phoneno">Phone Number</label>
+                                                                    <div class="form-control">
+                                                                        <input name="phone_number" id="phone_number" type="tel" placeholder="Enter your phone number" title="Enter your phone number" value="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label" required for="question">Questions <span>(optional)</span></label>
+                                                                <div class="form-control">
+                                                                    <textarea name="questions" id="questions" cols="30" rows="4" placeholder="Enter any questions you would like answered during your UCROO demonstration"></textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="form-control">
+                                                                    <script type="text/javascript">
+                                                                    var RecaptchaOptions = {
+                                                                        theme: 'clean'
+                                                                    };
+                                                                    </script>
+                                                                    <script type="text/javascript" src="https://www.google.com/recaptcha/api/challenge?k=6LeXaf4SAAAAABuBx8gHLXaMq2uTeYkFBj24Hdq_"></script>
+                                                                    <noscript>
+                                                                        <iframe src="https://www.google.com/recaptcha/api/noscript?k=6LeXaf4SAAAAABuBx8gHLXaMq2uTeYkFBj24Hdq_" height="300" width="500" frameborder="0"></iframe>
+                                                                        <br/>
+                                                                        <textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
+                                                                        <input type="hidden" name="recaptcha_response_field" value="manual_challenge" />
+                                                                    </noscript>
+                                                                </div>
+                                                            </div>
+                                                            <div id="submit_button">
+                                                                <button type="button" id="request_demo_submit" class="btn-blue button-blue-effect sign-up-btn">Request a Demo<span class="float-left"></span> <span class="icon-arrow-right5"></span></button>
+                                                            </div>
+                                                        </form>
+                                                        <div id="loading_image" class="float-on-form hidden">
+                                                            <img src="/assets_new/landing/images/loading-boring.gif" /> Sending your request.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </div>
+                                        </div>
+                                        <!--Request Demo start-->
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="s6">
+                        <!--29-07-2015 - #4939 - Anuj
+                            Meet the Team Div start-->
+                        <div class="team-page">
+                            <div class="team-banner">
+                                <div class="title-team">Our Team</div>
+                            </div>
+                            <div class="team-list">
+                                <div class="layout-width">
+                                    <ul class="first">
+                                        <li>
+                                            <div class="team-person-img">
+                                                <a href="javascript:void(0);" title="Andrew Dyer">
+                                                    <img src="/assets_new/landing/images/team/andrew.png" alt="Andrew Dyer" width="281" height="281" /></a>
+                                                <div class="team-person-description">
+                                                    <p>Andrew Dyer</p>
+                                                    <span>Advisory</span>
+                                                    <div class="team-social animated slideUp">
+                                                        <a title="Linkedin - Andrew Dyer" target="_blank" href="https://au.linkedin.com/pub/andrew-dyer/1/846/514">
+                                                            <div class="social-icon icon-linkedin2"></div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="team-person-img">
+                                                <a href="javascript:void(0);" title="Jerry Dilettuso">
+                                                    <img src="/assets_new/landing/images/team/jerry.png" alt="Jerry Dilettuso" /></a>
+                                                <div class="team-person-description">
+                                                    <p>Jerry Dilettuso</p>
+                                                    <span>President (U.S)</span>
+                                                    <div class="team-social animated slideUp">
+                                                        <a title="Linkedin - Jerry Dilettuso" target="_blank" href="https://www.linkedin.com/in/jerrydilettuso">
+                                                            <div class="social-icon icon-linkedin2"></div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="team-person-img">
+                                                <a href="javascript:void(0);" title="Maurice O'Shannassy">
+                                                    <img src="/assets_new/landing/images/team/maurice.png" alt="Maurice O'Shannassy" /></a>
+                                                <div class="team-person-description">
+                                                    <p>Maurice O'Shannassy</p>
+                                                    <span>Advisory</span>
+                                                    <div class="team-social animated slideUp">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="last">
+                                        <li>
+                                            <div class="team-person-img">
+                                                <a href="javascript:void(0);" title="James McCubbin">
+                                                    <img src="/assets_new/landing/images/team/james.png" alt="james McCubbin" /></a>
+                                                <div class="team-person-description">
+                                                    <p>James McCubbin</p>
+                                                    <span>Founder</span>
+                                                    <div class="team-social animated slideUp">
+                                                        <a title="Linkedin - James McCubbin" target="_blank" href="https://au.linkedin.com/in/jamesrichardmccubbin">
+                                                            <div class="social-icon icon-linkedin2"></div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="team-person-img">
+                                                <a href="javascript:void(0);" title="Chase Williams">
+                                                    <img src="/assets_new/landing/images/team/chase.png" alt="Chase Williams" /></a>
+                                                <div class="team-person-description">
+                                                    <p>Chase Williams</p>
+                                                    <span>Founder</span>
+                                                    <div class="team-social animated slideUp">
+                                                        <a title="Linkedin - Chase Williams" target="_blank" href="https://au.linkedin.com/in/chasewilliamsucroo">
+                                                            <div class="social-icon icon-linkedin2"></div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="team-person-img">
+                                                <a href="javascript:void(0);" title="Ajay Cherthedath">
+                                                    <img src="/assets_new/landing/images/team/ajay.png" alt="Ajay Cherthedath" /></a>
+                                                <div class="team-person-description">
+                                                    <p>Ajay Cherthedath</p>
+                                                    <span>Technical Lead</span>
+                                                    <div class="team-social animated slideUp">
+                                                        <a title="Linkedin - Ajay Cherthedath" target="_blank" href="https://au.linkedin.com/in/ajaycherthedath">
+                                                            <div class="social-icon icon-linkedin2"></div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Meet the Team complete-->
+                    <!--University complete-->
+                </div>
+                <!--Middle complete-->
+                <!--Footer start-->
+                <footer>
+                    <div class="footer-main">
+                        <div class="layout-width">
+                            <div id="footer_navigation_links" class="footer-section">
+                                <ul>
+                                    <li><a href="#s1" rel="#s1">Students</a></li>
+                                    <li><a href="#s2" rel="#s2">Instructors</a></li>
+                                    <li><a href="#s3" rel="#s3">Staff</a></li>
+                                    <li><a href="#s4" rel="#s4">Clubs &amp; Societies</a></li>
+                                    <li><a href="#s5" rel="#s5">Universities</a></li>
+                                    <!-- 29-07-2015 - #4939 - Anuj - Who is part of Team
+                                    @Add our team link in footer
+                                    -->
+                                    <li><a href="#s6" rel="#s6">Our Team</a></li>
+                                </ul>
+                            </div>
+                            <div id="footer_navigation_tabs" class="footer-section">
+                                <ul>
+                                    <li><a href="#horizontalTab1" rel="#s5">Why UCROO?</a></li>
+                                    <li><a href="#horizontalTab2" rel="#s5">University IT</a></li>
+                                    <li><a href="#horizontalTab3" rel="#s5">FAQ</a></li>
+                                    <li><a href="#horizontalTab4" rel="#s5">Request a Demo</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-section">
+                                <ul>
+                                    <li><a href="http://support.ucroo.com.au/" target="_blank" title="Support">Support</a></li>
+                                    <li><a href="http://support.ucroo.com.au/contact-us/" target="_blank" title="Contact">Contact</a></li>
+                                    <li><a href='javascript:void(0);' onclick="window.open('http://support.ucroo.com.au/terms-of-use/', '_blank', 'width=800,height=600,scrollbars=yes,status=yes,resizable=yes,screenx=0,screeny=0');">Terms</a></li>
+                                    <li><a href='javascript:void(0);' onclick="window.open('http://support.ucroo.com.au/privacy/', '_blank', 'width=800,height=600,scrollbars=yes,status=yes,resizable=yes,screenx=0,screeny=0');">Privacy</a></li>
+                                    <li><a href='javascript:void(0);' onclick="window.open('http://support.ucroo.com.au/serviceagreement/', '_blank', 'width=800,height=600,scrollbars=yes,status=yes,resizable=yes,screenx=0,screeny=0');">Service Agreement</a></li>
+                                    <li><a target="_blank" href="http://support.ucroo.com.au/knowledgebase/accessibility-statement/">Accessibility Statement</a></li>
+                                </ul>
+                            </div>
+                            <div class="connect-us">
+                                <div class="title">Connect with us</div>
+                                <div class="fb-icon">
+                                    <a class="social-icon icon-facebook2" href="http://www.facebook.com/ucroo" target="_blank" title="Facebook"><span>Facebook</span></a>
+                                </div>
+                                <div class="twitter-icon">
+                                    <a class="social-icon icon-twitter2" href="http://twitter.com/UCROO" target="_blank" title="Twitter"><span>Twitter</span></a>
+                                </div>
+                            </div>
+                            <div class="footer-logo">
+                                <a href="https://www.sucroo.com/" class="footer-logo-content">
+                                    <svg>
+                                        <use xlink:href="#landing-footer-logo" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </footer>
+                <!--Footer complete-->
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <style>
+    .recaptchatable #recaptcha_response_field {
+        background: #f1f2f2 !important;
+        color: #aeb5ba !important;
+        font-family: "Soleil" !important;
+        font-size: 16px !important;
+        border: 1px solid #e1e1e1 !important;
+        width: 270px !important;
+    }
+    </style>
+    <div id="signup_mobile_popup" style="display:none">Download the UCROO mobile app or sign up from desktop.
+        <div class="btn-ok"><a class="button-green" onclick="$.fancybox.close();">Ok</a></div>
+    </div>
+    <div style="height: 0; width: 0; position: absolute; visibility: hidden">
+        <!-- inject:svg -->
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+            <defs>
+                <filter id="shadow-black" x="0" y="0" width="100%" height="100%">
+                    <feOffset result="offOut" in="SourceAlpha" dx="0" dy="2"></feOffset>
+                    <feGaussianBlur result="blurOut" in="offOut" stdDeviation="3"></feGaussianBlur>
+                    <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
+                </filter>
+            </defs>
+            <symbol id="landing-footer-logo">
+                <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="0.7" inkscape:cx="226.61434" inkscape:cy="43.659699" inkscape:document-units="px" inkscape:current-layer="layer1" showgrid="false" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0" inkscape:window-width="1920" inkscape:window-height="1018" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1"></sodipodi:namedview>
+                <metadata id="metadata7">
+                    <rdf:rdf>
+                        <cc:work rdf:about="">
+                            <dc:format>image/svg+xml</dc:format>
+                            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
+                            <dc:title></dc:title>
+                        </cc:work>
+                    </rdf:rdf>
+                </metadata>
+                <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1" transform="translate(-233.40879,-528.20025)">
+                    <g id="g3006" transform="translate(233.40879,528.20025)">
+                        <path id="path2986" d="M 15.591,0 C 6.981,0 0,6.98 0,15.591 c 0,8.61 6.981,15.59 15.591,15.59 8.61,0 15.591,-6.98 15.591,-15.59 C 31.182,6.98 24.201,0 15.591,0 z m 8.422,10.011 h -2.348 v 9.669 c 0,3.714 -2.539,6.089 -6.24,6.089 -3.55,0 -6.14,-2.276 -6.14,-6.237 V 10.011 H 7.151 V 7.663 h 6.616 v 2.348 H 12.06 v 9.249 c 0,2.697 1.659,3.837 3.471,3.837 1.863,0 3.572,-1.163 3.572,-3.837 V 10.011 H 16.969 V 7.663 h 7.044 v 2.348 z" inkscape:connector-curvature="0" style="fill:#244372"></path>
+                        <g id="g2988">
+                            <path id="path2990" d="m 66.328,13.302 c 0,-3.125 -2.499,-5.212 -6.386,-5.212 H 52.4 v 17.716 h 2.134 v -7.043 h 4.853 l 5.317,7.043 h 2.448 l -5.619,-7.393 c 2.776,-0.496 4.795,-2.209 4.795,-5.111 z m -11.794,3.753 v -7.044 h 5.257 c 2.852,0 4.518,1.29 4.518,3.448 0,2.258 -1.893,3.596 -4.543,3.596 h -5.232 z" inkscape:connector-curvature="0" style="fill:#244372"></path>
+                            <path id="path2992" d="m 76.699,7.831 c -5.376,0 -9.036,4.192 -9.036,9.005 0,4.813 3.61,8.955 8.985,8.955 5.376,0 9.036,-4.191 9.036,-9.005 0.001,-4.812 -3.609,-8.955 -8.985,-8.955 z m 0,16.149 c -4.039,0 -6.966,-3.226 -6.966,-7.194 0,-3.968 2.877,-7.144 6.915,-7.144 4.038,0 6.966,3.225 6.966,7.194 0,3.969 -2.877,7.144 -6.915,7.144 z" inkscape:connector-curvature="0" style="fill:#244372"></path>
+                            <path id="path2994" d="m 95.625,7.831 c -5.376,0 -9.035,4.192 -9.035,9.005 0,4.813 3.609,8.955 8.985,8.955 5.376,0 9.036,-4.191 9.036,-9.005 0,-4.812 -3.609,-8.955 -8.986,-8.955 z m 0,16.149 c -4.038,0 -6.965,-3.226 -6.965,-7.194 0,-3.968 2.877,-7.144 6.915,-7.144 4.039,0 6.966,3.225 6.966,7.194 0,3.969 -2.877,7.144 -6.916,7.144 z" inkscape:connector-curvature="0" style="fill:#244372"></path>
+                            <path id="path2996" d="m 43.489,23.98 c -3.886,0 -6.84,-3.15 -6.84,-7.194 0,-4.044 2.928,-7.145 6.84,-7.145 2.398,0 4.064,0.992 5.553,2.382 l 1.363,-1.439 C 48.638,8.947 46.72,7.831 43.515,7.831 c -5.2,0 -8.935,4.043 -8.935,9.004 0,5.012 3.76,8.955 8.859,8.955 3.205,0 5.224,-1.215 7.067,-3.051 l -1.313,-1.265 c -1.692,1.589 -3.281,2.506 -5.704,2.506 z" inkscape:connector-curvature="0" style="fill:#244372"></path>
+                        </g>
+                        <rect id="rect2998" height="31.181" width="104.611" display="none" x="0" y="0" style="fill:none;display:none"></rect>
+                    </g>
+                </g>
+            </symbol>
+            <symbol id="landing-homepage-logo">
+                <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="3.959798" inkscape:cx="114.74745" inkscape:cy="34.097936" inkscape:document-units="px" inkscape:current-layer="layer1" showgrid="false" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0" inkscape:window-width="1920" inkscape:window-height="1018" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1"></sodipodi:namedview>
+                <metadata id="metadata7">
+                    <rdf:rdf>
+                        <cc:work rdf:about="">
+                            <dc:format>image/svg+xml</dc:format>
+                            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
+                            <dc:title></dc:title>
+                        </cc:work>
+                    </rdf:rdf>
+                </metadata>
+                <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1" transform="translate(-244.84286,-508.9343)">
+                    <g inkscape:label="Layer 1" transform="matrix(1.4340344,0,0,1.4340344,192.6314,-586.66834)" id="layer1-4">
+                        <g transform="translate(233.40879,528.20025)" id="g3006">
+                            <path d="m -181.4,235.8 c -8.6,0 -15.6,7 -15.6,15.6 0,8.6 7,15.6 15.6,15.6 8.6,0 15.6,-7 15.6,-15.6 0,-8.6 -7,-15.6 -15.6,-15.6 z m 8.4,10 h -2.3 v 9.7 c 0,3.7 -2.5,6.1 -6.2,6.1 -3.6,0 -6.1,-2.3 -6.1,-6.2 v -9.5 h -2.1 v -2.3 h 6.6 v 2.3 h -1.7 v 9.2 c 0,2.7 1.7,3.8 3.5,3.8 1.9,0 3.6,-1.2 3.6,-3.8 v -9.2 h -2.1 v -2.3 h 7 v 2.2 z" class="st0" inkscape:connector-curvature="0" id="path2986" style="fill:#ffffff"></path>
+                            <g id="g2988">
+                                <path d="m -130.7,249.1 c 0,-3.1 -2.5,-5.2 -6.4,-5.2 h -7.5 v 17.7 h 2.1 v -7 h 4.9 l 5.3,7 h 2.4 l -5.6,-7.4 c 2.8,-0.5 4.8,-2.2 4.8,-5.1 z m -11.8,3.8 v -7 h 5.3 c 2.9,0 4.5,1.3 4.5,3.4 0,2.3 -1.9,3.6 -4.5,3.6 0,0 -5.3,0 -5.3,0 z" class="st0" inkscape:connector-curvature="0" id="path2990" style="fill:#ffffff"></path>
+                                <path d="m -120.3,243.6 c -5.4,0 -9,4.2 -9,9 0,4.8 3.6,9 9,9 5.4,0 9,-4.2 9,-9 0,-4.8 -3.6,-9 -9,-9 z m 0,16.2 c -4,0 -7,-3.2 -7,-7.2 0,-4 2.9,-7.1 6.9,-7.1 4,0 7,3.2 7,7.2 0,4 -2.9,7.1 -6.9,7.1 z" class="st0" inkscape:connector-curvature="0" id="path2992" style="fill:#ffffff"></path>
+                                <path d="m -101.4,243.6 c -5.4,0 -9,4.2 -9,9 0,4.8 3.6,9 9,9 5.4,0 9,-4.2 9,-9 0,-4.8 -3.6,-9 -9,-9 z m 0,16.2 c -4,0 -7,-3.2 -7,-7.2 0,-4 2.9,-7.1 6.9,-7.1 4,0 7,3.2 7,7.2 0,4 -2.8,7.1 -6.9,7.1 z" class="st0" inkscape:connector-curvature="0" id="path2994" style="fill:#ffffff"></path>
+                                <path d="m -153.5,259.8 c -3.9,0 -6.8,-3.2 -6.8,-7.2 0,-4 2.9,-7.1 6.8,-7.1 2.4,0 4.1,1 5.6,2.4 l 1.4,-1.4 c -1.8,-1.6 -3.7,-2.8 -6.9,-2.8 -5.2,0 -8.9,4 -8.9,9 0,5 3.8,9 8.9,9 3.2,0 5.2,-1.2 7.1,-3.1 l -1.3,-1.3 c -1.9,1.6 -3.5,2.5 -5.9,2.5 z" class="st0" inkscape:connector-curvature="0" id="path2996" style="fill:#ffffff"></path>
+                            </g>
+                            <rect height="31.200001" width="104.6" class="st1" y="235.8" x="-197" id="rect2998" style="fill:#ffffff;display:none"></rect>
+                        </g>
+                    </g>
+                </g>
+                <style id="style2986" type="text/css">
+                .st0 {
+                    fill: #FFFFFF;
+                }
+
+                .st1 {
+                    display: none;
+                    fill: #FFFFFF;
+                }
+                </style>
+            </symbol>
+        </svg>
+        <!-- endinject -->
+    </div>
+    <script src="/assets_new/landing/js/landing.js" type="text/javascript"></script>
+</body>

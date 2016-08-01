@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "content_heading": {
+          "type": "string"
+        },
+        "is_csu_uni": {
+          "type": "boolean"
+        },
+        "is_user_NikGranger": {
+          "type": "boolean"
+        },
+        "is_club_membership_enabled": {
+          "type": "boolean"
+        },
+        "clubs": {
+          "type": "",
+          "properties": {
+            "": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "id": {
+                  "type": "integer"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "picture": {
+                  "type": "string"
+                },
+                "is_membership": {
+                  "type": "boolean"
+                },
+                "join_url": {
+                  "type": "string"
+                },
+                "is_followed": {
+                  "type": "boolean"
+                },
+                "follow_url": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "club_suggestions": {
+          "type": "",
+          "properties": {
+            "": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "id": {
+                  "type": "integer"
+                },
+                "picture": {
+                  "type": "string"
+                },
+                "invite_url": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "title": {
+          "type": "string"
+        },
+        "welcome_tour": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

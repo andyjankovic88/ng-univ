@@ -1,0 +1,83 @@
+.block-users-section {
+   .ucr-as-row {
+      margin-bottom: 10px;
+      .img-holder {
+         float: left;
+         position: relative;
+      }
+      .row-info {
+         font-size: 110%;
+         font-weight: bold;
+         color: #2C5975;
+         line-height: 36px;
+      }
+      .row-actions {
+         .btn-link {
+            margin-right: 20px;
+         }
+      }
+   }
+
+   .subtitle {
+      font-size: $font13;
+      margin-bottom: 10px;
+   }
+
+   .user_searchbox {
+      position: relative;
+      .btn-confirm {
+         position: absolute;
+         top: 0;
+         right: 0;
+      }
+      .icon-search-loading {
+         position: absolute;
+         top: 5px;
+         right: 95px;
+
+         svg {
+            width: 24px;
+            height: 24px;
+         }
+      }
+   }
+   .input-typeahead {
+      width: 100%;
+      padding-right: 115px;
+   }
+   .typeahead-dropdown-menu {
+      border: 1px solid #e1e1e1;
+      padding: 30px 15px;
+      width: 100%;
+
+      li {
+         display: inline-block;
+         width: 50%;
+
+         a {
+            font-size: $font12;
+            color: #2C5975;
+//            font-weight: bold;
+
+            figure {
+
+               position: relative;
+               float: left;
+
+               img {
+                  border-radius: 19px;
+               }
+            }
+            div.typeahead-label {
+               padding: 14px 0;
+               font-size: $font13;
+            }
+         }
+         &.active {
+            a {
+               font-weight: bold;
+            }
+         }
+      }
+   }
+}

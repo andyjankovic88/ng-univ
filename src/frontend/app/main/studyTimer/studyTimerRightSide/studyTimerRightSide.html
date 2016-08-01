@@ -1,0 +1,40 @@
+<div class="calendar-right-side">
+   <h2>Add Study Session</h2>
+   <form novalidate ng-submit="submit()">
+      <div class="row" dropdown>
+         <input type="text" dropdown-trigger value="{{session.study_date | date:'d MMM yyyy'}}" placeholder="Date">
+
+         <div dropdown-body class="popup-holder big-popup clearfix">
+            <div class="arrow-holder">
+               <span class="arrow-top-w"></span>
+               <span class="arrow-top"></span>
+            </div>
+
+            <div class="calendar-popup drop-content">
+               <div class="header clearfix">
+                  <svg class="ico-clear r-side" dropdown-inner-trigger>
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-clear"></use>
+                  </svg>
+               </div>
+               <date-picker-ex
+                  on-save="session.study_date = $date.format('YYYY-MM-DD')"
+                  on-cancel=""
+                  no-min-date="true"
+
+               ></date-picker-ex>
+            </div>
+         </div>
+      </div>
+      <div class="select-custom select-small row">
+         <select ng-class="{selected: session.unit_id}" ng-model="session.unit_id" ng-options="subject.id as (subject.code + ' ' + subject.name) for subject in subjects">
+            <option hidden disabled value="">Subject</option>
+         </select>
+      </div>
+      <div class="select-custom select-small row">
+         <select ng-class="{selected: session.study_time}" ng-model="session.study_time" ng-options="key as value for (key, value) in times">
+            <option hidden disabled value="">Time</option>
+         </select>
+      </div>
+      <button type="submit" class="blue-btn" ng-show="session.study_date && session.unit_id && session.study_time">Add Session</button>
+   </form>
+</div>

@@ -1,0 +1,13 @@
+.checkbox {
+   input {
+      left: 0px;
+      visibility: hidden;
+   }
+   label {
+      //overflow: hidden;
+      display: inline-block;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 218px;
+   }
+}

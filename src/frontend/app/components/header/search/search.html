@@ -1,0 +1,12 @@
+<div class="header-search">    
+    <svg class="ico-search" ng-click="search()">
+        <use xlink:href="#header-search" />
+    </svg>
+    <svg class="close-btn" ng-click="close()">
+        <use xlink:href="#header-cross" />
+    </svg>
+    <div class="input-holder">
+        <span class="vert-helper"></span>
+        <input placeholder="Search for a student, group or page..." value="" key-submit="search()" ng-model="terms"/>
+    </div>
+</div>

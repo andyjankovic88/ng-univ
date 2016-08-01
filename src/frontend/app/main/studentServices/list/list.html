@@ -1,0 +1,27 @@
+<div class="ur-ss-list">
+   <!-- content-heading -->
+   <div class="content-heading ng-scope">
+      <h1>Student Services</h1>
+      <div class="r-side" ng-if="isCreateable">
+         <a class="btn btn-blue" ui-sref="studentServicesCreate">Create Student Service</a>
+      </div>
+   </div>
+   <!-- sub-menu -->
+   <div class="sub-menu">
+      <ul>
+         <li ui-sref-active="active">
+            <a href="#" ui-sref="studentServicesList">
+               <svg class="ico-list"><use xlink:href="#feeds-list" /></svg>
+               <span>GROUP LIST</span>
+            </a>
+         </li>
+         <li ui-sref-active="active">
+            <a href="#" ui-sref="studentServicesSuggestions">
+               <svg class="ico-suggestions"><use xlink:href="#icon-suggestions" /></svg>
+               <span>SUGGESTIONS</span>
+            </a>
+         </li>
+      </ul>
+   </div>
+   <div class="ur-ss-content" ui-view></div>
+</div>

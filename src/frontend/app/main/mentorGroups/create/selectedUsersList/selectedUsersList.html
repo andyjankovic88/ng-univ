@@ -1,0 +1,16 @@
+<div class="holder table">
+   <ul class="rubber-list">
+      <li ng-repeat="item in list">
+         <figure>
+            <a href="#">
+               <span class="photo-holder">
+                              <img ng-src="{{item.pic}}">
+                              <svg class="status ico-ofline" ng-click="remove(item)"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-ofline"></use></svg>
+                           </span>
+               <strong class="user-name">{{item.value}}</strong>
+               <p>{{item.email}}</p>
+            </a>
+         </figure>
+      </li>
+   </ul>
+</div>

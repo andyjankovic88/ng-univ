@@ -1,0 +1,99 @@
+<!-- profile -->
+<div id="profile" class="uc-profile">
+   <div class="profile-header">
+      <div class="banner">
+         <img class="photo" ng-src="/assets_new/images/profile.jpg" alt="cover-pic">
+      </div>
+      <div class="holder-info">
+         <div class="user-info">
+            <figure class="img-holder">
+               <div class="avatar-holder">
+                  <a href="#"><img class="avatar" ng-src="{{profileInfo.photo_url}}" alt="Virginia Henderson"></a>
+               </div>
+               <figcaption class="user-name">
+                  <h1>{{profileInfo.name}}</h1>
+                  <span>{{profileInfo.subject}}</span>
+               </figcaption>
+            </figure>
+            <div class="profile-actions">
+               <a ui-sref="newMessage({recepient: profileInfo})" class="btn-blue" ng-if="profileInfo.user_id != currentUserId">Message</a>
+               <a href="#" class="btn-transparent has-icon"
+                  ng-disabled="isConnecting"
+                  ng-if="
+                  (profileInfo.connected === false) &&
+                  (profileInfo.user_id != currentUserId) &&
+                  (!profileInfo.user_blocked_me) &&
+                  !profileInfo.declined_request &&
+                  !profileInfo.sent_connection_request
+                  " ng-click="requestConnection(profileInfo.user_id)"><span ng-hide="isConnecting">Connect</span><span ng-show="isConnecting" class="icon-for-button"><svg class="ico-sm"><use xlink:href="#icon-loading-spinner"></use></svg></span></a>
+               <a href="#" class="btn-transparent has-icon"
+                  ng-disabled="isConnecting"
+                  ng-if="
+                  (profileInfo.connected === false) &&
+                  (profileInfo.user_id != currentUserId) &&
+                  (!profileInfo.user_blocked_me) &&
+                  !profileInfo.declined_request &&
+                  profileInfo.sent_connection_request
+                  " ng-click="requestConnection(profileInfo.user_id)"><span ng-hide="isConnecting">Reconnect</span><span ng-show="isConnecting" class="icon-for-button"><svg class="ico-sm"><use xlink:href="#icon-loading-spinner"></use></svg></span></a>
+               <a href="#" class="btn-transparent" ng-if="profileInfo.user_id == currentUserId" ui-sref="editProfile">Edit</a>
+            </div>
+         </div>
+         <div class="personal-detail clearfix">
+            <ul>
+               <li>
+                  <svg><use xlink:href="#profile-campus" /></svg>
+                  <span>{{profileInfo.campus}}</span>
+               </li>
+               <li ng-if="profileInfo.group == 'student'">
+                  <svg><use xlink:href="#profile-years" /></svg>
+                  <span>{{profileInfo.commencement}}-{{profileInfo.year_of_completion}}</span>
+               </li>
+               <li>
+                  <svg><use xlink:href="#profile-poits" /></svg>
+                  <span>{{profileInfo.karma}} points</span>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <!-- sub-menu -->
+      <loader is-active="listRequestInProgress" position="static"></loader>
+      <div class="sub-menu"  ng-show="main_tab">
+
+         <ul>
+
+            <li ui-sref-active="active" ng-if="profileInfo.group == 'student'">
+               <a href="#" ui-sref="profile.about" >
+                  <svg><use xlink:href="#profile-about" /></svg>
+                  <span>ABOUT</span>
+               </a>
+            </li>
+            <li ui-sref-active="active">
+               <a href="#" ui-sref="profileSubjects">
+                  <svg class="ico-subjects"><use xlink:href="#icon-subject" /></svg>
+                  <span>SUBJECTS</span>
+               </a>
+            </li>
+            <li ui-sref-active="active">
+               <a href="#" ui-sref="profile.connections">
+                  <svg class="ico-connections"><use xlink:href="#icon-connections" /></svg>
+                  <span>CONNECTIONS</span>
+               </a>
+            </li>
+            <li ui-sref-active="active">
+               <a href="#" ui-sref="profile.groups">
+                  <svg><use xlink:href="#profile-groups" /></svg>
+                  <span>GROUPS</span>
+               </a>
+            </li>
+            <li ui-sref-active="active" ng-if="profileInfo.group == 'student' && profileInfo.user_id == currentUserId">
+               <a href="#" ui-sref="universityCalendar">
+                  <svg><use xlink:href="#profile-calendar" /></svg>
+                  <span>CALENDAR</span>
+               </a>
+            </li>
+         </ul>
+      </div>
+   </div>
+   <!-- groups-section -->
+   <div class="profile-content" ng-show="main_tab" ui-view></div>
+</div>

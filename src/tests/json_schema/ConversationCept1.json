@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "array", 
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "msg_id": {
+              "type": "integer"
+            },
+            "message_text": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "profile_pic": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "is_read": {
+              "type": "integer"
+            },
+            "conversation_id": {
+              "type": "integer"
+            },
+            "how_long_ago": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

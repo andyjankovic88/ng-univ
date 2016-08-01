@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "posts": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "likes_count": {
+                  "type": "integer"
+                },
+                "comments_count": {
+                  "type": "integer"
+                },
+                "how_long_ago": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "username": {
+                      "type": "string"
+                    },
+                    "profile_pic": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "text": {
+                  "type": "string"
+                },
+                "is_anonymous": {
+                  "type": "integer"
+                },
+                "comments": {
+                  "type": "array",
+                  "items": []
+                },
+                "apo_text": {
+                  "type": "string"
+                },
+                "has_liked": {
+                  "type": "boolean"
+                },
+                "has_reported": {
+                  "type": "boolean"
+                },
+                "poll_options": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "text": {
+                          "type": "string"
+                        },
+                        "has_voted": {
+                          "type": "boolean"
+                        },
+                        "n_votes": {
+                          "type": "integer"
+                        },
+                        "vote_percent": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "is_followed": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

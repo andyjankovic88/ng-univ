@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "university": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "image_url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "image_url"
+        ]
+      },
+      "required": [
+        "0"
+      ]
+    },
+    "first_year": {
+      "type": "array",
+      "items": []
+    },
+    "final_year": {
+      "type": "array",
+      "items": []
+    },
+    "classes": {
+      "type": "array",
+      "items": []
+    },
+    "study_groups": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "image_url": {
+              "type": "string"
+            },
+            "privacy": {
+              "type": "string"
+            },
+            "creator": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "photo_url": {
+                  "type": "string"
+                },
+                "group_id": {
+                  "type": "integer"
+                },
+                "user_type": {
+                  "type": "string"
+                }
+              }
+            },
+            "is_joined": {
+              "type": "boolean"
+            }
+          }
+        }
+      ]
+    },
+    "clubs": {
+      "type": "array",
+      "items": []
+    },
+    "university_staff": {
+      "type": "array",
+      "items": []
+    },
+    "mentors": {
+      "type": "array",
+      "items": []
+    },
+    "customgroups": {
+      "type": "array",
+      "items": []
+    },
+    "services": {
+      "type": "array",
+      "items": []
+    }
+  },
+  "required": [
+    "university",
+    "first_year",
+    "final_year",
+    "classes",
+    "study_groups",
+    "clubs",
+    "university_staff",
+    "mentors",
+    "customgroups",
+    "services"
+  ]
+}

@@ -1,0 +1,64 @@
+ {
+        "user": {
+            "id": "",
+            "userName": "",
+            "profilePic": "",
+            "securityToken": "",
+            "unreadNotificationCount": "",
+            "unreadMessageCount": "",
+            "newConnectionsCount": ""
+        },
+        "eduInstitution": {
+            "id": "",
+            "name": "",
+            "logo": "url-to-logo",
+            "menu": [
+                {
+                    "title": "",
+                    "url": ""
+                }
+            ]
+        },
+        "adminMenu": [
+            {
+                "name": "",
+                "classId": ""
+            }
+        ],
+        "uniadminMenu": [
+            {
+                "id": "",
+                "title": ""
+            }
+        ],
+        "mainMenu": {
+        	"RecentActivity"
+
+            "Monash Univeristy": "5",
+            "University Staff Feed": "5",
+            "Subjects": [
+                {
+                    "id": "",
+                    "title": ""
+                }
+            ],
+            "StudyGroups": [
+                {
+                    "id": "",
+                    "name": ""
+                }
+            ],
+            "CustomGroups": [
+                {
+                    "id": "",
+                    "name": ""
+                }
+            ],
+            "MentorGroups": [
+                {
+                    "id": "name",
+                    "name": ""
+                }
+            ]
+        }
+    }

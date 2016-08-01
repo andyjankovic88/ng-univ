@@ -1,0 +1,107 @@
+@media only screen and (min-width: 1170px) and (max-width:1875px) {
+.layout-width{width:98%;}
+.top-right{width:45%;}	
+.top-left{width:50%;}
+.invite-box{width:100%;}
+.invite-box .content .thumbnail{margin-right:15px;}
+.invite-box .content .detail{width:78%;font-size:19px;}
+.middle .heading{width:100%;}
+.middle-right{width:35%;}
+.middle-left{width:60%;}
+.ucroo-video img{width:100%;}
+.service-list{width:45%;}
+.service-list.float-right{width:45%;}
+.service-list li .icon-main{margin:0 10px 0 0;}
+.service-list li .detail{width:84%;}
+.location-detail{line-height:inherit;}
+.ucroo-banner{overflow:hidden;}
+.ucroo-banner img{width:auto;}	
+
+}
+@media only screen and (min-width: 1024px) and (max-width: 1169px) {
+.layout-width{width:98%;}
+.top-right{width:45%;}	
+.top-left{width:50%;}
+.invite-box{width:100%;}
+.invite-box .content .thumbnail{margin-right:15px;}
+.invite-box .content .detail{width:78%;font-size:19px;}
+.middle .heading{width:100%;}
+.middle-right{width:35%;}
+.middle-left{width:60%;}
+.ucroo-video img{width:100%;}
+.service-list{width:45%;}
+.service-list.float-right{width:45%;}
+.service-list li .icon-main{margin:0 10px 0 0;}
+.service-list li .detail{width:84%;}
+.location-detail{line-height:inherit;}
+.ucroo-banner{overflow:hidden;}
+.ucroo-banner img{width:auto;}
+}
+
+@media only screen and (min-width: 980px) and (max-width: 1023px) {
+.layout-width{width:98%;}
+.top-right{width:45%;}	
+.top-left{width:50%;}
+.invite-box{width:100%;}
+.invite-box .content .thumbnail{margin-right:15px;}
+.invite-box .content .detail{width:76%;font-size:19px;}
+.middle .heading{width:100%;}
+.middle-right{width:35%;}
+.middle-left{width:60%;}
+.ucroo-video img{width:100%;}
+.service-list{width:45%;}
+.service-list.float-right{width:45%;}
+.service-list li .icon-main{margin:0 10px 0 0;}
+.service-list li .detail{width:83%;}
+.location-detail{line-height:inherit;}
+.ucroo-banner{overflow:hidden;}
+.ucroo-banner img{width:auto;}	
+}
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+.layout-width{width:98%;}
+.top-right{float:none;text-align:center;}
+.ucroo-banner{}
+.ucroo-banner img{display:inline;}
+.top-left{float:none;margin:30px auto;}
+.invite-box{margin:0 auto;width:100%;}
+.middle .heading{width:100%;}	
+.middle-right{float:none;width:100%;}
+.ucroo-video img{width:100%;}
+.middle-left{width:100%;float:none;}
+}
+
+@media only screen and (max-width: 767px) {
+.layout-width{width:98%;}
+.top-right{float:none;text-align:center;}
+.ucroo-banner{}
+.ucroo-banner img{display:inline;}
+.top-left{float:none;margin:30px auto;}
+.invite-box{margin:0 auto;width:100%;}
+.middle .heading{width:100%;}	
+.middle-right{float:none;width:100%;}
+.ucroo-video img{width:100%;}
+.middle-left{width:100%;float:none;}	
+.service-list,.service-list.float-right{width:100%;}
+}
+
+@media only screen and (max-width: 600px) {
+.invite-box .heading{padding:15px;}	
+.invite-box .content{padding:15px;}
+.invite-box .content .thumbnail{width:60px;height:60px;margin:0 10px 0 0;}
+.invite-box .content .detail{line-height:23px;font-size:19px;width:83%;}
+.invite-box .content .btn-green{width:115px;font-size:17px;margin:5px 0 0 75px;}
+.middle .heading{font-size:25px;}
+.middle-left{margin:45px 0;}	
+}
+
+@media only screen and (max-width: 360px) {
+.invite-box .content .detail{line-height:23px;font-size:17px;width:77%;}
+}
+@media only screen and (max-width: 320px) {
+	.invite-box .content .detail{width:73%;}
+.service-list li .detail{width:84%;}	
+}
+
+
+

@@ -1,0 +1,242 @@
+<div id="new-event">
+   <div class="content-heading">
+      <h1>Create New Event</h1>
+   </div>
+
+   <form id="form-event" name="createEvent">
+      <fieldset>
+         <div class="row event-type" ng-if="isClub()">
+            <label>Event type</label>
+            <div class="dropdown-timezone select-custom">
+               <select ng-class="{selected : details.completion_year.current}" id="dropdown-event-type"
+                       ng-model="newEvent.event_type" >
+                  <option ng-repeat="type in viewData.event_type" value="{{type.value}}">{{type.lable}}</option>
+               </select>
+            </div>
+         </div>
+         <div class="row">
+            <label>Name of Event</label>
+            <input class="input-name" ng-model="newEvent.title" type="text" placeholder="Type event name"/>
+         </div>
+         <div class="holder-txt row">
+            <label for="event-description" ng-class="{}">Event Description</label>
+                <textarea tabindex="0"
+                          id="event-description"
+                          class="textarea-white"
+                          cols="20" rows="3"
+                          ng-model="newEvent.description"
+                          placeholder="A few words about your event…"
+                          name="description"
+                          ng-minlength="50"
+                          ng-minlength="1000">
+                </textarea>
+         </div>
+         <div class="row">
+            <label>Event Image</label>
+            <button class="btn-green btn-upload" ngf-select="uploadLogo($file)" ngf-max-size="10MB" accept="image/*">
+               Upload a  File
+            </button>
+         </div>
+         <div class="row start-end">
+            <div class="col">
+               <label>Starts</label>
+               <div>
+                  <div class="row date-holder" dropdown>
+                     <input type="text" dropdown-trigger value="{{newEvent.start_date| date:'d MMM yyyy'}}" placeholder="Date" readonly>
+                     <div dropdown-body class="popup-holder big-popup clearfix">
+                        <div class="arrow-holder">
+                           <span class="arrow-top-w"></span>
+                           <span class="arrow-top"></span>
+                        </div>
+                        <div class="calendar-popup drop-content">
+                           <div class="header clearfix">
+                              <svg class="ico-clear r-side" dropdown-inner-trigger>
+                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-clear"></use>
+                              </svg>
+                           </div>
+                           <date-picker-ex
+                              on-save="newEvent.start_date = $date.format('DD/MM/YYYY')"
+                              on-cancel=""
+                              no-min-date="true"
+
+                              ></date-picker-ex>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-time">
+                     <div class="clearfix">
+                        <div class="col-time-hour">
+                           <input class="time-input" type="number" name="fromHour" ng-model="starts_time.hour" maxlength="2" number-check
+                                  min="hourMin" max="hourMax">
+                        </div>
+                        <div class="col-time-separator">:</div>
+                        <div class="col-time-minute">
+                           <input class="time-input" type="number" name="fromMinute" ng-model="starts_time.minute" maxlength="2" number-check
+                                  min="0" max="60">
+                        </div>
+                        <div class="select-custom col-time-period">
+                           <select name="fromPeriod" ng-model="starts_time.period">
+                              <option value="AM">AM</option>
+                              <option value="PM">PM</option>
+                           </select>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col">
+               <label>Ends</label>
+               <div>
+                  <div class="row date-holder" dropdown>
+                     <input type="text" dropdown-trigger value="{{newEvent.end_date| date:'d MMM yyyy'}}" placeholder="Date" readonly>
+                     <div dropdown-body class="popup-holder big-popup clearfix">
+                        <div class="arrow-holder">
+                           <span class="arrow-top-w"></span>
+                           <span class="arrow-top"></span>
+                        </div>
+                        <div class="calendar-popup drop-content">
+                           <div class="header clearfix">
+                              <svg class="ico-clear r-side" dropdown-inner-trigger>
+                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-clear"></use>
+                              </svg>
+                           </div>
+                           <date-picker-ex
+                              on-save="newEvent.end_date = $date.format('DD/MM/YYYY')"
+                              on-cancel=""
+                              no-min-date="true"
+
+                              ></date-picker-ex>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-time">
+                     <!--ng-class="{'has-error': isShowError(groupForm, groupForm.toHour, groupForm.toMinute), 'no-error': isShowSuccess(groupForm, groupForm.toHour, groupForm.toMinute)}">-->
+                     <div class="clearfix">
+                        <div class="col-time-hour">
+                           <input class="time-input" type="number" name="toHour" ng-model="ends_time.hour" maxlength="2" number-check
+                                  min="hourMin" max="stop_hourMax">
+                        </div>
+                        <div class="col-time-separator">:</div>
+                        <div class="col-time-minute">
+                           <input class="time-input" type="number" name="toMinute" ng-model="ends_time.minute" maxlength="2" number-check min="0"
+                                  max="60">
+                        </div>
+                        <div class="select-custom col-time-period">
+                           <select name="toPeriod" ng-model="ends_time.period">
+                              <option value="AM">AM</option>
+                              <option value="PM">PM</option>
+                           </select>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row" ng-if="!isClub()">
+            <div class="checkbox">
+               <input id="event-not-campus" type="checkbox" ng-model="newEvent.specificto_campus_check"
+                      ng-true-value="1"
+                      ng-false-value="0" title="This Event is not related to a specific campus" >
+               <label for="event-not-campus">This Event is not related to a specific campus</label>
+            </div>
+         </div>
+         <div class="row" ng-hide="newEvent.specificto_campus_check" ng-if="!isClub()">
+               <label for="campuses">Campuses</label>
+               <combo-with-checkboxes  id="campuses" options="viewData.campuses.options" id-key="value" label-key="name" id-attr-prefix="campus-"
+                                       ng-model="selectedCampuses"></combo-with-checkboxes>
+         </div>
+         <div class="row timezone">
+            <div class="col">
+               <label for="dropdown-timezone">Timezone</label>
+               <div class="dropdown-timezone select-custom">
+                  <select ng-class="{selected : details.completion_year.current}" id="dropdown-timezone"
+                          ng-model="newEvent.timezone" >
+                     <option ng-repeat="(key, value) in viewData.timezone" value="{{key}}">{{value}}</option>
+                  </select>
+               </div>
+            </div>
+            <div class="col">
+               <div class="col" ng-if="!isClub()">
+                  <label for="dropdown-target-year">Year level</label>
+                  <div class="select-custom select-big">
+                     <select ng-class="{selected : details.completion_year.current}" id="dropdown-target-year"
+                             ng-model="newEvent.target_year">
+                        <option ng-repeat="(key, value) in viewData.target_year" value="{{key}}">{{value}}</option>
+                     </select>
+                  </div>
+               </div>
+               <div class="col">
+                  <label for="max-attendees-text">Max. No of Attendees</label>
+                  <input id="max-attendees-text" type="number" name="location" ng-model="newEvent.max_attendees"
+                     >
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <label for="location-text">Location</label>
+            <input id="location-text" type="text" name="location" ng-model="newEvent.location"
+                   placeholder="Enter location…">
+         </div>
+         <div class="row sell-tickets" ng-if="isClub()">
+            <div class="holder" ><strong class="heading">Sell tickets for free on UCROO!</strong></div>
+            <ul class="options-selling clearfix">
+               <li>
+                  <a class="photo-holder" href="#">
+                     <svg>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-ticket-online"></use>
+                     </svg>
+                  </a>
+                  <div class="content-holder">Sell tickets online</div>
+               </li>
+               <li>
+                  <a class="photo-holder" href="#">
+                     <svg>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-credit-payments"></use>
+                     </svg>
+                  </a>
+                  <div class="content-holder">Process credit card payments</div>
+               </li>
+               <li>
+                  <a class="photo-holder" href="#">
+                     <svg>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-electronic-ticket"></use>
+                     </svg>
+                  </a>
+                  <div class="content-holder">Issue electronic tickets</div>
+               </li>
+               <li>
+                  <a class="photo-holder" href="#">
+                     <svg>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-all-tickets"></use>
+                     </svg>
+                  </a>
+                  <div class="content-holder">All events are free to ticket</div>
+               </li>
+            </ul>
+            <div class="checkbox">
+               <input id="event-sell-tickets" type="checkbox" ng-model="newEvent.ticketed_event"
+                      ng-true-value="1"
+                      ng-false-value="0" title="I would like to sell tickets to this event on UCROO" >
+               <label for="event-sell-tickets">I would like to sell tickets to this event on UCROO</label>
+            </div>
+         </div>
+         <div class="row">
+            <ul class="options-btn">
+               <li>
+                  <button type="button" class="btn-link" ng-click="cancel()">Cancel</button>
+               </li>
+               <li>
+                  <button type="button" ng-if="!editID"
+                          class="btn-blue btn-small" ng-click="submit()" ng-disabled="requiredAll()">Create Event
+                  </button>
+               </li>
+               <li>
+                  <button type="button" ng-if="editID"
+                          class="btn-blue btn-small" ng-click="save_edit()" ng-disabled="requiredAll()">Save Updates
+                  </button>
+               </li>
+            </ul>
+         </div>
+      </fieldset>
+   </form>
+</div>

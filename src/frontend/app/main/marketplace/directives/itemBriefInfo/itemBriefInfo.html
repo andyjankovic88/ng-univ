@@ -1,0 +1,25 @@
+<div class="item-brief-info">
+    <a class="name" ui-sref="marketplaceItem({id: item.item_id})">{{item.item_name}}</a>
+    <p>${{item.price}}</p>
+    <!-- <p>0</p> -->
+    <ul class="details">
+        <li class="detail-item">
+            <svg class="icon">
+                <use xlink:href="#icon-general-items" />
+            </svg>
+            <span>{{item.category}}</span>
+        </li>
+        <li class="detail-item">
+            <svg class="icon">
+                <use xlink:href="#profile-calendar" />
+            </svg>
+            <span>{{item.item_posted_date | date : format : timezone}}</span>
+        </li>
+        <li class="detail-item">
+            <svg class="icon">
+                <use xlink:href="#icon-location" />
+            </svg>
+            <span>{{item.campus_name}}</span>
+        </li>
+    </ul>
+</div>

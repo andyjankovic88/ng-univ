@@ -1,0 +1,44 @@
+#first-steps-overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 1010;
+
+   background: rgba(0, 0, 0, 0.7);
+}
+
+#first-steps {
+   display: table;
+   width: 900px;
+   height: 100%;
+   margin: 0 auto;
+   .first-steps-overlay-content {
+      display: table-cell;
+      vertical-align: middle;
+      font-family: latoregular, sans-serif;
+      text-align: center;
+      color: $color-white;
+      .title-wrapper {
+         margin-bottom: 40px;
+         .title {
+            font-size: 28px;
+            font-weight: bold;
+         }
+         .title-tip {
+            font-size: 14px;
+         }
+      }
+      .btn-done {
+         font-size: 15px;
+         width: 239px;
+         height: 44px;
+         font-weight: bold;
+         line-height: 44px;
+      }
+      .first-steps-content {
+         margin-bottom: 26px;
+      }
+   }
+}

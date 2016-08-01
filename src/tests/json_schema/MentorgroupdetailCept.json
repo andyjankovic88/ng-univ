@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "group_id": {
+          "type": "string"
+        },
+        "group_name": {
+          "type": "string"
+        },
+        "program_name": {
+          "type": "string"
+        },
+        "group_members": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "user_id": {
+                  "type": "string"
+                },
+                "user_name": {
+                  "type": "string"
+                },
+                "user_email": {
+                  "type": "string"
+                },
+                "user_photo": {
+                  "type": "string"
+                },
+                "member_type": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "can_delete": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

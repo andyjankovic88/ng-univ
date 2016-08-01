@@ -1,0 +1,96 @@
+.ng-hide #popup-notification {
+   right: -400px;
+   transition: right 0.5s ease;
+}
+
+#popup-notification {
+   top: 60px;
+   right: 0;
+   transition: right 0.5s ease;
+  .ico-clear {
+     margin: 3px 0 0;
+  }
+  .arrow-top {
+    right: -300px;
+  }
+  .popup-holder {
+     -webkit-box-shadow: -7px -4px 28px -15px rgba(0,0,0,0.75);
+     -moz-box-shadow: -7px -4px 28px -15px rgba(0,0,0,0.75);
+     box-shadow: -7px -4px 28px -15px rgba(0,0,0,0.75);
+    .popup-wrapper {
+      .popup-list {
+         padding: 0 10px;
+        .img-holder {
+          float: left;
+          margin: 0 20px 0 0;
+          position: relative;
+
+        }
+      }
+    }
+  }
+  .btn-block {
+    margin: 0 auto 40px;
+    padding: 10px 0 0;
+
+    .btn-submit,
+    .btn-red {
+      border: 0;
+      width: 115px;
+      height: 35px;
+      color: #fff;
+      line-height: 14px;
+    }
+    .btn-submit svg,
+    .btn-red svg {
+       use {
+         fill: #fff;
+       }
+      width: 18px;
+      height: 18px;
+      float: left;
+      margin: 0 5px 0 5px;
+    }
+    .btn-submit span,
+    .btn-red span {
+      margin: 2px 0 0;
+      float: left;
+    }
+    .btn-submit {
+      margin: 0 10px 0 10px;
+      background: $color-green;
+    }
+    .btn-submit:hover {
+      background: $color-green-hover;
+    }
+    .btn-red {
+      margin: 0 0 0 10px;
+    }
+  }
+   .popup-fixed {
+      padding: 0;
+   }
+   .header-notification {
+      font-size: 12px;
+      padding: 7px;
+      border-bottom: 1px solid $color-light-grey;
+   }
+   .holder-notification {
+      padding: 10px 0 0;
+   }
+   .user-name {
+      margin: 0 2px 0 0;
+      font-size: 13px;
+   }
+   .popup-info {
+      padding: 0 0 10px;
+      border-bottom: 1px solid $color-light-grey;
+   }
+}
+.icon-type-group {
+   width: 24px;
+   height: 24px;
+   position: absolute;
+   top: 20px;
+   left: 20px;
+}

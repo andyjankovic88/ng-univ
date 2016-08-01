@@ -1,0 +1,38 @@
+/* about */
+.about-section {
+   font-size: $font14;
+   h2 {
+      color: $color-green;
+      font-size: 128%;
+      margin: 0 0 10px;
+   }
+   address {
+      font-style: normal;
+      p {
+         margin: 0 0 3px;
+      }
+   }
+   .section {
+      margin: 0 0 15px;
+   }
+   .def-list {
+      overflow: hidden;
+      dt {
+         text-transform: capitalize;
+         float: left;
+         font-weight: bold;
+         margin: 0 5px 0 0;
+      }
+      dd {
+         &:after {
+            content: '\00a0';
+         }
+      }
+   }
+   .list-simple li {
+      margin: 0 0 3px;
+      text-transform: capitalize;
+   }
+
+}
+

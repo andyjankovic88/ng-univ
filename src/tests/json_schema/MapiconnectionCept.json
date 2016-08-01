@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "suggested_connections": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "user_id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "karma_point": {
+                  "type": "integer"
+                },
+                "image_url": {
+                  "type": "string"
+                },
+                "summary_options": {
+                  "type": "object",
+                  "properties": {
+                    "friend_or_knows": {
+                      "type": "string"
+                    },
+                    "Campus": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

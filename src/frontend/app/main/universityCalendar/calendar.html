@@ -1,0 +1,27 @@
+<div class="calendar-holder">
+   <h1>University Calendar</h1>
+   <div class="calendar-section">
+      <div ui-calendar="calendarConfig" ng-model="eventSources" calendar-timeline calendar="uCalendar"></div>
+   </div>
+   <div class="subjects-section">
+      <div class="item-holder clearfix" ng-repeat="event in events">
+         <div class="item">
+            <figure class="img-holder">
+               <div class="icon-circle">
+                  <svg>
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-subject"></use>
+                  </svg>
+               </div>
+            </figure>
+            <div class="item-info">
+               <h3>
+                  <a>{{event.title}}</a>
+                  <!-- <svg class="tick"><use xlink:href="#profile-tick" /></svg> -->
+               </h3>
+               <span class="message-update">{{event.unit_name}}</span>
+            </div>
+         </div>
+         <span class="scheldule">{{event.start | date: 'EEEE, h:mm a'}} {{event.end | date: '- h:mm a'}}</span>
+      </div>
+   </div>
+</div>

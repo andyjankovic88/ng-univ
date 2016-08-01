@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "student": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "user_id": {
+                  "type": ""
+                },
+                "name": {
+                  "type": ""
+                },
+                "photo_url": {
+                  "type": ""
+                },
+                "group_id": {
+                  "type": ""
+                },
+                "subject": {
+                  "type": ""
+                },
+                "campus": {
+                  "type": ""
+                },
+                "karma_points": {
+                  "type": ""
+                }
+              }
+            }
+          ]
+        },
+        "staff": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "user_id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "photo_url": {
+                  "type": "string"
+                },
+                "group_id": {
+                  "type": "string"
+                },
+                "faculty": {
+                  "type": "array",
+                  "items": []
+                },
+                "campus": {
+                  "type": "string"
+                },
+                "position": {
+                  "type": "string"
+                },
+                "karma_points": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

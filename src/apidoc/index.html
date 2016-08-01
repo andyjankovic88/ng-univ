@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>UCROO API</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="media/css/restdown.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="header">
+    <h1>UCROO API Documentation</h1>
+</div>
+
+    <div id="sidebar">
+<ul>
+  <li><div><a href="#university-authentication">University Authentication</a></div></li>
+  <li><div><a href="#endpoints">Endpoints</a></div>
+  <ul>
+    <li><div><a href="#POST-/userdata"><span class="method justendpoint"><span class="endpoint"><span class="verb">POST</span> <span class="path">/userdata</span></span></span></a></div></li>
+  </ul></li>
+  <li><div><a href="#response-codes">Response Codes</a></div></li>
+  <li><div><a href="#common-data-types">Common Data Types</a></div>
+  <ul>
+    <li><div><a href="#unit">unit</a></div></li>
+  </ul></li>
+</ul>
+
+    </div>
+    <div id="content">
+
+<h1>UCROO API Version 1.0</h1>
+<div class="intro">
+
+
+<p>The UCROO API provides a way to "sync" students' and staff members' subject and degree details with UCROO. It's really powerful stuff.</p>
+
+<h3>All API calls start with</h3>
+
+<pre class="base">
+https://api.ucroo.com.au
+</pre>
+
+<h3>Format</h3>
+
+<p>All requests are <strong>JSON</strong> .</p>
+
+<!--                    
+  USER AUTHENTICATION
+-->
+
+
+</div>
+<h1 id="university-authentication">University Authentication</h1>
+
+<p><code>UC-APPKEY</code> &amp; <code>UC-SECKEY</code> will be provided by UCROO.</p>
+
+<p>In order to connect to the UCROO API, the <code>UC-APPKEY</code> &amp; <code>UC-SECKEY</code> must be passed in the header of each request. The UCROO API is accessed via HTTPS so that the header won't be intercepted by a 3rd party.</p>
+
+<h1 id="endpoints">Endpoints</h1>
+
+<h2 id="POST-/userdata"><span class="method justendpoint"><span class="endpoint"><span class="verb">POST</span> <span class="path">/userdata</span></span></span></h2>
+
+<p>Post a list of students' or staff members' subjects and degree details in the batch.</p>
+
+<h3 id="post-data">POST Data</h3>
+
+<ul>
+<li><code>email</code> (string, mandatory)</li>
+<li><code>unit</code>  (array of <a href="#unit">unit</a>)</li>
+<li><code>degree</code> (string, optional)</li>
+<li><code>unenrol</code> (boolean, optional) if not provided, then by default the system will remove a user from any previous Class groups not specified in the batch posted</li>
+</ul>
+
+<h4 id="example-request">Example Request</h4>
+
+<pre><code>[
+  {
+    "email": "student@cqu.edu",
+    "unit": [
+      {
+        "code": "LAWS111",
+        "name": "Law Class"
+      },
+      {
+        "code": "LAWS112",
+        "name": "Law Class 2"
+      }
+    ],
+    "degree": "Masters of Journalism",
+    "unenrol" : FALSE
+  },
+  {
+    "email": "student2@cqu.edu",
+    "unit": [
+      {
+        "code": "LAWS111",
+        "name": "Law Class"
+      },
+      {
+        "code": "LAWS112",
+        "name": "Law Class 2"
+      },
+      {
+        "code": "LAWS113",
+        "name": "Law Class 3"
+      }
+    ]
+  },
+  {
+    "email": "staff1@cqu.edu",
+    "unit": [
+      {
+        "code": "LAWS111",
+        "name": "Law Class"
+      },
+      {
+        "code": "LAWS112",
+        "name": "Law Class 2"
+      }
+    ]
+  },
+  {
+    "email": "student4@cqu.edu",
+    "unit": [
+      {
+        "code": "LAWS111",
+        "name": "Law Class"
+      }
+    ]
+  },
+  {
+    "email": "staff2@cqu.edu",
+    "unit": [
+      {
+        "code": "LAWS111",
+        "name": "Law Class"
+      }
+    ]
+  }
+]
+</code></pre>
+
+<h4 id="sample-success-response">Sample Success Response</h4>
+
+<pre><code>{
+  "success": [
+      {
+          "message": "OK",
+          "code": 200
+      }
+  ]
+}
+</code></pre>
+
+<h4 id="sample-error-response">Sample Error Response</h4>
+
+<pre><code>{
+  "error": [
+      {
+          "message": "Bad Request",
+          "code": 400
+      }
+  ]
+}
+</code></pre>
+
+<h1 id="response-codes">Response Codes</h1>
+
+<table>
+<tbody>
+<tr><td><strong>Response Code</strong></td><td><strong>Text</strong></td><td><strong>Description</strong></td></tr>
+<tr><td>200</td><td>OK</td><td>Success</td></tr>
+<tr><td>400</td><td>Bad Request</td><td>The request was invalid or cannot be otherwise served</td></tr>
+<tr><td>401</td><td>Unauthorized</td><td>Authentication credentials were missing or incorrect</td></tr>
+<tr><td>403</td><td>Forbidden</td><td>The request is understood, but it has been refused or access is not allowed</td></tr>
+<tr><td>404</td><td>Not Found</td><td>The URI requested is invalid or the resource requested, such as a user, does not exist Also returned when the requested format is not supported by the requested method.</td></tr>
+<tr><td>500</td><td>Internal Server Error</td><td>Something is broken</td></tr>
+<tr><td>502</td><td>Bad Gateway</td><td>UCROO is down or being upgraded</td></tr>
+<tr><td>503</td><td>Service Unavailable</td><td>The UCROO servers are up, but overloaded with requests. Try again later</td></tr>
+<tr><td>504</td><td>Gateway timeout</td><td>The UCROO servers are up, but the request couldn’t be serviced due to some failure within our stack. Try again later</td></tr>
+</tbody>
+</table>
+
+<h1 id="common-data-types">Common Data Types</h1>
+
+<p><a id="unit"></a></p>
+
+<h2 id="unit">unit</h2>
+
+<ul>
+<li><code>code</code> (string)</li>
+<li><code>name</code> (string, optional)</li>
+</ul>
+
+    </div> <!-- #content -->
+<script type="text/javascript" charset="utf-8">
+$(function() {
+    var headerHeight = $("#header").height();
+
+    var sections = $("#content h1[id], #content h2[id]");
+    var sectionOffsets = [];
+    var slack = 100;  // Give the section scroll some slack (in pixels).
+    sections.each(function(elem) {
+        sectionOffsets.push($(this).offset().top - headerHeight - slack);
+    });
+
+    var currSectionIdx = -1;
+    function getSectionIdx(scrollDistance) {
+        if (scrollDistance < sectionOffsets[0]) {
+            return -1;
+        } else {
+            for (var id = sectionOffsets.length; id > 0; id--) {
+                if (scrollDistance > sectionOffsets[id - 1]) {
+                    return id - 1;
+                    break;
+                }
+            }
+        }
+    }
+
+    /** {{{ http://code.activestate.com/recipes/577787/ (r2) */
+    _slugify_strip_re = /[^\w\s-]/g;
+    _slugify_hyphenate_re = /[-\s]+/g;
+    function slugify(s) {
+      s = s.replace(_slugify_strip_re, '').trim().toLowerCase();
+      s = s.replace(_slugify_hyphenate_re, '-');
+      return s;
+    }
+    /** end of http://code.activestate.com/recipes/577787/ }}} */
+
+    /* See <https://github.com/trentm/restdown/issues/11>. */
+    function safechars(s) {
+      return s.replace(_slugify_strip_re, '');
+    }
+
+    $("#content").scroll(function() {
+        var scrollDistance = $("#content").scrollTop();
+        var sectionIdx = getSectionIdx(scrollDistance);
+
+        if (sectionIdx !== currSectionIdx) {
+            $("#sidebar li>div").removeClass("current");
+            currSectionIdx = sectionIdx;
+            if (currSectionIdx >= 0) {
+                var heading = $(sections[currSectionIdx]).text();
+                var possibleAnchors = [
+                    slugify(heading), // h1 or non-method h2
+                    heading.replace(/ /g, '-'), // h2 method, just name or just endpoint
+                    heading.slice(0, heading.lastIndexOf(' (')).trimRight().replace(/ /g, '-'), // h2 method, name and endpoint
+                ];
+                for (var i=0; i < possibleAnchors.length; i++) {
+                    var anchor = safechars(possibleAnchors[i]);
+                    try {
+                        $("#sidebar a[href=#" + anchor + "]").parent().addClass("current");
+                    } catch (e) {
+                        /* Ignore error if no such element. */
+                        console.log(e)
+                    }
+                }
+            }
+        }
+    });
+});
+</script>
+
+</body>
+</html>

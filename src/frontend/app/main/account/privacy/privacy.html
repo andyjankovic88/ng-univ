@@ -1,0 +1,21 @@
+<div class="privacy-section">
+   <h2>
+      <span>Change who can see your</span>
+   </h2>
+   <div class="section">
+      <ul>
+         <li ng-repeat="privacy in settings.privacy_settings" class="ucr-as-row ucr-clearfix">
+            <div class="row-actions r-side">
+               <div class="ucr-btn-group">
+                  <div class="ucr-btn" ng-repeat="option in privacy.all" ng-class="{'active': option==privacy.selected}">
+                     <label>{{option}}<input type="radio" ng-attr-name='{{privacy.action}}' ng-attr-value="{{option}}" ng-model="privacy.selected"></label>
+                  </div>
+               </div>
+            </div>
+            <div class="ucr-as-label">
+               <div class="ucr-as-title">{{privacy.title}}</div>
+            </div>
+         </li>
+      </ul>
+   </div>
+</div>

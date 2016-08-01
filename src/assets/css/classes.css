@@ -1,0 +1,247 @@
+/* @override
+	http://ucroo/assets/css/classes.css
+	http://localhost.ucroo/assets/css/classes.css
+	http://localhost.imac/assets/css/classes.css
+	http://localhost.martin/assets/css/classes.css?2125
+*/
+
+#unit_enroll
+{
+	float: left;
+	font-size: 14px;
+	border: 1px solid #cfd1d1;
+	width: 41em;
+	margin-bottom: 5px;
+	padding: 10px;
+	background-color: #ededed;
+	height: 22px;
+}
+
+
+.enrolled
+{
+}
+
+.textleft{
+	float: left;
+	font-size: 14px;
+	border: 1px solid #cfd1d1;
+	width: 41em;
+	margin-bottom: 5px;
+	padding: 10px;
+
+}
+
+.enrolled-delete	{
+}
+
+.enrolled-delete:hover	{
+	cursor:pointer;
+}
+
+.enrolled b {
+	color: #09ace9;
+}
+
+div.topright
+{
+	float: right;
+	height: 40px;
+	width: 22px;
+	margin-right: 16px;
+	padding-top: 5px;
+	cursor:pointer;
+}
+
+#first_post_question {
+	float: left;
+	width: 550px;
+	resize: none;
+    position: relative;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+div.classvotes,
+div.classans,
+div.classviews
+{
+	float: left;
+	margin-right: 8px;
+	background: #f5f5f5;
+	border: 1px solid #e2e2e2;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+div.classans
+{
+	background: #5cb294;
+	border: 1px solid #e2e2e2;
+	color: #f5f7ff;
+}
+
+div.classviews
+{
+	color: #fa9f35;
+}
+
+div.classunit
+{
+	float: left;
+}
+div.classunit a
+{
+	font-size: 18px;
+
+}
+
+div.classstats {
+	padding-bottom: 5px;
+}
+
+.thequestion ul li,
+.questiondetails ul li {
+	margin-left: 15px;
+}
+
+
+.theclassquestion
+{
+	padding-top: 5px;
+	margin-bottom: 20px;
+}
+
+
+span.onwhy {
+	color: #11587c;
+}
+
+h3.smaller {
+	margin-bottom: 10px;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+
+.ticketcodes {
+	margin: 3px 4px;
+	text-align: center;
+	color: #fff;
+	font-size: 13px;
+	white-space: nowrap;
+	min-width: 100px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+        float: left;
+}
+.ticketcodes a
+{
+	color: #fff;
+}
+
+.ticketcodes.large
+{
+	font-size: 21px;
+	padding-right: 0;
+	padding: 12px;
+}
+
+
+.ticketcodes.one { background-color: #800080; }
+.ticketcodes.two { background-color: #003153; }
+.ticketcodes.three { background-color: #222; }
+.ticketcodes.four { background-color: #A52A2A; }
+.ticketcodes.five{ background-color: #296237; }
+.ticketcodes.six{ background-color: #cd6014; }
+.ticketcodes.seven{ background-color: #205b61; }
+.ticketcodes.eight{ background-color: #78020e; }
+
+.pagination li {
+	display: inline;
+}
+
+/*.pagination li:last-child, .pagination li:last-child a {
+	border-right: 1px solid #BABABA;
+}*/
+
+.pagination a {
+	float: left;
+	padding: 0 10px;
+	line-height: 26px;
+	/*border: 1px solid #BABABA;*/
+	border-right-width: 0;
+
+}
+
+.pagination a:hover {
+	text-decoration: none;
+	background-color: #EEF0F0;
+}
+
+.pagination .active {
+	background-color: #EEF0F0;
+	color: #4B4B4B;
+}
+
+.past_assignment
+{
+	color: silver;
+}
+
+.due_assignment
+{
+	font-weight: bold;
+}
+
+.unit_list .event
+{
+	margin-top: -10px;
+	margin-bottom: 0;
+}
+
+.unit_list .event li a
+{
+	color: #464646;
+}
+
+.my_classes .event_heading:first-child
+{
+	margin-top: 10px;
+}
+
+.my_classes .event_heading + .content_heading
+{
+	margin-top: 0;
+}
+
+.unit_list .event li:first-child
+{
+	border-top: none;
+}
+
+.unit_list .event li:last-child
+{
+	border-bottom: none;
+}
+
+#classes_setup_form #search .search button.ui-multiselect.ui-widget
+{
+	margin-left: 0;
+}
+
+#classes_setup_form
+{
+	margin-top: 15px;
+	font-size: 14px;
+}
+
+.tag.ui-widget-content {
+  background-image: none;
+}
+
+.loading_animation {
+	margin: 1.6em auto 1em;
+	text-align: center;
+}

@@ -1,0 +1,153 @@
+<div class="new-post-area">
+   <form action="#" id="write-post" class="form" name="newPostForm">
+      <fieldset>
+         <legend class="none">search feed</legend>
+         <div class="parrent-loader">
+            <textarea id="txt_feed_content" name="txt_feed_content" cols="1" rows="4"
+                      placeholder="Ask your peers something or post an announcement..."
+                      ng-model="post.text">
+            </textarea>
+            <loader class="loader-under-text" is-active="loaderActive"></loader>
+         </div>
+      </fieldset>
+      <div class="holder">
+         <ul class="post-options options-link bg-colored">
+            <li ng-class="{active: post.isAnonymous}">
+               <a href="#" ng-click="post.isAnonymous = post.isAnonymous ? 0 : 1">
+                  <svg class="ico-eyehide">
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-eyehide"></use>
+                  </svg>
+               </a>
+            </li>
+            <li ng-class="{active: post.type === 'poll'}" ng-hide="isEditMode">
+               <a href="#" ng-click="setType('poll')">
+                  <svg class="ico-poll">
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-poll"></use>
+                  </svg>
+               </a>
+            </li>
+            <li dropdown class="dropdown-block" ng-class="{active: post.files.length || post.images.length}" ng-hide="isEditMode">
+               <a href="#" dropdown-trigger>
+                  <svg class="ico-attach">
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-attach"></use>
+                  </svg>
+               </a>
+               <div dropdown-body class="drop-holder drop-attach clearfix">
+                  <span class="arrow-top-w"></span>
+                  <span class="arrow-top"></span>
+                  <div class="drop-content">
+                     <ul class="edit-drop">
+                        <li
+                           ngf-select="uploadImages($files)"
+                           ngf-max-size="10MB"
+                           multiple
+                           accept="image/*">
+
+                           <svg class="ico ico-image">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-image"></use>
+                           </svg>
+                           <span class="">Image</span>
+                        </li>
+                        <li
+                           ngf-select="uploadFiles($files)"
+                           multiple
+                           ngf-max-size="10MB">
+
+                           <svg class="ico ico-file">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-file"></use>
+                           </svg>
+                           <span>File</span>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </li>
+            <li dropdown ng-class="{active: post.target}" ng-hide="isEditMode">
+               <a href="#" dropdown-trigger>
+                  <svg class="ico-target">
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-target"></use>
+                  </svg>
+               </a>
+
+               <div dropdown-body class="target-post-popup popup-holder clearfix">
+                  <div class="arrow-holder">
+                     <span class="arrow-top-w"></span>
+                     <span class="arrow-top"></span>
+                  </div>
+                  <target-select on-save="saveTarget($selected)"></target-select>
+               </div>
+            </li>
+            <li dropdown ng-class="{active: post.pinnDate}" ng-if="showPinDate">
+               <a href="#" dropdown-trigger>
+                  <svg class="ico-pin">
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-pin"></use>
+                  </svg>
+               </a>
+
+               <div dropdown-body class="popup-holder big-popup clearfix">
+                  <div class="arrow-holder">
+                     <span class="arrow-top-w"></span>
+                     <span class="arrow-top"></span>
+                  </div>
+                  <div class="calendar-popup drop-content">
+                     <div class="header clearfix">
+                        <h2 class="l-side">Pin until:</h2>
+                        <svg class="ico-clear r-side" dropdown-inner-trigger>
+                           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-clear"></use>
+                        </svg>
+                     </div>
+                     <date-picker-ex
+                        on-save="setPinnDate($date)"
+                        on-cancel="resetPinnDate()"
+                     ></date-picker-ex>
+                  </div>
+               </div>
+            </li>
+            <li dropdown ng-class="{active: post.scheduleDate}" ng-if="showPinDate">
+               <a href="#" dropdown-trigger>
+                  <svg class="ico-schedule">
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-schedule"></use>
+                  </svg>
+               </a>
+
+               <div dropdown-body class="popup-holder big-popup clearfix">
+                  <div class="arrow-holder">
+                     <span class="arrow-top-w"></span>
+                     <span class="arrow-top"></span>
+                  </div>
+                  <div class="calendar-popup drop-content">
+                     <div class="header clearfix">
+                        <h2 class="l-side">Schedule Post on:</h2>
+                        <svg class="ico-clear r-side" dropdown-inner-trigger>
+                           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-clear"></use>
+                        </svg>
+                     </div>
+                     <date-picker-ex
+                        on-save="setScheduleDate($date, $hasTime)"
+                        on-cancel="resetScheduleDate()"
+                        timeselect="1"
+                     ></date-picker-ex>
+                  </div>
+               </div>
+            </li>
+         </ul>
+      </div>
+      <poll-options
+         ng-if="post.type === 'poll' && !isEditMode"
+         options="post.pollOptions"
+         new-row="!isEditMode">
+      </poll-options>
+      <ng-gallery
+         ng-if="post.images.length && !isEditMode"
+         images="post.images"
+         img-key="url"
+         thumb-key="url"
+         can-edit="true"
+      ></ng-gallery>
+      <div class="holder mb20 loader-holder">
+         <button type="button" class="btn-blue r-side" ng-disabled="buttonPostActive" ng-click="addPost()">Post</button>
+      </div>
+      <feed-status post="post"></feed-status>
+      <file-list list="post.files" can-edit></file-list>
+   </form>
+</div>

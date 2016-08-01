@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "success": {
+      "type": "string"
+    },
+    "message": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "photo_url": {
+            "type": "string"
+          },
+          "group_id": {
+            "type": "integer"
+          },
+          "user_type": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "auth_token": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "success",
+    "message",
+    "auth_token"
+  ]
+}

@@ -1,0 +1,48 @@
+<!-- mentor-groups-list -->
+<div class="mentor-groups-list">
+   <div class="content-heading">
+      <h1>Mentor Groups</h1>
+      <a class="btn-blue r-side l-space" ui-sref="creteMentorGroup">Create Mentor Group</a>
+      <mentors-search filter-term="filterTerm"></mentors-search>      
+   </div>
+   <div class="filter-section">
+      <ul>
+         <li id="filter-campus" dropdown>
+            <a href="#" dropdown-trigger>Filter by Campus</a>
+            <div dropdown-body class="drop-holder big-drop clearfix" on-hide="onDropHide()">
+               <div class="arrow-holder">
+                  <span class="arrow-top-w"></span>
+                  <span class="arrow-top"></span>
+               </div>
+               <div class="drop-content">
+                  <multiselect-list
+                     list="campuses.list"
+                     selected="campuses.selected"
+                     is-changed="campuses.isChanged"
+                  ></multiselect-list>
+               </div>
+            </div>
+         </li>
+         <li id="filter-faculty" dropdown>
+            <a href="#" dropdown-trigger>Filter by Faculty</a>
+            <div dropdown-body class="drop-holder big-drop clearfix" on-hide="onDropHide()">
+               <div class="arrow-holder">
+                  <span class="arrow-top-w"></span>
+                  <span class="arrow-top"></span>
+               </div>
+               <div class="drop-content">
+                  <multiselect-list
+                     list="faculties.list"
+                     selected="faculties.selected"
+                     is-changed="faculties.isChanged"
+                  ></multiselect-list>
+               </div>
+            </div>
+         </li>
+      </ul>
+   </div>
+   <div class="section">
+      <loader is-active="loaderActive" position="static"></loader>
+      <mentor-groups-item data="group" join="join(group)" ng-repeat="group in list"></mentor-groups-item>
+   </div>
+</div>

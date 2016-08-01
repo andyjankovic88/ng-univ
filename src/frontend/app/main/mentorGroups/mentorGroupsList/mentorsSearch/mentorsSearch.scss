@@ -1,0 +1,23 @@
+#form-search {
+	position: relative;
+	.filter-block {
+		.search svg{
+			position: static;
+		}
+	}
+	.search-box {
+		position: absolute;
+		left: 0;
+		top: 40px;
+		z-index: 9;
+		li.active {
+			background: $color-inactive;
+		}
+		.ico-small{
+			width: 36px;
+			height: 36px;
+			border-radius: 50%;
+    	}
+	}
+}
+    

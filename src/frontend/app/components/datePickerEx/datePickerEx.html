@@ -1,0 +1,36 @@
+<div class="date-picker-ex">
+   <div class="date-block clearfix"
+        date-picker="selectedDate"
+        view="date"
+        min-view="date"
+        max-view="date"
+        min="minDate"
+        watch-direct-changes="true">
+   </div>
+   <div class="holder">
+      <a href="#" class="r-side link" ng-click="today()">Today</a>
+   </div>
+   <div class="time-holder" ng-if="timeselect">
+      <div class="holder">
+        <input type="text" placeholder="00" ng-model="timeInfo.hours" /> :
+        <input type="text" placeholder="00" ng-model="timeInfo.minutes" />
+        <div class="select-custom" id="post">
+          <select ng-model="timeInfo.dayPeriod">
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+          </select>
+        </div>
+      </div>
+       <label for="post">Post at</label>
+   </div>
+   <ul class="options-btn">
+      <li ng-if="isOnCancel">
+         <button type="button" class="btn-link" ng-click="onCancel()" dropdown-inner-trigger>Clear</button>
+      </li>
+      <li ng-if="isOnSave">
+         <button type="button" class="btn-blue btn-small" ng-click="save()"
+            dropdown-inner-trigger>Done
+         </button>
+      </li>
+   </ul>
+</div>

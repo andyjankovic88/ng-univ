@@ -1,0 +1,46 @@
+#first-steps-three {
+   .add-subject {
+      background: $color-white;
+      padding: 20px;
+      border-radius: 4px;
+      .item {
+      	.img-holder {
+      		padding-top: 3px;
+      		.icon-circle {
+      			use {
+      				fill: $color-blue;
+      			}
+      		}
+      	}
+         .item-info {
+            padding: 0;
+            .message-update {
+               text-align: left;
+            }
+         }
+      }
+      .rubber-list {
+         .icon-circle {
+            .ico-subject-small {
+               width: 15px;
+               use {
+                  fill: $color-blue;
+               }
+            }
+         }
+      }
+      .subjects-section {
+         overflow: hidden;
+         position: relative;
+         &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+         }
+      }
+
+   }
+}

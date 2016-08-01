@@ -1,0 +1,91 @@
+{
+    "message": "",
+    "response": {
+        "show_recommended": 0,
+        "is_event_ticketing_enabled": true,
+        "is_club_membership_enabled": true,
+        "is_csu_uni": false,
+        "is_user_NikGranger": true,
+        "content_heading": "Clubs & Societies",
+        "create_club": {
+            "url": "http://backend.localhost.ucroo/club/edit/new",
+            "title": "Create Club Page"
+        },
+        "tabs": {
+            "club_list": {
+                "title": "Club List",
+                "link": "http://backend.localhost.ucroo/club/listing/"
+            },
+            "memberships": {
+                "title": "Memberships",
+                "link": "http://backend.localhost.ucroo/club/my/"
+            },
+            "events": {
+                "title": "Upcoming Events (5)",
+                "link": "http://backend.localhost.ucroo/club/events/"
+            }
+        },
+        "upcoming_events": {
+            "heading": "UPCOMING EVENTS (5)",
+            "data": [
+                {
+                    "id": 64,
+                    "title": "KEPS Event",
+                    "link": "http://backend.localhost.ucroo/club/event_view/64",
+                    "pic": "/assets_new/images/img-2.jpg",
+                    "start_date_day": "19",
+                    "start_date_month": "Sep",
+                    "start_time": "10:00 AM",
+                    "end_time": "11:00 AM",
+                    "timezone": "AEST",
+                    "location": "Town Hall",
+                    "place": "Macquarie Pl",
+                    "hosted_by": {
+                        "id": 4,
+                        "pic": "http://backend.localhost.ucroo/assets_new/images/club/profile_standard_thumb.jpg",
+                        "name": "KEPS API",
+                        "link": "http://backend.localhost.ucroo/club/events/96",
+                        "time": "4 hours ago",
+                        "points": "2396",
+                        "likes": 4,
+                        "comments": 2
+                    },
+                    "ticket_details": "",
+                    "description": "I am hosting a jobs fair in the Sports Hall next Wednesday, 23 April 2014. Employers attending include Apple, Microsoft, Verizon, Cisco and more. Free entry, doors open at 10.30am. Hope to see you all there!",
+                    "view_event": {
+                        "title": "View Event",
+                        "link": "http://backend.localhost.ucroo/club/event_view/64/64"
+                    },
+                    "edit_event": {
+                        "title": "Edit Event",
+                        "link": "http://backend.localhost.ucroo/club/event_edit/96/64"
+                    }
+                },
+                {
+                    "id": 54,
+                    "title": "KEPS Event",
+                    "link": "http://backend.localhost.ucroo/club/event_view/64",
+                    "start_date": "Thursday, November 19",
+                    "start_time": "10:00 AM",
+                    "timezone": "Melbourne",
+                    "location": "Town Hall",
+                    "hosted_by": {
+                        "id": 4,
+                        "pic": "http://backend.localhost.ucroo/assets_new/images/club/profile_standard_thumb.jpg",
+                        "name": "KEPS API",
+                        "link": "http://backend.localhost.ucroo/club/events/96"
+                    },
+                    "ticket_details": "",
+                    "view_event": {
+                        "title": "View Event",
+                        "link": "http://backend.localhost.ucroo/club/event_view/64/64"
+                    },
+                    "edit_event": {
+                        "title": "Edit Event",
+                        "link": "http://backend.localhost.ucroo/club/event_edit/96/64"
+                    }
+                }
+            ]
+        }
+    }
+}

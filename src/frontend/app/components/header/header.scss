@@ -1,0 +1,116 @@
+.header {
+   padding: 6px 20px;
+   position: relative;
+   height: 100%;
+   .content-wrapper {
+      height: 100%;
+   }
+   .logo {
+      height: 38px;
+      width: 38px;
+      margin: 5px 0;
+      use {
+         fill: $color-white;
+      }
+   }
+   #user-area {
+      float: right;
+      cursor: pointer;
+      .photo {
+         height: 40px;
+         border-radius: 24px;
+         margin: 4px 0;
+      }
+      .arrow-top {
+         left: 145px;
+         top: -5px;
+      }
+      .popup-notification {
+         top: 23px;
+         left: -138px;
+         .popup-holder {
+            width: 175px;
+            .border {
+               border-color: $color-light-grey;
+               border-width: 1px;
+               border-top-style: solid;
+               border-bottom-style: solid;
+
+            }
+            .item {
+               color: $color-menu-grey;
+               font-size: 14px;
+               padding: 12px 0px 12px 17px;
+               h2 {
+                  font-size: 16px;
+                  color: $color-dark-blue;
+                  margin-bottom: 0;
+               }
+               p {
+                  font-size: 11px;
+                  margin: 0;
+               }
+               li {
+                  padding-bottom: 2px;
+               }
+            }
+         }
+      }
+   }
+   .apps-bar {
+      height: 100%;
+      font-size: 0px;
+      float: right;
+      padding: 5px 29px;
+      li {
+         height: 100%;
+         display: inline-block;
+         margin: 0 5px;
+         line-height: 38px;
+         .counter {
+            display: inline-block;
+            font-size: 18px;
+            color: white;
+            vertical-align: top;
+            margin: 0 9px;
+         }
+         .app-icon {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            &:before{
+               content: '';
+               position: absolute;
+               left:0;
+               right: 0;
+               top:0;
+               bottom: 0;
+            }
+            svg {
+               height: 20px;
+               width: 20px;
+               margin: 9px;
+               use {
+                  fill: $color-app-ico;
+               }
+            }
+            .counter {
+               position: absolute;
+               top: 0px;
+               left: 10px;
+               background: #F44C57;
+               color: white;
+               font-size: 10px;
+               height: 22px;
+               min-width: 22px;
+               border-radius: 11px;
+               border: 2px solid $color-header;
+               text-align: center;
+               font-style: normal;
+               padding: 0 3px 0 1px;
+               line-height: 17px;
+            }
+         }
+      }
+   }
+}

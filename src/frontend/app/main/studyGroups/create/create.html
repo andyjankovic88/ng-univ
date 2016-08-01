@@ -1,0 +1,122 @@
+<!-- createStudyGroup -->
+<div class="ur-sg-create">
+   <div ng-if="pageStatus('success')">
+      <div class="profile-header not-created">
+         <div class="banner">
+            <form id="upload-cover-pic">
+               <fieldset>
+                  <input for="txt" type="file" placeholder="" />
+                  <svg class="ico-test"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-test"></use></svg>
+                  <label id="txt">Click to upload your Cover Pic or just drag it here</label>
+               </fieldset>
+            </form>
+         </div>
+         <div class="holder-info">
+            <div class="user-info">
+               <figure class="img-holder">
+                  <div class="avatar-holder" ngf-select="uploadLogo($file)" ngf-max-size="10MB" accept="image/*">
+                     <a href="#"><img class="avatar" src="/assets_new/images/userpic.png" alt="avatar"></a>
+                  </div>
+                  <figcaption class="user-name">
+                     <input class="input-name" ng-class="{'input-error': showError('name')}" ng-model="groupInfo.name" type="text" placeholder="Study Group Name"/>
+                  </figcaption>
+               </figure>
+            </div>
+         </div>
+      </div>
+      <form id="form-study-group" name="forms.groupForm" ng-submit="submit(forms.groupForm)" novalidate>
+         <fieldset>
+            <div class="row">
+               <div class="col" ng-class="{'has-error': isShowError(forms.groupForm, forms.groupForm.purpose), 'no-error': isShowSuccess(forms.groupForm, forms.groupForm.purpose)}">
+                  <label for="purpose-group" ng-class="{green: selectedCategory.id >0}">Purpose of Group</label>
+                  <div class="select-custom form-object">
+                     <select id="purpose-group" name="purpose" ng-options="purpose.value as purpose.name for purpose in formInfo.purpose" ng-model="groupInfo.purpose" required>
+                        <option value="" disabled selected hidden>Select</option>
+                     </select>
+                  </div>
+               </div>
+               <div class="col" ng-class="{'has-error': isShowError(forms.groupForm, forms.groupForm.privacy), 'no-error': isShowSuccess(forms.groupForm, forms.groupForm.privacy)}">
+                  <label for="group-privacy">
+                     Group Privacy
+                     <svg class="ico-help"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-help"></use></svg>
+                  </label>
+                  <div class="select-custom form-object">
+                     <select id="group-privacy" name="privacy" ng-options="privacy.value as privacy.name for privacy in formInfo.privacies" ng-model="groupInfo.privacy" required>
+                        <option value="" disabled selected hidden>Select</option>
+                     </select>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <h2>Set Meeting Time</h2>
+               <div class="col-day" ng-class="{'has-error': isShowError(forms.groupForm, forms.groupForm.meetingDay), 'no-error': isShowSuccess(forms.groupForm, forms.groupForm.meetingDay)}">
+                  <label for="group-meeting-day">Day</label>
+                  <div class="select-custom">
+                     <select id="group-meeting-day" name="meetingDay" ng-options="dayname.value as dayname.name for dayname in formInfo.dayNames" ng-model="groupInfo.day" required>
+                        <option value="" disabled selected hidden>Select Day</option>
+                     </select>
+                  </div>
+               </div>
+               <div class="col-time" ng-class="{'has-error': isShowError(forms.groupForm, forms.groupForm.fromHour, forms.groupForm.fromMinute), 'no-error': isShowSuccess(forms.groupForm, forms.groupForm.fromHour, forms.groupForm.fromMinute)}">
+                  <label>From</label>
+                  <div class="clearfix">
+                     <div class="col-time-hour">
+                        <input type="text" name="fromHour" ng-model="groupInfo.fromHour" maxlength="2" number-check min="hourMin" max="hourMax" required>
+                     </div>
+                     <div class="col-time-separator">:</div>
+                     <div class="col-time-minute">
+                        <input type="text" name="fromMinute" ng-model="groupInfo.fromMinute" maxlength="2" number-check min="0" max="60" required>
+                     </div>
+                     <div class="col-time-separator">&nbsp</div>
+                     <div class="select-custom col-time-period">
+                        <select name="fromPeriod" ng-model="groupInfo.fromPeriod" required>
+                           <option value="am">AM</option>
+                           <option value="pm">PM</option>
+                        </select>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-time" ng-class="{'has-error': isShowError(forms.groupForm, forms.groupForm.toHour, forms.groupForm.toMinute), 'no-error': isShowSuccess(forms.groupForm, forms.groupForm.toHour, forms.groupForm.toMinute)}">
+                  <label>To</label>
+                  <div class="clearfix">
+                     <div class="col-time-hour">
+                        <input type="text" name="toHour" ng-model="groupInfo.toHour" maxlength="2" number-check min="0" max="12" required>
+                     </div>
+                     <div class="col-time-separator">:</div>
+                     <div class="col-time-minute">
+                        <input type="text" name="toMinute" ng-model="groupInfo.toMinute" maxlength="2" number-check min="0" max="60" required>
+                     </div>
+                     <div class="col-time-separator">&nbsp</div>
+                     <div class="select-custom col-time-period">
+                        <select name="toPeriod" ng-model="groupInfo.toPeriod" required>
+                           <option value="am">AM</option>
+                           <option value="pm">PM</option>
+                        </select>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <ul class="options-btn">
+                  <li>
+                     <button type="button" class="btn-link" ui-sref="studyGroupsList">Cancel</button>
+                  </li>
+                  <li>
+                     <button type="submit" ng-if="!editID" class="btn-blue btn-small">Create Study Group</button>
+                     <button type="submit" ng-if="editID" class="btn-blue btn-small">Save Study Group</button>
+                  </li>
+               </ul>
+            </div>
+         </fieldset>
+      </form>
+   </div>
+   <div class="failure-container" ng-if="pageStatus('permission_error')">
+      <div class="ur-message ur-message-warning">You could not edit this study group, please go to the <a ui-sref="studyGroupsList">study group list</a> page.</div>
+   </div>
+   <div class="failure-container" ng-if="pageStatus('failed')">
+      <div class="ur-message ur-message-warning">Could not load this study group, please go to the <a ui-sref="studyGroupsList">study group list</a> page.</div>
+   </div>
+   <loader is-active="pageStatus('loading')" position="static"></loader>
+</div>
+
+

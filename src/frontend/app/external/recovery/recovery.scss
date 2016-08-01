@@ -1,0 +1,90 @@
+@import "mixins";
+.content {
+   .recovery-pad {
+      width: 520px;
+      margin: 80px auto 150px;
+   }
+   .recovery-box-new {
+      font-size: $font13;
+      padding: 40px;
+      background: #fff;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+
+      .splitter {
+         margin-bottom: 30px;
+         .splitter-l-label {
+            color: #565656;
+            text-align: center;
+            font-size: $font24;
+            margin-bottom: 15px;
+         }
+         .splitter-label {
+            color: #565656;
+            text-align: center;
+            font-size: $font13;
+            margin-bottom: 15px;
+         }
+      }
+
+      .form-group {
+         margin-top: 5px;
+         width: 100%;
+      }
+
+      .form-label {
+         color: $color-grey;
+      }
+
+      .form-label-error {
+         color: #F4565E;
+         float: right;
+         display: none;
+         &.show {
+            display: block!important;
+         }
+      }
+
+      .form-object {
+         margin: 8px 0;
+         width: 100%;
+         color: #5A5A5A;
+         padding: 14px 18px;
+         font-size: 16px;
+      }
+
+      .has-error {
+         .form-label {
+            color: #F4565E;
+         }
+         .form-label-error {
+            display: block;
+         }
+         .form-object {
+            border-color: #F4565E;
+         }
+      }
+
+      .btn-login {
+         width: 100%;
+         height: auto !important;
+         font-size: $font18;
+         line-height: 32px;
+         padding: 9px 0;
+      }
+   }
+   .bottom-row {
+      margin-top: 20px;
+      color: #fff;
+      font-size: $font13;
+      .linkto-login {
+         display: block;
+         text-align: center;
+      }
+      a {
+         text-decoration: underline;
+         color: #fff;
+      }
+   }
+}

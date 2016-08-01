@@ -1,0 +1,25 @@
+#main-content {
+   @media (max-width: 420px) {
+      .box {
+         display: block;
+         width: 100%;
+      }
+   }
+
+   @media (max-width: 1665px) {
+      .holder-item .item .info-holder {
+         width: 90%;
+      }
+   }
+   @media (max-width: 1300px) {
+      [dropdown-body] .rubber-list .user-name {
+         max-width: 90%;
+      }
+   }
+   @media (max-width: 1280px) {
+      .sub-menu li {
+         margin: 0 1.5% 0 0;
+      }
+   }
+}
+

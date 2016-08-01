@@ -1,0 +1,20 @@
+#mentor-groups {
+    .subheading {
+        text-transform: uppercase;
+        display: block;
+        margin: 0 0 5px;
+    }
+    .holder-col {
+        background: url(/../assets_new/images/separator.gif) no-repeat 50% 35%;
+        .col {
+            min-width: 300px;
+            padding: 0 0 0 20px;
+            &:first-child {
+                padding: 0;
+            }
+        }
+    }
+    h3 svg.tick use {
+      fill: $color-green;
+    }
+}

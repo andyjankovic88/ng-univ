@@ -1,0 +1,106 @@
+.date-picker-ex {
+   font-size: 14px;
+   button {
+      min-width: 50px;
+   }
+   [date-picker] {
+      thead {
+         .weekdays {
+            text-transform: uppercase;
+            font-size: 12px;
+            font-family: $font-bold;
+         }
+         svg {
+            margin: 3px 0 0;
+            float: left;
+            width: 14px;
+            height: 14px;
+            use {
+               fill: #5A5A5A;
+            }
+         }
+      }
+      table td {
+         span {
+            width: 34px;
+            height: 34px;
+            padding-top: 4px;
+            margin: 0;
+            border-radius: 50%;
+            color: $color-grey;
+            &.active {
+               background-color: $color-blue;
+               background-image: none;
+            }
+         }
+         .disabled {
+            color: $color-light-grey !important;
+         }
+         .now {
+            color: inherit;
+            background: inherit;
+            text-shadow: none;
+         }
+         .active-start {
+            background-color: $color-blue;
+            border-radius: 50% 0 0 50%;
+            color: #fff !important;
+         }
+         .active-end {
+            background-color: $color-blue;
+            border-radius: 0 50% 50% 0;
+            color: #fff !important;
+         }
+         .active-range {
+            background: #ebf4fb;
+            border-radius: 0;
+            color: $color-grey-dark !important;
+         }
+         .active {
+            color: #fff !important;
+         }
+      }
+   }
+   .time-holder {
+      width: 100%;
+      display: table;
+      border-top: 1px solid $color-light-grey;
+      padding: 15px 0 0;
+      label {
+         float: right;
+         padding: 10px 10px 0 0;
+      }
+      input {
+         border-color: $color-grey-middle;
+         padding: 8px 10px;
+      }
+      .select-custom {
+         background: none;
+         border-color: $color-grey-middle;
+         width: 55px;
+         height: 35px;
+         margin: 0 0 0 10px;
+         float: right;
+         padding: 0;
+         select {
+            color: $color-inactive;
+            padding: 9px;
+         }
+      }
+      .checkbox {
+         float: left;
+         margin: 9px 12px 0 0;
+      }
+      .holder {
+         float: right;
+         width: auto;
+         display: inline;
+         clear: none;
+         input {
+            width: 40px;
+            color: $color-inactive;
+            height: 35px;
+         }
+      }
+   }
+}

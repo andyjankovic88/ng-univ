@@ -1,0 +1,83 @@
+.university-logo {
+   height: 48px;
+   line-height: 48px;
+	background-color: #f6f7f7;
+   padding-left: 15px;
+	img {
+		max-height: 45px;
+      vertical-align: middle;
+	}
+}
+.back-btn {
+	height: 57px;
+	background-color: rgba(218, 218, 218, 0.15);
+	padding: 23px 33px 22px;
+	cursor: pointer;
+	svg {
+		height: 12px;
+		width:13px;
+		fill: $color-inactive;
+	}
+
+}
+
+.root-menu {
+	//height: 515px;
+	//overflow-y: auto;
+	position: relative;
+	font-size: 0;
+   padding: 20px;
+   margin: 0;
+
+	.item {
+      width: 290px;
+      padding: 3px 0 3px 7px;
+		cursor: pointer;
+		display: block;
+		color: #5A5A5A;
+		font-family: $font-regular;
+		.icon {
+			vertical-align: middle;
+         width: 20px;
+         height: 20px;
+         margin-right: 20px;
+         margin: 2px 20px 0 4px;
+      }
+		svg {
+			fill: $color-inactive-icon;
+		}
+		span {
+			font-size: 14px;
+			display: inline-block;
+			height: 100%;
+			vertical-align: top;
+			max-width: 250px;
+         height: 30px;
+         line-height: 30px;
+		}
+		&.active,
+      	&:hover {
+		     color: $color-blue;
+			 svg	{
+			   use {
+				 fill: $color-blue;
+			   }
+			}
+		}
+	}
+	.group-title {
+		color: $color-grey-middle;
+		font-size: 10px;
+		text-transform: uppercase;
+		padding: 14px 0 0 10px;
+		margin: 0;
+		height: 32px;
+		box-sizing: border-box;
+
+	}
+	.list {
+	  li {
+		margin: 0;
+	  }
+	}
+}

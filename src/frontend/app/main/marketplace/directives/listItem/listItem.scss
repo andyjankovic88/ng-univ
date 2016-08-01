@@ -1,0 +1,89 @@
+.marketplace-list-item {
+   width: 238px;
+   height: 309px;
+   position: relative;
+   overflow: hidden;
+   border: solid 1px $color-light-grey;
+   .type {
+      width: 62px;
+      height: 24px;
+      text-align: center;    
+      color: rgba(255, 255, 255, 0.87);
+      line-height: 24px;
+      position: absolute;
+      top: 10px;
+      right: 0;
+      font-size: 10px;        
+      &.for-sale {
+         background: $color-blue;
+      }
+      &.wanted {
+         background: $color-green;
+      }
+   }   
+   .item-img {
+      width: 238px;
+      height: 238px;
+   }
+   .description {
+      margin: 15px 15px 0px 15px;
+   }
+   .name {
+      color: $color-blue;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-family: latobold;
+   }
+   p {
+      color: $color-black;
+      font-size: 14px;
+      font-family: latobold;
+      margin: 0;
+   }
+   .background {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: -100%;
+      transition: left 0.25s ease;
+      background: $color-white;      
+      padding: 15px;      
+      .edit {
+         position: absolute;
+         left: 15px;
+         bottom: 15px;
+         width: 208px;
+         .btn-sold {
+            background: $color-pink;
+            width: 62px;
+            min-width: 62px;
+            height: 24px;
+            padding: 0;
+            border-radius: 2px;
+         }
+         .post-options {
+            padding: 0 2px;
+            svg {
+               height: 16px;
+               width: 16px;
+            }
+            .ico-pencil {
+               height: 15px;
+               width: 15px;
+            }
+         }
+         .rubber-list {
+            li {
+               margin: 0;
+            }
+         }
+      }
+   }
+   &:hover {
+      .background {
+         left: 0;
+         transition: left 0.25s ease;
+      }
+   }
+}

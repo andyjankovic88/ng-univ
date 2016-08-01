@@ -1,0 +1,71 @@
+<section class="header" click-outside>
+   <div ng-hide="isHideContent" class="content-wrapper">
+      <div dropdown id="user-area" class="user-menu">
+         <img class="photo" ng-src="{{userInfo.profilePic}}" dropdown-trigger/>
+
+         <div dropdown-body class="popup-notification">
+            <span class="arrow-top"></span>
+            <div class="popup-holder clearfix">
+               <div class="item">
+                  <a ui-sref="profile({id: userId})" dropdown-inner-trigger>
+                     <h2>{{userInfo.userName}}</h2>
+                     <p>view profile</p>
+                  </a>
+               </div>
+               <div class="item border">
+                  UCROO Support
+               </div>
+               <div class="item">
+                  <ul>
+                     <li>
+                        <a ui-sref="ucrAccountPrivacy" dropdown-inner-trigger>Account Settings</a>
+                     </li>
+                     <li ng-click="logout()">
+                        Logout
+                     </li>
+                  </ul>
+
+               </div>
+            </div>
+         </div>
+      </div>
+      <ul class="apps-bar">
+         <li>
+            <a class="app-icon" ng-click="activate('search', true)">
+               <svg class="ico-search">
+                  <use xlink:href="#header-search"/>
+               </svg>
+            </a>
+         </li>
+         <li>
+            <a class="app-icon" ng-click="activate('messages')">
+               <svg>
+                  <use xlink:href="#header-messages"/>
+               </svg>
+               <em class="counter" ng-show="userInfo.unreadMessageCount">{{userInfo.unreadMessageCount}}</em>
+            </a>
+         </li>
+         <li>
+            <a class="app-icon" ng-click="activate('notifications')">
+               <svg>
+                  <use xlink:href="#header-alerts"/>
+               </svg>
+               <em class="counter" ng-show="userInfo.unreadNotificationCount">{{userInfo.unreadNotificationCount}}</em>
+            </a>
+         </li>
+         <li ng-if="isRunning">
+            <counter></counter>
+         </li>
+         <li ng-if="isStudent">
+            <counter only-if-counting></counter>
+            <a class="app-icon" ng-click="activate('timer', true)">
+               <timer-btn></timer-btn>
+            </a>
+         </li>
+      </ul>
+      <messages-popup ng-show="activeWidget === 'messages'"></messages-popup>
+      <notification-popup ng-show="activeWidget === 'notifications'"></notification-popup>
+   </div>
+   <timer ng-show="activeWidget === 'timer'"></timer>
+   <header-search ng-show="activeWidget === 'search'"></header-search>
+</section>

@@ -1,0 +1,219 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "ucroo_auth_token": {
+      "type": "string"
+    },
+    "token_expires": {
+      "type": "string"
+    },
+    "user": {
+      "type": "object",
+      "properties": {
+        "user": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "photo_url": {
+              "type": "string"
+            },
+            "group_id": {
+              "type": "integer"
+            },
+            "user_type": {
+              "type": "string"
+            }
+          }
+        },
+        "photo_url": {
+          "type": "string"
+        },
+        "group": {
+          "type": "string"
+        },
+        "uni_id": {
+          "type": "integer"
+        },
+        "gender": {
+          "type": "string"
+        },
+        "commencement": {
+          "type": "integer"
+        },
+        "year_of_completion": {
+          "type": "integer"
+        },
+        "avatar_image_url": {
+          "type": "string"
+        },
+        "karma": {
+          "type": "integer"
+        },
+        "skills": {
+          "type": "array",
+          "items": []
+        },
+        "interests": {
+          "type": "array",
+          "items": []
+        },
+        "awards": {
+          "type": "array",
+          "items": []
+        },
+        "n_connections": {
+          "type": "string"
+        },
+        "education": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "Name_of_School": {
+                "type": "string"
+              },
+              "Dates_attended": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "work_experience": {
+          "type": "array",
+          "items": []
+        },
+        "places": {
+          "type": "array",
+          "items": []
+        },
+        "club_memberships": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": []
+          }
+        },
+        "languages": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": []
+          }
+        },
+        "classes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "image_url": {
+                "type": "string"
+              },
+              "extended_name": {
+                "type": "string"
+              },
+              "members_jonied": {
+                "type": "integer"
+              }
+            }
+          }
+        },
+        "clubs": {
+          "type": "array",
+          "items": []
+        },
+        "connected": {
+          "type": "boolean"
+        },
+        "sent_connection_request": {
+          "id": "http://jsonschema.net/user/sent_connection_request",
+          "type": "boolean"
+        },
+        "received_connection_request": {
+          "type": "boolean"
+        },
+        "user_blocked_me": {
+          "type": "boolean"
+        },
+        "possessive_form": {
+          "type": "string"
+        },
+        "declined_request": {
+          "type": "boolean"
+        },
+        "campus_latitude": {
+          "type": "integer"
+        },
+        "campus_longitude": {
+          "type": "integer"
+        },
+        "oncampus_radius": {
+          "type": ""
+        },
+        "connections": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "photo_url": {
+                  "type": "string"
+                },
+                "group_id": {
+                  "type": "integer"
+                },
+                "user_type": {
+                  "type": "string"
+                },
+                "connection_status": {
+                  "type": "string"
+                },
+                "sub_str": {
+                  "type": "string"
+                },
+                "sort_order": {
+                  "type": "integer"
+                }
+              }
+            }
+          ]
+        },
+        "subject": {
+          "type": "string"
+        },
+        "campus": {
+          "type": "string"
+        },
+        "timezone": {
+          "type": "string"
+        }
+      }
+    },
+    "university_staff_id": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "ucroo_auth_token",
+    "token_expires",
+    "user",
+    "university_staff_id"
+  ]
+}

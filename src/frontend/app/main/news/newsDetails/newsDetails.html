@@ -1,0 +1,43 @@
+<!-- news-section -->
+<div id="news-section" class="news-details">
+   <div class="content-heading">
+      <h1>
+         <a href="#" ng-click="goBack()">
+            <svg class="arrow-l"><use xlink:href="#news-arrow-l" /></svg>
+            {{post.text}}
+         </a>
+      </h1>
+   </div>
+   <div class="post">
+      <!--<figure class="simple-img-holder">
+         <img class="full-img" src="/assets_new/images/news-image.png" alt="news"/>
+      </figure>-->
+      <div class="holder">
+         <figure class="post-heading clearfix">
+            <likes-comments is-liked="post.has_liked" likes="{{post.likes_count}}" comments="{{post.comments_count}}" like="like(post)"></likes-comments>
+            <a class="photo-holder" href="#">
+               <img class="ico" ng-src="{{post.news_source.logo}}"/>
+            </a>
+            <div class="wrapper-user">
+               <div class="user-details clearfix">
+                  <div class="l-side">
+                     <a href="{{post.news_source.link}}" class="user-name">{{post.news_source.name}}</a>
+                  </div>
+               </div>
+               <figcaption class="time-category">
+                  <div class="user-info clearfix">
+                     <span class="date">{{post.how_long_ago}}</span>
+                  </div>
+                  <!--<span>[soon]8:42pm</span>-->
+               </figcaption>
+            </div>
+         </figure>
+      </div>
+      <div class="post-text">
+         <div ng-bind-html="post.trustedHTML"></div>
+      </div>
+      <p><a href="{{post.news_source.link}}">View full article on {{post.news_source.name}}</a></p>
+      <comments post-id="{{id}}"></comments>
+
+   </div>
+</div>

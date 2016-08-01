@@ -1,0 +1,58 @@
+<div class="create-item">
+	<form name="itemForm">
+	   <fieldset>
+			<div class="row">
+			   <label for="item-name" ng-class="{red: itemForm.iName.$touched, green: itemForm.iName.$valid}">Item Title</label>
+			   <input id="item-name" type="text" placeholder="Enter item title..." required ng-model="item.item_name" name="iName" />
+			</div>
+	      <div class="holder-txt row">
+				<label for="item-description" ng-class="{red: itemForm.iDescription.$touched, green: itemForm.iDescription.$valid}">Description</label>
+				<textarea
+				   id="item-description"
+				   class="textarea-white"
+				   cols="20" rows="3"
+				   ng-model="item.description"
+				   placeholder="Enter a description for your item..."
+				   name="iDescription"
+				   ng-maxlength="1000"
+				   required>
+				</textarea>
+	      </div>
+
+	      <div class="images-section">	      	
+	      	<img ng-src="{{itemImage}}" />
+	      	<button class="btn-green"
+	      		ngf-select="uploadImages($files)"
+               ngf-max-size="10MB"               
+               accept="image/*">
+	      	Upload Photo</button>
+	      </div>
+	      <div class="row half" >
+	      	<div class="col">
+					<label for="item-category" >
+	            	Category
+	     			</label>
+	        		<div class="select-white"
+	        			id="item-category"
+	     				dropdown-select="categories"
+	     				dropdown-model="selectedCategory"
+	     				dropdown-item-label="category_name">
+	  				</div>
+	      	</div>
+	      	<div class="col">	    
+	      		<label for="item-price" ng-class="{red: itemForm.iPrice.$touched, green: itemForm.iPrice.$valid}">Price</label>
+				   <input id="item-price" type="text" placeholder="Set a Price" required ng-model="item.price" name="iPrice" format-as-currency/>
+	      	</div>
+	      </div>
+	   </fieldset>
+      <ul class="options-btn">
+         <li>
+            <button type="button" class="btn-link" ng-click="cancel()">Cancel</button>
+         </li>
+         <li>
+         	<button type="button" ng-if="!id" class="btn-blue" ng-click="save()" ng-disabled="!(itemForm.$valid && checkRequired())">Create</button>
+            <button type="button" ng-if="id" class="btn-blue" ng-click="save()" ng-disabled="!(itemForm.$valid && checkRequired())">Save</button>
+         </li>
+      </ul>	   
+	</form>
+</div>

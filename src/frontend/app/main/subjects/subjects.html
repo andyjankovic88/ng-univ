@@ -1,0 +1,28 @@
+<div id="subjects">
+   <!-- content-heading -->
+   <div class="content-heading ng-scope">
+      <h1>Subjects</h1>
+      <span class="default-btn">
+         <button type="button" class="btn-blue" ui-sref="{{addSubject()}}">Add a Subject</button>
+      </span>      
+   </div>
+   <!-- sub-menu -->
+   <div class="sub-menu">
+      <ul>
+         <li ui-sref-active="active">
+            <a href="#" ui-sref="subjectsList">
+               <svg class="ico-list"><use xlink:href="#feeds-list" /></svg>
+               <span>MY SUBJECTS</span>
+            </a>
+         </li>
+         <li ui-sref-active="active">
+            <a href="#" ui-sref="subjectsSuggestions">
+               <svg class="ico-suggestions"><use xlink:href="#icon-suggestions" /></svg>
+               <span>SUGGESTIONS</span>
+            </a>
+         </li>
+      </ul>
+   </div>
+   <!--content -->
+   <div class="subjects-content" ui-view></div>
+</div>

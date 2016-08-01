@@ -1,0 +1,20 @@
+.create-item {
+	.half {
+		width: 50%;
+		min-width: 300px;
+	}
+	.images-section {
+		img {
+			width: 100%;
+			height: auto;
+		}
+		margin-bottom: 40px;			
+	}
+	.options-btn {
+		float: right;
+		li {
+			display: inline-block;			
+		}
+	}
+
+}

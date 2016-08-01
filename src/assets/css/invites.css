@@ -1,0 +1,211 @@
+/* @override 
+	http://simplesaml.sucroo.com/assets/css/invites.css?2380
+	http://simplesaml.sucroo.com/assets/css/invites.css?2391
+*/
+
+h2.current_invite {
+    font-size: 30px;
+    font-weight: normal;
+    color: #464646;
+    margin-bottom:15px;
+}
+span.subheader_text{
+    font-size:12px;
+    color: #464646;
+
+}
+#invite_logo{
+    margin-right:10px;
+    margin-bottom: -21px;
+}
+#invite-all,
+#add-all {
+    float: right;
+}
+div#invite_area{
+    clear:left;
+    float:left;
+    width:292px;
+}
+div#invite_area span#invite_friends{
+    color: #3C5993;
+    font-weight:bold;
+    display: inline-block;
+    font-size: 15px;
+    margin-top: 10px;
+    float:left;
+}
+div#invite_area #invite_all_btn{
+    background-image:url('<?=base_url('assets/images/invites/invite_all_btn.png'); ?>');
+    width:92px;
+    height:44px;
+    display:block;
+    float:right;
+}
+div#google_contacts{
+    clear:left;
+    float:left;
+    margin-top:15px;
+}
+div#google_contacts li{
+    color:#5e5d5d;
+    font-size:12px;
+    font-weight:bold;
+    list-style:none;
+    width:315px;
+    margin-top:20px;
+    float:left;
+}
+div#google_contacts li div.contact_address{
+    width:70%;
+    float:left;
+}
+div#google_contacts li span.invite_btn{
+    display:inline-block;
+    margin-top:8px;
+}
+div#google_contacts li input{
+    float:left;
+}
+
+.invite-left .search_input
+{
+	margin-top: 15px;
+	border-bottom: 1px solid #bab9bb;
+	padding-bottom: 16px;
+}
+
+ul#invite_menu {
+    display: block;
+    margin: 20px -25px 0;
+    padding: 0 24px;
+    border-bottom: 5px solid #464646;
+}
+
+ul#invite_menu li {
+    list-style-type: none;
+    display: inline-block;
+    height: 57px;
+    width: 208px;
+    margin: 0;
+}
+ul#invite_menu li a {
+    position: relative;
+    display: block;
+    height: 57px;
+    line-height: 57px;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+    color: #464646;
+}
+ul#invite_menu li a img {
+    float: left;
+    width: 66px;
+    height: 57px;
+}
+ul#invite_menu li a span.hover {
+    display: none;
+    position: absolute;
+    height: 37px;
+    width: 192px;
+    color: #fff;
+    padding: 10px;
+    line-height: 37px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+}
+ul#invite_menu li a span.facebook {
+    background-color: rgba(59, 91, 153, 0.9);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#004b84', endColorstr='#004b84'); /* IE */
+
+}
+ul#invite_menu li a span.gmail {
+    background-color: rgba(195, 9, 7, 0.9);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#C50A07', endColorstr='#C50A07'); /* IE */
+}
+ul#invite_menu li a span.email {
+    background-color: rgba(70, 70, 70, 0.9);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#464646', endColorstr='#464646'); /* IE */
+}
+ul#invite_menu li a:hover span.hover {
+    display: block;
+}
+span#invite_indicator {
+    background: url('<?=base_url('assets/images/invites/indicator.png'); ?>') top center no-repeat transparent;
+    display: block;
+    height: 30px;
+}
+span#invite_indicator.google {
+    background-position: 335px 0px;
+}
+span#invite_indicator.email {
+    background-position: 550px 0px;
+}
+span#invite_indicator.facebook {
+    background-position: 125px 0px;
+}
+input.custom_email_contact{
+    margin-bottom:10px;
+    width: 250px;
+}
+.invited {
+ 
+}
+.invite-left,
+.invite-right {
+    width: 310px;
+    float: left;
+    margin-right: 12px;
+    display: block;
+}
+
+.invite-left p,
+.invite-right p {
+    height: 30px;
+    line-height: 30px;
+}
+
+.invite-left p.title,
+.invite-right p.title {
+    font-size: 15px;
+    color:#004b84;
+    font-weight: bold;
+}
+.invite-left ul
+{
+	margin-top: 10px;
+	padding: 10px;
+}
+.invite-right ul
+{
+	padding: 10px;
+}
+
+.invite-left ul li,
+.invite-right ul li {
+    display: block;
+    padding: 5px 0;
+    list-style-type: none;
+    height: 30px;
+    line-height: 30px;
+    color: #5e5d5d;
+}
+
+.invite-left ul li img,
+.invite-right ul li img {
+    float: left;
+    margin-right: 10px;
+}
+
+.invite-left ul li a.btn,
+.invite-right ul li a.btn {
+    float: right;
+}
+
+.invite-right {
+    width: 300px;
+    float: right;
+    margin-right: 0;
+}

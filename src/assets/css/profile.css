@@ -1,0 +1,669 @@
+/* @override
+	http://localhost.ucroo/assets/css/profile.css
+	http://anita.sucroo.com/assets/css/profile.css?2085
+	http://localhost.martin/assets/css/profile.css?2125
+	http://simplesaml.sucroo.com/assets/css/profile.css?2435
+*/
+
+@charset "UTF-8";
+
+#profile {
+    position: relative;
+}
+
+#profile h4 {
+    color: #333;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.profile-header {
+    background: url('/assets/images/profile/bg_profile_head.png') no-repeat;
+    margin: -15px;
+    padding: 20px;
+		margin-bottom: 10px;
+}
+
+#profile .part-content {
+    /*padding: 5px 20px;*/
+}
+
+#profile .part-content.timetable {
+    padding: 0;
+}
+
+#profile .part-content.connections {
+		padding: 12px;
+		padding-bottom: 0;
+}
+
+/*.content_heading.extracurricular*/
+#profile .content_heading
+{
+		margin-top: 0;
+}
+#profile .content_heading_main
+{
+    margin-bottom: 4em;
+}
+
+#profile .part-content.edit-extracurricular h4 {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+#profile .part-content.edit-extracurricular span.edit a {
+    font-size: 0.8em;
+}
+
+#profile .part-content.edit-extracurricular span.help {
+    float: right;
+}
+
+#profile .part-content ul li {
+    list-style-type: none;
+}
+
+#profile #second {
+	margin: 15px -25px 0 -24px;
+		/*border-bottom: 1px solid #EEF0F0;*/
+	border-bottom: 1px solid #acacac;
+}
+
+#profile #second .content_heading {
+		margin: 0;
+		overflow: hidden;
+}
+
+#profile #second .column {
+		float: left;
+}
+
+#profile #classes table
+, #profile #past-classes table
+{
+	border-spacing: 0;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#profile #classes table
+{
+	min-height: 300px;
+}
+
+#profile #past-classes table
+{
+	border-top: 1px solid #acacac;
+	border-right: none;
+}
+
+#profile #past-classes
+{
+	display: none;
+}
+
+
+#profile #classes tr
+, #profile #classes td
+, #profile #past-classes tr
+, #profile #past-classes td
+{
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+#profile #classes td
+, #profile #past-classes td
+{
+	vertical-align: middle;
+	border-bottom: 1px solid #acacac;
+	padding-left: 35px;
+	padding-right: 35px;
+}
+
+#profile #past-classes td
+{
+	height: 50px;
+}
+
+#profile #classes td:first-child
+, #profile #past-classes td:first-child
+{
+	width: 90px;
+    padding-right: 0;
+}
+
+#profile #classes .part-content td {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+#profile #classes tr:last-child td
+, #profile #past-classes tr:last-child td
+{
+	border-bottom: none;
+}
+
+#profile .content_heading.dark_banner a
+{
+	text-transform: capitalize;
+	font-size: 11px;
+}
+
+#profile #classes tr td:only-child
+, #profile #past-classes td td:only-child
+{
+	padding-right: 35px;
+}
+
+#profile #classes td:nth-child(2)
+, #profile #past-classes td:nth-child(2)
+{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#profile #classes
+, #profile #connections
+, #profile #classes .content_heading
+, #profile #connections .content_heading
+{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	/*padding: 0;*/
+}
+
+#profile #classes {
+		position: relative;
+		width: 400px;
+}
+
+#profile #classes .current {
+		height: 100%;
+        border-right: 1px solid #acacac;
+}
+
+#profile #connections {
+		width: 281px;
+}
+
+#profile #connections .content_heading
+{
+	padding-left: 0;
+}
+
+#profile #connections #see-all-connections {
+		float: right;
+		margin-right: 12px;
+		font-weight: bold;
+		/*margin-top: -5px;*/
+}
+
+#profile #connections #see-all-connections:first-letter {
+	text-transform: uppercase;
+}
+
+.profile-pic {
+    /*border: 6px solid #ffffff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.55);*/
+    position: relative;
+    /*display: block;*/
+    width: 120px;
+    height: 120px;
+}
+
+.image_for_heading
+{
+    position: relative;
+    /*display: table-cell;*/
+    /*vertical-align: middle;*/
+    margin-right: 18px;
+    width: 100px;
+    overflow: hidden;
+    float: left;
+    /*height: 50px;*/
+}
+
+.user_profile_picture
+{
+	/*width: 20%;*/
+	/*float: left;*/
+	/*margin-right: 25px;*/
+	position: relative;
+}
+
+
+.profile-header .user-info {
+    /*float: left;*/
+    /*margin: 0 0 0 20px;*/
+    /*width: 325px;*/
+}
+
+.profile-header .user-info h1 {
+    color: #464646;
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+}
+
+.profile-header .user-info h2 {
+    font-size: 1em;
+    line-height: 1em;
+    margin-bottom: 20px;
+    min-height: 42px;
+    text-transform: uppercase;
+}
+
+.profile-actions-bottom {
+    text-align: left;
+}
+
+.profile-header .profile-actions {
+    text-align: right;
+}
+
+.profile-header .profile-actions a,
+.profile-header .profile-actions button {
+    margin-bottom: 10px;
+}
+
+/*#karma-avatar {
+    background: white;
+    border: 1px solid #CCC;
+    border-bottom: 0px solid white;
+    box-shadow: 1px 1px 1px #aaa;
+    float: right;
+    padding: 4px 4px 0 4px;
+}*/
+
+#karma-avatar
+{
+	margin: 10px 0;
+	width: 70px;
+    position: absolute;
+    right: 4px;
+}
+
+#karma-avatar .points {
+    /*color: #1d8cba;*/
+    font-weight: bold;
+    font-size: 10px;
+    text-transform: lowercase;
+    text-align: center;
+    display: block;
+}
+
+#karma-avatar img {
+    width: 50px;
+}
+
+#profile .profile-connection {
+	/*width: 30%;*/
+	/*width: 71px;
+	height: 71px;*/
+    /*float: left;*/
+    display: inline-block;
+    margin: 0 17px 12px 0;
+    margin-right/*\**/: 11px\9;
+    /*overflow: hidden;*/
+    /*border: 1px solid #ccc;*/
+   	overflow: hidden;
+}
+
+@-moz-document url-prefix() {
+  #profile .profile-connection {
+     margin-right: 16px;
+  }
+}
+
+#profile .profile-connection:nth-child(3n)
+, #profile .profile-connection.nth-child-3n
+{
+	margin-right: 0;
+}
+
+#profile .profile-connection:nth-child(n+7)
+, #profile .profile-connection.nth-child-nplus7
+{
+	margin-bottom: 0;
+}
+
+#profile .profile-connection img
+{
+	width: 71px;
+	/*height: 60px;*/
+
+}
+
+/*.horizontal
+{
+	margin-left: -5%;
+	height: 50px;
+}*/
+/*.vertical
+{
+	width: 50px;
+}*/
+
+
+/*
+#profile .profile-connection:hover img {
+    box-shadow: 0 0 5px #111;
+    position: absolute;
+    margin: -10px;
+    width: 80px;
+    -moz-transform: scale(1.2) rotate(-2deg);
+    -webkit-transform: scale(1.2) rotate(-2deg);
+}
+
+#profile .profile-connection img:hover, #profile .profile-connection:hover img  {
+    border: none;
+}
+*/
+
+#profile .user_profile_picture .edit-profile-pic {
+    display: none;
+    position: absolute;
+}
+
+#profile #profile-pic:hover .edit-profile-pic,
+#profile #profile-pic .edit-profile-pic.edit-page,
+#profile .user_profile_picture:hover .edit-profile-pic {
+    display: block;
+}
+
+#profile-pic:hover {
+    cursor: pointer;
+}
+
+.loading {
+    background: url(/assets/images/ajax-loader-big-004b84.gif) no-repeat;
+    height: 6px;
+    width: 129px;
+    top: 75px;
+    left: 10px;
+    position: absolute;
+}
+
+.loading_profile {
+    background: url(/assets/images/ajax-loader-big-004b84.gif) no-repeat;
+    height: 6px;
+    width: 157px;
+    top: 10px;
+    left: 16px;
+    position: absolute;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#profile input#course_name {
+    /*width: 360px;*/
+}
+
+/* Extracurricular informations in profile */
+
+.extracurricular {
+	/*color: #464646;
+    font-size: 12px;*/
+}
+
+.edit-extracurricular  .section {
+    /*margin: 15px -25px 25px -24px;
+    padding: 0 24px 25px 25px;
+    border-bottom: 1px solid #acacac;*/
+}
+
+.extracurricular h3 {
+    font-size: 13px;
+		font-weight: bold;
+    padding: 4px 0;
+    text-indent: 0;
+    width: auto;
+		margin-bottom: 9px;
+		/*color: #004B84;*/
+		text-transform: uppercase;
+}
+
+.extracurricular .section > .position {
+    /*margin-left: 10px;*/
+}
+
+.extracurricular .section table,
+.extracurricular .section table tr,
+.extracurricular .section table td {
+		border-collapse: collapse;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+		font-weight: inherit;
+		font-style: inherit;
+		font-size: 100%;
+		font-family: inherit;
+		vertical-align: top;
+}
+
+.extracurricular .section table td {
+		/*height: 15px;*/
+}
+
+.extracurricular hr {
+		border: none;
+		border-bottom: 1px solid #acacac;
+		margin-bottom: 1em;
+		margin-top: 1em;
+		margin-left: -24px;
+		margin-right: -25px;
+}
+
+.extracurricular .section table tr {
+		height: 15px;
+}
+
+.extracurricular .section .dates {
+		padding-right: 10px;
+		text-align: right;
+		width: 180px;
+    	font-size: 11px;
+}
+
+.extracurricular .section .additional-notes {
+		/*height: 25px;*/
+}
+
+.edit-extracurricular .section .position .actions {
+    float: left;
+    margin-top: -8px;
+    margin-left: 25px;
+    padding: 0;
+}
+
+.edit-extracurricular .section .position .cnt {
+    /*float: left;*/
+   }
+
+.edit-extracurricular .section .position .cnt > div {
+    /*height: 40px;*/
+}
+
+.edit-extracurricular .section .position label {
+    /*display: block;
+    float: left;
+    margin: 3px 0;
+    width: 125px;
+    line-height: 1em;
+    padding-top: 6px;*/
+}
+
+.edit-extracurricular .section .actions button{
+    display: block;
+    margin: 10px 0 5px 0;
+    width: 75px;
+}
+
+.edit-extracurricular .section .position label:after {
+    content: ':';
+}
+
+.edit-extracurricular .section .position input {
+    width: 88%;
+    /*float: left;
+    margin: 3px 0;*/
+}
+
+.position .number
+{
+	background:#4f97e8;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+	font-family: 'SoleilBK';
+	font-size: 20px;
+	color: #fff;	
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;   margin-bottom: 20px;
+}
+
+.edit-extracurricular .actions .btn_round
+{
+	/*margin-left: -35px;*/
+}
+
+.extracurricular .position .submit
+{
+	float: right;
+}
+
+.section .btn.btn-dark_blue
+{
+	width: 339px;
+	margin-left: 125px;
+}
+
+.edit-extracurricular .section .position input.ui-state-disabled {
+    border: 1px solid white;
+    opacity: 0.8;
+}
+
+.extracurricular .section a.edit {
+    font-size: 0.7em;
+}
+
+.ui-dialog-content .loading {
+    position: relative;
+    left: 1px;
+}
+
+.ui-dialog-content .loading_profile {
+    position: relative;
+    left: 1px;
+}
+
+.edit_past_class_container
+{
+	margin: 0 -25px 0 -24px;
+	padding: 10px 24px;
+}
+
+.past-class-table {
+    /*width: 100%;*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: none;
+    border-bottom: 5px solid #464646;
+}
+
+.past-class-table.buy-tickets {
+    width: 100%;
+}
+
+.past-class-table tbody tr:nth-child(odd) {
+    background-color: #dbdbdb;
+}
+
+.past-class-table thead {
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #464646;
+    padding: 10px 24px;
+}
+
+.past-class-table th:first-child
+{
+	padding-left: 24px;
+}
+
+.past-class-table th:last-child
+{
+	padding-left: 24px;
+}
+
+.past-class-table th,
+.past-class-table td {
+    border: none;
+    padding: 4px 7px;
+}
+
+.past-class-table td:last-child {
+    padding-right: 10px;
+}
+
+.past-class-table td:first-child {
+    padding-left: 10px;
+}
+
+.past-class-table .colored-row:last-child td {
+    border-bottom: none;
+}
+
+.past-class-table tr:first-child td {
+    border-top: none;
+}
+
+.past-class-table td:last-child {
+    border-right: none;
+}
+
+.past-class-table .edit-class a {
+    margin-bottom: 2px;
+}
+
+.past-class-table .edit-class a:last-child {
+    margin-bottom: 0;
+}
+
+.standard-box {
+    float: left !important;
+    width: 134px;
+}
+
+.text-padding {
+    padding-left: 5px;
+}
+
+.with-small {
+    max-width: 134px;
+    min-width: 134px;
+}
+
+.with-input-forms {
+    max-width: 120px;
+    min-width: 120px;
+}
+
+.with-big-field {
+    max-width: 400px;
+    min-width: 400px;
+}
+

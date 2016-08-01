@@ -1,0 +1,223 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "user": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "userName": {
+              "type": "string"
+            },
+            "profilePic": {
+              "type": "string"
+            },
+            "unreadNotificationCount": {
+              "type": "integer"
+            },
+            "group_id": {
+              "type": "integer"
+            },
+            "newConnectionsCount": {
+              "type": "integer"
+            },
+            "unreadMessageCount": {
+              "type": "integer"
+            }
+          },
+           "required": ["id","userName","group_id"]
+        },
+        "ucrooadminMenu": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            }
+          },
+          "required": ["id","title"]
+        },
+        "eduInstitution": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "logo": {
+              "type": "string"
+            }
+          },
+          "required": ["id","name"]
+        },
+        "first_steps": {
+          "type": "boolean"
+        },
+        "mainMenu": {
+          "type": "object",
+          "properties": {
+            "student_news": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": ["id","title"]
+            },
+            "unit": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  },
+                "required": ["id","title"]
+                }
+              ]
+            },
+            "study_group": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["id","title"]
+                }
+              ]
+            },
+            "service_page": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  },
+                "required": ["id","title"]
+                }
+              ]
+            },
+            "club": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  },
+                "required": ["id","title"]
+                }
+              ]
+            },
+            "mentors": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["id","title"]
+                }
+              ]
+            },
+            "customgroups": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["id","title"]
+                }
+              ]
+            },
+            "university_staff": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": ["id","title"]
+            }
+          }
+        },
+        "classanalyticsMenu": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": ["id","title"]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

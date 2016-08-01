@@ -1,0 +1,574 @@
+/* @override 
+	http://simplesaml.sucroo.com/assets/css/reviews.css?2157
+	http://simplesaml.sucroo.com/assets/css/reviews.css?2179
+*/
+
+h1.rating
+{
+	font: bold 16px Verdana, sans-serif; 
+}
+
+h2.rating_pub
+{
+	font: bold 17px Verdana, sans-serif; 
+	line-height: 1em;
+	float: left;
+	color: #004b84;
+}
+
+
+.ratings h2 {
+	margin-bottom: 7px;
+	font: bold 30px Verdana, sans-serif;
+	color: #3b3b3b;
+}
+
+#searches h2 {
+	
+	font: 20px Verdana, sans-serif;
+	margin-bottom: 0;
+	padding: 15px 15px 5px;
+	color: #00b194;
+}
+
+h3.rating{
+	margin-bottom: 3px;
+	color: #004b84;
+	font-size: 19px;
+}
+
+h4.rating{
+	margin-bottom: 3px;
+	font-weight: bold;
+}
+
+.nine
+{
+	min-width: 90px;
+}
+
+.ratings_search {
+	float: left;
+	position: relative;
+}
+
+.ratings_sort {
+	float: left;
+	padding-top: 5px;
+	padding-left: 13px;	
+}
+
+
+
+.search_ratings,
+.search_academics,
+.search_units
+{
+	width: 500px;
+	min-height: 20px;
+}
+
+.academic {
+	clear: both;
+	min-height: 48px;
+	width: 550px;
+	padding: 12px 5px 12px 51px;
+	overflow: hidden;
+
+}
+
+#listing div.top5 div.top10 div.ratingcontent_best div.academic {
+	height: 48px;
+}
+
+
+.ratinglarge{
+	float: right;
+	font-size: 26px;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-right: 8px;
+	color: #004b84;
+}
+
+.ratingcontent_worst .ratinglarge
+{
+	color: #00b194;
+}
+.ratingcontent_best .ratinglarge
+{
+	color: #004b84;
+}
+
+
+.ratinglarge small {
+	font-size: 13px;
+	color: #404040;
+}
+
+.details {
+	padding-left: 5px;
+	float: left;
+	overflow: hidden;
+	width: 450px;
+	min-height: 40px;
+}
+
+.unit
+{
+	width: 550px;
+}
+
+.smalltext {
+	font-size: 11px;
+	line-height: 14px;
+}
+
+.actions {
+	float: right;
+	padding-right: 20px;
+	padding-top: 6px;
+}
+
+
+.ratings input
+{
+	width: 450px;
+	margin-bottom: 8px;
+}
+
+.ratings textarea
+{
+	width: 450px;		
+	height: 70px;
+	resize:none;
+}
+
+
+#send-button {
+	width: 160px;	
+}
+
+.unitrate
+{
+	padding-top: 4px;
+}
+
+
+
+
+
+
+
+
+ul{border:0; margin:0; padding:0;}
+
+#pagination-ucroo li{
+border:0; margin:0; padding:0;
+font-size:11px;
+list-style:none;
+margin-right:2px;
+}
+#pagination-ucroo a{
+border:solid 1px #9aafe5
+margin-right:2px;
+	color: green;
+}
+#pagination-ucroo .previous-off,
+#pagination-ucroo .next-off {
+border:solid 1px #DEDEDE
+color:#888888
+display:block;
+float:left;
+font-weight:bold;
+margin-right:2px;
+padding:3px 4px;
+}
+#pagination-ucroo .next a,
+#pagination-ucroo .previous a {
+font-weight:bold;
+} 
+#pagination-ucroo .active{
+background: #2bac2e;
+color:#FFFFFF;
+font-weight:bold;
+display:block;
+float:left;
+padding:4px 6px;
+}
+#pagination-ucroo a:link,
+#pagination-ucroo a:visited {
+color:#0e509e
+display:block;
+float:left;
+padding:3px 6px;
+text-decoration:none;
+border: 1px solid #8ad97d;
+	margin-right: 4px;
+}
+#pagination-ucroo a:hover{
+border: 1px solid green}
+
+.ratings_comments {
+    word-wrap: break-word;
+	width: 365px;
+}
+
+.ratings_comments_home
+{
+	width: 381px;
+}
+
+
+
+
+
+ /*!
+ * jQuery UI Stars v2.0.3
+ * http://plugins.jquery.com/project/Star_Rating_widget
+ *
+ * Copyright (c) 2009 Orkan (orkans@gmail.com)
+ * Dual licensed under the MIT and GPL licenses.
+ * http://docs.jquery.com/License
+ *
+ * $Rev: 102 $
+ * $Date:: 2009-06-07 #$
+ * $Build: 23 (2009-06-07)
+ *
+ * Theme: Crystal
+ *
+ */
+
+.ui-stars-star,
+.ui-stars-cancel {
+	float: left;
+	display: block;
+	overflow: hidden;
+	text-indent: -999em;
+	cursor: pointer;
+}
+.ui-stars-star a,
+.ui-stars-cancel a {
+	width: 28px;
+	height: 26px;
+	display: block;
+	position: relative;
+	background: url(/assets/images/stars/crystal-stars.png) no-repeat 0 0;
+}
+.ui-stars-star a {
+	background-position: 0 -56px;
+}
+.ui-stars-star-on a {
+	background-position: 0 -84px;
+}
+.ui-stars-star-hover a {
+	background-position: 0 -112px;
+}
+.ui-stars-cancel-hover a {
+	background-position: 0 -28px;
+}
+
+.ui-stars-star-disabled,
+.ui-stars-star-disabled a,
+.ui-stars-cancel-disabled a {
+	cursor: default !important;
+}
+
+.multiField {
+	min-height: 30px;
+}
+
+span.caption {
+	padding-left: 10px;
+	position: relative;
+	top: 4px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+
+.o_style {
+	font-weight: bold;
+	font-size: 16px;
+	color: #2bac2e;
+}
+
+div.faculty_listing {
+	
+}
+.ru_style {
+	color: #2bb194;
+}
+
+
+.r_style {
+	font-weight: bold;
+	font-size: 18px;
+	color: #004B84;
+}
+
+.s_style {
+	padding-top: 1px;
+}
+
+		
+.counter{
+	font-style:italic;
+	font-weight:bold;
+}
+
+.faculty
+{
+	margin-bottom: 10px;
+}
+.faculty_listing
+{
+	text-align: center;
+}
+
+
+.top5 {
+	height: 700px;
+	width: 100%;
+}
+
+.top10	{
+	width: 100%;
+}
+
+.top5-lhs {
+	width: 48%;
+	height: 100%;
+	float: left;
+	padding-right: 12px;
+}
+
+.top5-rhs {
+	width: 48%;
+	height: 100%;
+	float: left;
+	padding-left: 12px;
+}
+
+
+.titlebannerheader {
+	display: block;
+	float: left;
+	background-color: #00b194;
+	position: relative;
+	border: 1px solid #52b294;
+	width: 586px;
+	min-height: 22px;
+	padding: 5px 25px;
+}
+
+
+.titlebannerheader.blue {
+	background-color: #32bef2;
+	border: 1px solid #2cafdf;	
+}
+
+.titlebannerheader h2 {
+	margin: 0;
+	color: #FFF;
+	text-shadow: 1px 1px 1px #666;
+	font-size: 18px;
+}
+
+.titlebannerheaderfold {
+	width: 9px;
+	height: 20px;
+	display: block;
+	left: -1px;
+	bottom: -20px;
+	position: absolute;
+	z-index: 100;
+	background: url(/assets/images/banner.png) no-repeat;
+}
+.titlebannerheaderfold2 {
+	width: 9px;
+	height: 20px;
+	display: block;
+	bottom: -20px;
+	position: absolute;
+	z-index: 100;
+	background: url(/assets/images/banner2.png) no-repeat right 0;
+	left: 676px;
+}
+
+.titlebannerheader h1 {
+	padding: 3px 0px 0px;
+	margin: 0px;
+	color: #fff;
+	font: 14px Verdana, sans-serif;
+	font-weight: 600; 
+}
+
+.ratingcontent_best {
+	background: url(/assets/images/rating/best10.jpg) no-repeat -9px 18px;
+	margin-top: 34px;
+	height: 100%;
+}
+
+.ratingcontent_worst {
+	background: url(/assets/images/rating/worst5.jpg) no-repeat -3px 0;
+	margin-top: 34px;
+	height: 100%;
+}
+
+.ratingcontent_worst a{
+	color: #00b194;
+}
+
+#searches {
+	border: 2px solid #e2e2e2;
+	margin-top: -30px;
+	background-color: #f5f5f5;
+}
+
+.full
+{
+	width: 590px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-width: 1px;
+	border-color: #e2e2e2;
+	border-bottom: 1px dashed #acacac;
+	min-height: 46px;
+	
+}
+
+.last
+{
+	border-bottom-style: none;
+}
+
+.full .details {
+	width: 480px;
+	overflow: hidden;
+}
+
+.rating_spacer
+{
+	border-bottom: 1px solid #acacac;
+}
+
+
+.rating-inner
+{
+	float: left;
+	overflow: hidden;
+}
+.rating-inner div.col1
+{
+	background: #f5f5f5;
+	border: 1px solid #e2e2e2;
+	float: left;
+	margin-bottom: -1000px;
+	margin-right: 10px;
+	padding-bottom: 1000px;
+	width: 23em;
+}
+.rating-inner .col2
+{
+	background: #f5f5f5;
+	border: 1px solid #e2e2e2;
+	float: left;
+	margin-bottom: -1000px;
+	margin-right: 10px;
+	padding-bottom: 1000px;
+	margin-right: 0;
+	width: 28.5em;
+}
+
+.rating_pad
+{
+	padding: 5px;
+}
+
+.ratings .rdtop
+{
+	border-bottom: 1px dashed #d5d5d5;
+	clear: both;
+	min-height: 37px;
+	padding: 10px 4px 5px;
+	margin-bottom: 5px;
+}
+
+.ratings .title {
+	float: left;
+	font-size: 19px;
+	color: #5d5c5c;
+	width: 100%;
+	font-weight: bold;
+}
+.ratings .title.unit
+{
+	font-size: 15px;
+	padding-bottom: 4px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.ratings .value {
+	float: right;
+	font-size: 26px;
+	color: #004B84;
+	padding-top: 5px;
+}
+
+.rating_pad a {
+	text-transform: none;
+	color: #004B84;
+}
+
+.tinyspace
+{
+	margin-bottom: 8px;
+	margin-top: 8px;	
+}
+
+.therating
+{
+	background: #f5f5f5;
+	border: 1px solid #e2e2e2;
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 10px;
+}
+
+.ratingback{
+	float: right;
+}
+
+dl.unit_stats {
+	float: left;
+	width: 200px;
+	margin: 1em 0;
+	padding: 0;
+}
+
+.unit_stats dt, .unit_stats dd {
+	margin: 0;
+	padding: 0;
+}
+
+.unit_stats dt {
+	clear: left;
+	float: left;
+	width: 130px;
+	margin: 0;
+	padding: 5px;
+	font-weight: bold;
+	text-align: right;
+}
+
+.unit_stats dd {
+	float: left;
+	width: 20px;
+	text-align: right;
+	margin: 0;
+	padding: 5px;
+}
+

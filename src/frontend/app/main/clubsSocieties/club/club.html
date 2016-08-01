@@ -1,0 +1,88 @@
+<!-- clubInside -->
+<div class="club">
+   <div class="banner">
+      <img class="photo" ng-src="/assets_new/images/profile.jpg" alt="cover-pic">
+   </div>
+   <div class="holder-info">
+      <div class="user-info">
+         <figure class="img-holder">
+            <div class="avatar-holder">
+               <a href="#"><img class="avatar" ng-src="{{club.picture}}" alt="Virginia Henderson"></a>
+            </div>
+            <figcaption class="user-name">
+               <h1>{{club.name}}</h1>
+               <span>Clubs &amp; Societies</span>
+            </figcaption>
+         </figure>
+         <div class="profile-actions">
+            <span class="float-right m-left">
+               <input class="btn-blue" type="button" value="Create Event" ui-sref="newEvent({group_type: group_type, group_id: id})" >
+            </span>
+            <span class="float-right">
+               <input class="btn-green" type="button" value="Follow" ng-click="follow()" ng-if="!club.is_followed">
+            </span>
+         </div>
+      </div>
+      <div class="personal-detail clearfix">
+         <ul>
+            <li>
+               <svg><use xlink:href="#profile-campus" /></svg>
+               <span>Membership: {{club.info.membership.fee_student === "0.00" ? 'Free' : club.info.membership.fee_student}}</span>
+            </li>
+         </ul>
+         <div class="small-gallery">
+            <a href="#" class="arrow-blue">
+               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
+                 <polyline fill="none" stroke="#42a5f5" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" points="
+                 0.375,0.375 45.63,38.087 0.375,75.8 "></polyline>
+             </svg>
+            </a>
+            <ul>
+               <li ng-repeat="member in club.club_committee.data | limitTo: 6">
+                  <a title="{{member.username}}" ui-sref="profile({id: member.id})"><img class="photo"  ng-src="{{member.profile_pic.src}}"></a>
+                  <a class="tooltip-holder tooltip-top" href="#">
+                     <div class="arrow-top"></div>
+                     <div class="tooltip">
+                        <strong>{{member.username}}</strong>
+                        <p>{{member.position}}</p>
+                     </div>
+                  </a>
+               </li>
+
+            </ul>
+            <span class="label">Club Committee:</span>
+         </div>
+      </div>
+   </div>
+   <!-- sub-menu -->
+   <div class="sub-menu">
+      <ul>
+         <li ui-sref-active="active">
+            <a href="#" ui-sref="clubFeed">
+               <svg class="ico-list"><use xlink:href="#feeds-list" /></svg>
+               <span>DISCUSSION</span>
+            </a>
+         </li>
+         <li ui-sref-active="active" ng-if="club.is_admin && club.is_committee">
+            <a href="#" ui-sref="committeeFeed">
+               <svg class="ico-list"><use xlink:href="#feeds-list" /></svg>
+               <span>Committee</span>
+            </a>
+         </li>
+         <li ui-sref-active="active">
+            <a href="#" ui-sref="events">
+               <svg class="ico-star"><use xlink:href="#feeds-star" /></svg>
+               <span>EVENTS</span>
+            </a>
+         </li>
+         <li ui-sref-active="active">
+            <a href="#" ui-sref="clubInfo">
+               <svg class="ico-info"><use xlink:href="#icon-info" /></svg>
+               <span>INFO</span>
+            </a>
+         </li>
+      </ul>
+   </div>
+   <!-- groups-section -->
+   <div class="profile-content" ui-view></div>
+</div>

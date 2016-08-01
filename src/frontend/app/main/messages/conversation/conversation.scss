@@ -1,0 +1,60 @@
+#conversation-person {
+   padding-right: 2.5%;
+   padding-top: 64px;
+   height: 100%;
+  .messages-list-wrapper {
+     position: relative;
+     width: 100%;
+  }
+   .heading-holder {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      padding: 20px 2.5% 10px;
+   }
+   h1 {
+      font-size: 217%;
+   }
+   .item-list li {
+      border: 0;
+      margin: 0 0 20px;
+   }
+   .new-message {
+      border-top: 1px solid $color-light-grey;
+      padding: 50px 0 0;
+   }
+   .new-msg {
+      font-size: $font10;
+      width: 88px;
+      margin: -66px auto 20px;
+      background: #fff;
+      padding: 0 10px;
+      display: block;
+   }
+   .leave-comment {
+      padding: 20px 2.5% 10px;
+
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      .post-options {
+         margin: 0;
+         svg {
+            float: left;
+         }
+      }
+   }
+}
+
+/*
+   ToDo see classOnMiddleSectionDirective
+*/
+#main-content .middle-section.messages-section {
+   position: relative;
+   padding-bottom: 239px;
+   padding-right: 0px;
+   padding-top: 90px;
+}
+

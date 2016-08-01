@@ -1,0 +1,26 @@
+<div class="connections-section connections-list-section">
+   <h2 ng-show="listConnections">
+      <span ng-hide="noConnections">{{listConnections.length}} connections</span>
+      <span ng-show="noConnections">You have no connections.</span>
+   </h2>
+   <div class="section">
+      <loader is-active="loaderActive" position="static"></loader>
+      <div class="item" ng-repeat="connection in listConnections | filter:searchString">
+         <figure class="img-holder">
+            <a href="#" ui-sref="profile({id:connection.user_id})">
+               <img class="photo" ng-src="{{connection.profile_pic}}" alt="avatar-image">
+            </a>
+         </figure>
+         <div class="r-side">
+            <button type="button" class="btn-green" ng-click="removeConnection($index, connection.user_id)">Disconnect</button>
+         </div>
+         <div class="item-info">
+            <h3>
+               <a href="#" ui-sref="profile({id:connection.user_id})">{{connection.name}}</a>
+            </h3>
+            <span>{{connection.course || '-'}}</span>
+            <span>{{connection.campus}}</span>
+         </div>
+      </div>
+   </div>
+</div>

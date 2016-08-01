@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "now": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "string"
+            },
+            "timezone_type": {
+              "type": "integer"
+            },
+            "timezone": {
+              "type": "string"
+            }
+          }
+        },
+        "is_past": {
+          "type": "boolean"
+        },
+        "is_admin": {
+          "type": "boolean"
+        },
+        "content_heading": {
+          "type": "string"
+        },
+        "event_details": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "picture_name": {
+              "type": "string"
+            },
+            "start_date": {
+              "type": "string"
+            },
+            "start_date_hrs": {
+              "type": "string"
+            },
+            "end_date": {
+              "type": "string"
+            },
+            "end_date_hrs": {
+              "type": "string"
+            },
+            "specificto_campus_check": {
+              "type": "null"
+            },
+            "campus_id": {
+              "type": "string"
+            },
+            "timezone": {
+              "type": "string"
+            },
+            "location": {
+              "type": "string"
+            },
+            "max_attendees": {
+              "type": "integer"
+            },
+            "target_year": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

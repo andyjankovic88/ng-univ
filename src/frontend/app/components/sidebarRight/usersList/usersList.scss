@@ -1,0 +1,47 @@
+.university.rhs-connections {
+    .heading {
+        h1 {
+            span {
+                vertical-align: middle;
+            }
+        }
+    }
+    li:hover {
+        .options-icons {
+            display: block
+        }
+    }
+    .popup-info {
+        .options-icons {
+            float: right;
+            margin: 0;
+            display: none;
+        }
+        .icon-hide {
+            width: 14px;
+            height: 14px;
+            fill: $color-inactive-icon;
+            margin-right: 6px;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+        .icon-add {
+            width: 14px;
+            height: 14px;
+            fill: #3A91E0;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+        h3 {
+            a {
+                vertical-align: middle;
+            }
+        }
+    }
+    .message-update {
+        margin-bottom: 1px;
+    }
+   .seeAll a{
+      color: #3a91e0;
+   }
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "club_id": {
+          "type": ""
+        },
+        "is_membership_enabled": {
+          "type": "boolean"
+        },
+        "is_club_membership_payment_enabled": {
+          "type": "boolean"
+        },
+        "picture": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

@@ -1,0 +1,32 @@
+<!-- popup-messages -->
+<div class="popup-messages">
+    <span class="arrow-top"></span>
+   <!-- popup-holder -->
+    <div class="popup-holder clearfix">
+        <a href="#" ui-sref="conversationList" class="mark-read" ng-hide="messages.length">
+            <svg><use xlink:href="#icon-mail"></use> </svg>Go to inbox
+         </a>
+         <!-- popup-wrapper -->
+         <div class="popup-wrapper clearfix">
+            <loader ng-if="loaderActive" is-active="loaderActive" position="absolute"></loader>
+            <span class="note" ng-hide="messages.length">You haven't received any messages yet.</span>
+            <!-- popup-list -->
+            <div class="popup-fixed" ng-show="messages.length" scrollbar>
+                <ul class="popup-list clearfix">
+                    <li ng-repeat="message in messages" ui-sref="conversation({id: message.conversation_id, isRead: message.is_read, title: message.title})">
+                        <figure class="img-holder">
+                            <img class="photo" ng-src="{{message.profile_pic[0]}}">
+                        </figure>
+                        <div class="popup-info">
+                            <h2><a href="#">{{message.title}}</a></h2>
+                            <span class="message-update">{{message.how_long_ago}}</span>
+                            <p ng-class="{unread: !message.is_read}"><a href>{{message.message_text| messageLimit:50}}</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a href="#" class="btn-see-all link" ng-show="messages.length" ui-sref="conversationList">See All</a>
+            <a href="#" class="btn-see-all link" ng-hide="messages.length" ui-sref="newMessage">Send a New Message</a>
+        </div>
+    </div>
+</div>

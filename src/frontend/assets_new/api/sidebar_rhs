@@ -1,0 +1,119 @@
+{
+"message": "",
+"response": {
+    "at_university": {
+        "consultations": [
+            {
+                "id": 1,
+                "name": "Denzel Washington",
+                "image_url": "assets_new/images/photo-small.jpg",
+                "summary_text": "Started 8d 11m ago"
+            },
+            {
+                "id": 2,
+                "name": "name",
+                "image_url": "assets_new/images/photo-small.jpg",
+                "summary_text": "Started 8d 11m ago"
+            },
+            {
+                "id": 3,
+                "name": "Denzel Washington",
+                "image_url": "assets_new/images/photo-small.jpg",
+                "summary_text": "Started 8d 11m ago"
+            },
+            {
+                "id": 4,
+                "name": "Denzel Washington",
+                "image_url": "assets_new/images/photo-small.jpg",
+                "summary_text": "Started 8d 11m ago"
+            }
+            
+        ],
+        "events": [
+            {
+                "id": 1,
+                "name": "Another Name",
+                "image_url": "assets_new/images/photo-small.jpg",
+                "summary_text": "Started 8d 11m ago"
+            },
+            {
+                "id": 2,
+                "name": "Denzel Washington",
+                "image_url": "assets_new/images/photo-small.jpg",
+                "summary_text": "Started 8d 11m ago"
+            },
+            {
+                "id": 3,
+                "name": "Denzel Washington",
+                "image_url": "assets_new/images/photo-small.jpg",
+                "summary_text": "Started 8d 11m ago"
+            },
+            {
+                "id": 4,
+                "name": "Third Name",
+                "image_url": "assets_new/images/photo-small.jpg",
+                "summary_text": "Started 8d 11m ago"
+            }
+        ],
+        "peoples": [
+            {
+                "id": 1,
+                "name": "name",
+                "image_url": "assets_new/images/photo-small.jpg",
+                "summary_text": "Started 8d 11m ago"
+            },
+            {
+                "id": 3,
+                "name": "name",
+                "image_url": "assets_new/images/photo-small.jpg",
+                "summary_text": "Started 8d 11m ago"
+            },
+            {
+                "id": 3,
+                "name": "name",
+                "image_url": "assets_new/images/photo-small.jpg",
+                "summary_text": "Started 8d 11m ago"
+            },
+            {
+                "id": 4,
+                "name": "name",
+                "image_url": "assets_new/images/photo-small.jpg",
+                "summary_text": "Started 8d 11m ago"
+            },
+            {
+                "id": 5,
+                "name": "name",
+                "image_url": "assets_new/images/photo-small.jpg",
+                "summary_text": "Started 8d 11m ago"
+            }
+        ]
+    },
+    "suggested_connections": [
+        {
+            "id": 1,
+            "name": "name",
+            "image_url": "assets_new/images/photo-small.jpg",
+            "karma_point": "23",
+            "summary_options": [
+                {
+                    "Groups": "Group Name",
+                    "Subjects": "Subject",
+                    "Interested in": "Interest"
+                }
+            ]
+        },
+        {
+            "id": 2 ,
+            "name": "name",
+            "image_url": "assets_new/images/photo-small.jpg",
+            "summary_options": [
+                {
+                    "Groups": "Group Name",
+                    "Subjects": "Subject",
+                    "Interested in": "Interest"
+                }
+            ]
+        }
+    ]
+}
+}

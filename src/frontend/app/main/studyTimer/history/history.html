@@ -1,0 +1,32 @@
+<!-- study-history -->
+<div id="study-history">
+   <div class="study-timer-section" infinite-scroll='loadNextPage()' infinite-scroll-disabled='listRequestInProgress' infinite-scroll-distance='1' infinite-scroll-container='".middle-section"'>
+      <div class="holder" ng-repeat="(key, value) in sessionsData">
+         <h2>{{key | textDay}}</h2>
+         <div class="item-holder clearfix" ng-repeat="session in value">
+            <div class="item">
+              <figure class="img-holder">
+                  <div class="icon-circle">
+                      <a>
+                          <svg>
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-subject"></use>
+                          </svg>
+                      </a>
+                  </div>
+              </figure>
+              <div class="item-info">
+                  <h3>
+                      {{session.unit_code}}
+                  </h3>
+                  <span class="message-update">{{session.unit_name}}</span>
+              </div>
+            </div>
+            <div class="study-schedule">
+              <strong class="duration">{{session.study_time}}</strong>
+            </div>
+            <button class="remove-btn" ng-click="remove(key,session)"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-remove"></use></svg></button>
+         </div>
+
+      </div>
+   </div>
+</div>

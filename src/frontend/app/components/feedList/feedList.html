@@ -1,0 +1,93 @@
+<div ng-if="type === 'unit'">
+   <ul class="options-btn">
+      <li>
+         <button type="button" class="btn-blue" ui-sref="addSubjectAdmin({id: typeId})">Edit</button>
+      </li>
+         <li>
+            <a ng-href="/class_analytics/c/{{typeId}}" class="btn-blue">Class Analytics</a>
+         </li>
+   </ul>
+   <div class="content-heading">
+      <h1>{{code}}{{name}}</h1>
+   </div>
+   <h3>Subject</h3>
+</div>
+<new-feed post-added="loadNextPage(true)" type-id="{{typeId}}" type="{{type}}"></new-feed>
+
+<div class="write-post"></div>
+<div class="posting">
+   <div class="post" infinite-scroll='loadNextPage()' infinite-scroll-disabled='listRequestInProgress' infinite-scroll-distance='1'>
+      <div class="scheduled-posts clearfix">
+         <div class="header-holder clearfix">
+            <h3>
+               <svg class="ico-schedule">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-schedule"></use>
+               </svg>
+               <span class="title">Scheduled Posts</span>
+               <span class="amount">
+                  <a href="#">{{listScheduled.length}}</a>
+               </span>
+            </h3>
+            <div class="link">
+               <span class="link r-side" type="button" ng-show="!isScheduledVisible" ng-click="scheduledVisible()">Show</span>
+               <span class="link r-side" type="button" ng-show="isScheduledVisible" ng-click="scheduledVisible()">Hide</span>
+            </div>
+         </div>
+         <div class="post-section post-description clearfix" ng-repeat="feed in listScheduled" ng-show="isScheduledVisible">
+
+            <feed-header class="post-time" feed="feed" feed-type="{{type}}" feed-type-id="{{typeId}}" toggle-edit="toggleEditMode(feed)" delete-post="deletePostInView(feed)"></feed-header>
+            <div class="scheduled-info" ng-switch="feed.type" ng-if="!feed.isEditMode">
+               <feeds-post ng-switch-when="post" feed="feed"></feeds-post>
+               <feeds-post ng-switch-when="link" feed="feed"></feeds-post>
+               <feeds-poll ng-switch-when="poll"
+                           feed="feed"
+                           feed-type="{{type}}"
+                           feed-type-id="{{typeId}}"
+                  ></feeds-poll>
+               <feeds-file ng-switch-when="file" feed="feed"></feeds-file>
+            </div>
+            <div>{{feed.how_long_ago}}</div>
+            <new-feed ng-if="feed.isEditMode" post-added="postEdited" feed-data="feed" type-id="{{typeId}}" type="{{type}}"></new-feed>
+         </div>
+      </div>
+      <div class="post-section post-description" ng-repeat="feed in listPin">
+         <feed-header feed="feed" feed-type="{{type}}" feed-type-id="{{typeId}}" toggle-edit="toggleEditMode(feed)" delete-post="deletePostInView(feed)"></feed-header>
+         <div ng-switch="feed.type" ng-if="!feed.isEditMode">
+            <feeds-post ng-switch-when="post" feed="feed"></feeds-post>
+            <feeds-post ng-switch-when="link" feed="feed"></feeds-post>
+            <feeds-poll ng-switch-when="poll"
+                        feed="feed"
+                        feed-type="{{type}}"
+                        feed-type-id="{{typeId}}"
+               ></feeds-poll>
+            <feeds-file ng-switch-when="file" feed="feed"></feeds-file>
+         </div>
+         <new-feed ng-if="feed.isEditMode" post-added="postEdited" feed-data="feed" type-id="{{typeId}}" type="{{type}}"></new-feed>
+         <comments
+            feed-type="{{type}}"
+            feed-type-id="{{typeId}}"
+            post-id="{{feed.id}}">
+         </comments>
+      </div>
+      <div class="post-section post-description" ng-repeat="feed in getFeedList()">
+         <feed-header feed="feed" feed-type="{{type}}" feed-type-id="{{typeId}}" toggle-edit="toggleEditMode(feed)" delete-post="deletePostInView(feed)"></feed-header>
+         <div class="vote-section"ng-switch="feed.type" ng-if="!feed.isEditMode">
+            <feeds-post ng-switch-when="post" feed="feed"></feeds-post>
+            <feeds-post ng-switch-when="link" feed="feed"></feeds-post>
+            <feeds-poll ng-switch-when="poll"
+                        feed="feed"
+                        feed-type="{{type}}"
+                        feed-type-id="{{typeId}}"
+            ></feeds-poll>
+            <feeds-file ng-switch-when="file" feed="feed"></feeds-file>
+         </div>
+         <new-feed ng-if="feed.isEditMode" post-added="postEdited" feed-data="feed" type-id="{{typeId}}" type="{{type}}"></new-feed>
+         <comments
+            feed-type="{{type}}"
+            feed-type-id="{{typeId}}"
+            post-id="{{feed.id}}">
+         </comments>
+      </div>
+      <loader is-active="loaderActive" position="static"></loader>
+   </div>
+</div>

@@ -1,0 +1,25 @@
+<ul class="list list-ico">
+   <li ng-repeat="file in list">
+      <div class="ico-holder l-side">
+         <svg class="ico" ng-switch on="fileType(file)">
+            <use ng-switch-when="pdf" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-pdf"></use>
+            <use ng-switch-when="doc" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-doc"></use>
+            <use ng-switch-when="xls" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-xls"></use>
+            <use ng-switch-default xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#footer-question-mark"></use>
+         </svg>
+         <div class="txt-holder">
+            <a
+               ng-if="canDownload"
+               target="_blank"
+               ng-href="{{file.file}}"
+               ng-attr-download="{{file.file_name}}"
+            >
+               <span class="blue-link">{{file.display_name}}</span>
+            </a>
+            <span ng-if="!canDownload" class="blue-link">{{file.file_name}}</span>
+            <span>{{file.size}}</span>
+         </div>
+      </div>
+      <svg class="ico-remove r-side" ng-click="remove($index)" ng-if="canEdit"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-remove"></use></svg>
+   </li>
+</ul>

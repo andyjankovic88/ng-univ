@@ -1,0 +1,82 @@
+/* form-poll */
+#main-content {
+   .form-poll {
+      font-size: 14px;
+      padding: 10px 0 0;
+      label {
+         float: left;
+         width: 30%;
+         input {
+            float: left;
+            width: 20px;
+         }
+      }
+      .poll-container {
+         float: left;
+         width: 70%;
+      }
+      .active {
+         color: $color-blue;
+         font-weight: bold;
+      }
+      .checked {
+         color: $color-green;
+         font-weight: bold;
+         .bg-bar {
+            background: $color-green;
+         }
+         .bar-title {
+            color: $color-inactive;
+            font-weight: normal;
+            width: 47%;
+         }
+      }
+      .bar-title {
+         margin: 0 0 0 10px;
+         span {
+            float: left;
+            margin: 0 20px 0 0;
+         }
+      }
+      .poll-results {
+         overflow: hidden;
+      }
+      .bar-title {
+         overflow: hidden;
+         float: left;
+      }
+      .bar-container {
+         float: left;
+         background: #f4f4f4;
+         width: 48%;
+         height: 20px;
+         position: relative;
+      }
+      .bg-bar {
+         position: absolute;
+         top: 0;
+         left: 0;
+         background: $color-blue;
+         height: 100%;
+      }
+
+   }
+   .vote-section {
+      margin: 0 0 20px;
+   }
+}
+#main-content .form-poll .col {
+   &.col-votes {
+      width: 535px;
+   }
+   &.col-votes-count {
+      vertical-align: middle;
+      div {
+         text-align: center;
+         &.lbl-vote-count {
+            font-size: 50px;
+            line-height: 45px;
+         }
+      }
+   }
+}

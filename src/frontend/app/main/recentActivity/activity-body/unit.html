@@ -1,0 +1,17 @@
+<div class="subjects-section holder">
+   <figure class="img-holder">
+      <div class="icon-circle">
+         <a ui-sref="subjectFeed({id:activity.body.object.id})">
+            <svg>
+               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-subject"></use>
+            </svg>
+         </a>
+      </div>
+   </figure>
+   <div class="item-info">
+      <h3>
+         <a ui-sref="subjectFeed({id:activity.body.object.id})">{{activity.body.object.code}}</a>
+      </h3>
+      <span class="message-update">{{activity.body.object.name}}</span>
+   </div>
+</div>

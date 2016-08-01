@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "service_staff_members": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "user_id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "photo_url": {
+                  "type": "string"
+                },
+                "group_id": {
+                  "type": "string"
+                },
+                "campus": {
+                  "type": "string"
+                },
+                "karma_points": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "service_upcoming_event": {
+          "type": "array",
+          "items": []
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

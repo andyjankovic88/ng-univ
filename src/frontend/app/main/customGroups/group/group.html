@@ -1,0 +1,92 @@
+<!-- clubInside -->
+<div class="club">
+   <div class="banner">
+      <img class="photo" ng-src="/assets_new/images/profile.jpg" alt="cover-pic">
+   </div>
+   <div class="holder-info">
+      <div class="user-info">
+         <figure class="img-holder">
+            <div class="avatar-holder">
+               <a href="#">
+                  <img ng-if="group.picture" class="avatar" ng-src="{{group.picture}}" alt="{{group.name}}">
+               </a>
+            </div>
+            <figcaption class="user-name">
+               <h1>{{group.name}}</h1>
+               <span>Custom Groups</span>
+            </figcaption>
+         </figure>
+         <div class="profile-actions">
+            <span class="float-right m-left" ng-show="group.is_joined">
+               <button type="button" class="btn-green" ui-sref="newEvent({group_type: group_type, group_id: id})" >Create Event</button>
+            </span>
+            <span class="float-right m-left" ng-show="group.is_joined">
+               <input class="btn-transparent" type="button" ng-click="unfollow()" value="Unfollow">
+            </span>
+            <span class="float-right m-left" ng-show="!group.is_joined">
+               <button type="button" class="btn-green" ng-click="follow()" >Follow</button>
+            </span>
+            <span class="float-right" ng-show="group.can_edit">
+               <button type="button" class="btn-blue" ui-sref="createCustomGroup({edit_id: group.id})" >Edit</button>
+            </span>
+         </div>
+      </div>
+<!--
+      <div class="personal-detail clearfix">
+         <ul>
+            <li>
+               <svg><use xlink:href="#profile-campus" /></svg>
+               <span>{{group.info.type}}</span>
+            </li>
+         </ul>
+         <div class="small-gallery">
+            <a href="#" class="arrow-blue">
+               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
+                 <polyline fill="none" stroke="#42a5f5" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" points="
+                 0.375,0.375 45.63,38.087 0.375,75.8 "></polyline>
+             </svg>
+            </a>
+            <ul ng-repeat="member in group.admins">
+               <li>
+                  <a title="{{member.username}}" ui-sref="profile({id:{{member.id}}})"><img class="photo"  ng-src="{{member.picture}}"></a>
+                  <a class="tooltip-holder tooltip-top" href="#">
+                     <div class="arrow-top"></div>
+                     <div class="tooltip">
+                        <strong>[soon]Gregory Hanson</strong>
+                        <p>Head</p>
+                     </div>
+                  </a>
+               </li>
+
+            </ul>
+            <span class="label">Custom Group Committee:</span>
+         </div>
+      </div>
+-->
+   </div>
+   <!-- sub-menu -->
+   <div class="sub-menu">
+      <ul>
+         <li ui-sref-active="active">
+            <a href="#" ui-sref="customGroupsFeed">
+               <svg class="ico-list"><use xlink:href="#feeds-list" /></svg>
+               <span>DISCUSSION</span>
+            </a>
+         </li>
+         <li ui-sref-active="active">
+            <a href="#" ui-sref="customGroupEvents">
+               <svg class="ico-star"><use xlink:href="#feeds-star" /></svg>
+               <span>EVENTS</span>
+            </a>
+         </li>
+         <li ui-sref-active="active">
+            <a href="#" ui-sref="customGroupsInfo">
+               <svg class="ico-info"><use xlink:href="#icon-info" /></svg>
+               <span>INFO</span>
+            </a>
+         </li>
+      </ul>
+   </div>
+   <!-- groups-section -->
+   <div class="profile-content" ui-view></div>
+</div>

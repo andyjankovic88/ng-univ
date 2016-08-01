@@ -1,0 +1,12 @@
+<div class="main-menu">
+	<div class="university-logo" ng-show="!isSub">
+		<img ng-src="{{univLogo}}" />
+	</div><!-- /.university-logo -->
+	<div class="back-btn" ng-show="isSub" ng-click="goRoot()">
+		<svg><use xlink:href="#icon-btnBack" /></svg>
+	</div>
+	<nav class="root-menu">
+		<root-menu></root-menu>
+		<submenu></submenu>
+	</nav>
+</div><!-- /.main-menu -->

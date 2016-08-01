@@ -1,0 +1,71 @@
+<!-- mentor-groups-list -->
+<div class="mentor-groups-list">
+   <div class="content-heading">
+      <h1>Mentor Group</h1>
+   </div>
+</div>
+<div class="holder">
+   <form class="create-mentor-group" name="groupForm">
+      <fieldset>
+         <div class="row">
+            <label for="group-name" ng-class="{red: groupForm.gName.$touched, green: groupForm.gName.$valid}">Group Name</label>
+            <input id="group-name" type="text" placeholder="Enter Group Name…" required ng-model="group.name" name="gName"/>
+         </div>
+         <div class="row">
+            <label for="university-program" ng-class="{red: groupForm.gUnivProgramName.$touched, green: groupForm.gUnivProgramName.$valid}">Name of University Program</label>
+            <input id="university-program" type="text" placeholder="Enter Name of University Mentor Program..." required ng-model="group.UnivProgramName" name="gUnivProgramName"/>
+         </div>
+         <div class="row">
+            <label for="name-program" 
+               ng-class="{red: groupForm.gUnivMentorProgramName.$touched, green: groupForm.gUnivMentorProgramName.$valid}">
+               Enter Name of University Mentor Program...
+            </label>
+            <input id="name-program"
+               type="text"
+               placeholder="Provide the name of the University Mentor Program you are involved in"
+               required
+               ng-model="group.UnivMentorProgramName"
+               name="gUnivMentorProgramName"/>
+         </div>
+         <div class="row">
+            <label for="academic-topics">
+               <span class="l-side">Academic Topics</span>
+               <a class="tooltip-holder tooltip-left" href="#">
+                  <svg class="ico-help">
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-help"></use>
+                  </svg>
+                  <div class="arrow-left"></div>
+                  <div class="tooltip">
+                     <strong>Add the specific academic topics you will be mentoring students on</strong>
+                  </div>
+               </a>
+            </label>
+            <poll-options options="academicTopics">
+            </poll-options>
+         </div>
+         <div class="row">
+            <h2>Add Connections</h2>
+            <users-list users="connections"></users-list>
+         </div>
+         <div class="row">
+            <h2>Add by Name</h2>
+            <selected-users-list list="selectedUsers"></selected-users-list>
+            <search-by-name on-select="onUserSelected($selectedUser)" placeholder="Add a recipient…"></search-by-name>
+         </div>
+         <div class="row">
+            <label for="university-email">Add by University Email</label>
+            <poll-options options="emails">
+            </poll-options>
+         </div>
+         <ul class="options-btn">
+            <li>
+               <button type="button" class="btn-link no-decoration" ng-click="cancel()">Cancel</button>
+            </li>
+            <li>
+               <button type="button" class="btn-blue btn-small" ng-click="create()">Create Club page</button>
+            </li>
+         </ul>
+</div>
+</fieldset>
+</form>
+</div>

@@ -1,0 +1,45 @@
+/* types of dropdowns */
+#filter-groups.drop-holder {
+
+   left: -95px;
+   .edit-drop {
+      min-width: 165px;
+   }
+   [type="checkbox"]:not(:checked) + label
+   [type="checkbox"]:checked + label {
+      padding-left: 0;
+   }
+   label {
+      margin: 0;
+      svg {
+         margin: 0;
+      }
+   }
+   [type="checkbox"]:not(:checked) + label:before,
+   [type="checkbox"]:checked + label:before {
+      width: 195px;
+      height: 37px;
+      top: -1px;
+      background: 0;
+   }
+   [type="checkbox"]:not(:checked) + label:after,
+   [type="checkbox"]:checked + label:after {
+      background: 0;
+   }
+   [type="checkbox"]:checked + label {
+      background: url(/../svg/icon/tick.svg) no-repeat 95% 12px;
+      width: 195px;
+      height: 36px;
+   }
+   [type="checkbox"]:checked + label:after {
+      opacity: 0;
+   }
+   label {
+      width: 100%;
+      padding: 10px;
+   }
+   .edit-drop li {
+      padding: 0;
+   }
+}
+

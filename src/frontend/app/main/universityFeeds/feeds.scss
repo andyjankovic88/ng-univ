@@ -1,0 +1,338 @@
+/* simple list */
+.list {
+   width: 100%;
+   .ico-holder {
+      display: table;
+      clear: both;
+      content: '';
+      width: 100%;
+      svg {
+         width: 27px;
+         height: 39px;
+         margin: 0 10px 0 0;
+         float: left;
+      }
+      .feeds-events-icon {
+         width: 10px;
+         height: 10px;
+      }
+      span {
+         display: block;
+      }
+      .txt-holder {
+         float: left;
+      }
+   }
+   li {
+      margin: 0 0 10px;
+      overflow: hidden;
+      cursor: pointer;
+   }
+}
+.list-ico {
+   .ico-holder {
+      width: auto;
+   }
+}
+.content-heading {
+   display: table;
+   content: '';
+   clear: both;
+   margin: 0 0 22px 0;
+   padding: 20px 0 0;
+   color: #464646;
+   background-color: transparent;
+   position: relative;
+   width: 100%;
+   h1 {
+      color: #5a5a5a;
+      margin: 0;
+      word-wrap: break-word;
+      float: left;
+      font-weight: normal;
+   }
+   [dropdown] .small-drop {
+      left: -114px;
+      top: 42px;
+      .arrow-top {
+         top: -34px;
+         left: 104px;
+      }
+      .arrow-top-w {
+         left: 112px;
+         top: -35px;
+      }
+   }
+}
+.campus-tabs-wrapper {
+   border: 1px solid #e9e9e8;
+   border-width: 0 0 1px;
+   width: 100%;
+   margin: 0 0 30px;
+   .campus-tabs {
+      font-size: 117%;
+      li {
+         float: left;
+         text-transform: uppercase;
+         margin: 0 30px 0 0;
+         .feeds-events-icon {
+            width: 10px;
+            height: 10px;
+         }
+         a {
+            padding: 0 7px 10px;
+            display: block;
+            color: $color-inactive-icon;
+            min-height: 35px;
+            &:hover {
+               color: #3a91e0;
+               border: 2px solid $color-blue;
+               border-width: 0 0 2px;
+            }
+            .ico-info {
+               position: relative;
+               top: 2px;
+            }
+         }
+         &.active a {
+            color: $color-blue;
+            border: 2px solid $color-blue;
+            border-width: 0 0 2px;
+         }
+         & .list {
+            width: 13px;
+            height: 13px;
+            use {
+               fill: $color-grey-middle;
+            }
+         }
+         &.active .list use,
+         &:hover .list use {
+            fill: $color-blue;
+         }
+         & .star {
+            width: 13px;
+            height: 13px;
+            use {
+               fill: $color-grey-middle;
+            }
+         }
+         &:hover .star use {
+            fill: $color-blue;
+         }
+      }
+      svg {
+         margin: 0 5px 0 0;
+      }
+   }
+}
+.status {
+   border: 2px solid #fff;
+   width: 13px;
+   height: 13px;
+   bottom: 3px;
+   right: 2px;
+}
+/*svg.status {
+   width: 14px;
+   height: 17px;
+   background: $color-white;
+}*/
+.posting {
+   padding: 5px 0 0;
+}
+/* post */
+.post {
+   .post-comment-wrapper {
+      padding: 0 0 0 70px;
+   }
+   .photo-holder {
+      position: relative;
+      float: left;
+      margin: 0 15px 0 0;
+      img {
+         width: 56px;
+         height: 56px;
+      }
+   }
+   .post-section {
+      margin: 0 0 20px;
+   }
+   .post-heading {
+      margin: 0 0 5px;
+      float: left;
+      .video-holder {
+         width: 100%;
+      }
+   }
+   .post-icon {
+      margin: 0 0 5px;
+      float: left;
+   }
+   .wrapper-user {
+      float: left;
+      .points {
+         color: $color-green;
+         border: 1px solid $color-green;
+         font-weight: bold;
+         padding: 0 8px;
+         font-size: 100%;
+         margin: -2px 0 0 10px;
+         float: left;
+      }
+   }
+   .post-description {
+      .description-holder {
+         margin: 0 0 20px;
+         .description-holder {
+            margin: 0 0 20px;
+         }
+      }
+   }
+   p {
+      font-size: $font14;
+      line-height: 17px;
+      min-height: 28px;
+   }
+   .user-name {
+      float: left;
+      font-family: latobold;
+      margin: 0 5px 0 0;
+      font-size: 14px;
+      color: $color-dark-blue;
+      &:hover {
+         color: #000;
+      }
+   }
+}
+.time-category {
+   font-size: $font12;
+   .date {
+      float: left;
+      margin: 0 5px 0 0;
+   }
+}
+.user-name {
+   float: left;
+   font-weight: bold;
+   margin: 0 20px 0 0;
+   font-size: 14px;
+   color: $color-dark-blue;
+   &:hover {
+      color: #000;
+   }
+}
+.user-details {
+   margin: 0 0 5px;
+}
+.post-options {
+   .user-info {
+      width: 100%;
+   }
+   .post-comment-wrapper {
+      margin: 0 0 0 40px;
+   }
+   .post-section {
+      min-width: 612px;
+      margin-bottom: 50px;
+      .post-comment {
+         margin: 0 0 30px;
+      }
+   }
+   .leave-comment {
+      overflow: hidden;
+   }
+}
+.post-txt{
+   width: 100%;
+   clear: both;
+   margin: 0 0 10px;
+}
+#options-btn {
+   float: right;
+   li {
+      float: left;
+      margin: 0 0 0 10px;
+   }
+}
+.leave-comment {
+   overflow: hidden;
+}
+.comment-area {
+   margin: 0 0 10px;
+}
+
+/* form feed */
+#form-feed {
+   font-size: $font14;
+   .holder-txt {
+      margin: 0 0 20px;
+      overflow: hidden;
+   }
+   label {
+      width: 150px;
+      padding: 0 0 0 10px;
+      color: $color-dark-blue;
+      float: left;
+      margin: 15px 0 0;
+   }
+   .holer-target {
+      margin: 0 0 30px;
+   }
+   .select-grey {
+      width: 300px;
+      float: left;
+   }
+   .option-holder {
+      padding: 30px 0 0;
+   }
+   .checkbox {
+      padding: 0 0 0 150px;
+      label {
+         width: 100%;
+         padding: 0 0 0 30px;
+      }
+   }
+   .fieldset {
+      float: left;
+   }
+}
+#form-poll {
+   display: table;
+   clear: both;
+   content: '';
+   width: 100%;
+   .total-vote {
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      padding: 85px 0 0;
+      span {
+         display: block;
+      }
+      .amount {
+         font-size: 48px;
+         line-height: 57px;
+         font-family: 'latobold';
+      }
+   }
+}
+.bg-colored {
+   background: $color-bg-grey;
+}
+.calendar-popup.drop-content {
+   margin: 0;
+   #options-btn li {
+      margin: 0;
+   }
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+<div id="ucr-account-settings">
+   <!-- content-heading -->
+   <div class="content-heading">
+      <h1>Account Settings</h1>
+      <span class="r-side">
+         <button class="btn btn-green" ng-click="saveAccountSetting()" type="button">Save</button>
+      </span>
+   </div>
+   <!-- campus-tabs -->
+   <div class="sub-menu">
+      <ul class="clearfix">
+         <li ui-sref-active="active">
+            <a ui-sref="ucrAccountPrivacy">
+               <svg class="list"><use xlink:href="#icon-privacy-settings" /></svg>
+               <span>PRIVACY SETTINGS</span>
+            </a>
+         </li>
+         <li ui-sref-active="active">
+            <a ui-sref="ucrAccountNotification">
+               <svg class="list"><use xlink:href="#icon-email-notifications" /></svg>
+               <span>EMAIL NOTIFICATIONS</span>
+            </a>
+         </li>
+         <li ui-sref-active="active">
+            <a ui-sref="ucrAccountBlock">
+               <svg class="list"><use xlink:href="#icon-block-users" /></svg>
+               <span>BLOCK USERS</span>
+            </a>
+         </li>
+         <li ui-sref-active="active">
+            <a ui-sref="ucrAccountOther">
+               <svg class="list"><use xlink:href="#icon-other-dots" /></svg>
+               <span>OTHER</span>
+            </a>
+         </li>
+      </ul>
+   </div>
+   <loader is-active="loaderActive" position="static"></loader>
+   <div ng-hide="loaderActive" class="settings-content" ui-view></div>
+</div>
+<div class="overlay-entire" ng-class="{'active': isProgressing}">
+   <div><svg><use xlink:href="#icon-loading-spinner"></use></svg></div>
+</div>

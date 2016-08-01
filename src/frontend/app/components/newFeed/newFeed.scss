@@ -1,0 +1,47 @@
+.ico-clear {
+   cursor: pointer;
+}
+
+.loader-holder {
+   position: relative;
+}
+
+feeds-file .ng-gallery {
+   > div {
+      float: left;
+
+   }
+   > div:first-child {
+      float: none;
+      width: 100%;
+      overflow: hidden;
+      .ng-thumb {
+         height: auto;
+      }
+   }
+}
+
+.target-post-popup.popup-holder {
+   width: 501px;
+   left: -36px;
+   .category-content {
+      .col {
+         overflow: hidden;
+         float: left;
+      }
+      overflow: hidden;
+   }
+}
+
+.loader-under-text{
+   position:absolute ;
+   width:100px;
+   height: 100px;
+   left: 50%;
+   margin: 0 0 0 -50px;
+}
+
+.parrent-loader{
+   position: relative;
+}
+

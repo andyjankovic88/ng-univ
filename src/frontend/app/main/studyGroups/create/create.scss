@@ -1,0 +1,83 @@
+@import "mixins";
+
+.ur-sg-create {
+   margin-top: -20px;
+   .col-day {
+      width: 125px;
+      float: left;
+   }
+   .col-time {
+      width: 165px;
+      float: left;
+      margin-left: 20px;
+   }
+   .col-time-hour {
+      width: 40px;
+      float: left;
+      input {
+         padding: 14px 10px;
+         text-align: right;
+      }
+   }
+   .col-time-separator {
+      width: 10px;
+      text-align: center;
+      float: left;
+      line-height: 50px;
+   }
+   .col-time-minute {
+      width: 40px;
+      float: left;
+      input {
+         padding: 14px 10px;
+         text-align: right;
+      }
+   }
+   .col-time-period {
+      width: 60px;
+      float: left;
+   }
+   .select-custom {
+      &.col-time-period {
+         select {
+            padding: 13px 10px;
+         }
+         &:after {
+            right: 5px;
+         }
+      }
+   }
+   .has-error {
+      label {
+         color: $color-red;
+      }
+      input.ng-invalid {
+         border: 1px solid $color-red;
+      }
+      select.ng-invalid {
+         border: 1px solid $color-red;
+      }
+   }
+   .input-error {
+      border-color: $color-red;
+      &::-webkit-input-placeholder {
+         color: $color-red;
+      }
+
+      &:-moz-placeholder {
+         color: $color-red;
+      }
+
+      &::-moz-placeholder {
+         color: $color-red;
+      }
+
+      &:-ms-input-placeholder  {
+         color: $color-red;
+      }
+   }
+
+   .failure-container {
+      margin: 100px 50px;
+   }
+}

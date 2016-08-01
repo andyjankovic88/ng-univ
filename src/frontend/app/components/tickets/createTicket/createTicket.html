@@ -1,0 +1,147 @@
+<div class="create-ticket">
+   <div class="row">
+      <label>Name of Event</label>
+      <input type="text" ng-model="ticket.name">
+   </div>
+   <div class="row">
+      <table class="ticket-price">
+         <tr>
+            <th><label>Price</label></th>
+            <th></th>
+            <th><label>Quantity Available</label></th>
+         </tr>
+         <tr>
+            <td>
+               <div class="checkbox">
+                  <input type="checkbox" ng-attr-id="{{ 'free-' + ticket.id }}" ng-model="ticket.price_choice" ng-true-value="'free'" ng-true-value="'paid'">
+                  <label ng-attr-for="{{ 'free-' + ticket.id }}">Free</label>
+               </div>
+            </td>
+            <td>
+               <input type="text" placeholder="$00.00" ng-model="ticket.price" format-as-currency>
+            </td>
+            <td>
+               <input type="text" placeholder="0" ng-model="ticket.total_quantity">
+            </td>
+         </tr>
+      </table>
+   </div>
+   <div class="row">
+      <a class="blue-link r-side" href ng-click="ticket.advanced_show = !ticket.advanced_show"><span ng-if="!ticket.advanced_show">Show</span><span ng-if="ticket.advanced_show">Hide</span></a>
+      <h3>Advanced Options</h3>
+      <p>These are optional advanced settings for event tickets</p>
+      <div class="row start-end" ng-if="ticket.advanced_show">
+         <div class="col">
+            <label>Starts</label>
+            <div>
+               <div class="row date-holder" dropdown>
+                  <input type="text" dropdown-trigger value="{{ticket.start_date}}" placeholder="Date" readonly>
+                  <div dropdown-body class="popup-holder big-popup clearfix">
+                     <div class="arrow-holder">
+                        <span class="arrow-top-w"></span>
+                        <span class="arrow-top"></span>
+                     </div>
+                     <div class="calendar-popup drop-content">
+                        <div class="header clearfix">
+                           <svg class="ico-clear r-side" dropdown-inner-trigger>
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-clear"></use>
+                           </svg>
+                        </div>
+                        <date-picker-ex
+                           on-save="ticket.start_date = $date.format('DD/MM/YYYY')"
+                           on-cancel=""
+                           no-min-date="true"
+
+                           ></date-picker-ex>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-time">
+                  <div class="clearfix">
+                     <div class="col-time-hour">
+                        <input type="text" class="time-input" name="fromHour" ng-model="ticket.start_date_hrs" maxlength="2" number-check min="hourMin" max="hourMax">
+                     </div>
+                     <div class="col-time-separator">:</div>
+                     <div class="col-time-minute">
+                        <input type="text" class="time-input" name="fromMinute" ng-model="ticket.start_date_mins" maxlength="2" number-check min="0" max="60">
+                     </div>
+                     <div class="select-custom col-time-period">
+                        <select name="fromPeriod" ng-model="ticket.start_date_period">
+                           <option value="AM">AM</option>
+                           <option value="PM">PM</option>
+                        </select>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col">
+            <label>Ends</label>
+            <div>
+               <div class="row date-holder" dropdown>
+                  <input type="text" dropdown-trigger value="{{ticket.end_date}}" placeholder="Date" readonly>
+                  <div dropdown-body class="popup-holder big-popup clearfix">
+                     <div class="arrow-holder">
+                        <span class="arrow-top-w"></span>
+                        <span class="arrow-top"></span>
+                     </div>
+                     <div class="calendar-popup drop-content">
+                        <div class="header clearfix">
+                           <svg class="ico-clear r-side" dropdown-inner-trigger>
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-clear"></use>
+                           </svg>
+                        </div>
+                        <date-picker-ex
+                           on-save="ticket.end_date = $date.format('DD/MM/YYYY')"
+                           on-cancel=""
+                           no-min-date="true"
+
+                           ></date-picker-ex>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-time">
+                  <div class="clearfix">
+                     <div class="col-time-hour">
+                        <input type="text" class="time-input" name="toHour" ng-model="ticket.end_date_hrs" maxlength="2" number-check min="hourMin" max="stop_hourMax">
+                     </div>
+                     <div class="col-time-separator">:</div>
+                     <div class="col-time-minute">
+                        <input type="text" class="time-input" name="toMinute" ng-model="ticket.end_date_mins" maxlength="2" number-check min="0" max="60">
+                     </div>
+                     <div class="select-custom col-time-period">
+                        <select name="toPeriod" ng-model="ticket.end_date_period">
+                           <option value="AM">AM</option>
+                           <option value="PM">PM</option>
+                        </select>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="holder-txt row">
+            <label for="description">Description</label>
+             <textarea tabindex="0"
+                       id="description"
+                       class="textarea-white"
+                       cols="20" rows="3"
+                       ng-model="ticket.description"
+                       placeholder="Enter a ticket description"
+                       name="description"
+                       ng-minlength="50"
+                       ng-minlength="1000">
+             </textarea>
+      </div>
+   </div>
+   <div class="row">
+      <ul class="options-btn r-side clearfix">
+         <li class="error" ng-if="errorMessage">
+            {{errorMessage}}
+         </li>
+         <li>
+            <button type="button" class="btn-blue r-side" ng-click="create()" ng-disabled="requiredAll()">Save</button>
+         </li>
+      </ul>
+   </div>
+</div>

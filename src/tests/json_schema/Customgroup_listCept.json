@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "filters": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "category_name": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "trending_group": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "group_type": {
+                  "type": "string"
+                },
+                "is_joined": {
+                  "type": "boolean"
+                },
+                "category_name": {
+                  "type": "string"
+                },
+                "picture": {
+                  "type": "string"
+                },
+                "members": {
+                  "type": "integer"
+                }
+              }
+            }
+          ]
+        },
+        "groups_list": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "group_type": {
+                  "type": "string"
+                },
+                "is_joined": {
+                  "type": "boolean"
+                },
+                "category_name": {
+                  "type": "string"
+                },
+                "picture": {
+                  "type": "string"
+                },
+                "members": {
+                  "type": "integer"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

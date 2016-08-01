@@ -1,0 +1,8 @@
+.nalanda, .monash{background: #fff;}
+.nalanda, .monash{background: #fff !important;border-bottom: 2px solid #c2d82e;}
+.nalanda .left, .monash .left{padding: 7px 0 0 0;}
+.nalanda .right, .monash .right{float: right;}
+.nalanda .right .top-links, .monash .right .top-links{text-align: right;font-size: 13px;line-height: 17px;}
+.nalanda .right .top-links a,.monash .right .top-links a{display: inline-block;color: #003868;padding: 0 10px;margin: 20px 0 0 0;}
+.nalanda .right .top-links a:hover,.monash .right .top-links a:hover{color: #000;}
+.nalanda .right .top-links a img,.monash .right .top-links a img{vertical-align: middle;margin:0 10px 0 0;}

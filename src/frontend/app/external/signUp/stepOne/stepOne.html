@@ -1,0 +1,26 @@
+<div class="signup-pad">
+   <form ng-submit="nextStep()">
+      <div class="signup-pad-in">
+         <div class="row">
+            <div class="home-logo"><svg><use xlink:href="#header-homepage-logo2"></use></svg></div>
+         </div>
+         <div class="row row-info">
+            <div class="info-l-label">Connect your Facebook Account</div>
+         </div>
+         <div class="row">
+            <a class="btn-blue btn-facebook" ng-click="connectWithFacebook()">Connect with Facebook</a>
+            <!-- href="https://www.facebook.com/v2.2/dialog/oauth?client_id=156090291141450&redirect_uri=https%3A%2F%2Fwww.ucroo.com.au%2Fuser%2Ffblogin_auth%2F&state=713c31e2220a3e06a9e15c1166211c8c&sdk=php-sdk-4.0.20&scope=email%2Cuser_hometown%2Cuser_work_history%2Cuser_friends%2Cuser_education_history" -->
+         </div>
+         <div class="row"></div>
+         <div class="row"></div>
+         <div class="row">
+            <div class="r-side">
+               <a class="btn-default" ui-sref="stepTwo">SKIP<svg class="ico-btn-right"><use xlink:href="#icon-arrow-right-nf"></use></svg></a>
+            </div>
+         </div>
+      </div>
+   </form>
+</div>
+<div class="overlay-entire" ng-class="{'active': isProgressing}">
+   <div><svg><use xlink:href="#icon-loading-spinner"></use></svg></div>
+</div>

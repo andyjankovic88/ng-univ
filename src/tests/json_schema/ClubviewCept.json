@@ -1,0 +1,198 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "content_heading": {
+          "type": "string"
+        },
+        "is_admin": {
+          "type": "boolean"
+        },
+        "picture": {
+          "type": "string"
+        },
+        "is_club_membership_enabled": {
+          "type": "boolean"
+        },
+        "is_club_membership_payment_enabled": {
+          "type": "boolean"
+        },
+        "is_club_event_ticketing_enabled": {
+          "type": "boolean"
+        },
+        "is_followed": {
+          "type": "boolean"
+        },
+        "follow_url": {
+          "type": "string"
+        },
+        "object_list_title": {
+          "type": "string"
+        },
+        "object_list_id": {
+          "type": "string"
+        },
+        "finished": {
+          "type": "string"
+        },
+        "is_committee": {
+          "type": "boolean"
+        },
+        "title": {
+          "type": "string"
+        },
+        "has_bank_details": {
+          "type": "boolean"
+        },
+        "steps": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "bank_details": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "link": {
+                      "type": "string"
+                    },
+                    "desc": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "info": {
+          "type": "object",
+          "properties": {
+            "membership": {
+              "type": "object",
+              "properties": {
+                "fee_non_student": {
+                  "type": "string"
+                },
+                "fee_student": {
+                  "type": "string"
+                }
+              }
+            },
+            "website": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "data": {
+                  "type": "string"
+                }
+              }
+            },
+            "phone": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "data": {
+                  "type": "string"
+                }
+              }
+            },
+            "description": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "data": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "benefits": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "data": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "club_committee": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "data": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "position": {
+                    "type": "string"
+                  },
+                  "profile_link": {
+                    "type": "string"
+                  },
+                  "profile_pic": {
+                    "type": "object",
+                    "properties": {
+                      "src": {
+                        "type": "string"
+                      },
+                      "alt": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "club_members": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

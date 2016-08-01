@@ -1,0 +1,123 @@
+{
+    "message": "",
+    "response": {
+        "name": "KEPS Club 9188",
+        "id": 99,
+        "actions": {
+            "subscribe": {
+                "url": "http://backend.localhost.ucroo/club/follow/99",
+                "text": "Follow"
+            },
+            "edit": {
+                "url": "http://backend.localhost.ucroo/club/edit/99",
+                "text": "Edit Club"
+            }
+        },
+        "content_heading": "KEPS Club 9188",
+        "is_admin": true,
+        "picture": "http://backend.localhost.ucroo/ugc/clubs/99/club_99_1448445649_r.jpg",
+        "is_club_membership_enabled": true,
+        "is_club_membership_payment_enabled": true,
+        "is_club_event_ticketing_enabled": true,
+        "object_list_title": "KEPS 9188",
+        "object_list_id": "99",
+        "finished": "00",
+        "is_committee": true,
+        "title": "KEPS Club 9188 | UCROO ",
+        "has_bank_details": false,
+        "steps": [
+            {
+                "bank_details": {
+                    "title": "Bank Details Required",
+                    "link": "http://backend.localhost.ucroo/club/admin_bank_details/99",
+                    "desc": "We require your club bank details to deposit membership funds, fill them in by clicking <a href=\"http://backend.localhost.ucroo/club/admin_bank_details/99\">here</a>"
+                }
+            },
+            {
+                "administrators": {
+                    "link": "http://backend.localhost.ucroo/club/welcome/club-edit/99/#admin-adder",
+                    "title": "Add Administrators &amp; Committee Members",
+                    "desc": "Add Page Administrators and Committee Members to your Club Page by clicking <a href=\"http://backend.localhost.ucroo/club/welcome/club-edit/99/#admin-adder\">here</a>"
+                }
+            },
+            {
+                "existing_member": {
+                    "title": "Add Existing Members",
+                    "link": "http://backend.localhost.ucroo/club/welcome/club-admin_import_members/99",
+                    "desc": "Bulk import existing members to your Page's database by clicking <a href=\"http://backend.localhost.ucroo/club/welcome/club-admin_import_members/99\">here</a>"
+                }
+            },
+            {
+                "existing_member": {
+                    "title": "Member Registration Fields",
+                    "link": "http://backend.localhost.ucroo/club/admin_custom_fields/99",
+                    "desc": "Establish the information to be collected by your Club by clicking <a href=\"http://backend.localhost.ucroo/club/admin_custom_fields/99\">here</a>"
+                }
+            }
+        ],
+        "menu": {
+            "active": "",
+            "class": "view",
+            "feed": {
+                "title": "Feed",
+                "url": "http://backend.localhost.ucroo/club/feed/99"
+            },
+            "club_committee": {
+                "title": "Committee",
+                "url": "http://backend.localhost.ucroo/feed_posts/club_committee/99"
+            },
+            "events": {
+                "title": "Events ",
+                "url": "http://backend.localhost.ucroo/club/events/99"
+            },
+            "info": {
+                "title": "Info",
+                "url": "http://backend.localhost.ucroo/club/view/99"
+            },
+            "admin": {
+                "title": "Admin",
+                "url": "http://backend.localhost.ucroo/club/admin/99"
+            }
+        },
+        "info": {
+            "membership": {
+                "title": "Phone",
+                "data": "9798799870"
+            },
+            "website": "",
+            "phone": "",
+            "description": {
+                "title": "Description",
+                "data": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus. Cras ultricies ligula sed magna dictum porta. Curabitur aliquet quam id dui posuere blandit. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus. Proin eget tortor risus."
+            }
+        },
+        "benefits": {
+            "title": "Benefits of Membership",
+            "data": [
+                "Benefit 9",
+                "Benefit 1",
+                "Benefit 8",
+                "Benefit 8"
+            ]
+        },
+        "club_committee": {
+            "title": "Club Committee",
+            "data": [
+                {
+                    "id": 54,
+                    "username": "Michelle Kktqyvia",
+                    "position": "Director",
+                    "profile_link": "http://backend.localhost.ucroo/user/profile/3",
+                    "profile_pic": {
+                        "src": "http://backend.localhost.ucroo/assets_new/images/user/avatar_female_thumb.jpg",
+                        "alt": "Michelle Kktqyvia&apos;s profile picture",
+                        "width": 50,
+                        "height": 50
+                    },
+                    "connected": true
+                }
+            ]
+        },
+        "club_members": ""
+    }
+}

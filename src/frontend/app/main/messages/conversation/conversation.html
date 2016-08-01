@@ -1,0 +1,78 @@
+<!-- conversation-person -->
+<div id="conversation-person" class="holder-item" class-on-middle-section infinite-scroll-up="loadNextPage()" scroll-down-event="onMessageAdded">
+   <div class="heading-holder clearfix width100">
+      <svg class="arrow-left" ui-sref="conversationList">
+         <use xlink:href="#messages-arrow-left"/>
+      </svg>
+      <h1><a href="#">{{title}}</a></h1>
+   </div>
+   <div move-to-bottom class="messages-list-wrapper">
+
+      <loader is-active="listRequestInProgress" position="static"></loader>
+      <ul class="item-list">
+         <li ng-repeat="message in oldMessages">
+            <message message="message"></message>
+         </li>
+      </ul>
+
+      <!-- new-message -->
+      <div class="new-message">
+      <span class="new-msg" ng-if="newMessages.length">
+            New <br/> Message
+            <svg class="arrow-down">
+               <use xlink:href="#messages-arrow-down"/>
+            </svg>
+        </span>
+         <ul class="item-list">
+            <li ng-repeat="message in newMessages">
+               <message message="message"></message>
+            </li>
+         </ul>
+
+      </div>
+
+   </div>
+
+   <div class="leave-comment">
+      <form action="#" id="form-comment-messages" class="form-comment">
+         <fieldset>
+            <legend class="none">comment</legend>
+            <figure class="post-heading clearfix">
+               <a class="photo-holder" href="#">
+                  <img ng-src="{{profilePic}}">
+               </a>
+            </figure>
+            <div class="textarea-holder">
+               <div class="holder-txt">
+                  <textarea class="colored comment-area" cols="20" rows="1" placeholder="New message text"  key-submit="postMessage()" ng-model="newMessage"></textarea>
+               </div>
+               <ul class="post-options r-side">
+                  <li ng-hide="attachment.images.length || attachment.files.length">
+                     <a href="#" ngf-select="uploadFiles($files)" ngf-max-size="10MB">
+                        <svg class="ico-attach">
+                           <use xlink:href="#news-attach"/>
+                        </svg>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </fieldset>
+         <div id="gallery">
+            <ng-gallery
+               ng-if="attachment.images.length"
+               images="attachment.images"
+               img-key="url"
+               thumb-key="url"
+            ></ng-gallery>
+            <file-list list="attachment.files" can-edit>
+               <span></span>
+            </file-list>
+         </div>
+      </form>
+
+   </div>
+
+</div>
+
+
+

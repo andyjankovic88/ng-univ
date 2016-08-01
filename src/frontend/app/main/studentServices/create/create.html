@@ -1,0 +1,138 @@
+<!-- createStudentService -->
+<div class="ur-ss-create">
+   <div ng-if="pageStatus('success')">
+      <div class="profile-header not-created">
+         <div class="banner">
+            <form id="upload-cover-pic">
+               <fieldset>
+                  <input for="txt" type="file" placeholder="" />
+                  <svg class="ico-test"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-test"></use></svg>
+                  <label id="txt">Click to upload your Cover Pic or just drag it here</label>
+               </fieldset>
+            </form>
+         </div>
+         <div class="holder-info">
+            <div class="user-info">
+               <figure class="img-holder">
+                  <div class="avatar-holder" ngf-select="uploadLogo($file)" ngf-max-size="10MB" accept="image/*">
+                     <a href="#"><img class="avatar" src="/assets_new/images/userpic.png" alt="avatar"></a>
+                  </div>
+                  <figcaption class="user-name">
+                     <input class="input-name" ng-class="{'input-error': showError('name')}" ng-model="serviceInfo.name" type="text" placeholder="Student Service Name"/>
+                  </figcaption>
+               </figure>
+            </div>
+         </div>
+      </div>
+      <form id="form-student-service" name="serviceForm" ng-submit="submit(serviceForm)" novalidate>
+         <fieldset>
+            <div class="holder-txt row" ng-class="{'has-error': isShowError(serviceForm, serviceForm.description), 'no-error': isShowSuccess(serviceForm, serviceForm.description)}">
+               <label for="service-description">Student Service Description</label>
+                <textarea
+                   id="service-description"
+                   class="textarea-white"
+                   cols="20" rows="3"
+                   ng-model="serviceInfo.description"
+                   placeholder="A few words about your service…"
+                   name="description"
+                   ng-minlength ="50"
+                   ng-minlength="1000"
+                   required>
+                  </textarea>
+            </div>
+            <div class="row">
+               <div class="col" ng-class="{'has-error': isShowError(serviceForm, serviceForm.faculty), 'no-error': isShowSuccess(serviceForm, serviceForm.faculty)}">
+                  <label for="sel_faculty" ng-class="{green: selectedCategory.id >0}">Faculty</label>
+                  <div class="select-custom form-object">
+                     <select id="sel_faculty" name="faculty" ng-options="faculty.key as faculty.value for faculty in formInfo.faculties track by faculty.key" ng-model="serviceInfo.faculty" ng-required='!serviceInfo.noFaculty'>
+                        <option value="" disabled selected hidden>Select</option>
+                     </select>
+                  </div>
+               </div>
+               <div class="col" ng-class="{'has-error': isShowError(serviceForm, serviceForm.campus), 'no-error': isShowSuccess(serviceForm, serviceForm.campus)}">
+                  <label for="sel_campus">Campus</label>
+                  <div class="select-custom form-object">
+                     <select id="sel_campus" name="campus" ng-options="campus.key as campus.value for campus in formInfo.campuses track by campus.key" ng-model="serviceInfo.campus"  ng-required='!serviceInfo.noCampus'>
+                        <option value="" disabled selected hidden>Select</option>
+                     </select>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col">
+                  <div class="checkbox">
+                     <input id="chk_no_faculty" type="checkbox" name="isFaculty" ng-model="serviceInfo.noFaculty" title="Not related to a specific Faculty">
+                     <label for="chk_no_faculty" tabindex="0">Not related to a specific Faculty</label>
+                  </div>
+               </div>
+               <div class="col">
+                  <div class="checkbox">
+                     <input id="chk_no_campus" type="checkbox" name="isNoCampus" ng-model="serviceInfo.noCampus" title="Not related to a specific Campus">
+                     <label for="chk_no_campus" tabindex="0">Not related to a specific Campus</label>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <label>Location</label>
+               <fields-list options="serviceInfo.locations" type="oneField" placeholder="Enter office location..." field="title" ></fields-list>
+            </div>
+            <div class="row">
+               <div class="checkbox">
+                  <input id="chk_no_location" type="checkbox" name="isNoLocation" ng-model="isVetStudent" title="Does not have an office location">
+                  <label for="chk_no_location" tabindex="0">Does not have an office location</label>
+               </div>
+            </div>
+            <h2>Consultation Times</h2>
+            <div class="row">
+               <label>Set Consultation Times</label>
+               <fields-list options="serviceInfo.consultationTimes" consultation-data="formInfo.consultationTimes" type="consultationTimes2" field="title" ></fields-list>
+            </div>
+            <h2>Student Services Details</h2>
+            <div class="row">
+               <label for="txt_siteurl">Website URL</label>
+               <input id="txt_siteurl" class="input-big" name="siteUrl" type="text" ng-model="serviceInfo.siteUrl" placeholder="http://page-example.com.au" />
+            </div>
+            <div class="row">
+               <label for="txt_phone">Phone No.</label>
+               <input id="txt_phone" class="input-big" name="phone" type="text" ng-model="serviceInfo.phoneNo" placeholder="(0) 9999 5555" />
+            </div>
+            <div class="row">
+               <label for="txt_email">Service Email</label>
+               <input id="txt_email" class="input-big" name="email" type="email" ng-model="serviceInfo.email" placeholder="info@yourpage.com.au" />
+            </div>
+            <h2>Add stuff</h2>
+            <div class="row">
+               <label>Add by Name</label>
+               <fields-list options="serviceInfo.stuffNames" type="oneField" placeholder="Add a name..." field="name" ></fields-list>
+            </div>
+            <div class="row">
+               <label>Add by Email</label>
+               <fields-list options="serviceInfo.stuffEmails" type="oneField"  placeholder="Add an email..." field="email" ></fields-list>
+            </div>
+            <div class="row">
+               <import-csv files="csvFiles" type="studentservices"></import-csv>
+            </div>
+            <div class="row">
+               <ul class="options-btn">
+                  <li>
+                     <button type="button" class="btn-link" ui-sref="studentServicesListGeneral">Cancel</button>
+                  </li>
+                  <li>
+                     <button type="submit" ng-if="!editID" class="btn-blue btn-small">Create Student Service</button>
+                     <button type="button" ng-if="editID" ng-disabled="groupForm.$invalid" class="btn-blue btn-small" ng-click="submit()">Save Student Service</button>
+                  </li>
+               </ul>
+            </div>
+         </fieldset>
+      </form>
+   </div>
+   <div class="failure-container" ng-if="pageStatus('permission_error')">
+      <div class="ur-message ur-message-warning">You could not edit this study group, please go to the <a ui-sref="studyGroupsList">study group list</a> page.</div>
+   </div>
+   <div class="failure-container" ng-if="pageStatus('failed')">
+      <div class="ur-message ur-message-warning">Could not load this study group, please go to the <a ui-sref="studyGroupsList">study group list</a> page.</div>
+   </div>
+   <loader is-active="pageStatus('loading')" position="static"></loader>
+</div>
+
+

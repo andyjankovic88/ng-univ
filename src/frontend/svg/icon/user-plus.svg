@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="64"
+   height="64"
+   id="svg4492"
+   version="1.1"
+   viewBox="0 0 64 64"
+   style="enable-background:new 0 0 64 64;" xml:space="preserve">
+  <g
+     id="layer1">
+    <path
+       d="m 17.430711,49.131393 c 0.430902,-4.247497 1.209105,-5.515467 3.768052,-7.226275 4.866125,-3.253287 12.249918,-5.370638 19.006324,-5.457304 6.905301,-0.08858 14.666622,1.66785 20.207281,5.200939 3.103349,1.978899 3.533235,4.148113 3.590154,7.803444 l 0.06556,4.211295 -23.400506,0 -23.400507,0 z"
+       id="path4488"
+       inkscape:connector-curvature="0" />
+    <path
+       d="m 8.8132814,38.946538 0,-8.472795 -8.70337165,0 -0.005803,-5.762671 8.70945236,0 0,-8.643792 6.0370916,0.01071 0,8.63311 8.415334,0 0,5.762669 -8.415334,0 0,8.565658 z"
+       id="path4486"
+       inkscape:connector-curvature="0" />
+    <ellipse
+       id="path4190"
+       cx="40.670044"
+       cy="18.969883"
+       rx="11.525476"
+       ry="11.639027" />
+  </g>
+</svg>

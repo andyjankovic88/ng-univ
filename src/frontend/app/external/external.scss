@@ -1,0 +1,198 @@
+/* web accessibility */
+.logo {
+   svg {
+      width: 150px;
+      height: 44px;
+   }
+}
+
+.full-background {
+   background: url(../../assets_new/images/bg-signup.jpg) no-repeat 100% 100% fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+
+.external-section {
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   overflow-y: auto;
+
+   .layout-width {
+      width: 100%;
+      margin: 0 auto;
+      max-width: 1200px;
+      .holder-login {
+         width: 100%;
+         padding: 0 30px;
+      }
+   }
+   .home-bg {
+      width: 100%;
+      height: auto;
+   }
+
+   .homepage-logo {
+      float: left;
+      margin: 20px 0 0 0;
+      svg {
+         width: 150px;
+         height: 44px;
+      }
+   }
+   .home-login {
+      float: right;
+      margin: 25px 0 0 0;
+      color: #fff;
+      position: relative;
+
+      a {
+         font-size: 130%;
+         color: rgba(255,255,255,0.6);
+      }
+   }
+   .sign-up {
+      padding: 2%;
+   }
+
+   .home-logo {
+      text-align: center;
+      margin-bottom: 60px;
+
+      svg {
+         width: 150px;
+         height: 45px;
+         use {
+            fill: #1565C0;
+         }
+      }
+   }
+   .pad {
+      width: 520px;
+      margin: 0 auto;
+      padding: 0;
+      background: #fff;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+   }
+   .home-logo {
+      text-align: center;
+      margin-bottom: 40px;
+
+      svg {
+         width: 150px;
+         height: 45px;
+         use {
+            fill: #1565C0;
+         }
+      }
+   }
+}
+.sign-in-univ {
+   display: block;
+   margin: 40px 0;
+   text-align: center;
+   button.sign-up-btn {
+      border: medium none;
+      box-shadow: none;
+   }
+   .btn-blue {
+      border: none;
+      color: #fff;
+      background: #4f97e8;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      font-size: 18px;
+      height: 45px;
+      text-align: center;
+      line-height: 45px;
+      display: inline-block;
+      cursor: pointer;
+      padding: 0 25px !important;
+      .icon-arrow-right5 {
+         color: #a7cbf4;
+         vertical-align: middle;
+         padding: 0 0 0 5px;
+      }
+      &:hover {
+         background:#2a7fcd;
+      }
+      &:hover .arrow-r polyline {
+         stroke-width: 9;
+      }
+   }
+   .arrow-r {
+      fill: #fff;
+      width: 12px;
+      height: 12px;
+      margin: 0 0 0 10px;
+   }
+   polyline {
+      transition: all 250ms ease-in-out;
+      stroke-width: 6;
+   }
+   em {
+      color: #ccc;
+      display: block;
+      font-size: 18px;
+      font-style: normal;
+      margin: 30px 0 0 0;
+      a {
+         color: #ccc;
+      }
+      a:hover {
+         color: #FFF;
+      }
+      a:hover polyline,
+      .right:focus polyline {
+         stroke-width: 9;
+      }
+      &:active polyline {
+         stroke-width: 9;
+         transition: all 100ms ease-in-out;
+      }
+   }
+}
+
+[class^="icon-"], [class*=" icon-"] {
+   font-family: 'icomoon';
+   speak: none;
+   font-style: normal;
+   font-weight: normal;
+   font-variant: normal;
+   text-transform: none;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.overlay-entire {
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   z-index: 1;
+   background-color: rgba(0, 0, 0, 0.3);
+   display: none;
+   &.active {
+      display: block;
+   }
+   & > div {
+      text-align: center;
+      top: 50%;
+      position: relative;
+      margin-top: -77px;
+      svg use {
+         fill: #fff;
+      }
+   }
+}

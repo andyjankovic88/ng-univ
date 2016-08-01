@@ -1,0 +1,34 @@
+<!-- Signup pad -->
+<div class="signup-pad">
+   <form id="signup-form" name="signupForm" ng-submit="nextStep(signupForm)" novalidate>
+      <div class="signup-pad-in">
+         <div class="row">
+            <div class="home-logo">
+               <svg ui-sref="landing"><use xlink:href="#header-homepage-logo2"></use></svg>
+            </div>
+         </div>
+         <div class="row">
+            <div class="form-group" ng-class="{'has-error': (signupForm.$submitted) && signupForm.university.$invalid}">
+               <div class="form-label-error">The university field is required.</div>
+               <label class="form-label">Select your university</label>
+               <div class="select-custom form-object">
+                  <select name="university"
+                          ng-class="{'selected': selectedUniversity!=null}"
+                          ng-options="university as university.name for university in universities track by university.id"
+                          ng-model="selectedUniversity" required tabindex="0">
+                     <option value="" disabled selected hidden>Select University</option>
+                  </select>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <button class="btn-blue btn-login" type="submit">Sign Up with University Account</button>
+         </div>
+         <div class="row">
+         </div>
+      </div>
+      <div class="signup-info">
+         <p>Have an account? <a ui-sref="login" href="#">Login now</a></p>
+      </div>
+   </form>
+</div>

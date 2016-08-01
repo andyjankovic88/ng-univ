@@ -1,0 +1,57 @@
+<div class="uc-field-list consultation-times-list">
+   <ul>
+      <li ng-repeat="option in options track by $index">
+         <svg class="ico-remove r-side" ng-click="removeOption($index)">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-remove"></use>
+         </svg>
+         <div class="list-fields">
+            <div class="list-row">
+               <div class="col-campus">
+                  <div class="select-custom">
+                     <select ng-class="{selected:chosen}" ng-model="option.campus" ng-options="campus.key as campus.value for campus in consultationData.campuses track by campus.key">
+                        <option value="" disabled selected hidden>Campus</option>
+                     </select>
+                  </div>
+               </div>
+               <div class="col-location">
+                  <input type="text" placeholder="Location" ng-model="option.location" >
+               </div>
+            </div>
+            <div class="list-row">
+               <div class="col-day">
+                  <div class="select-custom select-sm">
+                     <select ng-class="{selected:chosen}" ng-model="option.day" ng-options="day.key as day.value for day in consultationData.days track by day.key">
+                        <option value="" disabled selected hidden>Day</option>
+                     </select>
+                  </div>
+               </div>
+               <div class="col-start">
+                  <div class="select-custom select-sm">
+                     <select ng-class="{selected:chosen}" ng-model="option.time_from" ng-options="time.key as time.value for time in consultationData.times track by time.key">
+                        <option value="" disabled selected hidden>Starts</option>
+                     </select>
+                  </div>
+               </div>
+               <div class="col-end">
+                  <div class="select-custom select-sm">
+                     <select ng-class="{selected:chosen}" ng-model="option.time_to" ng-options="time.key as time.value for time in consultationData.times track by time.key">
+                        <option value="" disabled selected hidden>Ends</option>
+                     </select>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </li>
+   </ul>
+   <div class="holder">
+      <ul class="post-options r-side">
+         <li>
+            <a href="#" ng-click="addOption()">
+               <svg class="ico-add">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#popup-plus"></use>
+               </svg>
+            </a>
+         </li>
+      </ul>
+   </div>
+</div>

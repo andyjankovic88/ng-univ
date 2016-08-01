@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "user": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "userName": {
+                  "type": "string"
+                },
+                "profilePic": {
+                  "type": "string"
+                }
+              }
+            },
+            "comment_id": {
+              "type": "integer"
+            },
+            "how_long_ago": {
+              "type": "string"
+            },
+            "post_time": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

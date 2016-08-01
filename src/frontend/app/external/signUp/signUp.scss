@@ -1,0 +1,250 @@
+@import "mixins";
+
+.content {
+   .signup-pad {
+      width: 520px;
+      margin: 80px auto 150px;
+      font-size: $font13;
+
+      &.signup-pad-large {
+         width: 610px;
+      }
+
+      .signup-pad-in {
+         padding: 40px;
+         background-color: #fff;
+         -webkit-border-radius: 2px;
+         -moz-border-radius: 2px;
+         border-radius: 2px;
+         margin: 0 0 20px;
+      }
+      .row {
+         position: relative;
+
+         .col2 {
+            width: 50%;
+            float: left;
+            padding-left: 10px;
+            &:first-child {
+               padding-right: 10px;
+               padding-left: 0;
+            }
+         }
+      }
+
+      .form-group {
+         width: 100%;
+         svg {
+            width: 16px;
+            height: 16px;
+         }
+      }
+
+      .form-label {
+         color: $color-grey-dark;
+         /* margin: 0; */
+      }
+      .form-label-error {
+         color: $color-red;
+         float: right;
+         display: none;
+      }
+
+      .form-object {
+         //margin: 8px 0;
+         width: 100%;
+         color: $color-grey-dark;
+         padding: 14px 18px;
+         font-size: 16px;
+      }
+      div.form-object {
+         padding: 0;
+      }
+
+      .has-error {
+         .form-label {
+            color: $color-red;
+         }
+         .form-label-error {
+            display: block;
+         }
+         .form-object {
+            border-color: $color-red;
+            .wrap-dd-select {
+               border-color: $color-red;
+            }
+         }
+      }
+      .no-error {
+         .form-label {
+            color: $color-green;
+         }
+      }
+
+      .btn-login {
+         width: 100%;
+         height: auto !important;
+         font-size: $font18;
+         line-height: 32px;
+         padding: 9px 0;
+      }
+
+      .btn-facebook {
+         background: #3b5a9d;
+         -webkit-border-radius: 2px;
+         -moz-border-radius: 2px;
+         border-radius: 2px;
+         transition: all 0.3s ease 0s;
+         font-size: $font18;
+         height: 50px;
+         line-height: 50px;
+         color: #fff;
+         text-decoration: none;
+         padding: 0;
+         cursor: pointer;
+         text-align: center;
+         width: 100%;
+         margin: 0;
+      }
+
+      .btn-default {
+         padding: 0;
+         color: $color-blue;
+         font-size: $font18;
+         cursor: pointer;
+         min-width: initial;
+         svg {
+            width: 16px;
+            height: 16px;
+            use {
+               fill: $color-blue
+            }
+         }
+         .ico-btn-right {
+            margin-left: 10px;
+         }
+         .ico-btn-left {
+            margin-right: 10px;
+         }
+      }
+
+      .checkbox {
+         label {
+            color: #5C6068;
+         }
+      }
+      [type="checkbox"]:not(:checked) + label:after, [type="checkbox"]:checked + label:after {
+         top: 0;
+      }
+
+      .row-info {
+         margin-bottom: 30px;
+         .info-l-label {
+            color: $color-grey-dark;
+            text-align: center;
+            font-size: $font24;
+         }
+         .info-label {
+            color: $color-grey-dark;
+            text-align: center;
+            font-size: $font13;
+         }
+      }
+
+      .pad-info {
+         text-align: center;
+         a {
+            color: $color-blue;
+            &:hover {
+               color: $color-blue-hover;
+            }
+         }
+      }
+
+      ul.step-indicator {
+         list-style: none;
+         margin: 0;
+         padding: 0;
+         left: 50%;
+         position: absolute;
+         margin-left: -30%;
+         width: 60%;
+         text-align: center;
+         li {
+            width: 8px;
+            height: 8px;
+            display: inline-block;
+            background-color: $color-grey;
+            border-radius: 4px;
+            margin-left: 10px;
+            &.active {
+               background-color: $color-blue;
+            }
+            &:first-child {
+               margin-left: 0;
+            }
+         }
+      }
+      #signup-form {
+         margin: 0 0 20px;
+         .signup-info {
+            color: $color-white;
+            text-align: center;
+            a {
+               color: $color-white;
+               text-decoration: underline;
+               &:hover {
+                  text-decoration: none;
+               }
+            }
+         }
+      }
+      .avatar {
+         width: 80px;
+         height: 80px;
+         margin: 0 auto;
+         -webkit-border-radius: 40px;
+         -moz-border-radius: 40px;
+         border-radius: 40px;
+         overflow: hidden;
+         img {
+            width: 100%;
+            height: 100%;
+         }
+      }
+   }
+   .home-logo {
+      text-align: center;
+      margin-bottom:10px;
+
+      svg {
+         width: 150px;
+         height: 45px;
+         use {
+            fill: #1565C0;
+         }
+      }
+   }
+   .signup-select2 {
+      display: inline-block;
+      padding: 14px 15px;
+      color: #d1d3d4;
+      font-size: 18px;
+      background-color: rgba(255,255,255,0.2);
+      border: 0;
+      height: 53px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      width: 395px;
+      cursor: pointer;
+      .selected {
+         float: left;
+         font-weight: normal;
+      }
+   }
+}
+
+.signup-main .btn-blue {
+   outline: none !important;
+}

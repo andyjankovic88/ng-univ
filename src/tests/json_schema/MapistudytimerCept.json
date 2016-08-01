@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "StudyTimer": {
+      "type": "object",
+      "properties": {
+        "unit_code": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "start_time": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "unit_code",
+        "name",
+        "start_time",
+        "id"
+      ]
+    }
+  },
+  "required": [
+    "StudyTimer"
+  ]
+}

@@ -1,0 +1,75 @@
+.ngdialog-overlay {
+   background: rgba(0, 0, 0, 0.7);
+}
+.ngdialog.import-email-list {
+   .ngdialog-content {
+      padding: 1.5em;
+      background: $color-white;
+      width: 540px;
+   }
+   .ngdialog-close:before {
+      cursor: pointer;
+   }
+   .btn-green {
+      margin: 0 0 20px;
+   }
+   .ico {
+      width: 28px;
+      height: 39px;
+      padding: 5px 0 0;
+      float: left;
+   }
+   .ico {
+      margin: 0 10px 0 0;
+   }
+   .list-ico {
+      li {
+         position: relative;
+         overflow: hidden;
+         .ico-remove {
+            position: absolute;
+            top: 0;
+            right: 0;
+         }
+      }
+   }
+   .txt-holder {
+      float: left;
+      span {
+         display: block;
+      }
+   }
+}
+ul.marked-list {
+   list-style-type: disc;
+   margin: 0 0 20px 14px;
+}
+.row:last-child {
+   margin: 0;
+}
+.holder-import-email {
+   margin: 0 0 40px;
+}
+.file-loaded {
+   .blue {
+      display: block;
+      font-size: 14px;
+   }
+}
+#import-file,
+#import-email-list {
+   .list-ico {
+      li:hover .ico-remove {
+         use {
+            fill: #a8a8a8;
+         }
+      }
+      padding: 0 10px 0 0;
+   }
+   .blue-link:hover {
+      color: $color-blue;
+   }
+   svg:hover use {
+      color: $color-blue;
+   }
+}

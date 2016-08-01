@@ -1,0 +1,37 @@
+
+<div class="holder table">
+   <ul id="added-people" class="rubber-list">
+      <li ng-repeat="user in selectedUsers">
+         <figure>
+            <a href="#">
+               <span class="photo-holder">
+                  <img ng-src="{{user.profile_pic}}">
+               </span>
+               <strong class="user-name">{{user.name}}</strong>
+               <p>{{user.email}}</p>
+            </a>
+         </figure>
+         <svg ng-click="removeUser(user)" class="status ico-cross"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-cross"></use></svg>
+      </li>
+   </ul>
+</div>
+<div class="search-section" dropdown>
+   <input class="autoinput" ng-model="search.name" dropdown-trigger placeholder="{{placeholder}}" />
+   <div class="search-box" dropdown-body ng-show="search.name.length > 0 && filtered.length > 0">
+      <div class="holder"><span class="r-side txt">search suggestions</span></div>
+      <div class="holder table">
+         <ul class="rubber-list">
+            <li ng-repeat="user in filtered = (connections | filter:search | limitTo: 10)" ng-click="addUser(user)" dropdown-inner-trigger>
+               <figure>
+                  <a href="#">
+                  <span class="photo-holder">
+                     <img ng-src="{{user.profile_pic}}">
+                  </span>
+                     <strong class="user-name">{{user.name}}</strong>
+                  </a>
+               </figure>
+            </li>
+         </ul>
+      </div>
+   </div>
+</div>

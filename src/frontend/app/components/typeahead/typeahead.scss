@@ -1,0 +1,24 @@
+.typeahead-dropdown-menu {
+   position: absolute;
+   z-index: 1000;
+   background-color: white;
+   border: 1px solid #ddd;
+   width: 100%;
+
+   ul {
+      padding: 20px 0;
+      li {
+         padding: 10px 20px;
+         &.active {
+            background-color: #f0f0f0;
+         }
+      }
+   }
+
+   .external-link {
+      position: absolute;
+      right: 15px;
+      top: 5px;
+      color: #a8a8a8;
+   }
+}

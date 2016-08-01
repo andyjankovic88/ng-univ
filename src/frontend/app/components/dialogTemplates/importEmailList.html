@@ -1,0 +1,34 @@
+<!-- dialog-window -->
+<div id="import-email-list">
+   <div class="holder-import-email">
+      <h1>Import Email List</h1>
+      <p>Select a file containing the university emails of the group members you would like to add</p>
+      <ul class="marked-list">
+         <li>The file format type must be <strong>.csv</strong>, <strong>.xlsx</strong>, <strong>.xls</strong> (
+            <a href="#" class="blue-link">click here for help</a>)
+         </li>
+         <li>Files must ONLY contain a <strong>list of university email addresses</strong></li>
+         <li>Do not upload files with multiple columns</li>
+         <li>You can upload a maximum of <strong>1000 members at a time</strong></li>
+      </ul>
+      <div class="row file-upload">
+         <div class="btn-green" ngf-select="importCSV($file)" ngf-max-size="10MB">
+            Select File
+         </div>
+         <file-list list="files" can-edit></file-list>
+      </div>
+   </div>
+   <div class="row">
+      <form action="#">
+         <ul class="options-btn">
+            <li>
+               <button type="button" class="btn-link" ng-click="clearFiles(); closeThisDialog()">Cancel</button>
+            </li>
+            <li>
+               <button type="button" class="btn-blue btn-small" ng-click="closeThisDialog()" ng-disabled="!files.length">Done</button>
+            </li>
+         </ul>
+      </form>
+   </div>
+</div>
+

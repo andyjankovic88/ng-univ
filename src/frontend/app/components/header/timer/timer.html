@@ -1,0 +1,40 @@
+<div class="timer">
+    <span class="vert-helper"></span>
+    <ul class="subjects-first">
+        <li ng-repeat="(key, subject) in subjects | limitTo : 4" ng-click="selectSubject(subject.id)" ng-class="{ active: subject.id == activeSubjectId }">
+            <span class="vert-helper"></span>
+            <span class="icon">
+        		<svg>
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-subject"></use>
+				</svg>
+			</span>
+            <span>
+			{{subject.title}}</span>
+        </li>
+    </ul>
+    <div dropdown ng-if="subjects.length > 4" class="extend-list-btn">
+        <span dropdown-trigger>• • •</span>
+        <div dropdown-body class="popup-notification">
+            <span class="arrow-top"></span>
+            <div class="popup-holder clearfix">
+                <ul class="subjects-additional">
+                    <li ng-repeat="(key, subject) in subjects | limitTo : 99 : 4" dropdown-inner-trigger ng-click="selectSubject(subject.id)" ng-class="{ active: subject.id == activeSubjectId }">
+                        <svg>
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-subject"></use>
+                        </svg>
+                        <span>{{subject.title}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="right-btns">
+    	<span class="vert-helper"></span>
+    	<counter></counter>
+        <a class="btn start" ng-class="{ 'start': !isRunning, 'stop': isRunning }" ng-click="counter()">{{ isRunning ? 'Stop Studying' : 'Start Studying'}}</a>
+        <svg class="close-btn" ng-click="close()">
+            <use xlink:href="#header-cross" />
+        </svg>
+    </div>
+
+</div>

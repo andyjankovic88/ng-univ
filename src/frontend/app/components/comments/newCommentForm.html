@@ -1,0 +1,18 @@
+<div class="leave-comment" ng-if="showNewComment">
+   <figure class="img-holder post-heading clearfix" ng-if="comment.comment_id === 0">
+      <a href="#">
+         <img ng-src="{{comment.user.profilePic}}" alt="avatar-image">
+      </a>
+   </figure>
+   <form action="#" class="form-comment">
+      <fieldset>
+         <legend class="none">comment</legend>
+         <div class="textarea-holder">
+            <loader mini is-active="messageLoaderActive" ng-if="messageLoaderActive" class="loader-right" ></loader>
+            <div class="holder-txt">
+               <textarea msd-elastic class="colored" key-submit="postComment()" ng-model="comment.text" cols="20" rows="1" placeholder="Leave a new comment…."></textarea>
+            </div>
+         </div>
+      </fieldset>
+   </form>
+</div>

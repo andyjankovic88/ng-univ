@@ -1,0 +1,53 @@
+.schedule-post-btn {/*background:url("/assets_new/images/icon-schedule-post.png") left 4px no-repeat !important;*/ }
+.schedule-post-btn a:hover, .schedule-post-btn a.active { /*background:url("/assets_new/images/icon-schedule-post.png")0 -17px no-repeat !important; */ }
+.checkbox label:before { top: 6px !important; }
+.show-schedule .text { /*background:url(/assets_new/images/icon-schedule-white.png) no-repeat left 3px !important;*/ }
+ul.scheduled_ul li .feed-post-university-file { background-position: 0 -533px !important; }
+.advance-post { /*background:url("/assets_new/images/icon-target-post.png")0 5px no-repeat !important;*/ }
+.advance-post a:hover, .advance-post a.active { color: #3a91e0;/*background:url("/assets_new/images/icon-target-post.png")0 -17px no-repeat !important;*/ }
+#schedule_post_count_number { padding: 4px 11px !important; }
+ul.scheduled_ul li .feed-post-unit-file { background-position: 0 -553px !important; }
+ul.scheduled_ul li .feed-post-unit-poll { background-position: 0 -214px !important; }
+ul.scheduled_ul li .feed-post-service_page-file { background-position: 0 -595px !important; }
+ul.scheduled_ul li .feed-post-club-post { background-position: 0 -1556px !important; }
+ul.scheduled_ul li .feed-post-club-link { background-position: 0 -1613px !important; display: inline-block !important; width: auto !important; }
+ul.scheduled_ul li .feed-post-club-file { background-position: 0 -1594px !important; }
+.side-box .heading { padding: 8px 20px !important; }
+.btn-green {/*padding: 8px 20px !important;*/ }
+.btn-blue { padding: 8px 20px !important; }
+.btn-grey { padding: 8px 20px !important; }
+.input-btn-padding { line-height: 36px !important; }
+.btn-green-s {padding: 5px 20px !important; }
+.decline-btn { padding: 5px 20px !important; }
+.signup-main .btn-blue { line-height: 52px !important; }
+.panel-content li { background-position: left 10px !important; }
+.join-now .btn-blue { height: auto !important; line-height: inherit !important; }
+.to-do-list li, .to-do-list li:hover { background-position: left 6px !important; }
+.sell-header-bar .title { padding: 0 !important; }
+.radio-cust label:before { top: 6px !important; }
+.signup-detail .checkbox label:before { top: 3px !important; }
+.finish-btn input { padding: 13px 0 !important; }
+.mce-flow-layout-item { margin: 18px 10px 15px !important; }
+.post-anonymous .feed-padding { top: 30px !important; }
+.post-anonymous .checkbox label:before { top: 3px !important; }
+.btn-blue-s { padding: 5px 20px !important; }
+.add-connection-btn em img { margin: 3px 8px 0 0 !important; }
+/*login css 4349*/
+.login-box-new #remember_university { height: 25px !important; display: inline-block; vertical-align: top }
+.login-box-new .checkbox label { display: inline-block; vertical-align: top; margin-top: 3px; }
+.follow-btn { padding: 5px 20px 5px 37px !important }
+.feed-post-custom-btn .join-btn:before { top: 13px; }
+/*.club-event-right .join-btn:before { top: 13px; }*/
+/*.join-btn:before{top: 10px;}*/
+.club-event-right .follow-btn:before { top: 13px; }
+.follow-btn:before{ top:10px;}
+/*.campus-info li .info-sec1 .icon:before { top: 5px }*/
+.drop-campus-tabs ul li a span.icon-feed::before { position: relative; top: 0; }
+.complete-steps .follow-btn::before { top: 9px; }
+.join_custom_group .join-btn { padding: 4px 20px 6px 42px !important; }
+.join-btn::before { top: 37.5%; }
+.connection-suggestion-list li .button{ padding: 8px 0;}
+.help-btn-text {margin-top: 8px; }
+.create-icon::before{    top: 10px;}
+.footer-bar-padding .messages-icon:before{ top: 14px;}
+.icon-joined::before{ top: -3px;}	

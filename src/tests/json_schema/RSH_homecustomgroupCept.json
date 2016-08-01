@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "upcoming_events": {
+          "type": "array",
+          "items": []
+        },
+        "admin": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "userName": {
+                "type": "string"
+              },
+              "profilePic": {
+                "type": "string"
+              },
+              "karma": {
+                "type": "integer"
+              }
+            }
+          }
+        },
+        "member": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "userName": {
+                "type": "string"
+              },
+              "profilePic": {
+                "type": "string"
+              },
+              "karma": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "message",
+    "response"
+  ]
+}

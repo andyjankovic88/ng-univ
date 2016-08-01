@@ -1,0 +1,28 @@
+<div id="custom-group">
+   <!-- content-heading -->
+   <div class="content-heading ng-scope">
+      <h1>Clubs &amp; Societies</h1>
+   <span class="float-right default-btn">
+      <button type="button" class="btn-blue">Create Club page</button>
+   </span>
+   </div>
+   <!-- sub-menu -->
+   <div class="sub-menu">
+      <ul>
+         <li ui-sref-active="active">
+            <a href="#" ui-sref="groupList">
+               <svg class="ico-list"><use xlink:href="#feeds-list" /></svg>
+               <span>GROUP LIST</span>
+            </a>
+         </li>
+         <li ui-sref-active="active">
+            <a href="#" ui-sref="suggestions">
+               <svg class="ico-suggestions"><use xlink:href="#icon-suggestions" /></svg>
+               <span>SUGGESTIONS</span>
+            </a>
+         </li>
+      </ul>
+   </div>
+   <!-- custom-content -->
+   <div class="custom-content" ui-view></div>
+</div>

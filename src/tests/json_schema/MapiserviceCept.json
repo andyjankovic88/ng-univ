@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "upcoming": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "location": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "photo_url": {
+              "type": "string"
+            },
+            "start_time": {
+              "type": "string"
+            },
+            "start_time_show": {
+              "type": "string"
+            },
+            "how_long_ago": {
+              "type": "string"
+            },
+            "end_time": {
+              "type": "string"
+            },
+            "tickets": {
+              "type": "array",
+              "items": []
+            },
+            "total_attendee": {
+              "type": "string"
+            },
+            "attending": {
+              "type": "string"
+            },
+            "creator": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "photo_url": {
+                  "type": "string"
+                },
+                "group_id": {
+                  "type": "integer"
+                },
+                "user_type": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "required": [
+            "id",
+            "name",
+            "location",
+            "description",
+            "photo_url",
+            "start_time",
+            "start_time_show",
+            "how_long_ago",
+            "end_time",
+            "tickets",
+            "total_attendee",
+            "attending",
+            "creator"
+          ]
+        }
+      ]
+    },
+    "past": {
+      "type": "array",
+      "items": []
+    }
+  },
+  "required": [
+    "upcoming",
+    "past"
+  ]
+}

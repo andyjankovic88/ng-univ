@@ -1,0 +1,19 @@
+.alerts-info {
+   display: none;
+   font-size: $font14;
+   padding: 11px 18px;
+   text-align: center;
+   &.active {
+      display: block;
+   }
+
+   .message {
+   }
+
+   .dismiss {
+      color: $color-grey;
+      float: right;
+   }
+
+
+}
